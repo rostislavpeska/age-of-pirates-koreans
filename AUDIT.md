@@ -102,7 +102,9 @@ everything still missing for a fully playable, fully Korean civilization, most i
   The seam became a hoecheom valley (회첨골): a narrow gutter (~0.16 m) of its own pan tiles running down the valley,
   courses at equal heights on both roofs so the laps meet in matching V's, field tiles cut to the gutter edge with small
   lime plugs in the cut cover rolls, gutter toned towards the field tiles, shallow concave relief and lap steps in the
-  normal map. Roofs BaseColor/Masks/Normals only; walls unchanged.
+  normal map. Roofs BaseColor/Masks/Normals only; walls unchanged. **Owner-accepted in game** ("use that version";
+  game started after the r15h install). The soft Blender preview had made it look invisible: judge such details in
+  game. Rule: korean-buildings-blender `patterns/korean/roof_valleys.md` (KR-ROOF-VALLEY-01).
 - **Bench names (2026-10-09):** owner: "please also add test town center, barracks and stables" - the benches
   `zzTESTKoreanTownCenter` / `Barracks` / `Stable` (22003-22005, on the test builder wagon) existed but used the
   vanilla names; they now read "zzTEST Korean Town Center / Barracks / Stable (destruction bench)" (600038-600043).
