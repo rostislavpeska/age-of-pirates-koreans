@@ -3,11 +3,15 @@
   <definebone>bip01 prop1</definebone>
   <definebone>bip01 prop2</definebone>
   <definebone>bone_gun</definebone>
-  <attachment>bows<include>units\mercenaries\manchurian_archer\manchurian_bow.xml</include>
-  </attachment>
-  <attachment>arrow_attachment<anim>Idle<component />
+  <attachment>bow<component>bow<assetreference type="GrannyModel">
+        <file>units\asians\japanese\yabusame\yabusameRider_bow</file>
+      </assetreference>
+    </component>
+    <anim>
+      <component>bow</component>
     </anim>
-    <include>units\attachments\arrow.xml</include>
+  </attachment>
+  <attachment>arrow<include>units\attachments\arrow.xml</include>
   </attachment>
   <attachment>fire_arrow<anim>Idle<component />
     </anim>
@@ -17,7 +21,8 @@
         <file>units\asians\chinese\steppe_rider\steppe_rider_sword</file>
       </assetreference>
     </component>
-    <anim>Idle<component>sword</component>
+    <anim>
+      <component>sword</component>
     </anim>
   </attachment>
   <attachment>hammer<component>hammer<assetreference type="GrannyModel">
@@ -27,21 +32,42 @@
     <anim>Idle<component>hammer</component>
     </anim>
   </attachment>
+  <attachment>bows<component>bow<assetreference type="GrannyModel">
+        <file>units\asians\mercenaries\yojimbo\yojimbo_bow</file>
+      </assetreference>
+    </component>
+    <anim>Idle<component>bow</component>
+    </anim>
+  </attachment>
   <component>ModelComp<logic type="Tech">
       <none>
         <logic type="LowPoly">
           <normal>
             <assetreference type="GrannyModel">
-              <file>units\mercenaries\manchurian_archer\manchurian_archer_rider</file>
+              <file>units\korean_monk\korean_monk_rider</file>
             </assetreference>
           </normal>
           <lowpoly>
             <assetreference type="GrannyModel">
-              <file>units\mercenaries\manchurian_archer\lp_manchurian_archer_rider</file>
+              <file>units\korean_monk\korean_monk_rider</file>
             </assetreference>
           </lowpoly>
         </logic>
       </none>
+      <yphonoredyabusame>
+        <logic type="LowPoly">
+          <normal>
+            <assetreference type="GrannyModel">
+              <file>units\korean_monk\korean_monk_rider</file>
+            </assetreference>
+          </normal>
+          <lowpoly>
+            <assetreference type="GrannyModel">
+              <file>units\korean_monk\korean_monk_rider</file>
+            </assetreference>
+          </lowpoly>
+        </logic>
+      </yphonoredyabusame>
       <guardcavarchers />
     </logic>
   </component>
@@ -49,19 +75,19 @@
       <file>animation_library\cavalry\bow_canter</file>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="bip01 prop2" syncanims="0" />
   </anim>
   <anim>Jog<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\bow_jog</file>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Run<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\bow_gallop</file>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Idle<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_idle_A</file>
@@ -96,7 +122,7 @@
       <weight>40</weight>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Bored<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_bored_A</file>
@@ -115,7 +141,7 @@
       <weight>50</weight>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Attack_ranged<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\bow_attack_A</file>
@@ -134,8 +160,8 @@
       <weight>10</weight>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
-    <attach a="arrow_attachment" frombone="bone_bow" tobone="bip01 prop1" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="arrow" frombone="bone_bow" tobone="bip01 prop1" syncanims="0" />
   </anim>
   <anim>Attack_melee<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_attack_A</file>
@@ -166,7 +192,7 @@
       <file>animation_library\cavalry\sword_deathC</file>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Death_by_range<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_deathA</file>
@@ -178,7 +204,7 @@
       <file>animation_library\cavalry\sword_deathC</file>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Death_by_havoc<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\rider_death_havoc_a</file>
@@ -201,7 +227,7 @@
       <file>animation_library\cavalry\sword_cheer_E</file>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Raze_idle<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\raze_idle_A</file>
@@ -236,14 +262,14 @@
       <weight>40</weight>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Raze_attack<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\bow_raze_attack_A</file>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="fire_arrow" frombone="MASTER" tobone="Bip01 Prop1" syncanims="0" />
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="fire_arrow" frombone="bone_bow" tobone="bip01 prop1" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Walk_melee<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_canter</file>
@@ -400,6 +426,11 @@
     <component>ModelComp</component>
     <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
+  <anim>Heal<assetreference type="GrannyAnim">
+      <file>animation_library\natives\warchief_lakota\heal</file>
+    </assetreference>
+    <component>ModelComp</component>
+  </anim>
   <anim>Volley_standing_attack<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\bow_attack_A</file>
       <weight>40</weight>
@@ -417,8 +448,8 @@
       <weight>10</weight>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
-    <attach a="arrow_attachment" frombone="bone_bow" tobone="bip01 prop1" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="arrow" frombone="bone_bow" tobone="bip01 prop1" syncanims="0" />
   </anim>
   <anim>stun_attack<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\bow_attack_A</file>
@@ -437,8 +468,8 @@
       <weight>10</weight>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
-    <attach a="arrow_attachment" frombone="bone_bow" tobone="bip01 prop1" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="arrow" frombone="bone_bow" tobone="bip01 prop1" syncanims="0" />
   </anim>
   <anim>Charge_attack<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_attack_A</file>
@@ -458,21 +489,6 @@
     </assetreference>
     <component>ModelComp</component>
     <attach a="sword" frombone="bone_sword" tobone="Bip01 Prop1" syncanims="0" />
-  </anim>
-  <anim>Heal<assetreference type="GrannyAnim">
-      <file>animation_library\cavalry\sword_cheer_F</file>
-    </assetreference>
-    <assetreference type="GrannyAnim">
-      <file>animation_library\cavalry\sword_cheer_H</file>
-    </assetreference>
-    <assetreference type="GrannyAnim">
-      <file>animation_library\cavalry\sword_bored_A</file>
-    </assetreference>
-    <assetreference type="GrannyAnim">
-      <file>animation_library\cavalry\sword_cheer_E</file>
-    </assetreference>
-    <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Knockout<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_idle_A</file>
@@ -507,7 +523,7 @@
       <weight>40</weight>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>KnockoutIdle<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_idle_A</file>
@@ -542,7 +558,7 @@
       <weight>40</weight>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
   <anim>Recover<assetreference type="GrannyAnim">
       <file>animation_library\cavalry\sword_cheer_F</file>
@@ -557,6 +573,6 @@
       <file>animation_library\cavalry\sword_cheer_E</file>
     </assetreference>
     <component>ModelComp</component>
-    <attach a="bows" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
+    <attach a="bow" frombone="bone_bow" tobone="Bip01 L Hand" syncanims="0" />
   </anim>
 </animfile>

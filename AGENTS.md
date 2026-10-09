@@ -11,7 +11,8 @@ This repository is the Koreans civilization add-on for Age of Pirates (AoP) and 
    stays in the Korean repositories** (this repo: README, AUDIT; korean-buildings-blender: plan and research), never
    in AoP. Read the relevant skills in AoP (`aoe-xml`, `aoe3de-soundsets`, `bar-extract` ...) before editing.
    Record lessons in AoP's shared journal (`workflow-journal` skill).
-3. **AoP's AGENTS.md rules apply here too** (CRLF runtime XML, XMB twins, never copy vanilla assets, owner approval
+3. **AoP's AGENTS.md rules apply here too** (CRLF runtime XML, XMB twins, never copy vanilla assets - except rule 2's
+   retexture clone of a vanilla unit, shape untouched -, owner approval
    for deletions, screen control announced, incidents reported). Read `../age-of-pirates/AGENTS.md`.
 4. **Workflow:** edit `art/ data/ game/ sound/` (soundset definitions in `tools/korean_soundsets.xml`), then
    `python tools/build.py`, `python -m pytest tests -q`, game test, commit. Never hand-edit the files

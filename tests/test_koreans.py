@@ -176,6 +176,42 @@ def _anim_scopes(text):
     return scopes
 
 
+def test_final_monk_is_the_retextured_disciple_on_the_yabusame_horse():
+    """Owner 2026-10-09: the bald Disciple on the rider skeleton rides (game test "Works!"), retextured after the WoL
+    Jeobju; hero cavalry selection like the Elmeti; heal from the Lakota war chief; own BaseColor/Normals/Details."""
+    horse = (K / 'art/units/korean_monk/korean_monk_horse.xml').read_text(encoding='utf-8')
+    rider = (K / 'art/units/korean_monk/korean_monk_rider.xml').read_text(encoding='utf-8')
+    dec = re.search(r'<decal>(.*?)</decal>', horse, re.S).group(1)
+    assert 'shadows_selections' + BS + 'shadow_hero_64x64' in dec and 'selection_hero_64x64' in dec
+    assert '<width>1.50</width>' in dec and '<height>3.00</height>' in dec
+    model = BS.join(['units', 'korean_monk', 'korean_monk_rider'])
+    assert rider.count('<file>%s</file>' % model) == 4 and not re.search(r'yabusameRider_[02]', rider, re.I)
+    assert (K / 'art/units/korean_monk/korean_monk_rider.gr2').is_file()
+    heal = lambda text: re.search(r'^  <anim>Heal<(.*?)^  </anim>', text, re.S | re.M).group(1)
+    assert 'horse_heal' in heal(horse) and 'warchief_lakota' + BS + 'heal' in heal(rider)
+    assert 'spear' not in heal(rider)
+    mat = (K / 'art/units/korean_monk/korean_monk_rider.material').read_text(encoding='utf-8')
+    tex = dict(re.findall(r'<texture name="(\w+)" override="([^"]+)"', mat))
+    for kind in ('BaseColor', 'Normals', 'Details'):
+        assert (K / 'art' / (tex[kind] + '.ddt')).is_file(), kind
+    assert tex['Masks'].startswith('units/asians/chinese/shaolin_disciple/')     # vanilla masks by path
+
+
+def test_monk_arrows_leave_with_the_bow_release():
+    """Owner's game test 2026-10-09 (bench): "the shooting anim is not well synced with the arrow". The rider draws
+    with the generic cavalry bow_attack_A-D; the arrow leaves at the HORSE animation's Attack tag. Only the generic
+    horse_1-5_attack_A-D carry tags tuned to that release (0.62 / 0.43 / 0.43 / 0.43, the Manchu archer pair); the
+    yabusame's own horse attacks fire at 0.28. Every monk horse animfile uses the tuned pair for each shot."""
+    tuned = [('horse_1-5_attack_A', ['0.62']), ('horse_1-5_attack_B', ['0.43']),
+             ('horse_1-5_attack_C', ['0.43']), ('horse_1-5_attack_D', ['0.43'])]
+    for rel in ('art/units/korean_monk/korean_monk_horse.xml',):
+        anims = dict(re.findall(r'^  <anim>(\w+)<(.*?)^  </anim>', (K / rel).read_text(encoding='utf-8'), re.S | re.M))
+        for shot in ('Attack_ranged', 'Volley_standing_attack', 'stun_attack'):
+            refs = re.findall(r'<file>([^<]+)</file>(.*?)</assetreference>', anims[shot], re.S)
+            got = [(f.split(BS)[-1], re.findall(r'type="Attack">([^<]+)<', b)) for f, b in refs]
+            assert got == tuned, (rel, shot, got)
+
+
 def test_every_tactics_animation_exists_and_moves():
     """Owner 2026-10-09: the Korean monk stood still while building and picking up treasure (its Build and Pickup
     were copies of Idle). For every proto with a repo animfile and repo tactics: each animation an action names
