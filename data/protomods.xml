@@ -13,8 +13,8 @@
        Colonial Age. Look: art/buildings/korean_house/korean_house.xml - the
        Japanese Shrine (age 1) in the Discovery Age, Korean House A/B/C from
        the Colonial Age on (owner 2026-10-09), with a garrison flag bone on
-       its small mast; the generic house icons (owner 2026-10-09: no unique
-       Hanok icon needed). Enabled and added to every villager's build menu by
+       its small mast; icon and portrait rendered from Korean House B in the
+       Japanese Shrine portrait's style (owner 2026-10-09). Enabled and added to every villager's build menu by
        zpKoreanBuildings (data/techtreemods.xml).
        ================================================================== -->
   <unit id="22000" name="zpHouseKorean">
@@ -32,8 +32,8 @@
     <impacttype>Wood</impacttype>
     <physicsinfo>house</physicsinfo>
     <placementfile>buildingsmall.xml</placementfile>
-    <icon>resources\art\buildings\house\house_icon.png</icon>
-    <portraiticon>resources\art\buildings\house\house_portrait.png</portraiticon>
+    <icon>resources\art\buildings\korean_house\korean_house_icon.png</icon>
+    <portraiticon>resources\art\buildings\korean_house\korean_house_portrait.png</portraiticon>
     <rollovertextid>600008</rollovertextid>
     <shortrollovertextid>600009</shortrollovertextid>
     <initialhitpoints>1200.0000</initialhitpoints>
@@ -825,8 +825,8 @@
     <impacttype>Wood</impacttype>
     <physicsinfo>house</physicsinfo>
     <placementfile>buildingsmall.xml</placementfile>
-    <icon>resources\art\buildings\house\house_icon.png</icon>
-    <portraiticon>resources\art\buildings\house\house_portrait.png</portraiticon>
+    <icon>resources\art\buildings\korean_house\korean_house_icon.png</icon>
+    <portraiticon>resources\art\buildings\korean_house\korean_house_portrait.png</portraiticon>
     <rollovertextid>600008</rollovertextid>
     <shortrollovertextid>600009</shortrollovertextid>
     <initialhitpoints>1200.0000</initialhitpoints>
@@ -915,8 +915,8 @@
     <impacttype>Wood</impacttype>
     <physicsinfo>house</physicsinfo>
     <placementfile>buildingsmall.xml</placementfile>
-    <icon>resources\art\buildings\house\house_icon.png</icon>
-    <portraiticon>resources\art\buildings\house\house_portrait.png</portraiticon>
+    <icon>resources\art\buildings\korean_house\korean_house_icon.png</icon>
+    <portraiticon>resources\art\buildings\korean_house\korean_house_portrait.png</portraiticon>
     <rollovertextid>600008</rollovertextid>
     <shortrollovertextid>600009</shortrollovertextid>
     <initialhitpoints>1200.0000</initialhitpoints>
@@ -1005,8 +1005,8 @@
     <impacttype>Wood</impacttype>
     <physicsinfo>house</physicsinfo>
     <placementfile>buildingsmall.xml</placementfile>
-    <icon>resources\art\buildings\house\house_icon.png</icon>
-    <portraiticon>resources\art\buildings\house\house_portrait.png</portraiticon>
+    <icon>resources\art\buildings\korean_house\korean_house_icon.png</icon>
+    <portraiticon>resources\art\buildings\korean_house\korean_house_portrait.png</portraiticon>
     <rollovertextid>600008</rollovertextid>
     <shortrollovertextid>600009</shortrollovertextid>
     <initialhitpoints>1200.0000</initialhitpoints>
