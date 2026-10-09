@@ -76,12 +76,13 @@ def base_text(name):
 
 
 def wagon_files():
-    """Every wagon sound file the game or AoP ships (lower case), sorted."""
+    """Every wagon and rickshaw sound file the game or AoP ships (lower case), sorted. Rickshaws are the Asian
+    wagons: YPMilitaryRickshaw builds the Barracks and Stable (owner's test 2026-10-09: no sound)."""
     _, index = bartool()
     names = {p[len('sound/'):-len('.xmb')] for p in index if p.startswith('sound/') and p.count('/') == 1
              and p.endswith('_snds.xml.xmb')}
     names |= set(aop_sound_files())
-    return sorted(n for n in names if 'wagon' in n)
+    return sorted(n for n in names if 'wagon' in n or 'rickshaw' in n)
 
 
 def korean_name(name):

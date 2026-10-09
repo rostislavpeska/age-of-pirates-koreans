@@ -124,6 +124,7 @@ def test_korean_wagons_and_fishing_boats_speak_like_the_japanese_ones():
     defined = set(re.findall(r'<soundset name="([^"]+)"', (K / 'sound/soundsetsde.mods.xml').read_text(encoding='utf-8')))
     files = sorted(p for p in (K / 'sound').glob('*_snds.xml') if 'wagon' in p.name and not p.name.startswith('zztest'))
     assert len(files) == 49 and (K / 'sound/ypfishingboatasian_snds.xml').is_file()
+    files.append(K / 'sound/ypmilitaryrickshaw_snds.xml')         # the Asian wagon: builds Barracks and Stable
     korean_voices = set()
     for p in files + [K / 'sound/ypfishingboatasian_snds.xml']:
         assert b'\r\n' in p.read_bytes() and b'\n' not in p.read_bytes().replace(b'\r\n', b''), p.name   # CRLF
@@ -188,6 +189,11 @@ def test_korean_monks_replace_the_japanese_monks():
         assert {'Hero', 'AbstractMonk', 'AbstractCavalry'} <= types
         assert not types & {'AbstractInfantry', 'AbstractJapaneseMonk', 'LogicalTypeStealthUnit'}
         assert 'KnockoutDeath' in [f.text for f in u.findall('flag')]
+    for rel in ('art/units/korean_monk/korean_monk_horse.xml', 'art/units/korean_monk/korean_monk_rider.xml'):
+        anims = set(re.findall(r'^  <anim>(\w+)<', (K / rel).read_text(encoding='utf-8'), re.M))
+        # owner's test 2026-10-09: Knockout aliased to Idle kept the knocked-out monk on the horse; vanilla mounted
+        # heroes (Hetman, Ras, Emir) have none of these and fall with the death animation
+        assert not anims & {'Knockout', 'KnockoutIdle', 'Recover'}, rel
         trains = [e.text for e in u.findall('train')]
         assert 'zpHouseKorean' in trains and 'ypShrineJapanese' not in trains
         assert 'ypMonkDisciple' not in trains and 'zpSeungbyeong' not in trains   # the tech adds the Seungbyeong
