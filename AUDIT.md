@@ -92,6 +92,11 @@ everything still missing for a fully playable, fully Korean civilization, most i
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
+- **Korean House roof junction r15f (2026-10-09):** owner: "the junction of two roofs ... should have special texture,
+  only on texture level without adding more geometry". A 3D distance field from each roof texel to the other roof
+  (porch <-> main, `roof_junction.py`, Houses B/C) drives a valley at texture level: a weathered lime-mortar seam on
+  the junction, a calmer, darker channel ~0.1-0.16 m each side (roll relief eased in the normal map), a cut-tile line,
+  moss and grime collecting along the valley. Rule in korean-buildings-blender `patterns/korean/roof_surface_finish.md`.
 - **Bench names (2026-10-09):** owner: "please also add test town center, barracks and stables" - the benches
   `zzTESTKoreanTownCenter` / `Barracks` / `Stable` (22003-22005, on the test builder wagon) existed but used the
   vanilla names; they now read "zzTEST Korean Town Center / Barracks / Stable (destruction bench)" (600038-600043).
