@@ -518,8 +518,8 @@
      the zpHouseKorean values, to test construction, garrison flag and destruction. Moved from AoP (21207, 30160, 30162, 30164); vanilla string ids. -->
 <unit id="22003" name="zzTESTKoreanTownCenter">
     <dbid>22003</dbid>
-    <displaynameid>22841</displaynameid>
-    <editornameid>28145</editornameid>
+    <displaynameid>600038</displaynameid>
+    <editornameid>600039</editornameid>
     <populationcapaddition>10</populationcapaddition>
     <obstructionradiusx>4.0000</obstructionradiusx>
     <obstructionradiusz>4.0000</obstructionradiusz>
@@ -666,8 +666,8 @@
   </unit>
 <unit id="22004" name="zzTESTKoreanBarracks">
   <dbid>22004</dbid>
-  <displaynameid>60237</displaynameid>
-  <editornameid>62920</editornameid>
+  <displaynameid>600040</displaynameid>
+  <editornameid>600041</editornameid>
   <obstructionradiusx>4.0000</obstructionradiusx>
   <obstructionradiusz>4.0000</obstructionradiusz>
   <maxvelocity>0.0000</maxvelocity>
@@ -735,8 +735,8 @@
   </unit>
 <unit id="22005" name="zzTESTKoreanStable">
   <dbid>22005</dbid>
-  <displaynameid>60216</displaynameid>
-  <editornameid>60217</editornameid>
+  <displaynameid>600042</displaynameid>
+  <editornameid>600043</editornameid>
   <obstructionradiusx>4.0000</obstructionradiusx>
   <obstructionradiusz>5.0000</obstructionradiusz>
   <maxvelocity>0.0000</maxvelocity>

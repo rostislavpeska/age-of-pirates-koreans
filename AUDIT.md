@@ -92,6 +92,9 @@ everything still missing for a fully playable, fully Korean civilization, most i
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
+- **Bench names (2026-10-09):** owner: "please also add test town center, barracks and stables" - the benches
+  `zzTESTKoreanTownCenter` / `Barracks` / `Stable` (22003-22005, on the test builder wagon) existed but used the
+  vanilla names; they now read "zzTEST Korean Town Center / Barracks / Stable (destruction bench)" (600038-600043).
 - **Korean House roofs r15e (2026-10-09):** owner: the TC roof "looks more contrasting and pronounced ... normals edit or
   more contrast? Explore the textures forensically". Same normal tilt per texel (24 deg mean) and brightness as the TC, but
   the TC rolls carry broad curvature and ~20-40 % more tile-scale albedo contrast (std 15.4 vs 12.7) on a matte

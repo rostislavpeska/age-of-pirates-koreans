@@ -32,6 +32,12 @@
       <string _locid="600025">zzTEST Korean House B (destruction bench)</string>
       <string _locid="600026">Hanok C (test)</string>
       <string _locid="600027">zzTEST Korean House C (destruction bench)</string>
+      <string _locid="600038">Korean Town Center (test)</string>
+      <string _locid="600039">zzTEST Korean Town Center (destruction bench)</string>
+      <string _locid="600040">Korean Barracks (test)</string>
+      <string _locid="600041">zzTEST Korean Barracks (destruction bench)</string>
+      <string _locid="600042">Korean Stable (test)</string>
+      <string _locid="600043">zzTEST Korean Stable (destruction bench)</string>
     </language>
   </stringtable>
 </stringmods>
