@@ -91,6 +91,12 @@ everything still missing for a fully playable, fully Korean civilization, most i
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
+- **Korean House gables r15c (2026-10-09):** owner: "maybe some player color decorations on the gables? ... TC too
+  decorative, barracks and stables use simpler. house can use even simpler one". Barracks/Stable: broad player-colour
+  frame + double-square emblem; the House: one painted frieze above the gable foot + one emblem standing on it
+  (Details.R). A game-camera ray test showed the 0.6 m roof overhang hides the gables above ~0.75 m on Houses A/B
+  and both porches, so the decoration sits low, where it is seen. The r14 tan diamond emblem was removed. The emblem
+  is a procedural rosette until the image harness answers (n8n unreachable 2026-10-09). Not yet seen in game.
 - **Korean House textures r15b (2026-10-09):** owner on r15: "the green on the roofs is masking everything beneath it" and
   "why the roof endings are pure grey?". Moss is now a translucent, grainy tint (opacity <= 0.8 with holes, the tile's
   own light/dark detail kept) in shorter cushions; the eave ends (r12 had flattened them to the TC grey, detail +-3)
