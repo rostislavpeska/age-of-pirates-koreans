@@ -92,6 +92,11 @@ everything still missing for a fully playable, fully Korean civilization, most i
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
+- **Korean House roofs r15e (2026-10-09):** owner: the TC roof "looks more contrasting and pronounced ... normals edit or
+  more contrast? Explore the textures forensically". Same normal tilt per texel (24 deg mean) and brightness as the TC, but
+  the TC rolls carry broad curvature and ~20-40 % more tile-scale albedo contrast (std 15.4 vs 12.7) on a matte
+  surface (roughness 207 vs 186). r15e: roof-field normals widened (blend with a mask-normalised blur) and amplified
+  x1.35, crowns/channels +-20 %, crest highlight, dark line under each course lip, roughness toward 207. ROOFS only.
 - **Korean House gables r15c (2026-10-09):** owner: "maybe some player color decorations on the gables? ... TC too
   decorative, barracks and stables use simpler. house can use even simpler one". Barracks/Stable: broad player-colour
   frame + double-square emblem; the House: one painted frieze above the gable foot + one emblem standing on it

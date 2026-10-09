@@ -348,7 +348,7 @@
   {
    "id": "korean_house_roofs",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15b over texture-r14 ROOFS: translucent grainy moss, textured eave ends around the approved grey; Painter generator masks + compose_r15.py; Normals unchanged); one page shared by House A/B/C, all stages",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15e over texture-r14 ROOFS: translucent moss, textured eave ends, TC-level roll contrast - widened/amplified roof-field normals, crests, course lines, matte roughness); one page shared by House A/B/C, all stages",
    "page": [
     2048,
     2048
@@ -357,15 +357,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_roofs_BaseColor",
-     "sha256": "f9411640bd9fc535ca19a4696fe972fdf2048ac5254f9feb49598b2906c107b7"
+     "sha256": "bcaff8e7c0a73dd1d8dbd5bf99446dcc47c7735221f7ad21bedecb728f1f0f97"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Normals",
-     "sha256": "ea619261349b40389a0f17c3c603e1065f2465e8d3791c8e81df17d6e899b410"
+     "sha256": "ff5cf9b3cf348670de9dd529bb0149d1364d128cd9f1364bad7485b4e10604a7"
     },
     "Masks": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Masks",
-     "sha256": "c9b1630a73ff0859d0da1296075759a0d1ca2230b6bf8985586fd61fad060149"
+     "sha256": "a88432d1069e7fe5c68e609cab2593f688d79eb19c58da2a26327b01d81b546f"
     }
    }
   }
