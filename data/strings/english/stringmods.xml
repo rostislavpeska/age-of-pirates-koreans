@@ -26,6 +26,12 @@
       <string _locid="600019">Villagers near a Korean Monk gather 10% faster.</string>
       <string _locid="600020">Seungbyeong</string>
       <string _locid="600021">Korean Monks can train warrior monks (Disciples).</string>
+      <string _locid="600022">Hanok A (test)</string>
+      <string _locid="600023">zzTEST Korean House A (destruction bench)</string>
+      <string _locid="600024">Hanok B (test)</string>
+      <string _locid="600025">zzTEST Korean House B (destruction bench)</string>
+      <string _locid="600026">Hanok C (test)</string>
+      <string _locid="600027">zzTEST Korean House C (destruction bench)</string>
     </language>
   </stringtable>
 </stringmods>

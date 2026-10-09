@@ -25,6 +25,14 @@
       "correction": "The option text named the burnt-timber region by mistake; the strip lies in the r65 clay region (x 528-704, y 768-1008 px) and stays inside it after the scale (x 529.5-702.5).",
       "source": "Owner-selected option in the Claude Code House-states session (KTC-176), 2026-10-09.",
       "recorded_by": "claude (House states, claim c-6ea3d06649)"
+    },
+    {
+      "id": "owner-house-garrison-flag-2026-10-09",
+      "text": "and garrison flag appears too high. The bone is always lower edge of the flagm, so bone shoulkd be lower and the pile possibly 15% higher",
+      "context": "Owner's game test of Korean House r14b (screenshot: the flag floating above the mast tip).",
+      "source": "Owner message in the Claude Code House-states session (KTC-176), 2026-10-09.",
+      "applied": "pole (Attachment.GarrisonFlag.Mast) +15 % about its base; BONE_GARRISONFLAG = new tip - 1.05 m cloth - 0.05 m (A 5.79 -> 4.995, B/C 6.07 -> 5.275)",
+      "recorded_by": "claude (House states)"
     }
   ]
 }

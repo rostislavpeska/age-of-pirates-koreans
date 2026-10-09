@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "texture-r14 + destruction r14 + engine winding (corner order reversed for the mirrored frame) + pole +15% / bone at the flag's lower edge (owner 2026-10-09)",
+  "author_blend_sha256": "783df1d637f81486583906cfb34e5ae0baee07d85fb5b5e267b502d4ae443545",
+  "author_payload_sha256": "ce982868a475816bb4f224aced14187c2f9056b082f414b5b9f35789870b6493",
+  "author_damaged_payload_sha256": "2574f2ac74c88c6fa3ce1c88b6ea3becde0c86f5f358e292c72e2bc859596b90",
+  "provenance": "House A texture-r14 + destruction r14 + engine winding (corner order reversed for the mirrored frame) + pole +15% / bone at the flag's lower edge (owner 2026-10-09): payload House_A_payload_mast.json + House_A_damaged_payload_mast.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 3822,
+        "position_f32_sha256": "eec9b3164a46b8770a9ad62c6182c755b232240ff676332f18f6545a9f9c61e0",
+        "raw_uv_f16_sha256": "eaaae7706d8745235c761b3aea2d1143ebff01229038a44db9437a8dd9b709c3"
+      },
+      "mata": {
+        "corners": 2496,
+        "position_f32_sha256": "d3a58d4725e799b616631a885c016c8de62999672081aaf023f307c332222aa1",
+        "raw_uv_f16_sha256": "c5e5cc8535279f049e30431c69c9a28e327b303ac91583417fff9e75fb76826d"
+      },
+      "matb": {
+        "corners": 2604,
+        "position_f32_sha256": "695b71518f85345acdf7da48e26d3ab05a87bec4b0359e767dc8272e960ca779",
+        "raw_uv_f16_sha256": "ad7c7cc7981d58b7f6d4259e1a7dc6a2af4a1b8965f0612b92d5f0f0dba60abf"
+      },
+      "matd": {
+        "corners": 1422,
+        "position_f32_sha256": "1981fdcfb981b6f454e22059f8de6d25ce8ffbc1bd54e0f0514bd20b50119572",
+        "raw_uv_f16_sha256": "0912341bb279e318282141a2c75f7835a1153e2162d3354941e8bb83608a9eca"
+      }
+    },
+    "damaged": {
+      "matc": {
+        "corners": 7596,
+        "position_f32_sha256": "c4401419d7089978989df341b057cff2af421525d0f578ce6719d167eb9dae66",
+        "raw_uv_f16_sha256": "71c0313dd7a1134334a048e9df9894d287e2f29c291900861b894786517e8110"
+      },
+      "mata": {
+        "corners": 3405,
+        "position_f32_sha256": "34d6f8544513d25b92b4ca3ddfa921a1631aea1a0d1609b440e6eeb4ef36cd9e",
+        "raw_uv_f16_sha256": "8cd1163d74c96949a629f648e69e5ed4ac5aac0fa29cc61bc5ae2c413801ade4"
+      },
+      "matb": {
+        "corners": 3441,
+        "position_f32_sha256": "c576452062fd3e151d336030ad3b3d29aefcdb70e3a9dee074e8f4d6e3f570b9",
+        "raw_uv_f16_sha256": "dafd934b1e9ca19c53bc65bb177e725e5501d91b58924bfa63c93e42bc6fb625"
+      },
+      "matd": {
+        "corners": 1422,
+        "position_f32_sha256": "ddbbbed87866e1192acb59f3fd582a55e937eb62d42d8475bd79cba14c13c982",
+        "raw_uv_f16_sha256": "f212c0f58b5afdce70c9583c02a3244492860872db7112098124682b87d5d3cf"
+      }
+    }
+  }
+}

@@ -50,7 +50,7 @@ def test_techs_activate_japan_and_the_visual_marker():
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(22)]
+    assert ids == [str(600000 + i) for i in range(28)]          # 600022-600027: zzTEST House benches A/B/C
     civ = xml(K / 'data/civmods.xml').find('civ')
     for field in ('homecityflagiconwpf', 'homecityflagbuttonwpf', 'postgameflagiconwpf'):
         assert (K / 'data/wpfg' / civ.findtext(field).replace(BS, '/')).is_file(), field
