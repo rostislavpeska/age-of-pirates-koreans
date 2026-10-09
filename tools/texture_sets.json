@@ -320,7 +320,7 @@
   {
    "id": "korean_house_walls",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15c over texture-r14 WALLS: weathering, gable player-colour frieze + emblem in Details.R placed by game-camera visibility; Normals unchanged); one page shared by House A/B/C, all stages",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15d over texture-r14 WALLS: weathering, gable player-colour frieze + image-harness emblem in Details.R placed by game-camera visibility; Normals unchanged); one page shared by House A/B/C, all stages",
    "page": [
     2048,
     2048
@@ -329,7 +329,7 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_walls_BaseColor",
-     "sha256": "27a71cef047768c176b05ab086f794e11024fe5f90670e9afd5f7b9954615a0b"
+     "sha256": "51f8a5d2f6f25a1563e68740d3d48479b984edf6c5dd176753094f866e454efd"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_walls_Normals",
@@ -337,11 +337,11 @@
     },
     "Masks": {
      "path": "buildings/korean_house/textures/korean_house_walls_Masks",
-     "sha256": "843e6a3f5589ef9877efd55b48591643bfd2167da3274a6d616ffea394ab90bc"
+     "sha256": "19f1bb846f7394eb98983f76abcbb5f5d956e3271f5cdc4b60683d7201e71390"
     },
     "Details": {
      "path": "buildings/korean_house/textures/korean_house_walls_Details",
-     "sha256": "88b92eaaa8de3c87e23e835da5f09636a8ba17e22527a0044f896d9fa826e77e"
+     "sha256": "071ef0ab180d7ac0c6c8f671a8c117afaf15bfd692a0aac7601f443835b968ec"
     }
    }
   },
