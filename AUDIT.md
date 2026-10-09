@@ -76,7 +76,12 @@ everything still missing for a fully playable, fully Korean civilization, most i
 - **Icons:** done 2026-10-09 - Korean monk (unit icon + 512 portrait) and the four monastery techs, generated
   through the image harness (5 paid calls, gpt-image low quality; provenance in `tools/provenance/icons_2026-10-09/`),
   bordered with `icon-forge`. The Hanok's icon and 512 portrait (2026-10-09, owner: "in the same style as Japanese Shrine") are a
-  Cycles render of Korean House B (`data/wpfg/resources/art/buildings/korean_house/`), building border by `icon-forge`. The owner found the tech icons all
+  Cycles render of Korean House B (`data/wpfg/resources/art/buildings/korean_house/`), building border by `icon-forge`. Redone
+  2026-10-09 (owner: "still need improvement to look cleaner", "somehow stylized", "use Gemini ... with strong prompt",
+  "clear front view"): a straight front render with de-weathered texture copies, one Gemini stylization edit with
+  the Shrine portrait as reference, the roof darkened back to the model's neutral slate (Gemini made it light and
+  bluish), a thin rim light on the roof outline; AoP `visual-detail-check` at 128/64/48 px: cleaner than the old one
+  (mottle 5.7 vs 8.1 at 64 px) and stands out more (0.36 vs 0.28; roof-edge contrast 10 vs 3, Shrine 18). The owner found the tech icons all
   amber; second set the same day with one palette per icon (6 more paid calls: one rejected 3x2 grid - a grid
   splits one image's detail between its cells -, four icons, one rejected Seungbyeong retry), "not much in AoE
   style". Third set wired the same day (4 paid calls, 15 in all) after AoP's icon visual language
