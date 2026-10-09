@@ -14,7 +14,7 @@ Generated files - never edit them by hand, edit the source named here:
                                    compiled from data/strings/english/stringmods.xml into every language folder
                                    (new strings are English only; owner rule 2026-10-08)
   art/buildings/town_center/town_center.xml, art/buildings/asian_civs/bansho/bansho.xml,
-  art/buildings/asian_civs/stable/stable.xml
+  art/buildings/asian_civs/stable/stable.xml, art/buildings/asian_civs/castle/castle.xml
                                    AoP's override of that animfile when AoP has one, else vanilla, plus the Korean
                                    branch (tools/korean_visuals.py; the Korean models stay in AoP's art/)
   sound/soundsetsde.mods.xml       AoP's file + tools/korean_soundsets.xml (the engine's merge of this file across

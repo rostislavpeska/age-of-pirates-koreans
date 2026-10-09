@@ -726,6 +726,185 @@
     "name_board": null,
     "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
    }
+  },
+  "korean_castle": {
+   "model": "korean_castle",
+   "names": [
+    "Castle",
+    "Korean Castle"
+   ],
+   "_doc": "Korean castle (Colonial castle stage1, premium textures M7), castle states r1: intact + damaged + HKT on the vanilla Japanese castle age 2 donor graph (japanese_castle_age2(_damag)); garrison flag on the ridge pole (donor bone moved, scale 0.8), BONE_HITPOINTBAR, bone_launchpoint01-06 at the gun ports (owner: \"set up all attack bones\").",
+   "files": {
+    "intact": "korean_castle.gr2",
+    "damaged": "korean_castle_damaged.gr2",
+    "hkt": "korean_castle_damaged.hkt",
+    "intact_material": "korean_castle.material",
+    "damaged_material": "korean_castle_damaged.material",
+    "animfile": "korean_castle.xml"
+   },
+   "texture_budget": {
+    "class": "medium",
+    "confirmed_by": "owner-castle-medium-2026-10-10",
+    "models": [
+     "korean_castle"
+    ],
+    "_doc": "owner 2026-10-10: Castle = medium - the own R0 2048 (walls, pavilion, roof details) + R2 1024 (roof tiles) pages, one set for every stage; the shared r65 atlas (construction beams, destruction caps, hidden backing) is pinned, not counted",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/castle_shared_owner_evidence.json",
+       "sha256": "f46abeeb3f4955842cb53a87fdfb103e5eb0c6f45e13c7991a7ff21564a42cfd",
+       "owner_quote": "after you're done, pull all changes from all repos - age of pirates korean buildings blender and the korean mod, then implement the model to the game incl.. destruction and construction. For construction - just the stone part will be built, the rest will be beams using the generic atlas - check town center"
+      }
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "Object02",
+    "japanese_castle_age2",
+    "bone_garrisonflag",
+    "BONE_HITPOINTBAR",
+    "bone_launchpoint01",
+    "bone_launchpoint02",
+    "bone_launchpoint03",
+    "bone_launchpoint04",
+    "bone_launchpoint05",
+    "bone_launchpoint06"
+   ],
+   "physical_mounts": [
+    {
+     "bone": "bone_garrisonflag",
+     "position": [
+      0.0,
+      11.5717,
+      0.0
+     ],
+     "body": "flagpolegarrison_wood_solid_p2b_ondeath_01",
+     "bottom_y": 11.16,
+     "top_y": 12.82,
+     "_doc": "the garrison pole on the ridge; flag cloth (0.8 x 1.5 m) from the bone up, 5 cm under the tip; damaged: the donor's own garrison-pole body holds the pole only"
+    }
+   ],
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   },
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_castle_r1.json",
+    "sha256": "79ca55b546d4dbb492b93bacbe4b2b5e0986640e5a7b55786dded07c3c1ac2e5"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
+  },
+  "korean_castle_con": {
+   "model": "korean_castle",
+   "names": [
+    "Castle",
+    "Korean Castle"
+   ],
+   "_doc": "Korean castle last construction stage (p66): the masonry built, the pavilion as fresh beams on its real geometry on r65",
+   "files": {
+    "intact": "korean_castle_con.gr2",
+    "intact_material": "korean_castle_con.material",
+    "animfile": "korean_castle.xml"
+   },
+   "texture_budget": {
+    "class": "medium",
+    "confirmed_by": "owner-castle-medium-2026-10-10",
+    "models": [
+     "korean_castle"
+    ],
+    "_doc": "owner 2026-10-10: Castle = medium - the own R0 2048 (walls, pavilion, roof details) + R2 1024 (roof tiles) pages, one set for every stage; the shared r65 atlas (construction beams, destruction caps, hidden backing) is pinned, not counted",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/castle_shared_owner_evidence.json",
+       "sha256": "f46abeeb3f4955842cb53a87fdfb103e5eb0c6f45e13c7991a7ff21564a42cfd",
+       "owner_quote": "after you're done, pull all changes from all repos - age of pirates korean buildings blender and the korean mod, then implement the model to the game incl.. destruction and construction. For construction - just the stone part will be built, the rest will be beams using the generic atlas - check town center"
+      }
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "Object02",
+    "japanese_castle_age2_construction",
+    "japanese_castle_age2_construction_M0",
+    "BONE_HITPOINTBAR"
+   ],
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_castle_con_r1.json",
+    "sha256": "25ce01782a18bf19880aabf7d1d1ac92d31a1874b78d300f61a6590aea46d8d6"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
   }
  }
 }

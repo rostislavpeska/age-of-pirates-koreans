@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "castle-states-r1 construction r2",
+  "author_blend_sha256": "e833d3c0a175e5d83a6e15f52c728211896262f1827096984e013436102b3207",
+  "author_payload_sha256": "9f4a590d1cebeb8b8e6f0205a84a003ecd91cae347ed97e276eb5f45c872be77",
+  "provenance": "Castle castle_con castle-states-r1 construction r2: payload castle_con_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 7404,
+        "position_f32_sha256": "012fffd69c1fe401a81f5cd93697f4f3dabb189573b7e36d468b5ce9e2ce776f",
+        "raw_uv_f16_sha256": "05233a1c397a9f756adfe1393243a0ffd16175bc4f4643b663e6446e4a67af19"
+      },
+      "matc": {
+        "corners": 12144,
+        "position_f32_sha256": "afffc68f85046593314de1e88f542705913011c02fc6924d921d4a5c99defe7c",
+        "raw_uv_f16_sha256": "deb2cee8127cb6d4247a5011a52c96241a63e7e96f52f5bf3fc0c104b1cd1f57"
+      }
+    },
+    "damaged": {}
+  }
+}

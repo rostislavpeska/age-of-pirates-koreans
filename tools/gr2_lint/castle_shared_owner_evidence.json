@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner message in the Claude Code castle session, 2026-10-10 (no app message id); the same words are tools/gr2_lint/owner_authorization.json item owner-castle-construction-generic-atlas-2026-10-10. Construction beams on the generic (r65) atlas by the owner; the destruction caps and the hidden backing use the same shared atlas as the Korean House/TC precedent.",
+  "owner_quote": "after you're done, pull all changes from all repos - age of pirates korean buildings blender and the korean mod, then implement the model to the game incl.. destruction and construction. For construction - just the stone part will be built, the rest will be beams using the generic atlas - check town center",
+  "models": [
+    "korean_castle",
+    "korean_castle_damaged",
+    "korean_castle_con"
+  ],
+  "source_names": [
+    "Korean shared matc r65"
+  ]
+}

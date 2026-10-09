@@ -48,7 +48,7 @@ everything still missing for a fully playable, fully Korean civilization, most i
    turtle ship, long-range archers, Panokseon).
 7. **Wonders** are the five Japanese ones (Golden Pavilion, Great Buddha, Shogunate, Torii Gates, Toshogu Shrine)
    with Japanese art, names and age-up bonuses.
-8. **Every other building** is Japanese by culture (the Hanok has its Korean model from the Colonial Age): Dojo, Castle, Consulate, Rice Paddy, Dock,
+8. **Every other building** is Japanese by culture (the Hanok and, from 2026-10-10, the Castle have their Korean models from the Colonial Age; the Castle: intact + construction p66 + Havok destruction on the Japanese castle donor, `art/buildings/korean_castle/`, gr2_lint 36/0/0 and 17/0/0, bench `zzTESTKoreanCastle`, not yet seen in game): Dojo, Consulate, Rice Paddy, Dock,
    Market, walls, Trading Post.
 9. **Villagers and explorers**: villagers are now the Asian (Chinese) villager (owner, 2026-10-08), but the
    home city still ships **Japanese** villagers (`YPHCShipSettlersAsian1/2/5`) and Zen Diet targets the Japanese

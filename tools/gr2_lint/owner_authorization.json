@@ -33,6 +33,31 @@
       "source": "Owner message in the Claude Code House-states session (KTC-176), 2026-10-09.",
       "applied": "pole (Attachment.GarrisonFlag.Mast) +15 % about its base; BONE_GARRISONFLAG = new tip - 1.05 m cloth - 0.05 m (A 5.79 -> 4.995, B/C 6.07 -> 5.275)",
       "recorded_by": "claude (House states)"
+    },
+    {
+      "id": "owner-castle-medium-2026-10-10",
+      "text": "Yes: Castle = medium",
+      "question": "No texture is added. gr2_lint just needs your words for the castle's existing pages: R0 2048 (walls, pavilion, roof details) + R2 1024 (roof tiles), with the shared r65 atlas for beams, caps and hidden backing (shared, not counted). Confirm the Korean castle as class medium (2048 + 1024)?",
+      "options": [
+        "Yes: Castle = medium",
+        "Castle = large"
+      ],
+      "source": "Owner-selected option in the Claude Code castle session (premium textures -> game states), 2026-10-10.",
+      "recorded_by": "claude (castle states r1)"
+    },
+    {
+      "id": "owner-castle-construction-generic-atlas-2026-10-10",
+      "text": "after you're done, pull all changes from all repos - age of pirates korean buildings blender and the korean mod, then implement the model to the game incl.. destruction and construction. For construction - just the stone part will be built, the rest will be beams using the generic atlas - check town center",
+      "context": "the castle construction stage: retained masonry + fresh beams on the shared r65 (generic) atlas",
+      "source": "Owner message in the Claude Code castle session, 2026-10-10.",
+      "recorded_by": "claude (castle states r1)"
+    },
+    {
+      "id": "owner-castle-construction-shape-2026-10-10",
+      "text": "No, the shape must fillow the real shape of gthe building | beams must follow the palace on the top",
+      "context": "review of construction r1 (a generic hip frame); r2 builds the pavilion members on their real geometry",
+      "source": "Owner messages in the Claude Code castle session, 2026-10-10.",
+      "recorded_by": "claude (castle states r1)"
     }
   ]
 }

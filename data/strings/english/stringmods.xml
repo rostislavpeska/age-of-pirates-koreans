@@ -52,6 +52,8 @@
       <string _locid="600045">Seungbyeong (monk soldier)</string>
       <string _locid="600046">Korean monk soldier armed with a glaive. Costs no population (at most 10, 15 with the Seungbyeong monastery tech). Good against cavalry and light infantry.</string>
       <string _locid="600047">Monk soldier: no population cost, good against cavalry.</string>
+      <string _locid="600048">Korean Castle (test)</string>
+      <string _locid="600049">zzTEST Korean Castle (destruction bench)</string>
     </language>
   </stringtable>
 </stringmods>

@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "castle-states-r1 (M7, masonry fracture r3d)",
+  "author_blend_sha256": "27a0e691cfeef78a948d071d6751bbb716b26e2672c887dea017fc0e075ee56d",
+  "author_payload_sha256": "cdbd6a9d111a35d4dd1eda054833d0a37e58467d90bc96a354bd2bfda8c568ef",
+  "author_damaged_payload_sha256": "572b48bd86b2cfcd2f55acf31343edbc2600d4c32c88832931e5c8c4377820f0",
+  "provenance": "Castle castle castle-states-r1 (M7, masonry fracture r3d): payload castle_payload.json + castle_damaged_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 24198,
+        "position_f32_sha256": "1ca8f91f5386a8a77df227b44e2a3145be45f0984c834bd4e9f5092e4623d458",
+        "raw_uv_f16_sha256": "c6c1586d24e4a13be76f39783eb778a7601c198ab92b2450638d795afec39dc6"
+      },
+      "matc": {
+        "corners": 1152,
+        "position_f32_sha256": "81133f7a74c21a4ad52d9d5b69ee582ff28342b18c65fc5ba16fb6c393b6c9c5",
+        "raw_uv_f16_sha256": "fdc0a31ffe98623d3ee371a2e8c700ac6964cec1ca9d078603cae9a4f3e31ec4"
+      },
+      "matb": {
+        "corners": 2298,
+        "position_f32_sha256": "240dfd7da573ddecfdf59d38fe0479c675dd4538a1e2da837fba1bc8d9415f17",
+        "raw_uv_f16_sha256": "e0a512b609763f6439071e162f803f26c49cce586431c127756c4ee4d2ed43b8"
+      }
+    },
+    "damaged": {
+      "matc": {
+        "corners": 38841,
+        "position_f32_sha256": "40aedee57a4b1a3bb9eaf30d0aede56efc4b8b953d8e6ad5a22f8efa5a2b9107",
+        "raw_uv_f16_sha256": "b3821eb53c59febd29b5c7150c328f4a1c0fc466b234862f5421809c0e479ffe"
+      },
+      "mata": {
+        "corners": 39990,
+        "position_f32_sha256": "9b59da97af7ab2d7de593877646d7b1081ca812a460954f6fd9d6d8d0eb6ab64",
+        "raw_uv_f16_sha256": "45cebc0d8df6ec3bbd6313c383ed89f4145601b946b094495b4aceb34290176e"
+      },
+      "matb": {
+        "corners": 4455,
+        "position_f32_sha256": "d651b16392f4878aeb63dc962b4852df44a0b9f925f5d9833479b24fd60c1498",
+        "raw_uv_f16_sha256": "3e903dc9363ec8c5907fe95e3ec00cfb4b527662f9d2c787a0a4aee3da746636"
+      }
+    }
+  }
+}

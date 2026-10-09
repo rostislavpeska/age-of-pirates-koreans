@@ -46,6 +46,11 @@ BUILDINGS = [
      'art/zbench_korean_military/barracks/korean_barracks_physics.xml', 'japanese', True),
     ('Art/buildings/asian_civs/stable/stable.xml.XMB', 'art/buildings/asian_civs/stable/stable.xml',
      'art/zbench_korean_military/stable/korean_stable_physics.xml', 'japanese', False),
+    # Korean castle (owner 2026-10-10: "implement the model to the game incl. destruction and construction"): the Colonial
+    # castle (premium textures M7) for the Japanese castle proto under zpKoreanVisuals - Frontier/Fortified castle techs
+    # keep the Korean look (one Korean castle model so far); gr2_lint korean_castle / korean_castle_con pass
+    ('Art/buildings/asian_civs/castle/castle.xml.XMB', 'art/buildings/asian_civs/castle/castle.xml',
+     'art/buildings/korean_castle/korean_castle.xml', 'japanese', False),
 ]
 
 MARKER = 'zpkoreanvisuals'
@@ -146,6 +151,11 @@ def merge(vanilla, korean_text, culture, add_attack):
     close = out.rindex('</logic>', t0, t1)
     line0 = out.rindex('\n', 0, close) + 1
     ind = out[line0:close]                       # indentation of the Tech logic's closing tag
+    if ind.strip():                              # a compact base (AoP's castle.xml: one line per culture branch):
+        none = re.match(r'<logic type="Tech">\s*(<none>.*?</none>)', out[t0:t1], re.S)   # the marker goes in inline
+        block = ''.join(['<%s><logic type="Tech">' % MARKER, none.group(1) if none else '',
+                         '<colonialize>', completion, '</colonialize></logic></%s>' % MARKER])
+        return out[:close] + block + out[close:]
     none = re.search(r'\n(%s  <none>\n.*?\n%s  </none>)\n' % (ind, ind), out[t0:t1], re.S)
     korean = '\n'.join((ind + '        ' + l[4:]) if l.startswith('    ') else (ind + '        ' + l)
                        for l in completion.split('\n'))

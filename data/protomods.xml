@@ -625,7 +625,8 @@
      straight from their animfiles (no civ / age logic): zzTESTKoreanTownCenter / Barracks / Stable, built by
      zzTESTKoreanBuilderWagon. zzTESTKoreanHouseA/B/C (22007-22009, owner 2026-10-09): one Korean House variant
      each, the shipped GR2s through art/zbench_korean_house (no age logic: the editor shows the Korean model) -
-     the zpHouseKorean values, to test construction, garrison flag and destruction. Moved from AoP (21207, 30160, 30162, 30164); vanilla string ids. -->
+     the zpHouseKorean values, to test construction, garrison flag and destruction. zzTESTKoreanCastle (22011, 2026-10-10): the Korean
+     castle through its own BuildingCompletion-only animfile (buildings\korean_castle\korean_castle.xml), ypCastle values. Moved from AoP (21207, 30160, 30162, 30164); vanilla string ids. -->
 <unit id="22003" name="zzTESTKoreanTownCenter">
     <dbid>22003</dbid>
     <displaynameid>600038</displaynameid>
@@ -1190,6 +1191,101 @@
       <damagebonus type="AbstractLightInfantry">1.500000</damagebonus>
     </protoaction>
   </unit>
+<unit id="22011" name="zzTESTKoreanCastle">
+    <dbid>22011</dbid>
+    <displaynameid>600048</displaynameid>
+    <editornameid>600049</editornameid>
+    <obstructionradiusx>4.0000</obstructionradiusx>
+    <obstructionradiusz>4.0000</obstructionradiusz>
+    <maxvelocity>0.0000</maxvelocity>
+    <movementtype>land</movementtype>
+    <animfile>buildings\korean_castle\korean_castle.xml</animfile>
+    <deadreplacement>BuildingRubble4x4</deadreplacement>
+    <deadreplacementlifespan>15</deadreplacementlifespan>
+    <impacttype>Wood</impacttype>
+    <physicsinfo>blockhouse</physicsinfo>
+    <placementfile>buildingsmall.xml</placementfile>
+    <icon>resources\art\buildings\asian_civs\castle\japan\japan_castle_icon_64.png</icon>
+    <portraiticon>resources\art\buildings\asian_civs\castle\japan\japan_castle_icon_portrait.png</portraiticon>
+    <rollovertextid>62978</rollovertextid>
+    <shortrollovertextid>62977</shortrollovertextid>
+    <initialhitpoints>3000.0000</initialhitpoints>
+    <maxhitpoints>3000.0000</maxhitpoints>
+    <los>32.0000</los>
+    <projectileprotounit>Arrow</projectileprotounit>
+    <unitaitype>RangedCombative</unitaitype>
+    <buildpoints>55.0000</buildpoints>
+    <buildlimit>999</buildlimit>
+    <bounty>120.0000</bounty>
+    <buildbounty>60.0000</buildbounty>
+    <cost resourcetype="Wood">250.0000</cost>
+    <cost resourcetype="Gold">50.0000</cost>
+    <buildingworkrate>1.0000</buildingworkrate>
+    <maxcontained>20</maxcontained>
+    <allowedage>0</allowedage>
+    <armor type="Siege" value="0.0000" />
+    <builderlimit>4</builderlimit>
+    <unittype>LogicalTypeValidSabotage</unittype>
+    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeBuildingsNotWalls</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttackNoVillagers</unittype>
+    <unittype>LogicalTypeVillagersAttack</unittype>
+    <unittype>LogicalTypeHandUnitsAttack</unittype>
+    <unittype>LogicalTypeShipsAndBuildings</unittype>
+    <unittype>LogicalTypeRangedUnitsAttack</unittype>
+    <unittype>LogicalTypeBuildingsNotWallsOrGroves</unittype>
+    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
+    <unittype>BuildingClass</unittype>
+    <unittype>MilitaryBuilding</unittype>
+    <unittype>Building</unittype>
+    <unittype>LogicalTypeBuildingsHASRangedAttack</unittype>
+    <unittype>HasBountyValue</unittype>
+    <unittype>AbstractDefensiveBuilding</unittype>
+    <unittype>ConstructableBuilding</unittype>
+    <flag>CollidesWithProjectiles</flag>
+    <flag>Immoveable</flag>
+    <flag>NoBloodOnDeath</flag>
+    <flag>ObscuresUnits</flag>
+    <flag>NonAutoFormedUnit</flag>
+    <flag>Doppled</flag>
+    <flag>SelectWithObstruction</flag>
+    <flag>PaintTextureWhenPlacing</flag>
+    <flag>FlattenGround</flag>
+    <flag>AllowAutoGarrison</flag>
+    <flag>Tracked</flag>
+    <flag>DisplayRange</flag>
+    <notcontain>AbstractMonk</notcontain>
+    <notcontain>ExcludeFromRansom</notcontain>
+    <notcontain>AbstractFishingBoat</notcontain>
+    <contain>AbstractVillager</contain>
+    <contain>AbstractInfantry</contain>
+    <command page="10" column="5">Eject</command>
+    <command page="10" column="7">Delete</command>
+    <flag>StartEnabled</flag>
+    <tactics>castle.tactics</tactics>
+    <protoaction>
+      <name>AntiShipAttack</name>
+      <damage>100.000000</damage>
+      <damagetype>Siege</damagetype>
+      <minrange>0.000000</minrange>
+      <maxrange>40.000000</maxrange>
+      <rof>3.000000</rof>
+      <damagebonus type="AbstractSiegeTrooper">0.500000</damagebonus>
+    </protoaction>
+    <protoaction>
+      <name>RangedAttack</name>
+      <damage>30.000000</damage>
+      <damagetype>Ranged</damagetype>
+      <minrange>0.000000</minrange>
+      <maxrange>24.000000</maxrange>
+      <rof>3.000000</rof>
+      <damagebonus type="AbstractVillager">0.250000</damagebonus>
+      <damagebonus type="AbstractCavalry">1.500000</damagebonus>
+      <damagebonus type="AbstractSiegeTrooper">0.500000</damagebonus>
+      <damagebonus type="AbstractLightInfantry">1.300000</damagebonus>
+    </protoaction>
+  </unit>
 <unit id="22006" name="zzTESTKoreanBuilderWagon">
   <dbid>22006</dbid>
   <displaynameid>30679</displaynameid>
@@ -1258,6 +1354,7 @@
   <train row="0" page="6" column="3">zzTESTKoreanHouseA</train>
   <train row="0" page="6" column="4">zzTESTKoreanHouseB</train>
   <train row="0" page="6" column="5">zzTESTKoreanHouseC</train>
+  <train row="0" page="6" column="6">zzTESTKoreanCastle</train>
   <command page="10" column="1">Stop</command>
   <command page="10" column="7">Delete</command>
   <tactics>test_korean_builder.tactics</tactics>
