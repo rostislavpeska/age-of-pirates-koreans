@@ -1,11 +1,11 @@
 {
   "schema": 1,
   "convention": "raw_gr2=(author_u,1-author_v)",
-  "author_checkpoint": "texture-r14 + destruction r14 + engine winding (corner order reversed for the mirrored frame) + pole +15% / bone at the flag's lower edge (owner 2026-10-09)",
+  "author_checkpoint": "r14c + progressive destruction r2 (stage quota 1.3x vanilla, support pass; owner 2026-10-09)",
   "author_blend_sha256": "783df1d637f81486583906cfb34e5ae0baee07d85fb5b5e267b502d4ae443545",
   "author_payload_sha256": "ce982868a475816bb4f224aced14187c2f9056b082f414b5b9f35789870b6493",
-  "author_damaged_payload_sha256": "2574f2ac74c88c6fa3ce1c88b6ea3becde0c86f5f358e292c72e2bc859596b90",
-  "provenance": "House A texture-r14 + destruction r14 + engine winding (corner order reversed for the mirrored frame) + pole +15% / bone at the flag's lower edge (owner 2026-10-09): payload House_A_payload_mast.json + House_A_damaged_payload_mast.json; derived from author payloads, not from the GR2",
+  "author_damaged_payload_sha256": "1b18952ed852d40e763ab39362c055d6c0c84854ac8c075d9a71b8665556a6d0",
+  "provenance": "House A r14c + progressive destruction r2 (stage quota 1.3x vanilla, support pass; owner 2026-10-09): payload House_A_payload_mast.json + House_A_damaged_payload_mast.json; derived from author payloads, not from the GR2",
   "expected": {
     "intact": {
       "matc": {
@@ -31,9 +31,9 @@
     },
     "damaged": {
       "matc": {
-        "corners": 7596,
-        "position_f32_sha256": "c4401419d7089978989df341b057cff2af421525d0f578ce6719d167eb9dae66",
-        "raw_uv_f16_sha256": "71c0313dd7a1134334a048e9df9894d287e2f29c291900861b894786517e8110"
+        "corners": 7632,
+        "position_f32_sha256": "e2f7a3662fd5934922a4154f87119174041ba4e636581723ce41ebb9bebc6a43",
+        "raw_uv_f16_sha256": "0d7f821294a3b1a69b376ab8ecfa7b3971959633aa1eeaf11b230234d154661b"
       },
       "mata": {
         "corners": 3405,
@@ -41,9 +41,9 @@
         "raw_uv_f16_sha256": "8cd1163d74c96949a629f648e69e5ed4ac5aac0fa29cc61bc5ae2c413801ade4"
       },
       "matb": {
-        "corners": 3441,
-        "position_f32_sha256": "c576452062fd3e151d336030ad3b3d29aefcdb70e3a9dee074e8f4d6e3f570b9",
-        "raw_uv_f16_sha256": "dafd934b1e9ca19c53bc65bb177e725e5501d91b58924bfa63c93e42bc6fb625"
+        "corners": 3501,
+        "position_f32_sha256": "f73bd36f557ecf83d87b6f27729547700451c92357a662eb872011a85d33d570",
+        "raw_uv_f16_sha256": "db4de7b7568c8e592b944a290a8eae681c816669a9fb6a292b1db90711e2d598"
       },
       "matd": {
         "corners": 1422,

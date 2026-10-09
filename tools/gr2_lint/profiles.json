@@ -14,7 +14,7 @@
     "House A/B/C",
     "Hanok"
    ],
-   "_doc": "Korean House A (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_01(_damaged). Intact + damaged + HKT + materials + animfile. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls).",
+   "_doc": "Korean House A (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_01(_damaged). Intact + damaged + HKT + materials + animfile. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls). r14d: progressive destruction - stage bodies carry 14-20 % of the surface (vanilla 12-18 %; r14c 2.7-6.6 %).",
    "files": {
     "intact": "korean_house_a.gr2",
     "damaged": "korean_house_a_damaged.gr2",
@@ -127,8 +127,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_a_r14c.json",
-    "sha256": "fa93d577671ecaa99251d047688adef1c324d06b0ea8d048951616dd00d03eef"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_a_r14d.json",
+    "sha256": "aebaef432ac1111c0f1aee8bd2f8ab9d46762c1c35bf9e6364dd0ff60b6741a5"
    },
    "handedness": {
     "expect_sign": 1,
@@ -254,7 +254,7 @@
     "House A/B/C",
     "Hanok"
    ],
-   "_doc": "Korean House B (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_02(_damaged). Intact + damaged + HKT + materials + animfile. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls).",
+   "_doc": "Korean House B (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_02(_damaged). Intact + damaged + HKT + materials + animfile. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls). r14d: progressive destruction - stage bodies carry 14-20 % of the surface (vanilla 12-18 %; r14c 2.7-6.6 %).",
    "files": {
     "intact": "korean_house_b.gr2",
     "damaged": "korean_house_b_damaged.gr2",
@@ -368,8 +368,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_b_r14c.json",
-    "sha256": "9b812ce27acaa594edc7423e219f1602a0b11810b046d7bca1af344a68684d09"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_b_r14d.json",
+    "sha256": "e9f98ec3be9ded6ad4c3880a93a2edd8966ebb59721dadb6bd5125e834c8a589"
    },
    "handedness": {
     "expect_sign": 1,
@@ -495,7 +495,7 @@
     "House A/B/C",
     "Hanok"
    ],
-   "_doc": "Korean House C (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_03(_damaged). Intact + damaged + HKT + materials + animfile. Owner 2026-10-09 (owner_authorization.json owner-house-c-receiver-uv-2026-10-09): the export scales the Roof.Main.Receiver matc strip by 3% (authored 54.19 t/u, 53.53 after float16 UVs); its contract is built from the adjusted payloads. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls).",
+   "_doc": "Korean House C (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_03(_damaged). Intact + damaged + HKT + materials + animfile. Owner 2026-10-09 (owner_authorization.json owner-house-c-receiver-uv-2026-10-09): the export scales the Roof.Main.Receiver matc strip by 3% (authored 54.19 t/u, 53.53 after float16 UVs); its contract is built from the adjusted payloads. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls). r14d: progressive destruction - stage bodies carry 14-20 % of the surface (vanilla 12-18 %; r14c 2.7-6.6 %).",
    "files": {
     "intact": "korean_house_c.gr2",
     "damaged": "korean_house_c_damaged.gr2",
@@ -608,8 +608,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_c_r14c.json",
-    "sha256": "8bc6ffc38dbedbf50cf2cb0c4db5b93d2d30c55e293ff67d30104ab4d02b2486"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_c_r14d.json",
+    "sha256": "f4679f6b41c0c6db6996c9cdf68ecf792646c8f66138a231c3e7a1060f0f0c4d"
    },
    "handedness": {
     "expect_sign": 1,
