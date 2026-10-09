@@ -97,6 +97,12 @@ everything still missing for a fully playable, fully Korean civilization, most i
   (porch <-> main, `roof_junction.py`, Houses B/C) drives a valley at texture level: a weathered lime-mortar seam on
   the junction, a calmer, darker channel ~0.1-0.16 m each side (roll relief eased in the normal map), a cut-tile line,
   moss and grime collecting along the valley. Rule in korean-buildings-blender `patterns/korean/roof_surface_finish.md`.
+- **Korean House roof valley tiles r15g/r15h (2026-10-09):** owner on r15f: "I don't see it. It needs special tiles
+  matching on both sides - study real Korean valley ridges", then "almost there ... a bit more subtle", "thinner".
+  The seam became a hoecheom valley (회첨골): a narrow gutter (~0.16 m) of its own pan tiles running down the valley,
+  courses at equal heights on both roofs so the laps meet in matching V's, field tiles cut to the gutter edge with small
+  lime plugs in the cut cover rolls, gutter toned towards the field tiles, shallow concave relief and lap steps in the
+  normal map. Roofs BaseColor/Masks/Normals only; walls unchanged.
 - **Bench names (2026-10-09):** owner: "please also add test town center, barracks and stables" - the benches
   `zzTESTKoreanTownCenter` / `Barracks` / `Stable` (22003-22005, on the test builder wagon) existed but used the
   vanilla names; they now read "zzTEST Korean Town Center / Barracks / Stable (destruction bench)" (600038-600043).
