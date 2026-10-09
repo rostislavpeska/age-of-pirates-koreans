@@ -1,0 +1,27 @@
+{
+  "request": {
+    "prompt": "STILL LIFE: a Korean celadon-green glazed medicine jar with its lid set aside, a pale ginseng root with fine rootlets, a small bundle of thin bronze acupuncture needles tied with a red cord, and a few dried herb leaves, arranged close together on a dark wooden tray. Background: deep jade green, plain with a soft vignette.\nAge of Empires III Definitive Edition tech icon: one subject, centred, filling most of the square, strong key light and rim light, crisp edges, readable at 64 pixels; no text, no letters, no numbers, no border, no frame.\nStylised video-game icon render, NOT a photograph and NOT photorealistic: clean hand-painted game-asset look, saturated colours, simplified textures, no camera lens effects, no photographic depth of field.",
+    "quality": "low"
+  },
+  "references": [],
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "usage": {
+    "input_tokens": 172,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 172
+    },
+    "output_tokens": 272,
+    "output_tokens_details": {
+      "image_tokens": 272,
+      "text_tokens": 0
+    },
+    "total_tokens": 444
+  },
+  "revised_prompts": [],
+  "files": [
+    "C:\\Users\\TIGO\\AppData\\Local\\Temp\\claude\\C--Users-TIGO-Games-Age-of-Empires-3-DE-76561198347905238-mods-local-age-of-pirates\\9a3f55d9-a13c-4be3-8a29-86f909d798a5\\scratchpad\\icons_v3\\hyangyak_v3_1.png"
+  ],
+  "time": "2026-10-09T09:25:46"
+}

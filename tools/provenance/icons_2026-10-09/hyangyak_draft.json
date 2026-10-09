@@ -1,0 +1,27 @@
+{
+  "request": {
+    "prompt": "An open antique Korean medical book with hand-written Hanja columns (illegible, decorative), ginseng roots, dried medicinal herbs, a small brass mortar and acupuncture needles on a wooden table, a monk's hand preparing herbal medicine. Painterly historical strategy-game icon in the style of Age of Empires III Definitive Edition: rich oil-paint look, warm dramatic lighting, strong readable silhouette, centered composition that reads at 64 pixels, dark muted background, no text, no letters, no border, no frame.",
+    "quality": "low"
+  },
+  "references": [],
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "usage": {
+    "input_tokens": 111,
+    "input_tokens_details": {
+      "image_tokens": 0,
+      "text_tokens": 111
+    },
+    "output_tokens": 272,
+    "output_tokens_details": {
+      "image_tokens": 272,
+      "text_tokens": 0
+    },
+    "total_tokens": 383
+  },
+  "revised_prompts": [],
+  "files": [
+    "C:\\Users\\TIGO\\AppData\\Local\\Temp\\claude\\C--Users-TIGO-Desktop-WORKSPACE-korean-buildings-blender\\9a3f55d9-a13c-4be3-8a29-86f909d798a5\\scratchpad\\icons\\hyangyak_draft_1.png"
+  ],
+  "time": "2026-10-09T01:30:41"
+}

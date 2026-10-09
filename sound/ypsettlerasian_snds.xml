@@ -1,0 +1,243 @@
+<protounitsounddef>
+  <protounit name="ypSettlerAsian">
+    <soundtype name="Creation">
+      <soundset name="SettlerBirth" />
+    </soundtype>
+    <soundtype name="Grunt">
+      <variationlogic>
+        <choice name="0">
+          <soundset name="GenericMaleGrunt" />
+        </choice>
+        <choice name="1">
+          <soundset name="GenericFemaleGrunt" />
+        </choice>
+      </variationlogic>
+    </soundtype>
+    <soundtype name="Death">
+      <variationlogic>
+        <choice name="0">
+          <soundset name="GenericMaleDeath" />
+        </choice>
+        <choice name="1">
+          <soundset name="GenericFemaleDeath" />
+        </choice>
+      </variationlogic>
+    </soundtype>
+    <soundtype name="Select">
+      <variationlogic>
+        <choice name="0">
+          <civlogic>
+            <choice name="none">
+              <soundset name="ChineseVillagerM_Select" />
+            </choice>
+            <choice name="zpKoreans">
+              <soundset name="zpKoreanVillagerM_Select" />
+            </choice>
+          </civlogic>
+        </choice>
+        <choice name="1">
+          <civlogic>
+            <choice name="none">
+              <soundset name="ChineseVillagerF_Select" />
+            </choice>
+            <choice name="zpKoreans">
+              <soundset name="zpKoreanVillagerF_Select" />
+            </choice>
+          </civlogic>
+        </choice>
+      </variationlogic>
+    </soundtype>
+    <soundtype name="Acknowledge">
+      <variationlogic>
+        <choice name="0">
+          <targetlogic>
+            <choice name="default">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_Acknowledge" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_Acknowledge" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="enemy">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_Attack" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_Attack" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="build">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_Build" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_Build" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="Huntable">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_GatherMeat" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_GatherMeat" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="Tree">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_GatherWood" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_GatherWood" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="AbstractMine">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_GatherCoin" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_GatherCoin" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="AbstractFarm">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_Farm" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_Farm" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="AbstractResourceCrate">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_Acknowledge" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_Acknowledge" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="AbstractFruit">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerM_GatherFruit" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerM_GatherFruit" />
+                </choice>
+              </civlogic>
+            </choice>
+          </targetlogic>
+        </choice>
+        <choice name="1">
+          <targetlogic>
+            <choice name="default">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_Acknowledge" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_Acknowledge" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="enemy">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_Attack" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_Attack" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="build">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_Build" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_Build" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="Huntable">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_GatherMeat" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_GatherMeat" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="Tree">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_GatherWood" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_GatherWood" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="AbstractMine">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_GatherCoin" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_GatherCoin" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="AbstractFarm">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_Farm" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_Farm" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="AbstractResourceCrate">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_Acknowledge" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_Acknowledge" />
+                </choice>
+              </civlogic>
+            </choice>
+            <choice name="AbstractFruit">
+              <civlogic>
+                <choice name="none">
+                  <soundset name="ChineseVillagerF_GatherFruit" />
+                </choice>
+                <choice name="zpKoreans">
+                  <soundset name="zpKoreanVillagerF_GatherFruit" />
+                </choice>
+              </civlogic>
+            </choice>
+          </targetlogic>
+        </choice>
+      </variationlogic>
+    </soundtype>
+  </protounit>
+</protounitsounddef>

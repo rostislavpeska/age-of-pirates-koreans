@@ -5,11 +5,27 @@
            export copies the compiled table to every language folder (stringsync rule for a table without
            REWRITES). Ascending ids. ===== -->
       <string _locid="600000">Koreans</string>
-      <string _locid="600001">&lt;color=1.0, 1.0, 0.0&gt;Civilization bonus:&lt;/color&gt;\nVillagers cannot hunt. Shrines attract animals to generate resources.\n&lt;color=1.0, 1.0, 0.0&gt;Unique units:&lt;/color&gt;\nAshigaru Musketeer, Atakebune, Daimyo, Flaming Arrow, Fune, Sohei Archer, Morutaru, Naginata Rider, Tekkousen, Samurai, Yabusame Archer and Yumi Archer.\n&lt;color=1.0, 1.0, 0.0&gt;Unique buildings:&lt;/color&gt;\nKorean Town Center, Barracks and Stable. Cherry Orchard is a resource for food. Dojo generates armies automatically and Shrines are homes.\n&lt;color=1.0, 1.0, 0.0&gt;Wonders:&lt;/color&gt;\nGolden Pavilion, Great Buddha, The Shogunate, Torii Gates and Toshogu Shrine\n\nThe Joseon dynasty ruled Korea from Hanseong for five centuries and proclaimed the Korean Empire in 1897.</string>
+      <string _locid="600001">&lt;color=1.0, 1.0, 0.0&gt;Civilization bonus:&lt;/color&gt;\nVillagers can hunt and herd livestock.\n&lt;color=1.0, 1.0, 0.0&gt;Unique units:&lt;/color&gt;\nAshigaru Musketeer, Atakebune, Daimyo, Flaming Arrow, Fune, Sohei Archer, Morutaru, Naginata Rider, Tekkousen, Samurai, Yabusame Archer and Yumi Archer.\n&lt;color=1.0, 1.0, 0.0&gt;Unique buildings:&lt;/color&gt;\nHanok (Korean House), Korean Town Center, Barracks and Stable. Hanoks shelter up to 3 villagers or infantry and, from the Colonial Age, shoot while occupied. Cherry Orchard is a resource for food. Dojo generates armies automatically.\n&lt;color=1.0, 1.0, 0.0&gt;Wonders:&lt;/color&gt;\nGolden Pavilion, Great Buddha, The Shogunate, Torii Gates and Toshogu Shrine\n\nThe Joseon dynasty ruled Korea from Hanseong for five centuries and proclaimed the Korean Empire in 1897.</string>
       <string _locid="600002">Hanseong</string>
       <string _locid="600003">Samyeong Daesa</string>
       <string _locid="600004">Empress Myeongseong</string>
       <string _locid="600005">Empress Myeongseong is a shrewd and determined ruler. She seeks strong allies abroad, keeps a watchful eye on every rival and defends her realm with patience before she strikes.</string>
+      <string _locid="600006">Hanok</string>
+      <string _locid="600007">Hanok (Korean House)</string>
+      <string _locid="600008">Korean house. Increases the population limit by 10. Up to 3 villagers or infantry can take refuge inside, and the town bell sends villagers in. From the Colonial Age it shoots while occupied: the more units inside, the stronger.</string>
+      <string _locid="600009">Korean house: population and a refuge for 3 villagers or infantry.</string>
+      <string _locid="600010">Korean Monk</string>
+      <string _locid="600011">Korean Monk (mounted)</string>
+      <string _locid="600012">Mounted Korean monk and explorer. Builds Town Centers, Trading Posts and Hanoks, shoots with a bow and stuns enemies, and is knocked out instead of killed (ransom him at a Town Center). Monastery techs: Hyangyak Jipseongbang (heal), Dure (nearby villagers gather faster), Pyeonjeon (archery), Seungbyeong (trains warrior monks).</string>
+      <string _locid="600013">Mounted explorer: builds, shoots and stuns.</string>
+      <string _locid="600014">Hyangyak Jipseongbang</string>
+      <string _locid="600015">Korean Monks gain the ability to heal nearby units.</string>
+      <string _locid="600016">Pyeonjeon</string>
+      <string _locid="600017">Korean Monk bow and stun shot: +4 range and +25% damage.</string>
+      <string _locid="600018">Dure</string>
+      <string _locid="600019">Villagers near a Korean Monk gather 10% faster.</string>
+      <string _locid="600020">Seungbyeong</string>
+      <string _locid="600021">Korean Monks can train warrior monks (Disciples).</string>
     </language>
   </stringtable>
 </stringmods>

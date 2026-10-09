@@ -19,7 +19,7 @@
   <ambientsounds>homecity\japaneseambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
   <heroprotounits>
-    <protounit>ypMonkJapanese</protounit>
+    <protounit>zpMonkKorean</protounit>
   </heroprotounits>
   <coffers>
     <current>

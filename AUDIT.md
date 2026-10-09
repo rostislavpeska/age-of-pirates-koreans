@@ -13,8 +13,13 @@ everything still missing for a fully playable, fully Korean civilization, most i
 | Korean Town Center, Barracks, Stable | from the first upgrade (Colonial) on; Discovery Age keeps the vanilla Asian look | TC seen in game (before the age fix); Barracks, Stable and the age switch not yet seen |
 | Home city | Japanese scene and cards, named Hanseong, hero Samyeong Daesa | static only |
 | AI personality | Empress Myeongseong (name, tooltip) | static only |
-| Korean villager voices | 34 lines, 22 soundsets defined, **not used by any unit** (owner) | files and definitions checked |
-| Separate add-on | `koreans/` in AoP -> export -> public repo | export checked offline; AoP + add-on together not yet run in game |
+| Asian villager `ypSettlerAsian` speaking Korean | replaces the Japanese villager (`zpKoreanUnits`; civ entry, 6 starting and 13 Empire Wars villagers); hunts and herds; 20 Korean voice choices wired in `sound/ypsettlerasian_snds.xml` (`tools/korean_sounds.py`) | offline only (tests); not yet seen in game |
+| Korean villager voices | 34 lines, 22 soundsets; the 20 villager sets wired to the Asian villager, the 2 fishing-boat sets not yet used | files, definitions and wiring checked offline |
+| Korean House "Hanok" `zpHouseKorean` (22000) | replaces the Shrine: standard-house values, refuge for 3 villagers or infantry (town bell; 5 was too strong, owner 2026-10-09), arrows only while occupied from Colonial (`zpKoreanBuildings`, `zpKoreanHouseArrows`); Shrine model as placeholder, garrison flag floats until the Korean House model; added to every villager's build menu in the Shrine's slot by `CommandAdd` (page 6, column 0) | owner's tests: 2026-10-08 the Hanok appeared in the villager menu (first route `AddTrain` put it alone in the top row, replaced by `CommandAdd`); 2026-10-09 refuge worked (5 inside), arrows never fired - the Colonial tech was never armed, fixed (`zpKoreanBuildings` sets it obtainable); capacity cut to 3. Slot and arrows to re-check |
+| Korean monks `zpMonkKorean`, `zpMonkKorean2` (22001-22002) | mounted explorers on the vanilla Manchu horse archer model (placeholder, Manchu icons); Japanese monk explorer rules without stealth or sabotage, cavalry types; build Town Center, Trading Post, Hanok; retrained in the Town Center's monk slots; Korean soldier voices (AoP soundsets); animfiles and tactics generated (`tools/korean_monk.py`); treasure pickup, build and smoke bomb animations from vanilla General Kichiro (horse and rider pair) | owner's test 2026-10-09: the monk stood still while building and picking up treasure (Idle copies) - fixed with the Kichiro animations, guarded by `test_every_tactics_animation_exists_and_moves`; to re-check in game |
+| Korean monastery (`zpMonasteryHyangyak`, `Dure`, `Pyeonjeon`, `Seungbyeong`) | replace the four Japanese monk techs in their slots: heal; villagers near a monk gather +10% (aura); bow and stun +4 range, +25% damage; monks train Disciples (Chinese placeholder unit); Compunction kept; own icons (third set 2026-10-09, after the icon visual language) | owner's test 2026-10-09: the four techs in their slots; first icons all amber, second not AoE style - replaced; third set not yet seen in game |
+| Market hunting pair (`zpKoreanEconomy`) | Hunting Eagles and Professional Hunters instead of the Japanese berry pair (debt B9 closed) | offline only |
+| Separate add-on | this repo is the only source (tools/build.py, tests/); AoP holds no Korean source, only a guard test | build and tests offline; AoP + add-on together run by the owner 2026-10-08 (Hanok in the villager menu) |
 
 ## A. Blocking for real play
 
@@ -42,14 +47,15 @@ everything still missing for a fully playable, fully Korean civilization, most i
    turtle ship, long-range archers, Panokseon).
 7. **Wonders** are the five Japanese ones (Golden Pavilion, Great Buddha, Shogunate, Torii Gates, Toshogu Shrine)
    with Japanese art, names and age-up bonuses.
-8. **Every other building** is Japanese by culture: Shrine (house), Dojo, Castle, Consulate, Rice Paddy, Dock,
+8. **Every other building** is Japanese by culture (the Hanok still uses the Shrine model): Dojo, Castle, Consulate, Rice Paddy, Dock,
    Market, walls, Trading Post.
-9. **Villagers and explorers**: the Japanese villager model and rules (villagers cannot hunt); explorers are the
-   Japanese monks (the home city hero name is only a rename). A switch to the Chinese villager was judged too
-   invasive (3 Japanese settler cards and Zen Diet target `ypSettlerJapanese`).
-10. **Voices**: villager soundsets defined but not wired (`civlogic` in `ypsettlerjapanese_snds` /
-    `ypfishingboatasian_snds` would do it - see the `aoe3de-soundsets` skill); soldiers, monks, ships and the
-    home city speak Japanese. AoE2 also has Korean soldier, monk and king lines (soldier lines are already in AoP).
+9. **Villagers and explorers**: villagers are now the Asian (Chinese) villager (owner, 2026-10-08), but the
+   home city still ships **Japanese** villagers (`YPHCShipSettlersAsian1/2/5`) and Zen Diet targets the Japanese
+   one (debt B1, plan section 8); explorers are now the mounted Korean monks (placeholder Manchu model, own icons; knockout shows the idle pose - no
+   mounted knockout animation exists in DE).
+10. **Voices**: villagers speak Korean (`sound/ypsettlerasian_snds.xml`). Fishing boats: `ypfishingboatasian_snds`
+    lists every civ and zpKoreans is not among them, so Korean boats are probably silent - add a zpKoreans choice
+    with `zpKoreanFishingBoat*` (same tool). Soldiers, monks, ships and the home city speak Japanese. AoE2 also has Korean soldier, monk and king lines (soldier lines are already in AoP).
 11. **Home city**: Japanese 3D scene (Edo), Japanese card set and default deck, Japanese card art.
 12. **Lobby and menu art** still Japanese: history preview `h_pc_japanese`, independence icon, AI avatar
     (Tokugawa's face for the Empress), matchmaking textures, legacy flag button sets, legacy postgame texture. The
@@ -62,6 +68,28 @@ everything still missing for a fully playable, fully Korean civilization, most i
     "Asian Stable" in 15 languages).
 16. **Random names**: no Korean explorer, ship or unit name lists.
 17. **Balance**: identical to Japan; nothing in the gameplay is Korean yet.
+
+## Tracked debts
+
+- **Icons:** done 2026-10-09 - Korean monk (unit icon + 512 portrait) and the four monastery techs, generated
+  through the image harness (5 paid calls, gpt-image low quality; provenance in `tools/provenance/icons_2026-10-09/`),
+  bordered with `icon-forge`. The Hanok keeps the generic house icons (owner). The owner found the tech icons all
+  amber; second set the same day with one palette per icon (6 more paid calls: one rejected 3x2 grid - a grid
+  splits one image's detail between its cells -, four icons, one rejected Seungbyeong retry), "not much in AoE
+  style". Third set wired the same day (4 paid calls, 15 in all) after AoP's icon visual language
+  (`icon-forge/references/visual-language.md`): rendered props on plain fields - Hyangyak medicine jar and ginseng
+  (jade), Dure rice sheaf, hoe and sickle (dark field; the prompt asked for blue), Pyeonjeon horn bow and dart guide
+  (crimson), Seungbyeong straw hat, staff, spear and beads (purple); `iconsheet.py` panel check with Compunction
+  passes. Open: the monk unit icon is still the first, warm one.
+- **Balance placeholders (B10):** monk speed 6.0/7.25 and 250 HP, Dure +10% within 16, Pyeonjeon +4 range +25%,
+  tech costs copied from the replaced Japanese techs.
+
+- **F1 - city maps forbid houses, not the Hanok.** AoP's `zpSPCDisableHousesShadow` (London, Florence, Bosporus,
+  Versailles attacker, Aztec city defender) disables the standard houses and removes them from the villagers' build
+  menu, and caps special houses (Shrine 5, Village 3, Torp and others 5). The Hanok must be forbidden there too
+  (owner, 2026-10-08). Plan: an add-on shadow tech with prerequisites `zpSPCDisableHousesShadow` and
+  `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
+  Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
 ## C. Housekeeping
 

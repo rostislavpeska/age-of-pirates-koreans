@@ -16,7 +16,9 @@
        way vanilla DEHCIturbidePalace swaps the Town Center look.
 
        Later Korean changes go into these techs, never into Japanese ones.
-       This add-on's techtreemods.xml holds only these two, so they are the first
+       zpKoreanBuildings (the Korean House instead of the Shrine) and
+       zpKoreanHouseArrows (Colonial) and zpKoreanUnits (the Asian villager) follow below.
+       This add-on's techtreemods.xml holds only Korean techs, so they are the first
        techs of the file (AoP: techs near the bottom of a big techtreemods.xml did
        not apply - see zpNeutralCathedralSelectableP1 in AoP's file).
        ================================================================== -->
@@ -34,6 +36,251 @@
     <effects>
       <effect type="TechStatus" status="active">YPAge0Japanese</effect>
       <effect type="TechStatus" status="active">zpKoreanVisuals</effect>
+      <effect type="TechStatus" status="active">zpKoreanBuildings</effect>
+      <effect type="TechStatus" status="active">zpKoreanUnits</effect>
+      <effect type="TechStatus" status="active">zpKoreanEconomy</effect>
+    </effects>
+  </tech>
+  <!-- zpKoreanBuildings: the Korean building set on top of the Japanese one, activated after
+       YPAge0Japanese. The Korean House (data/protomods.xml) replaces the Japanese Shrine; CommandAdd puts it
+       into the build menu of every villager type (vanilla and AoP) in the Shrine's slot (page 6, column 0,
+       shared by every civ's house) without editing any villager record, the way vanilla
+       DEIndependenceConfucianAcademyUnlock adds a wonder to ypSettlerAsian. AddTrain was tried first: no slot
+       setting, the button landed alone in the top row (owner's test, 2026-10-08). -->
+  <tech name="zpKoreanBuildings" type="Normal">
+    <dbid>60002</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <effects>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpHouseKorean</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpHouseKorean" page="6" column="0">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypShrineJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpKoreanHouseArrows</effect>
+    </effects>
+  </tech>
+  <!-- zpKoreanHouseArrows: the Korean House shoots from the Colonial Age (while units are inside; see
+       data/tactics/zphousekorean.tactics). zpKoreanBuildings arms it (TechStatus obtainable); the Shadow tech
+       then researches itself once its prerequisites are active - AoP's zpSPCAztecAltarColonializeShadow
+       pattern. Without the arming an UNOBTAINABLE tech never fires (owner's test 2026-10-09: no arrows). -->
+  <tech name="zpKoreanHouseArrows" type="Normal">
+    <dbid>60003</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">Colonialize</techstatus>
+      <techstatus status="Active">zpKoreanVisuals</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" action="RangedAttack" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">zpHouseKorean</target>
+      </effect>
+    </effects>
+  </tech>
+  <!-- zpKoreanUnits: Korean units on top of the Japanese set, activated after YPAge0Japanese. Villager: the
+       Asian (Chinese) villager ypSettlerAsian, which hunts and herds (owner decision 2026-10-08, as WoL Koreans),
+       instead of ypSettlerJapanese - the vanilla YPAge0ChineseUnits / YPAge0JapaneseUnits enable pattern. Its
+       Korean voices: sound/ypsettlerasian_snds.xml (tools/korean_sounds.py). Explorers: the Korean monks
+       (zpMonkKorean, zpMonkKorean2) instead of the Japanese monks, retrained in the Town Center's monk slots;
+       the Korean monastery techs replace the four Japanese monk techs in the same slots (page 1, columns 1-4;
+       Compunction in column 5 stays). Owner 2026-10-09. -->
+  <tech name="zpKoreanUnits" type="Normal">
+    <dbid>60004</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <effects>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypSettlerAsian</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypSettlerJapanese</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypMonkJapanese</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypMonkJapanese2</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpMonkKorean" page="0" column="5">
+        <target type="ProtoUnit">TownCenter</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpMonkKorean2" page="0" column="6">
+        <target type="ProtoUnit">TownCenter</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">ypMonasteryJapaneseHealing</effect>
+      <effect type="TechStatus" status="unobtainable">ypMonasteryJapaneseCombat</effect>
+      <effect type="TechStatus" status="unobtainable">ypMonasteryKillingBlowUpgrade</effect>
+      <effect type="TechStatus" status="unobtainable">ypMonasteryRangedSplash</effect>
+      <effect type="TechStatus" status="obtainable">zpMonasteryHyangyak</effect>
+      <effect type="CommandAdd" tech="zpMonasteryHyangyak" page="1" column="1">
+        <target type="ProtoUnit">ypMonastery</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpMonasteryDure</effect>
+      <effect type="CommandAdd" tech="zpMonasteryDure" page="1" column="2">
+        <target type="ProtoUnit">ypMonastery</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpMonasteryPyeonjeon</effect>
+      <effect type="CommandAdd" tech="zpMonasteryPyeonjeon" page="1" column="3">
+        <target type="ProtoUnit">ypMonastery</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpMonasterySeungbyeong</effect>
+      <effect type="CommandAdd" tech="zpMonasterySeungbyeong" page="1" column="4">
+        <target type="ProtoUnit">ypMonastery</target>
+      </effect>
+    </effects>
+  </tech>
+  <!-- zpKoreanEconomy: Koreans hunt (Asian villager), so their market offers the hunting pair (Hunting Eagles, Professional Hunters) instead of the Japanese berry pair - same slot (page 1, column 0) and costs; debt B9 -->
+  <tech name="zpKoreanEconomy" type="Normal">
+    <dbid>60005</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <effects>
+      <effect type="TechStatus" status="obtainable">ypMarketHuntingDogs</effect>
+      <effect type="TechStatus" status="obtainable">ypMarketSteelTraps</effect>
+      <effect type="TechStatus" status="unobtainable">ypMarketBerryDogs</effect>
+      <effect type="TechStatus" status="unobtainable">ypMarketBerryTraps</effect>
+    </effects>
+  </tech>
+  <!-- Hyangyak Jipseongbang (native medicine): Korean monks heal nearby units - the Reiki mechanic, slot 1 -->
+  <tech name="zpMonasteryHyangyak" type="Normal">
+    <dbid>60006</dbid>
+    <displaynameid>600014</displaynameid>
+    <cost resourcetype="Wood">200.0000</cost>
+    <cost resourcetype="Gold">100.0000</cost>
+    <researchpoints>15.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\korean\zpmonasteryhyangyak.png</icon>
+    <rollovertextid>600015</rollovertextid>
+    <flag>UniqueTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>YPMonasteryTech</flag>
+    <effects>
+      <effect type="Data" action="Heal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="Heal" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+    </effects>
+  </tech>
+  <!-- Dure (village work cooperative): villagers near a Korean monk gather faster (aura in zpmonkkorean.tactics), slot 2; WoL Jinbohoe idea -->
+  <tech name="zpMonasteryDure" type="Normal">
+    <dbid>60007</dbid>
+    <displaynameid>600018</displaynameid>
+    <cost resourcetype="Food">200.0000</cost>
+    <cost resourcetype="Wood">200.0000</cost>
+    <researchpoints>15.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\korean\zpmonasterydure.png</icon>
+    <rollovertextid>600019</rollovertextid>
+    <flag>UniqueTech</flag>
+    <flag>CountsTowardEconomicScore</flag>
+    <flag>YPMonasteryTech</flag>
+    <effects>
+      <effect type="Data" action="Dure" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="Dure" amount="1.00" subtype="ActionEnable" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+    </effects>
+  </tech>
+  <!-- Pyeonjeon (Korean short-arrow technique): monk bow and stun shot +4 range, +25% damage, slot 3 -->
+  <tech name="zpMonasteryPyeonjeon" type="Normal">
+    <dbid>60008</dbid>
+    <displaynameid>600016</displaynameid>
+    <cost resourcetype="Wood">500.0000</cost>
+    <cost resourcetype="Gold">500.0000</cost>
+    <researchpoints>15.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\korean\zpmonasterypyeonjeon.png</icon>
+    <rollovertextid>600017</rollovertextid>
+    <flag>UniqueTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>YPMonasteryTech</flag>
+    <effects>
+      <effect type="Data" action="VolleyRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="DefendRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="StaggerRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="Stun" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="VolleyRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" action="DefendRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" action="StaggerRangedAttack" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" action="Stun" amount="4.00" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" action="VolleyRangedAttack" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="DefendRangedAttack" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="StaggerRangedAttack" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="Stun" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="Data" action="VolleyRangedAttack" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" action="DefendRangedAttack" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" action="StaggerRangedAttack" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" action="Stun" amount="1.25" subtype="Damage" relativity="BasePercent">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+    </effects>
+  </tech>
+  <!-- Seungbyeong (monk soldiers): Korean monks train warrior monks - placeholder unit the Chinese Disciple, slot 4 -->
+  <tech name="zpMonasterySeungbyeong" type="Normal">
+    <dbid>60009</dbid>
+    <displaynameid>600020</displaynameid>
+    <cost resourcetype="Wood">350.0000</cost>
+    <cost resourcetype="Gold">350.0000</cost>
+    <researchpoints>15.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\korean\zpmonasteryseungbyeong.png</icon>
+    <rollovertextid>600021</rollovertextid>
+    <flag>UniqueTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>YPMonasteryTech</flag>
+    <effects>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypMonkDisciple</target>
+      </effect>
     </effects>
   </tech>
 </techtreemods>

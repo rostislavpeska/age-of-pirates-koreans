@@ -16,7 +16,7 @@
     <polcivname>Japanese</polcivname>
     <portrait>objects\flags\zpkoreans</portrait>
     <culture>Japanese</culture>
-    <settlerprotoname>ypSettlerJapanese</settlerprotoname>
+    <settlerprotoname>ypSettlerAsian</settlerprotoname>
     <displaynameid>600000</displaynameid>
     <rollovernameid>600001</rollovernameid>
     <independencetooltipid>212156</independencetooltipid>
@@ -73,15 +73,15 @@
       <wood>0.75</wood>
       <trade>0.45</trade>
     </startingresourcesmultiplier>
-    <startingunit>ypMonkJapanese</startingunit>
-    <startingunit>ypMonkJapanese2</startingunit>
+    <startingunit>zpMonkKorean</startingunit>
+    <startingunit>zpMonkKorean2</startingunit>
     <startingunit>YPBerryWagon1</startingunit>
-    <townstartingunit>ypSettlerJapanese</townstartingunit>
-    <townstartingunit>ypSettlerJapanese</townstartingunit>
-    <townstartingunit>ypSettlerJapanese</townstartingunit>
-    <townstartingunit>ypSettlerJapanese</townstartingunit>
-    <townstartingunit>ypSettlerJapanese</townstartingunit>
-    <townstartingunit>ypSettlerJapanese</townstartingunit>
+    <townstartingunit>ypSettlerAsian</townstartingunit>
+    <townstartingunit>ypSettlerAsian</townstartingunit>
+    <townstartingunit>ypSettlerAsian</townstartingunit>
+    <townstartingunit>ypSettlerAsian</townstartingunit>
+    <townstartingunit>ypSettlerAsian</townstartingunit>
+    <townstartingunit>ypSettlerAsian</townstartingunit>
     <townstartingunit>CrateofFood</townstartingunit>
     <townstartingunit>CrateofFood</townstartingunit>
     <townstartingunit>CrateofFood</townstartingunit>
@@ -90,19 +90,19 @@
     <townstartingunit>CrateofWood</townstartingunit>
     <townstartingunit>CrateofWood</townstartingunit>
     <townstartingunit>CrateofWood</townstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
-    <empirewarsstartingunit>ypSettlerJapanese</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
+    <empirewarsstartingunit>ypSettlerAsian</empirewarsstartingunit>
     <empirewarsstartingunit>YPCastleWagon</empirewarsstartingunit>
     <empirewarsstartingunit>CrateofFoodLarge</empirewarsstartingunit>
     <empirewarsstartingunit>deCrateofFoodLarge400</empirewarsstartingunit>
