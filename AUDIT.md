@@ -91,6 +91,11 @@ everything still missing for a fully playable, fully Korean civilization, most i
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
+- **Korean House r14c (2026-10-09):** the owner's first game test of r14b showed black roofs, too-dark walls and faces
+  turned around - every House GR2 was inside out (mirrored export frame without corner reversal, INC-198). r14c
+  writes the engine winding (AoP gr2_lint check `winding` now guards every model), makes the garrison pole 15 %
+  taller and puts BONE_GARRISONFLAG at the flag's lower edge (owner: the bone is the cloth's lower edge). Test
+  benches `zzTESTKoreanHouseA/B/C` place one variant each in the editor (no age logic). To re-test in game.
 - **Korean House model (2026-10-09, texture-r14; release game-states-r14b):** every state derives from the r14
   geometry and maps (source retention audited: exact UVs/normals; DDTs byte-identical re-encodes); r14b fixed the
   construction timbers' mirrored UVs found by AoP's uv_integrity gate. 128 source faces per House (TC pots, pot
