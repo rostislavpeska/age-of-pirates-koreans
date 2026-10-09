@@ -348,7 +348,7 @@
   {
    "id": "korean_house_roofs",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15 weathering pass over texture-r14 ROOFS: Painter generator masks + compose_r15.py; Normals/Details unchanged); one page shared by House A/B/C, all stages",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15b over texture-r14 ROOFS: translucent grainy moss, textured eave ends around the approved grey; Painter generator masks + compose_r15.py; Normals unchanged); one page shared by House A/B/C, all stages",
    "page": [
     2048,
     2048
@@ -357,7 +357,7 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_roofs_BaseColor",
-     "sha256": "293782e653035fe55fe6a778d54223119795dd871b38d7a296f3a6e8036ce5f6"
+     "sha256": "f9411640bd9fc535ca19a4696fe972fdf2048ac5254f9feb49598b2906c107b7"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Normals",
@@ -365,7 +365,7 @@
     },
     "Masks": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Masks",
-     "sha256": "4214e28b5a59316e8f0788cb71ff09ac248d3bb86a30d12b5a9d95abe9cb6e41"
+     "sha256": "c9b1630a73ff0859d0da1296075759a0d1ca2230b6bf8985586fd61fad060149"
     }
    }
   }

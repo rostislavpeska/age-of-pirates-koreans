@@ -91,6 +91,11 @@ everything still missing for a fully playable, fully Korean civilization, most i
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
+- **Korean House textures r15b (2026-10-09):** owner on r15: "the green on the roofs is masking everything beneath it" and
+  "why the roof endings are pure grey?". Moss is now a translucent, grainy tint (opacity <= 0.8 with holes, the tile's
+  own light/dark detail kept) in shorter cushions; the eave ends (r12 had flattened them to the TC grey, detail +-3)
+  keep that grey as their mean but get clay grain, per-tile tone, worn rims, damp lower edges and grime. ROOFS only.
+  gr2_lint 6 profiles 0 FAIL / 0 SKIP, DDT decode PASS; not yet seen in game.
 - **Korean House textures r15 (2026-10-09):** owner after the r14c test: "The textures need more love ... more moss,
   imperfection - roof imperfections - like towncenter". Weathering pass over texture-r14 (the newest release, checked in
   the producer folder, the package and here) on the WALLS and ROOFS pages: Painter generator masks (Dirt, Dripping
