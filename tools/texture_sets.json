@@ -320,7 +320,7 @@
   {
    "id": "korean_house_walls",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/HOUSE_RELEASE_GATE.json (texture-r14 WALLS maps); one page shared by House A/B/C, all stages",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15 weathering pass over texture-r14 WALLS: Painter generator masks + compose_r15.py; Normals/Details unchanged); one page shared by House A/B/C, all stages",
    "page": [
     2048,
     2048
@@ -329,7 +329,7 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_walls_BaseColor",
-     "sha256": "34ef42e582234d7ea26f6290dcbafcb93ae3c3c02df770c99eb10303ae946f17"
+     "sha256": "29ba0b6d7803df5f8d96407ec64c632a1b0eff3501b3e29ea3caada83f8e874e"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_walls_Normals",
@@ -337,7 +337,7 @@
     },
     "Masks": {
      "path": "buildings/korean_house/textures/korean_house_walls_Masks",
-     "sha256": "fe6161f4149e359564b6cac1074dad04c19257040661726cc5760ad690d9a841"
+     "sha256": "e372392b483f1d3e03aea2ff3b7738c6f89b720363d0603bf9e846fb299d6237"
     },
     "Details": {
      "path": "buildings/korean_house/textures/korean_house_walls_Details",
@@ -348,7 +348,7 @@
   {
    "id": "korean_house_roofs",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/HOUSE_RELEASE_GATE.json (texture-r14 ROOFS maps); one page shared by House A/B/C, all stages",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15 weathering pass over texture-r14 ROOFS: Painter generator masks + compose_r15.py; Normals/Details unchanged); one page shared by House A/B/C, all stages",
    "page": [
     2048,
     2048
@@ -357,7 +357,7 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_roofs_BaseColor",
-     "sha256": "bc892c7c98e7a48d6fdf02f078091c87d09434576619b30edcb2d8e4a7683b06"
+     "sha256": "293782e653035fe55fe6a778d54223119795dd871b38d7a296f3a6e8036ce5f6"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Normals",
@@ -365,7 +365,7 @@
     },
     "Masks": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Masks",
-     "sha256": "2259d474b2a3f2539a8ce044b65cfe7cb408cebf044ec54a0708fb9180822764"
+     "sha256": "4214e28b5a59316e8f0788cb71ff09ac248d3bb86a30d12b5a9d95abe9cb6e41"
     }
    }
   }

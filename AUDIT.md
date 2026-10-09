@@ -91,6 +91,20 @@ everything still missing for a fully playable, fully Korean civilization, most i
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
+- **Korean House textures r15 (2026-10-09):** owner after the r14c test: "The textures need more love ... more moss,
+  imperfection - roof imperfections - like towncenter". Weathering pass over texture-r14 (the newest release, checked in
+  the producer folder, the package and here) on the WALLS and ROOFS pages: Painter generator masks (Dirt, Dripping
+  Rust, Metal Edge Wear, fine Dirt; own second Painter instance on a copy of the r14 master) placed by per-texel 3D
+  fields (height above ground, world-down runs, ridge/eave, tile pans). Roof: moss cushions in the pans on 14.6 % of the
+  up-facing tiles (r14: 3.3 %), lichen, lighter tile crowns, worn lips, a few replaced/bleached tiles; ridge beam and
+  barge timbers weathered. Walls: foot grime and algae, rain runs below edges and windows, earthen plaster chips,
+  stone moss/grime, gable streaks. Unchanged: grey eave ends, alpha, AO, metallic, Normals, Details, UVs, budget.
+  Offline: gr2_lint 6 profiles 0 FAIL / 0 SKIP, DDT decode PASS; not yet seen in game.
+- **Korean House r14d (2026-10-09):** owner after the r14c test: "The destruction is too decent ... one of the model
+  didn't have the continuous destruction basically at all". Stage (HKT type 0) pieces now carry 20.3 / 14.1 / 18.5 %
+  of the damaged surface (A/B/C; vanilla Shrine donors 16.8 / 12.4 / 17.9; r14c 4.2 / 6.6 / 2.7): roof plates,
+  rafters, gable ends, attic and wall plaster/window/door pieces break off as hitpoints drop, nothing left unsupported.
+  Not yet seen in game.
 - **Korean House r14c (2026-10-09):** the owner's first game test of r14b showed black roofs, too-dark walls and faces
   turned around - every House GR2 was inside out (mirrored export frame without corner reversal, INC-198). r14c
   writes the engine winding (AoP gr2_lint check `winding` now guards every model), makes the garrison pole 15 %
