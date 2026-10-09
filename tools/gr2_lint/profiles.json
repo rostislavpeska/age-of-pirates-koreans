@@ -139,7 +139,7 @@
     "House A/B/C",
     "Hanok"
    ],
-   "_doc": "Korean House A construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone.",
+   "_doc": "Korean House A construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone. r14b: every new member face keeps a positive UV winding (AoP uv_integrity W); the r14 members were mirrored.",
    "files": {
     "intact": "korean_house_a_con.gr2",
     "intact_material": "korean_house_a_con.material",
@@ -230,8 +230,8 @@
     "japan_shrine_age2_01_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_a_con_r14.json",
-    "sha256": "c251db3d077146feff17abe0dba3b706d2000aedac42e6af13cd8a4f8f5e5cbe"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_a_con_r14b.json",
+    "sha256": "bf29d040b7fd43dc82c25fc3586eb4289ae16f8750fbe198b98020a395aaba0d"
    }
   },
   "korean_house_b": {
@@ -368,7 +368,7 @@
     "House A/B/C",
     "Hanok"
    ],
-   "_doc": "Korean House B construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone.",
+   "_doc": "Korean House B construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone. r14b: every new member face keeps a positive UV winding (AoP uv_integrity W); the r14 members were mirrored.",
    "files": {
     "intact": "korean_house_b_con.gr2",
     "intact_material": "korean_house_b_con.material",
@@ -459,8 +459,8 @@
     "japan_shrine_age2_02_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_b_con_r14.json",
-    "sha256": "6d27d24f82006fa457e00fc776a2b0ab380e77db0f7388291717bcdd4ae2e1aa"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_b_con_r14b.json",
+    "sha256": "9fa11bbf221d9351c6f20fb45d16b863693a9cb4549891115cfb360fee1571eb"
    }
   },
   "korean_house_c": {
@@ -596,7 +596,7 @@
     "House A/B/C",
     "Hanok"
    ],
-   "_doc": "Korean House C construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone.",
+   "_doc": "Korean House C construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone. r14b: every new member face keeps a positive UV winding (AoP uv_integrity W); the r14 members were mirrored.",
    "files": {
     "intact": "korean_house_c_con.gr2",
     "intact_material": "korean_house_c_con.material",
@@ -687,8 +687,8 @@
     "japan_shrine_age2_03_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_c_con_r14.json",
-    "sha256": "752bd9b5f33a2b57d155e774693e93c1d8f3f429add60291b0e858d764a6f2a2"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_c_con_r14b.json",
+    "sha256": "8bc369e20a86da4246632afc704f05432bd2366ee6c279e5077ab2f83ef2bf2b"
    }
   }
  }

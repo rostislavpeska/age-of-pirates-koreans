@@ -91,7 +91,10 @@ everything still missing for a fully playable, fully Korean civilization, most i
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
 
-- **Korean House model (2026-10-09, texture-r14):** to see in game - slow construction (vanilla p0/p33, Korean p66
+- **Korean House model (2026-10-09, texture-r14; release game-states-r14b):** every state derives from the r14
+  geometry and maps (source retention audited: exact UVs/normals; DDTs byte-identical re-encodes); r14b fixed the
+  construction timbers' mirrored UVs found by AoP's uv_integrity gate. 128 source faces per House (TC pots, pot
+  base discs, mast) keep a negative UV winding, kept verbatim and reported (INC-194). To see in game - slow construction (vanilla p0/p33, Korean p66
   with the vanilla scaffold), completion, the garrison flag on the small mast (engine scale 0.7 unverified), partial
   damage (the damaged model) and the final collapse (mast falls as one piece). Open: the Discovery Age keeps the
   Shrine placeholder and its floating garrison flag; damage-decal (.dmg) templates not made; donor Havok bodies
