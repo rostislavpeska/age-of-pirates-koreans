@@ -27,7 +27,7 @@ guard test is `scripts/tools/tests/test_no_korean_civ_in_aop.py` in AoP.
 | Tests | `tests/test_koreans.py` |
 | Open work and debts | [AUDIT.md](AUDIT.md) |
 | Design plan and research | korean-buildings-blender `research/Koreans_Civ_18/PLAN.md`, `research/WoL_Korea_15/` |
-| Korean building models (3D pipeline) | this repo: `art/buildings/korean_tc/`, `korean_shared/`, `korean_tc_experiment/`, `art/zbench_korean_military/` (moved from AoP 2026-10-09; owned by the 3D agents) |
+| Korean building models (3D pipeline) | this repo: `art/buildings/korean_tc/`, `korean_shared/`, `korean_tc_experiment/`, `korean_house/`, `art/zbench_korean_military/` (moved from AoP 2026-10-09; owned by the 3D agents); their `gr2_lint` profiles, owner answers and UV contracts in `tools/gr2_lint/` (`python ../age-of-pirates/scripts/havok/gr2_lint.py --profiles tools/gr2_lint/profiles.json --profile korean_house_a art/buildings/korean_house/`) |
 
 Workflow (any computer, AoP checked out next to this repo as `../age-of-pirates`):
 

@@ -15,7 +15,7 @@ everything still missing for a fully playable, fully Korean civilization, most i
 | AI personality | Empress Myeongseong (name, tooltip) | static only |
 | Asian villager `ypSettlerAsian` speaking Korean | replaces the Japanese villager (`zpKoreanUnits`; civ entry, 6 starting and 13 Empire Wars villagers); hunts and herds; 20 Korean voice choices wired in `sound/ypsettlerasian_snds.xml` (`tools/korean_sounds.py`) | offline only (tests); not yet seen in game |
 | Korean villager voices | 34 lines, 22 soundsets; the 20 villager sets wired to the Asian villager, the 2 fishing-boat sets not yet used | files, definitions and wiring checked offline |
-| Korean House "Hanok" `zpHouseKorean` (22000) | replaces the Shrine: standard-house values, refuge for 3 villagers or infantry (town bell; 5 was too strong, owner 2026-10-09), arrows only while occupied from Colonial (`zpKoreanBuildings`, `zpKoreanHouseArrows`); Shrine model as placeholder, garrison flag floats until the Korean House model; added to every villager's build menu in the Shrine's slot by `CommandAdd` (page 6, column 0) | owner's tests: 2026-10-08 the Hanok appeared in the villager menu (first route `AddTrain` put it alone in the top row, replaced by `CommandAdd`); 2026-10-09 refuge worked (5 inside), arrows never fired - the Colonial tech was never armed, fixed (`zpKoreanBuildings` sets it obtainable); capacity cut to 3. Slot and arrows to re-check |
+| Korean House "Hanok" `zpHouseKorean` (22000) | replaces the Shrine: standard-house values, refuge for 3 villagers or infantry (town bell; 5 was too strong, owner 2026-10-09), arrows only while occupied from Colonial (`zpKoreanBuildings`, `zpKoreanHouseArrows`); look `art/buildings/korean_house/korean_house.xml` (2026-10-09): the vanilla Shrine age 1 in the Discovery Age, Korean House A/B/C from the Colonial Age on (owner: "Colonial on; Shrine in Discovery"), each with its small garrison mast (flag at 0.7 scale), an own last construction stage (p66) and Havok destruction on the vanilla shrine body graph; added to every villager's build menu in the Shrine's slot by `CommandAdd` (page 6, column 0) | owner's tests: 2026-10-08 the Hanok appeared in the villager menu (first route `AddTrain` put it alone in the top row, replaced by `CommandAdd`); 2026-10-09 refuge worked (5 inside), arrows never fired - the Colonial tech was never armed, fixed (`zpKoreanBuildings` sets it obtainable); capacity cut to 3. Slot and arrows to re-check. Korean House model: offline gates only - `gr2_lint` 6 profiles 0 FAIL / 0 SKIP (`tools/gr2_lint/profiles.json`, Granny DLL both routes), state frames, UV contracts, tests; not yet seen in game (checklist below) |
 | Korean monks `zpMonkKorean`, `zpMonkKorean2` (22001-22002) | mounted explorers on the vanilla Manchu horse archer model (placeholder, Manchu icons); Japanese monk explorer rules without stealth or sabotage, cavalry types; build Town Center, Trading Post, Hanok; retrained in the Town Center's monk slots; Korean soldier voices (AoP soundsets); animfiles and tactics generated (`tools/korean_monk.py`); treasure pickup, build and smoke bomb animations from vanilla General Kichiro (horse and rider pair) | owner's test 2026-10-09: the monk stood still while building and picking up treasure (Idle copies) - fixed with the Kichiro animations, guarded by `test_every_tactics_animation_exists_and_moves`; to re-check in game |
 | Korean monastery (`zpMonasteryHyangyak`, `Dure`, `Pyeonjeon`, `Seungbyeong`) | replace the four Japanese monk techs in their slots: heal; villagers near a monk gather +10% (aura); bow and stun +4 range, +25% damage; monks train Disciples (Chinese placeholder unit); Compunction kept; own icons (third set 2026-10-09, after the icon visual language) | owner's test 2026-10-09: the four techs in their slots; first icons all amber, second not AoE style - replaced; third set not yet seen in game |
 | Market hunting pair (`zpKoreanEconomy`) | Hunting Eagles and Professional Hunters instead of the Japanese berry pair (debt B9 closed) | offline only |
@@ -47,7 +47,7 @@ everything still missing for a fully playable, fully Korean civilization, most i
    turtle ship, long-range archers, Panokseon).
 7. **Wonders** are the five Japanese ones (Golden Pavilion, Great Buddha, Shogunate, Torii Gates, Toshogu Shrine)
    with Japanese art, names and age-up bonuses.
-8. **Every other building** is Japanese by culture (the Hanok still uses the Shrine model): Dojo, Castle, Consulate, Rice Paddy, Dock,
+8. **Every other building** is Japanese by culture (the Hanok has its Korean model from the Colonial Age): Dojo, Castle, Consulate, Rice Paddy, Dock,
    Market, walls, Trading Post.
 9. **Villagers and explorers**: villagers are now the Asian (Chinese) villager (owner, 2026-10-08), but the
    home city still ships **Japanese** villagers (`YPHCShipSettlersAsian1/2/5`) and Zen Diet targets the Japanese
@@ -90,6 +90,15 @@ everything still missing for a fully playable, fully Korean civilization, most i
   (owner, 2026-10-08). Plan: an add-on shadow tech with prerequisites `zpSPCDisableHousesShadow` and
   `zpKoreanBuildings` active, disabling `zpHouseKorean` and removing it from `AbstractVillager`; AoP stays Korean-free.
   Open: Koreans then have no house on those maps (the Shrine is off for them); alternative: cap the Hanok at 5.
+
+- **Korean House model (2026-10-09, texture-r14):** to see in game - slow construction (vanilla p0/p33, Korean p66
+  with the vanilla scaffold), completion, the garrison flag on the small mast (engine scale 0.7 unverified), partial
+  damage (the damaged model) and the final collapse (mast falls as one piece). Open: the Discovery Age keeps the
+  Shrine placeholder and its floating garrison flag; damage-decal (.dmg) templates not made; donor Havok bodies
+  without Korean geometry keep their vanilla hulls; House C's hidden roof-deck strip (`Roof.Main.Receiver`, matc)
+  is scaled +3 % at export (owner, 2026-10-09: float16 UVs put it at 53.5 t/u, floor 54) - the House source should
+  carry that margin; the source marks the mast UV cell "generic source cell unresolved"; the attic bearing-wall
+  panels question stays with the House producer.
 
 ## C. Housekeeping
 

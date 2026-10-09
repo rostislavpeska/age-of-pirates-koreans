@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner-pasted House assignment, Claude Code House-states session 2026-10-09T07:26:46Z (KTC-176); the same text is committed as korean-buildings-blender research/Colonial_Expansion_17/CLAUDE_HOUSES_GAME_PROMPT.md (06dc267, sha256 e20a77a0a017cb091b690d4cf3faa9aa4227c5a4d6975c7c8f30304e09c58b7f), line 26. No app message id available. Earlier records of the same sharing: AoP config/gr2_uv_contracts/shared_matc_owner_evidence.json (the atlas works for all Korean buildings) and shared_props_owner_evidence.json (the TC pots).",
+  "owner_quote": "- Owned textures across **all three together**: one WALLS 2048² set and one ROOFS 2048² set. Reuse the exact Korean shared matc r65 1024² and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod.",
+  "models": [
+    "korean_house_a",
+    "korean_house_a_damaged",
+    "korean_house_a_con",
+    "korean_house_b",
+    "korean_house_b_damaged",
+    "korean_house_b_con",
+    "korean_house_c",
+    "korean_house_c_damaged",
+    "korean_house_c_con"
+  ],
+  "source_names": [
+    "Korean TC shared matC",
+    "Korean TC pots"
+  ]
+}

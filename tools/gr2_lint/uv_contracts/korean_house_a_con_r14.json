@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "construction p66 r14",
+  "author_blend_sha256": "1211fbbce24eec52363db1fdc50a890be52671e20583828e5a602d19a4087aa8",
+  "author_payload_sha256": "e27b9eae5dd781b635e8f9eca3bd56b660b98f55be243c445a11a850265ab2cc",
+  "provenance": "House A construction p66 r14: payload House_A_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 5934,
+        "position_f32_sha256": "bfff7523263508ea7338d054adcb3a79b8ab9d11b20066bafbbb072be7b8736c",
+        "raw_uv_f16_sha256": "a1bd27a3495de24b0c320b8160a2561d5baec24ad174a14e417ccf703b578651"
+      },
+      "mata": {
+        "corners": 2334,
+        "position_f32_sha256": "4f34381fed3d3666d0f93011a897ba540fb2832df99430092f8eb59c85621ca6",
+        "raw_uv_f16_sha256": "ebf984c3c40cb83b3e179ace2a5deab26a239e1f64e0019cdc24544bd4ba533c"
+      }
+    },
+    "damaged": {}
+  }
+}

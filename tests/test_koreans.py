@@ -156,6 +156,26 @@ def _top_anims(text):
     return {n.lower(): re.findall(r'<file>([^<]+)</file>', b) for n, b in blocks}
 
 
+def _anim_scopes(text):
+    """[(scope, anims, defined attachments, used attachments)] of one animfile. A unit: its top-level anims and
+    attachments. A building whose anims all sit inside submodels (the vanilla shrine.xml pattern, the Korean House):
+    one scope per finished submodel - it has a Death anim; construction stages hold Idle only and play no action -
+    with the attachments defined at the top level or inside that submodel."""
+    top = _top_anims(text)
+    defined_top = set(re.findall(r'^  <attachment>(\w+)', text, re.M))
+    if top:
+        return [('', top, defined_top, set(re.findall(r'<attach a="(\w+)"', text)))]
+    scopes = []
+    for s in ET.fromstring(text.lstrip('\ufeff')).findall('submodel'):
+        anims = {(a.text or '').strip().lower(): [(f.text or '').strip() for f in a.iter('file')]
+                 for a in s.findall('anim')}
+        if 'death' in anims:
+            scopes.append(((s.text or '').strip(), anims,
+                           defined_top | {(a.text or '').strip() for a in s.findall('attachment')},
+                           {e.get('a') for e in s.iter('attach')}))
+    return scopes
+
+
 def test_every_tactics_animation_exists_and_moves():
     """Owner 2026-10-09: the Korean monk stood still while building and picking up treasure (its Build and Pickup
     were copies of Idle). For every proto with a repo animfile and repo tactics: each animation an action names
@@ -179,19 +199,20 @@ def test_every_tactics_animation_exists_and_moves():
             p = K / 'art' / inc.strip().replace(BS, '/')
             if p.is_file():
                 texts.append(p.read_text(encoding='utf-8'))
-        files = [_top_anims(t) for t in texts]
-        for t, anims in zip(texts, files):
+        scopes = [sc for t in texts for sc in _anim_scopes(t)]
+        assert scopes, '%s: %s has no top-level anims and no finished submodel' % (u.get('name'), anim)
+        for scope, anims, defined, used in scopes:
             missing = needed - set(anims)
-            assert not missing, '%s: %s lacks %s' % (u.get('name'), anim, sorted(missing))
-            defined = set(re.findall(r'^  <attachment>(\w+)', t, re.M))
-            used = set(re.findall(r'<attach a="(\w+)"', t))
+            assert not missing, '%s: %s %s lacks %s' % (u.get('name'), anim, scope, sorted(missing))
             assert used <= defined, '%s: undefined attachments %s' % (u.get('name'), sorted(used - defined))
-        idle = {f for anims in files for f in anims['idle']}
-        for name in sorted(needed):
-            played = {f for anims in files for f in anims[name]}
-            assert not played <= idle, '%s: %s plays only the idle pose' % (u.get('name'), name)
+        unit = [a for s, a, _, _ in scopes if not s]  # a unit: its files together (horse and rider); a building:
+        for group in ([unit] if unit else [[a] for _, a, _, _ in scopes]):   # each finished state on its own
+            idle = {f for a in group for f in a['idle']}
+            for name in sorted(needed):
+                played = {f for a in group for f in a[name]}
+                assert not played <= idle, '%s: %s plays only the idle pose' % (u.get('name'), name)
         checked += 1
-    assert checked >= 2                                # zpMonkKorean, zpMonkKorean2
+    assert checked >= 3                                # zpMonkKorean, zpMonkKorean2, zpHouseKorean
 
 
 def test_korean_monastery_replaces_the_japanese_monk_techs():

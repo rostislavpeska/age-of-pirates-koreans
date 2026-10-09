@@ -10,10 +10,11 @@
        Its RangedAttack fires only while units are inside and scales with
        their number (the Chinese Village pattern, data/tactics/
        zphousekorean.tactics); zpKoreanHouseArrows switches it on at the
-       Colonial Age. Placeholder look: the Japanese Shrine animfile; the generic house icons (owner
-       2026-10-09: no unique Hanok icon needed)
-       (no garrison flag bone - the flag floats until the Korean House model
-       replaces it). Enabled and added to every villager's build menu by
+       Colonial Age. Look: art/buildings/korean_house/korean_house.xml - the
+       Japanese Shrine (age 1) in the Discovery Age, Korean House A/B/C from
+       the Colonial Age on (owner 2026-10-09), with a garrison flag bone on
+       its small mast; the generic house icons (owner 2026-10-09: no unique
+       Hanok icon needed). Enabled and added to every villager's build menu by
        zpKoreanBuildings (data/techtreemods.xml).
        ================================================================== -->
   <unit id="22000" name="zpHouseKorean">
@@ -25,7 +26,7 @@
     <obstructionradiusz>2.0000</obstructionradiusz>
     <maxvelocity>0.0000</maxvelocity>
     <movementtype>land</movementtype>
-    <animfile>buildings\asian_civs\shrine\shrine.xml</animfile>
+    <animfile>buildings\korean_house\korean_house.xml</animfile>
     <deadreplacement>BuildingRubble2x2</deadreplacement>
     <deadreplacementlifespan>15</deadreplacementlifespan>
     <impacttype>Wood</impacttype>

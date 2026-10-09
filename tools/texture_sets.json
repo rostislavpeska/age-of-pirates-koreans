@@ -316,6 +316,58 @@
      "sha256": "36aa9e4acfcf4c15577f60649429f46f00174b495c3f847e271098f2dac6aa52"
     }
    }
+  },
+  {
+   "id": "korean_house_walls",
+   "status": "current",
+   "record": "Korean repo research/Colonial_Expansion_17/HOUSE_RELEASE_GATE.json (texture-r14 WALLS maps); one page shared by House A/B/C, all stages",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_house/textures/korean_house_walls_BaseColor",
+     "sha256": "34ef42e582234d7ea26f6290dcbafcb93ae3c3c02df770c99eb10303ae946f17"
+    },
+    "Normals": {
+     "path": "buildings/korean_house/textures/korean_house_walls_Normals",
+     "sha256": "c0bc68f27a5da38f44fdaa799862e55653c728ce75e2e973093d28934d712cda"
+    },
+    "Masks": {
+     "path": "buildings/korean_house/textures/korean_house_walls_Masks",
+     "sha256": "fe6161f4149e359564b6cac1074dad04c19257040661726cc5760ad690d9a841"
+    },
+    "Details": {
+     "path": "buildings/korean_house/textures/korean_house_walls_Details",
+     "sha256": "72ce8192dec9b7d28bbfb36522fcd555ee7855e40b094b21f5e02e057ccff5cd"
+    }
+   }
+  },
+  {
+   "id": "korean_house_roofs",
+   "status": "current",
+   "record": "Korean repo research/Colonial_Expansion_17/HOUSE_RELEASE_GATE.json (texture-r14 ROOFS maps); one page shared by House A/B/C, all stages",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_house/textures/korean_house_roofs_BaseColor",
+     "sha256": "bc892c7c98e7a48d6fdf02f078091c87d09434576619b30edcb2d8e4a7683b06"
+    },
+    "Normals": {
+     "path": "buildings/korean_house/textures/korean_house_roofs_Normals",
+     "sha256": "ea619261349b40389a0f17c3c603e1065f2465e8d3791c8e81df17d6e899b410"
+    },
+    "Masks": {
+     "path": "buildings/korean_house/textures/korean_house_roofs_Masks",
+     "sha256": "2259d474b2a3f2539a8ce044b65cfe7cb408cebf044ec54a0708fb9180822764"
+    }
+   }
   }
  ]
 }

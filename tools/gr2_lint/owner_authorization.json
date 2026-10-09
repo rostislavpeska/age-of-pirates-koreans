@@ -1,0 +1,30 @@
+{
+  "_doc": "The owner's message store of the Koreans add-on's gr2_lint profiles (tools/gr2_lint/profiles.json tools.owner_messages): every item is the owner's WHOLE answer, verbatim, with the question it answered and where it was given. gr2_lint's texture_budget class confirmation (confirmed_by) and density waivers resolve here. Never paraphrase an item; a new decision is a new item.",
+  "items": [
+    {
+      "id": "owner-house-large-2026-10-09",
+      "text": "Yes: House A/B/C = large",
+      "question": "No texture is added. The lint just needs your words for the House family's EXISTING contract (WALLS 2048 + ROOFS 2048, shared by House A/B/C; construction and destruction reuse them plus the shared r65 atlas). Its class table still says 'House = small, 1 page' (your 30 Sept m336), so it fails the existing two pages. Confirm the Korean House class as large (2x2048: WALLS + ROOFS)?",
+      "options": [
+        "Yes: House A/B/C = large",
+        "No, keep House small"
+      ],
+      "source": "Owner-selected option in the Claude Code House-states session (KTC-176), 2026-10-09T09:03:43Z; the first asking (08:40Z) was answered with a question ('Why do you need to add new texture?'), re-explained before this answer.",
+      "recorded_by": "claude (House states, claim c-6ea3d06649)"
+    },
+    {
+      "id": "owner-house-c-receiver-uv-2026-10-09",
+      "text": "Export fix: +3% on that strip (Recommended)",
+      "question": "House A and B and all three construction models pass every lint check: 0 FAIL, 0 SKIP, DLL both routes. House C fails only the UV density floor. One hidden part, the matc roof deck under the tiles (Roof.Main.Receiver), was authored at 54.19 t/u against the 54 floor. Storing UVs in the GR2's 16-bit format drops it to 53.53, which puts 6.9% of C's matc area below the floor (limit 2%). How should I fix it?",
+      "options": [
+        "Export fix: +3% on that strip (Recommended)",
+        "Producer fixes the source",
+        "Waive the floor for it"
+      ],
+      "option_detail": "I scale only House C's Roof.Main.Receiver matc UV strip by 3% about its centre (it stays inside the burnt-timber region of r65, hidden under the roof tiles), rebuild C intact, damaged and its UV contract from the adjusted payload, record it as a derived export adjustment, and tell the House producer to carry it into the source.",
+      "correction": "The option text named the burnt-timber region by mistake; the strip lies in the r65 clay region (x 528-704, y 768-1008 px) and stays inside it after the scale (x 529.5-702.5).",
+      "source": "Owner-selected option in the Claude Code House-states session (KTC-176), 2026-10-09.",
+      "recorded_by": "claude (House states, claim c-6ea3d06649)"
+    }
+  ]
+}
