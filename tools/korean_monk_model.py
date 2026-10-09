@@ -23,10 +23,14 @@ import korean_visuals  # noqa: E402  (AOP, BARTOOL)
 DONOR = 'Art/units/asians/japanese/yabusame/yabusamerider_0.gr2'          # skeleton
 TARGET = 'Art/units/asians/chinese/shaolin_disciple/shaolin_disciple_01.gr2'   # mesh
 OUT = os.path.join(REPO, 'art', 'units', 'korean_monk', 'korean_monk_rider.gr2')
+# the Seungbyeong (foot monk soldier, owner 2026-10-09): the vanilla Disciple unchanged, under its own name so that
+# korean_seungbyeong.material gives it the monk's white retexture; its own Bip01 skeleton plays the universal
+# animation library (pikeman set, glaive on Bip01 Prop1)
+OUT_FOOT = os.path.join(REPO, 'art', 'units', 'korean_monk', 'korean_seungbyeong.gr2')
 
 
 def build():
-    """bytes of a fresh build (the vanilla files are extracted into a temporary folder, never into the repo)."""
+    """{path: bytes} of a fresh build (the vanilla files are extracted into a temporary folder, never into the repo)."""
     tool = os.path.join(korean_visuals.AOP, 'scripts', 'havok', 'gr2_reskeleton.py')
     if not os.path.isfile(tool) or not os.path.isfile(korean_visuals.BARTOOL):
         print('MISSING: AoP checkout with scripts/havok/gr2_reskeleton.py and bartool (%s)' % korean_visuals.AOP)
@@ -45,22 +49,24 @@ def build():
         if r.returncode:
             print(r.stderr.strip()[-1500:])
             sys.exit(1)
-        return open(out, 'rb').read()
+        return {OUT: open(out, 'rb').read(), OUT_FOOT: open(target, 'rb').read()}
 
 
 def main():
-    data = build()
-    current = open(OUT, 'rb').read() if os.path.isfile(OUT) else None
-    if '--check' in sys.argv:
-        print('korean_monk_rider.gr2', 'up to date' if current == data else 'STALE')
-        return 0 if current == data else 1
-    if current != data:
-        os.makedirs(os.path.dirname(OUT), exist_ok=True)
-        open(OUT, 'wb').write(data)
-        print('wrote', os.path.relpath(OUT, REPO), len(data), 'bytes')
-    else:
-        print('korean_monk_rider.gr2 up to date')
-    return 0
+    stale = 0
+    for path, data in build().items():
+        name = os.path.basename(path)
+        current = open(path, 'rb').read() if os.path.isfile(path) else None
+        if '--check' in sys.argv:
+            print(name, 'up to date' if current == data else 'STALE')
+            stale += current != data
+        elif current != data:
+            os.makedirs(os.path.dirname(path), exist_ok=True)
+            open(path, 'wb').write(data)
+            print('wrote', os.path.relpath(path, REPO), len(data), 'bytes')
+        else:
+            print(name, 'up to date')
+    return 1 if stale else 0
 
 
 if __name__ == '__main__':

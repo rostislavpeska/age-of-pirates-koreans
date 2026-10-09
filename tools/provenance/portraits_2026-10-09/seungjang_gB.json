@@ -1,0 +1,55 @@
+{
+  "request": {
+    "operation": "generate",
+    "provider": "gemini",
+    "prompt": "Paint a new Age of Empires III unit portrait in exactly the painting style of the reference images (official Age of Empires III unit portraits): close-up of head and shoulders, the head large in the upper half, three-quarter view, smooth airbrushed painterly skin, simplified stylised forms and folds, soft warm key light, a crisp bright rim light along the silhouette, hand-painted video-game look, NOT a photograph. Subject: A young Korean Buddhist warrior-monk general (seungjang) of the Joseon era, a youthful man of about 28 with a smooth unlined face, calm and confident, clean-shaven head, a short neat dark beard. He wears a light grey-white monk's robe with wide sleeves; a long string of dark wooden prayer beads around his neck. A wide band runs diagonally from his left shoulder across his chest. A Korean composite bow is slung over his right shoulder. The diagonal band is one flat pure magenta colour (#FF00FF) with no shading. Background: flat pure green (#00FF00), nothing else. No text, no border.",
+    "aspect_ratio": "1:1",
+    "image_size": "1K"
+  },
+  "operation": "generate",
+  "inputs": [
+    "C:\\Users\\TIGO\\AppData\\Local\\Temp\\claude\\C--Users-TIGO-Games-Age-of-Empires-3-DE-76561198347905238-mods-local-age-of-pirates\\9a3f55d9-a13c-4be3-8a29-86f909d798a5\\scratchpad\\portraits\\ref_japanese_monk.png",
+    "C:\\Users\\TIGO\\AppData\\Local\\Temp\\claude\\C--Users-TIGO-Games-Age-of-Empires-3-DE-76561198347905238-mods-local-age-of-pirates\\9a3f55d9-a13c-4be3-8a29-86f909d798a5\\scratchpad\\portraits\\ref_chinese_monk.png"
+  ],
+  "inputs_sha256": [
+    "ccd8fa32540694f31957b004dcbf0fb0eb075f6e7e8d5316ff981be1be6d80b3",
+    "b0ef2e87861a62f418beed1472cfb7a6c8af86f9882080975a1487aa7fde6fd6"
+  ],
+  "mask": null,
+  "mask_sha256": null,
+  "references": [
+    "C:/Users/TIGO/AppData/Local/Temp/claude/C--Users-TIGO-Games-Age-of-Empires-3-DE-76561198347905238-mods-local-age-of-pirates/9a3f55d9-a13c-4be3-8a29-86f909d798a5/scratchpad/portraits/ref_japanese_monk.png",
+    "C:/Users/TIGO/AppData/Local/Temp/claude/C--Users-TIGO-Games-Age-of-Empires-3-DE-76561198347905238-mods-local-age-of-pirates/9a3f55d9-a13c-4be3-8a29-86f909d798a5/scratchpad/portraits/ref_chinese_monk.png"
+  ],
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-image-preview",
+  "usage": {
+    "promptTokenCount": 751,
+    "candidatesTokenCount": 1426,
+    "totalTokenCount": 2177,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 235
+      },
+      {
+        "modality": "IMAGE",
+        "tokenCount": 516
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "estimate_usd": null,
+  "request_sha256": "98986a9af6477895a0f76030ada468b5095ca9f632d5e70d8b5a47b55f63229c",
+  "revised_prompts": [],
+  "files": [
+    "C:\\Users\\TIGO\\AppData\\Local\\Temp\\claude\\C--Users-TIGO-Games-Age-of-Empires-3-DE-76561198347905238-mods-local-age-of-pirates\\9a3f55d9-a13c-4be3-8a29-86f909d798a5\\scratchpad\\portraits\\seungjang_gB_1.jpg"
+  ],
+  "time": "2026-10-09T18:10:27"
+}

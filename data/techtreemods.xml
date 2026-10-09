@@ -121,6 +121,17 @@
       <effect type="CommandAdd" proto="zpMonkKorean2" page="0" column="6">
         <target type="ProtoUnit">TownCenter</target>
       </effect>
+      <!-- the Seungbyeong (zpSeungbyeong): Korea only, in the Barracks' free slot (Japan uses 0-2) -->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpSeungbyeong" page="0" column="3">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpSeungbyeongColonial</effect>
+      <effect type="TechStatus" status="obtainable">zpSeungbyeongFortress</effect>
+      <effect type="TechStatus" status="obtainable">zpSeungbyeongIndustrial</effect>
+      <effect type="TechStatus" status="obtainable">zpSeungbyeongImperial</effect>
       <effect type="TechStatus" status="unobtainable">ypMonasteryJapaneseHealing</effect>
       <effect type="TechStatus" status="unobtainable">ypMonasteryJapaneseCombat</effect>
       <effect type="TechStatus" status="unobtainable">ypMonasteryKillingBlowUpgrade</effect>
@@ -264,7 +275,8 @@
       </effect>
     </effects>
   </tech>
-  <!-- Seungbyeong (monk soldiers): Korean monks train warrior monks - placeholder unit the Chinese Disciple, slot 4 -->
+  <!-- Seungbyeong (monk soldiers): the Seungjang trains the Seungbyeong (zpSeungbyeong) in the field and up
+       to 15 of them instead of 10 (owner 2026-10-09; replaces the Chinese Disciple placeholder), slot 4 -->
   <tech name="zpMonasterySeungbyeong" type="Normal">
     <dbid>60009</dbid>
     <displaynameid>600020</displaynameid>
@@ -278,8 +290,94 @@
     <flag>CountsTowardMilitaryScore</flag>
     <flag>YPMonasteryTech</flag>
     <effects>
-      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
-        <target type="ProtoUnit">ypMonkDisciple</target>
+      <effect type="CommandAdd" proto="zpSeungbyeong" page="6" column="7">
+        <target type="ProtoUnit">zpMonkKorean</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpSeungbyeong" page="6" column="7">
+        <target type="ProtoUnit">zpMonkKorean2</target>
+      </effect>
+      <effect type="Data" amount="15.00" subtype="BuildLimit" relativity="Assign">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+    </effects>
+  </tech>
+  <!-- Seungbyeong age-ups: the Disciple scales only through the Chinese age techs (hit points and damage x1.20
+       Colonial, x1.30 Fortress, x1.40 Industrial, x1.50 Imperial, +0.5 speed at Colonial); Korea ages up with the
+       Japanese techs, so these shadow techs give zpSeungbyeong the same lines when the generic age tech is active
+       (armed by zpKoreanUnits, the zpKoreanHouseArrows pattern). The Disciple's killing-blow lines are left out:
+       the Seungbyeong's attacks have no killing blow. -->
+  <tech name="zpSeungbyeongColonial" type="Normal">
+    <dbid>60010</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">Colonialize</techstatus>
+      <techstatus status="Active">zpKoreanVisuals</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+      <effect type="Data" amount="0.50" subtype="MaximumVelocity" relativity="Absolute">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpSeungbyeongFortress" type="Normal">
+    <dbid>60011</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">Fortressize</techstatus>
+      <techstatus status="Active">zpKoreanVisuals</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+      <effect type="Data" amount="1.30" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpSeungbyeongIndustrial" type="Normal">
+    <dbid>60012</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">Industrialize</techstatus>
+      <techstatus status="Active">zpKoreanVisuals</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.40" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+      <effect type="Data" amount="1.40" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpSeungbyeongImperial" type="Normal">
+    <dbid>60013</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">Imperialize</techstatus>
+      <techstatus status="Active">zpKoreanVisuals</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpSeungbyeong</target>
+      </effect>
+      <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpSeungbyeong</target>
       </effect>
     </effects>
   </tech>

@@ -42,7 +42,8 @@ def test_techs_activate_japan_and_the_visual_marker():
     techs = xml(K / 'data/techtreemods.xml').findall('tech')
     assert [t.get('name') for t in techs] == ['zpKoreanVisuals', 'zpAge0Korean', 'zpKoreanBuildings', 'zpKoreanHouseArrows',
                                                   'zpKoreanUnits', 'zpKoreanEconomy', 'zpMonasteryHyangyak', 'zpMonasteryDure',
-                                                  'zpMonasteryPyeonjeon', 'zpMonasterySeungbyeong']
+                                                  'zpMonasteryPyeonjeon', 'zpMonasterySeungbyeong', 'zpSeungbyeongColonial', 'zpSeungbyeongFortress',
+                                                  'zpSeungbyeongIndustrial', 'zpSeungbyeongImperial']
     active = [e.text for e in techs[1].iter('effect') if e.get('type') == 'TechStatus' and e.get('status') == 'active']
     assert active == ['YPAge0Japanese', 'zpKoreanVisuals', 'zpKoreanBuildings', 'zpKoreanUnits', 'zpKoreanEconomy']
     assert all(60000 <= int(t.findtext('dbid')) < 61000 for t in techs)
@@ -50,8 +51,10 @@ def test_techs_activate_japan_and_the_visual_marker():
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(28)] + [str(600038 + i) for i in range(6)]  # 600022-600027: zzTEST House
-                                                                # benches; 600038-600043: zzTEST TC/Barracks/Stable
+    assert ids == [str(600000 + i) for i in range(48)]          # 600022-600027: zzTEST House benches A/B/C
+                                                                # 600028-600037: the monks' random names
+                                                                # 600038-600043: zzTEST TC/Barracks/Stable names
+                                                                # 600044-600047: the Seungbyeong
     civ = xml(K / 'data/civmods.xml').find('civ')
     for field in ('homecityflagiconwpf', 'homecityflagbuttonwpf', 'postgameflagiconwpf'):
         assert (K / 'data/wpfg' / civ.findtext(field).replace(BS, '/')).is_file(), field
@@ -114,6 +117,57 @@ def test_koreans_use_the_asian_villager_with_korean_voices():
     assert set(korean) <= defined, sorted(set(korean) - defined)
 
 
+def test_korean_wagons_and_fishing_boats_speak_like_the_japanese_ones():
+    """Owner 2026-10-09: fishing boats with the male villager voice, every wagon as the Japanese one, no new
+    soundsets. Each Japanese choice has a zpKoreans twin right after it: Japanese voices renamed to their Korean
+    twins (existing soundsets), every other voice kept."""
+    defined = set(re.findall(r'<soundset name="([^"]+)"', (K / 'sound/soundsetsde.mods.xml').read_text(encoding='utf-8')))
+    files = sorted(p for p in (K / 'sound').glob('*_snds.xml') if 'wagon' in p.name and not p.name.startswith('zztest'))
+    assert len(files) == 49 and (K / 'sound/ypfishingboatasian_snds.xml').is_file()
+    korean_voices = set()
+    for p in files + [K / 'sound/ypfishingboatasian_snds.xml']:
+        assert b'\r\n' in p.read_bytes() and b'\n' not in p.read_bytes().replace(b'\r\n', b''), p.name   # CRLF
+        root = ET.fromstring(p.read_text(encoding='utf-8'))
+        pairs = 0
+        for parent in root.iter():
+            kids = list(parent)
+            for k, c in enumerate(kids):
+                if c.get('name') == 'Japanese':
+                    twin = kids[k + 1]
+                    assert twin.get('name') == 'zpKoreans', p.name
+                    jp = [s.get('name') for s in c.iter('soundset')]
+                    ko = [s.get('name') for s in twin.iter('soundset')]
+                    assert ko == [n.replace('JapaneseVillagerM_', 'zpKoreanVillagerM_')
+                                  .replace('JapaneseFishingBoat', 'zpKoreanFishingBoat') for n in jp], p.name
+                    korean_voices |= {n for n in ko if n.startswith('zpKorean')}
+                    pairs += 1
+        assert pairs == 2, (p.name, pairs)                                   # Select and Acknowledge
+    assert korean_voices == {'zpKoreanVillagerM_Select', 'zpKoreanVillagerM_Acknowledge',
+                             'zpKoreanFishingBoatSelect', 'zpKoreanFishingBoatAcknowledge'}
+    assert korean_voices <= defined
+
+
+def test_monks_have_the_japanese_monk_abilities_and_korean_names():
+    """Owner's test 2026-10-09: the Abilities grid was empty and the monk was called "Korean Monk". Abilities and
+    random names bind by proto name in their own files (data/abilities/abilitymods.xml, data/randomnamemods.xml), so
+    a new proto has neither until it is listed there."""
+    strings = dict(re.findall(r'_locid="(\d+)">([^<]*)<', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8')))
+    units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
+    abilities = xml(K / 'data/abilities/abilitymods.xml')
+    names = {p.text.strip(): [t.text for t in p.iter('title')] for p in xml(K / 'data/randomnamemods.xml').findall('protounit')}
+    tactics = {a.findtext('name') for a in xml(K / 'data/tactics/zpmonkkorean.tactics').iter('action')}
+    for name in ('zpMonkKorean', 'zpMonkKorean2'):
+        u = units[name]
+        assert 'Abilities' in [c.text for c in u.findall('command')] and 'HeroName2' in [f.text for f in u.findall('flag')]
+        powers = [a.text for a in abilities.find(name.lower()).findall('ability')]
+        assert powers == ['ypPowerGuardianStun', 'ypPowerSmokeBomb', 'ypPowerDivineBlow', 'ypPowerDodge',
+                          'ypUnitScareAura', 'deUnitHealthRegen']       # the Japanese monk's, without ypPowerSabotage
+        assert {'Stun', 'SmokeBomb'} <= tactics                          # the actions those powers fire
+        assert names[name] == [str(i) for i in range(600028, 600038)] and all(strings[i] for i in names[name])
+        assert strings[u.findtext('displaynameid')] == 'Seungjang'
+    assert (K / 'data/abilities/abilitymods.xml.xmb').is_file() and (K / 'data/randomnamemods.xml.xmb').is_file()
+
+
 def test_hanok_uses_the_generic_house_icons():
     house = xml(K / 'data/protomods.xml').find('unit')
     assert house.findtext('icon').endswith('house_icon.png') and house.findtext('portraiticon').endswith('house_portrait.png')
@@ -123,7 +177,7 @@ def test_korean_monks_replace_the_japanese_monks():
     """Owner 2026-10-09: a mounted monk-explorer (WoL principle) on the Manchu horse archer model as placeholder."""
     units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
     # zzTEST* = the 3D test benches in their own marked block (owner 2026-10-09, strip before release)
-    assert {n for n in units if not n.startswith('zzTEST')} == {'zpHouseKorean', 'zpMonkKorean', 'zpMonkKorean2'}
+    assert {n for n in units if not n.startswith('zzTEST')} == {'zpHouseKorean', 'zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong'}
     civ = xml(K / 'data/civmods.xml').find('civ')
     assert [u.text for u in civ.findall('startingunit')][:2] == ['zpMonkKorean', 'zpMonkKorean2']
     assert 'ypMonkJapanese' not in (K / 'data/civmods.xml').read_text(encoding='utf-8')
@@ -135,7 +189,8 @@ def test_korean_monks_replace_the_japanese_monks():
         assert not types & {'AbstractInfantry', 'AbstractJapaneseMonk', 'LogicalTypeStealthUnit'}
         assert 'KnockoutDeath' in [f.text for f in u.findall('flag')]
         trains = [e.text for e in u.findall('train')]
-        assert 'zpHouseKorean' in trains and 'ypMonkDisciple' in trains and 'ypShrineJapanese' not in trains
+        assert 'zpHouseKorean' in trains and 'ypShrineJapanese' not in trains
+        assert 'ypMonkDisciple' not in trains and 'zpSeungbyeong' not in trains   # the tech adds the Seungbyeong
         assert 'ToggleStealth' not in [c.text for c in u.findall('command')]
         assert 'SabotageAttack' not in [a.findtext('name') for a in u.findall('protoaction')]
         assert (K / 'data/tactics' / u.findtext('tactics')).is_file()
@@ -149,6 +204,101 @@ def test_korean_monks_replace_the_japanese_monks():
     assert tc == [('zpMonkKorean', '0', '5'), ('zpMonkKorean2', '0', '6')]      # the Japanese monks' retrain slots
     off = [e.findtext('target') for e in eff if e.get('subtype') == 'Enable' and e.get('amount') == '0.00']
     assert {'ypMonkJapanese', 'ypMonkJapanese2'} <= set(off)
+
+
+def test_seungbyeong_is_a_zero_pop_monk_soldier_with_a_glaive():
+    """Owner 2026-10-09: "extra unit like disciple", "no pop costs but lower stats", "distinct from Disciple", the white
+    monk "as footman". The native Sohei's glaive and pikeman.tactics on the Disciple body with the monk's white
+    retexture; trained in the Barracks (Korea only) and, after zpMonasterySeungbyeong, by the Seungjang in the field."""
+    units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
+    u = units['zpSeungbyeong']
+    assert u.findtext('populationcount') is None and u.findtext('buildlimit') == '10' and u.findtext('allowedage') == '1'
+    assert {c.get('resourcetype'): float(c.text) for c in u.findall('cost')} == {'Food': 50.0, 'Wood': 30.0}
+    assert float(u.findtext('maxhitpoints')) == 100 and u.findtext('tactics') == 'pikeman.tactics'
+    types = {e.text for e in u.findall('unittype')}
+    assert {'AbstractPikeman', 'AbstractHandInfantry', 'AbstractInfantry'} <= types and 'AbstractNativeWarrior' not in types
+    melee = [a for a in u.findall('protoaction') if a.findtext('name') == 'MeleeHandAttack'][0]
+    assert float(melee.findtext('damage')) == 9
+    assert {b.get('type'): float(b.text) for b in melee.findall('damagebonus')} == {'AbstractCavalry': 3.0,
+                                                                                   'AbstractLightInfantry': 2.0}
+    anim = (K / 'art' / u.findtext('animfile').replace(BS, '/')).read_text(encoding='utf-8')
+    model = BS.join(['units', 'korean_monk', 'korean_seungbyeong'])
+    assert anim.count('<file>%s</file>' % model) == 2 and 'sohei_age2' not in anim
+    assert '_pikeman</file>' not in anim and anim.count('tobone="Bip01 Prop1"') == 2     # Bip01 twins, glaive in hand
+    assert BS.join(['sohei', 'sohei_sword']) in anim                                  # the vanilla glaive, by path
+    mat = lambda n: (K / 'art/units/korean_monk' / n).read_text(encoding='utf-8')
+    assert mat('korean_seungbyeong.material') == mat('korean_monk_rider.material')    # the monk's white retexture
+    assert (K / 'art/units/korean_monk/korean_seungbyeong.gr2').is_file()
+    snds = xml(K / 'sound/zpseungbyeong_snds.xml')
+    assert snds.find('protounit').get('name') == 'zpSeungbyeong'
+    assert {s.get('name') for s in snds.iter('soundset')} >= {'Korean_Soldier_Select', 'Korean_Soldier_Attack'}
+    techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    eff = list(techs['zpKoreanUnits'].iter('effect'))
+    assert ('zpSeungbyeong', '0', '3', 'ypBarracksJapanese') in [
+        (e.get('proto'), e.get('page'), e.get('column'), e.findtext('target')) for e in eff if e.get('type') == 'CommandAdd']
+    assert 'zpSeungbyeong' in [e.findtext('target') for e in eff if e.get('subtype') == 'Enable' and e.get('amount') == '1.00']
+    sb = [(e.get('type'), e.get('subtype'), e.get('amount'), e.get('proto'), e.get('page'), e.get('column'),
+           e.findtext('target')) for e in techs['zpMonasterySeungbyeong'].iter('effect')]
+    assert sb == [('CommandAdd', None, None, 'zpSeungbyeong', '6', '7', 'zpMonkKorean'),
+                  ('CommandAdd', None, None, 'zpSeungbyeong', '6', '7', 'zpMonkKorean2'),
+                  ('Data', 'BuildLimit', '15.00', None, None, None, 'zpSeungbyeong')]
+    strings = dict(re.findall(r'_locid="(\d+)">([^<]*)<', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8')))
+    assert strings[u.findtext('displaynameid')] == 'Seungbyeong'
+
+
+def test_seungbyeong_plays_the_vanilla_sohei_animations():
+    """The footman's animfile keeps the vanilla Sohei's animation set (the one pikeman.tactics plays on the Sohei),
+    and every file it names exists in the game: the animation library's Bip01 twins, the glaive, the effects."""
+    try:
+        import korean_sounds
+        bt, index = korean_sounds.bartool()
+    except BaseException:
+        pytest.skip('game archives not readable here')
+    vanilla = bt.decode(bt.read_entry(index['art/units/asians/japanese/sohei/sohei.xml.xmb']), True, 'lf')[0]
+    ours = (K / 'art/units/korean_monk/korean_seungbyeong.xml').read_text(encoding='utf-8')
+    assert set(_top_anims(ours)) == set(_top_anims(vanilla.decode('utf-8-sig')))
+    model = BS.join(['units', 'korean_monk', 'korean_seungbyeong'])
+    for f in set(re.findall(r'<file>([^<]+)</file>', ours)) - {model}:
+        p = 'art/' + f.replace(BS, '/').lower()
+        assert any(p + ext in index for ext in ('.gr2', '.xmb', '')), f
+
+
+def test_monk_portraits_and_icons_carry_the_player_colour():
+    """Owner 2026-10-09: own portraits for the Seungjang and the Seungbyeong on the vanilla portrait backdrop; the
+    kasaya is transparent and stores a light grey shading: the game multiplies the player colour into the RGB under
+    it (owner's test 2026-10-09: stored black showed a near-black sash), as the vanilla monk sashes."""
+    from PIL import Image
+    units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
+    for name in ('zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong'):
+        u = units[name]
+        for field, size in (('portraiticon', 512), ('icon', 128)):
+            im = Image.open(K / 'data/wpfg' / u.findtext(field).replace(BS, '/')).convert('RGBA')
+            assert im.size == (size, size), (name, field, im.size)
+            hole = sum(1 for a in im.getchannel('A').getdata() if a == 0) / size / size
+            assert hole > 0.02, (name, field, hole)                       # the player-colour kasaya
+            under = [sum(px[:3]) / 3 for px in im.getdata() if px[3] == 0]
+            assert sorted(under)[len(under) // 2] > 100, (name, field)     # the game MULTIPLIES the player colour
+                                                                          # into this RGB: black = black sash
+        assert 'sohei' not in u.findtext('icon') and 'sohei' not in u.findtext('portraiticon')
+
+
+def test_seungbyeong_scales_with_the_ages_like_the_disciple():
+    """Owner 2026-10-09: "verify how disciples are impacted by age up ... your new unit must work the same way". The
+    Disciple's only age scaling: the Chinese age techs (hit points and damage x1.20/1.30/1.40/1.50, +0.5 speed at
+    Colonial). Korea's Japanese age-ups activate the generic age techs, on which four armed shadow techs fire."""
+    techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    armed = [(e.text or '').strip() for e in techs['zpKoreanUnits'].iter('effect') if e.get('status') == 'obtainable']
+    for name, age, amt in (('zpSeungbyeongColonial', 'Colonialize', '1.20'), ('zpSeungbyeongFortress', 'Fortressize', '1.30'),
+                           ('zpSeungbyeongIndustrial', 'Industrialize', '1.40'), ('zpSeungbyeongImperial', 'Imperialize', '1.50')):
+        t = techs[name]
+        assert name in armed and t.findtext('status') == 'UNOBTAINABLE' and 'Shadow' in [f.text for f in t.findall('flag')]
+        assert [p.text for p in t.iter('techstatus')] == [age, 'zpKoreanVisuals']
+        got = {(e.get('subtype'), e.get('amount'), e.get('relativity'), e.get('allactions')) for e in t.iter('effect')}
+        want = {('Hitpoints', amt, 'BasePercent', None), ('Damage', amt, 'BasePercent', '1')}
+        if age == 'Colonialize':
+            want.add(('MaximumVelocity', '0.50', 'Absolute', None))
+        assert got == want, (name, got)
+        assert {e.findtext('target') for e in t.iter('effect')} == {'zpSeungbyeong'}
 
 
 def _top_anims(text):
@@ -262,7 +412,8 @@ def test_korean_monastery_replaces_the_japanese_monk_techs():
              if e.get('type') == 'CommandAdd' and e.findtext('target') == 'ypMonastery']
     assert slots == [('zpMonasteryHyangyak', '1'), ('zpMonasteryDure', '2'), ('zpMonasteryPyeonjeon', '3'),
                      ('zpMonasterySeungbyeong', '4')]
-    armed = [(e.text or '').strip() for e in eff if e.get('status') == 'obtainable']
+    armed = [(e.text or '').strip() for e in eff if e.get('status') == 'obtainable'
+             and not (e.text or '').strip().startswith('zpSeungbyeong')]     # the age-up techs: their own test
     assert armed == [s[0] for s in slots]
     for name, _ in slots:
         t = techs[name]

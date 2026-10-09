@@ -1,0 +1,11 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="units/korean_monk/textures/korean_monk_rider_matA_BaseColor" />
+      <texture name="Normals" override="units/korean_monk/textures/korean_monk_rider_matA_Normals" />
+      <texture name="Masks" override="units/asians/chinese/shaolin_disciple/textures/shaolin_disciple_01_matA_Masks" />
+      <texture name="Details" override="units/korean_monk/textures/korean_monk_rider_matA_Details" />
+    </parameters>
+  </submaterial>
+</material>

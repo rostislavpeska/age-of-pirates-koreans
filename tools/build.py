@@ -8,7 +8,8 @@ Run after every edit, before a game test or a commit:
 
 Generated files - never edit them by hand, edit the source named here:
 
-  data/<file>.xml.xmb              compiled from data/<file>.xml (the engine reads the twin)
+  data/<file>.xml.xmb              compiled from data/<file>.xml (the engine reads the twin); the same for
+                                   data/abilities/<file>.xml
   data/strings/<lang>/stringmods.xml.xmb
                                    compiled from data/strings/english/stringmods.xml into every language folder
                                    (new strings are English only; owner rule 2026-10-08)
@@ -20,6 +21,9 @@ Generated files - never edit them by hand, edit the source named here:
                                    two mods is unverified, so the add-on carries both)
   sound/ypsettlerasian_snds.xml    AoP's copy if any, else vanilla, with Korean voices for zpKoreans
                                    (tools/korean_sounds.py)
+  sound/*wagon*_snds.xml, sound/ypfishingboatasian_snds.xml
+                                   AoP's copy if any, else vanilla, with a zpKoreans choice after every Japanese
+                                   one: the Japanese voices as their Korean twins (tools/korean_sounds.py)
   art/units/korean_monk/*.xml, data/tactics/zpmonkkorean.tactics
                                    the Korean monk's animfiles and tactics (tools/korean_monk.py)
 
@@ -96,6 +100,9 @@ def build():
     for f in sorted(os.listdir(data_dir)):
         if f.endswith('.xml'):
             out['data/%s.xmb' % f] = compile_xmb(f, out['data/' + f])
+    for f in sorted(os.listdir(os.path.join(data_dir, 'abilities'))):
+        if f.endswith('.xml'):
+            out['data/abilities/%s.xmb' % f] = compile_xmb(f, out['data/abilities/' + f])
     strings = os.path.join(data_dir, 'strings')
     xmb = compile_xmb('stringmods.xml', out['data/strings/english/stringmods.xml'])
     for lang in sorted(os.listdir(strings)):

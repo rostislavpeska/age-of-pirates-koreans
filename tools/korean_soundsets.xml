@@ -1,7 +1,7 @@
 <soundsetdefmods>
   <!-- Koreans (civ zpKoreans): AoE2 DE Korean villager voices, sound/korean/Koreans_Villager_*_AoE2.wav.
-       Families mirror vanilla JapaneseVillagerM_/F_* and JapaneseFishingBoat* (soundsetsy.xml). Defined only:
-       no _snds file uses them yet (owner 2026-10-08). -->
+       Families mirror vanilla JapaneseVillagerM_/F_* and JapaneseFishingBoat* (soundsetsy.xml). Used by the
+       Asian villager, the wagons and the Asian fishing boat (generated _snds files, tools/korean_sounds.py). -->
   <soundset name="zpKoreanVillagerM_Select" volume="0.7000" maxnum="4" distance="1.0000">
     <sound filename="korean\Koreans_Villager_Male_Select_1_AoE2.wav" volume="1.0000">
     </sound>

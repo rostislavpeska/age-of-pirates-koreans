@@ -1,0 +1,22 @@
+<abilitymods>
+  <!-- zpMonkKorean, zpMonkKorean2: the vanilla Japanese monk's abilities (abilities.xml <ypmonkjapanese>,
+       <ypmonkjapanese2>, copied in order) without ypPowerSabotage: the Korean monks have no sabotage. Abilities bind by
+       the lower-case proto name, so a new proto has none until it is listed here (owner's test 2026-10-09: the
+       Abilities grid was empty). One line per ability: XMB keeps element text verbatim. -->
+  <zpmonkkorean>
+    <ability>ypPowerGuardianStun<rof>60</rof></ability>
+    <ability>ypPowerSmokeBomb<rof>60</rof><castonself>true</castonself></ability>
+    <ability>ypPowerDivineBlow<alwaysdisabledingrid>true</alwaysdisabledingrid></ability>
+    <ability>ypPowerDodge<tech>ypDodge</tech><rof>60</rof><alwaysdisabledingrid>true</alwaysdisabledingrid><forceshowrollover>true</forceshowrollover></ability>
+    <ability>ypUnitScareAura<tech>YPHCJapaneseMonkRangeAura</tech><alwaysdisabledingrid>true</alwaysdisabledingrid></ability>
+    <ability>deUnitHealthRegen<alwaysdisabledingrid>true</alwaysdisabledingrid><forceshowrollover>true</forceshowrollover></ability>
+  </zpmonkkorean>
+  <zpmonkkorean2>
+    <ability>ypPowerGuardianStun<rof>60</rof></ability>
+    <ability>ypPowerSmokeBomb<rof>60</rof><castonself>true</castonself></ability>
+    <ability>ypPowerDivineBlow<alwaysdisabledingrid>true</alwaysdisabledingrid></ability>
+    <ability>ypPowerDodge<tech>ypDodge</tech><rof>60</rof><alwaysdisabledingrid>true</alwaysdisabledingrid></ability>
+    <ability>ypUnitScareAura<tech>YPHCJapaneseMonkRangeAura</tech><alwaysdisabledingrid>true</alwaysdisabledingrid></ability>
+    <ability>deUnitHealthRegen<alwaysdisabledingrid>true</alwaysdisabledingrid><forceshowrollover>true</forceshowrollover></ability>
+  </zpmonkkorean2>
+</abilitymods>

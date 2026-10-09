@@ -1,0 +1,7 @@
+<randomnamemods>
+  <!-- zpMonkKorean, zpMonkKorean2 (flag HeroName2): each monk gets one of these names, as the vanilla Japanese monk
+       gets Rennyo, Shinran Shonin ... (randomnames.xml <ypMonkJapanese>). Korean Buddhist monks of the Goryeo and
+       Joseon eras, strings 600028-600037. One line per proto: XMB keeps element text verbatim. -->
+  <protounit>zpMonkKorean<civ>Default<title>600028</title><title>600029</title><title>600030</title><title>600031</title><title>600032</title><title>600033</title><title>600034</title><title>600035</title><title>600036</title><title>600037</title></civ></protounit>
+  <protounit>zpMonkKorean2<civ>Default<title>600028</title><title>600029</title><title>600030</title><title>600031</title><title>600032</title><title>600033</title><title>600034</title><title>600035</title><title>600036</title><title>600037</title></civ></protounit>
+</randomnamemods>

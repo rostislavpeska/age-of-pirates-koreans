@@ -1,0 +1,251 @@
+<protounitsounddef>
+  <protounit name="deMilitaryWagon">
+    <soundtype name="Select">
+      <civlogic>
+        <choice name="Nature" />
+        <choice name="British">
+          <soundset name="BritishSettlerMaleSelect" />
+        </choice>
+        <choice name="French">
+          <soundset name="FrenchSettlerMaleSelect" />
+        </choice>
+        <choice name="Russians">
+          <soundset name="RussianSettlerMaleSelect" />
+        </choice>
+        <choice name="Spanish">
+          <soundset name="SpanishSettlerMaleSelect" />
+        </choice>
+        <choice name="Ottomans">
+          <soundset name="OttomanSettlerMaleSelect" />
+        </choice>
+        <choice name="Portuguese">
+          <soundset name="PortugueseSettlerMaleSelect" />
+        </choice>
+        <choice name="Germans">
+          <soundset name="GermanSettlerMaleSelect" />
+        </choice>
+        <choice name="Dutch">
+          <soundset name="DutchSettlerMaleSelect" />
+        </choice>
+        <choice name="Aztecs" />
+        <choice name="Caribs" />
+        <choice name="Cherokee" />
+        <choice name="Comanche" />
+        <choice name="Cree" />
+        <choice name="Incas" />
+        <choice name="Iroquois" />
+        <choice name="Lakota" />
+        <choice name="Maya" />
+        <choice name="Nootka" />
+        <choice name="Seminoles" />
+        <choice name="Tupi" />
+        <choice name="SPCAct1">
+          <soundset name="BritishSettlerMaleSelect" />
+        </choice>
+        <choice name="SPCAct2">
+          <soundset name="BritishSettlerMaleSelect" />
+        </choice>
+        <choice name="SPCAct3">
+          <soundset name="BritishSettlerMaleSelect" />
+        </choice>
+        <choice name="XPIroquois">
+          <soundset name="IroquoisVillagerMaleSelect" />
+        </choice>
+        <choice name="XPSioux">
+          <soundset name="SiouxVillagerMaleSelect" />
+        </choice>
+        <choice name="XPAztec">
+          <soundset name="AztecVillagerMaleSelect" />
+        </choice>
+        <choice name="XPSPC">
+          <soundset name="IroquoisVillagerMaleSelect" />
+        </choice>
+        <choice name="XPSPCFalcon">
+          <soundset name="BritishSettlerMaleSelect" />
+        </choice>
+        <choice name="XPSPCLakota">
+          <soundset name="SiouxVillagerMaleSelect" />
+        </choice>
+        <choice name="Japanese">
+          <soundset name="JapaneseVillagerM_Select" />
+        </choice>
+        <choice name="zpKoreans">
+          <soundset name="zpKoreanVillagerM_Select" />
+        </choice>
+        <choice name="Indians">
+          <soundset name="IndianVillagerM_Select" />
+        </choice>
+        <choice name="Chinese">
+          <soundset name="ChineseVillagerM_Select" />
+        </choice>
+        <choice name="SPCJapanese">
+          <soundset name="JapaneseVillagerM_Select" />
+        </choice>
+        <choice name="SPCChinese">
+          <soundset name="ChineseVillagerM_Select" />
+        </choice>
+        <choice name="SPCIndians">
+          <soundset name="IndianVillagerM_Select" />
+        </choice>
+        <choice name="DEInca">
+          <soundset name="DEIncaVillagerMaleSelect" />
+        </choice>
+        <choice name="DESwedish">
+          <soundset name="DESwedishWagonSelect" />
+        </choice>
+        <choice name="DEAmericans">
+          <soundset name="DEAmericanSettlerMaleSelect" />
+        </choice>
+        <choice name="DEHausa">
+          <soundset name="DEHausaVMSelect" />
+        </choice>
+        <choice name="DEEthiopians">
+          <soundset name="DEEthiopianVillagerMaleSelect" />
+        </choice>
+        <choice name="DEMexicans">
+          <soundset name="DEMexicanSettlerMaleSelect" />
+        </choice>
+        <choice name="DEItalians">
+          <soundset name="DEItalianSettlerMaleSelect" />
+        </choice>
+        <choice name="DEMaltese">
+          <soundset name="DEItalianSettlerMaleSelect" />
+        </choice>
+        <choice name="DEPolish">
+          <soundset name="PolishSettlerMaleSelect" />
+        </choice>
+        <choice name="DEDanish">
+          <soundset name="DanishSettlerMaleSelect" />
+        </choice>
+      </civlogic>
+    </soundtype>
+    <soundtype name="Grunt">
+      <soundset name="CavalryGrunt" />
+    </soundtype>
+    <soundtype name="Death">
+      <soundset name="GenericMaleDeath" />
+    </soundtype>
+    <soundtype name="Creation">
+      <soundset name="SettlerBirth" />
+    </soundtype>
+    <soundtype name="Acknowledge">
+      <civlogic>
+        <choice name="Nature" />
+        <choice name="British">
+          <soundset name="BritishSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="French">
+          <soundset name="FrenchSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="Russians">
+          <soundset name="RussianSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="Spanish">
+          <soundset name="SpanishSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="Ottomans">
+          <soundset name="OttomanSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="Portuguese">
+          <soundset name="PortugueseSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="Germans">
+          <soundset name="GermanSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="Dutch">
+          <soundset name="DutchSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="Aztecs" />
+        <choice name="Caribs" />
+        <choice name="Cherokee" />
+        <choice name="Comanche" />
+        <choice name="Cree" />
+        <choice name="Incas" />
+        <choice name="Iroquois" />
+        <choice name="Lakota" />
+        <choice name="Maya" />
+        <choice name="Nootka" />
+        <choice name="Seminoles" />
+        <choice name="Tupi" />
+        <choice name="SPCAct1">
+          <soundset name="BritishSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="SPCAct2">
+          <soundset name="BritishSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="SPCAct3">
+          <soundset name="BritishSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="XPIroquois">
+          <soundset name="IroquoisVillagerMaleAcknowledge" />
+        </choice>
+        <choice name="XPSioux">
+          <soundset name="SiouxVillagerMaleAcknowledge" />
+        </choice>
+        <choice name="XPAztec">
+          <soundset name="AztecVillagerMaleAcknowledge" />
+        </choice>
+        <choice name="XPSPC">
+          <soundset name="IroquoisVillagerMaleAcknowledge" />
+        </choice>
+        <choice name="XPSPCFalcon">
+          <soundset name="BritishSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="XPSPCLakota">
+          <soundset name="SiouxVillagerMaleAcknowledge" />
+        </choice>
+        <choice name="Chinese">
+          <soundset name="ChineseVillagerM_Acknowledge" />
+        </choice>
+        <choice name="Japanese">
+          <soundset name="JapaneseVillagerM_Acknowledge" />
+        </choice>
+        <choice name="zpKoreans">
+          <soundset name="zpKoreanVillagerM_Acknowledge" />
+        </choice>
+        <choice name="Indians">
+          <soundset name="IndianVillagerM_Acknowledge" />
+        </choice>
+        <choice name="SPCJapanese">
+          <soundset name="JapaneseVillagerM_Acknowledge" />
+        </choice>
+        <choice name="SPCChinese">
+          <soundset name="ChineseVillagerM_Acknowledge" />
+        </choice>
+        <choice name="SPCIndians">
+          <soundset name="IndianVillagerM_Acknowledge" />
+        </choice>
+        <choice name="DEInca">
+          <soundset name="DEIncaVillagerMaleAcknowledge" />
+        </choice>
+        <choice name="DESwedish">
+          <soundset name="DESwedishWagonAcknowledge" />
+        </choice>
+        <choice name="DEAmericans">
+          <soundset name="DEAmericanSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="DEHausa">
+          <soundset name="DEHausaVMAcknowledge" />
+        </choice>
+        <choice name="DEEthiopians">
+          <soundset name="DEEthiopianVillagerMaleAcknowledge" />
+        </choice>
+        <choice name="DEMexicans">
+          <soundset name="DEMexicanSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="DEItalians">
+          <soundset name="DEItalianSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="DEMaltese">
+          <soundset name="DEItalianSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="DEPolish">
+          <soundset name="PolishSettlerMaleAcknowledge" />
+        </choice>
+        <choice name="DEDanish">
+          <soundset name="DanishSettlerMaleAcknowledge" />
+        </choice>
+      </civlogic>
+    </soundtype>
+  </protounit>
+</protounitsounddef>
