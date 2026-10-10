@@ -467,6 +467,15 @@ def test_generated_files_are_current_and_buildings_switch_at_the_first_upgrade()
         tech = root.find('component/logic/japanese/logic')
         branch = tech.find('zpkoreanvisuals/logic')
         assert [c.tag for c in tech][-1] == 'zpkoreanvisuals' and [c.tag for c in branch][-1] == 'colonialize'
+    # the castle switches on its OWN first upgrade (owner 2026-10-10: "as castle 1st upgrade Korean variant"): vanilla
+    # Japanese castle before ypFrontierCastle, the Korean castle from it on
+    root = ET.fromstring(files['art/buildings/asian_civs/castle/castle.xml'].decode('utf-8'))
+    tech = next(lg.find('japanese/logic') for lg in root.iter('logic') if lg.find('japanese/logic') is not None)
+    branch = tech.find('zpkoreanvisuals/logic')
+    assert [c.tag for c in tech][-1] == 'zpkoreanvisuals'
+    assert [c.tag for c in branch] == ['none', 'ypfrontiercastle'], [c.tag for c in branch]
+    refs = [r.get('ref') for r in branch.find('ypfrontiercastle').iter('submodelref')]
+    assert refs[-1] == 'korean_castle_built' and all(r.startswith('korean_castle') for r in refs), refs
     langs = [d for d in os.listdir(K / 'data/strings') if (K / 'data/strings' / d).is_dir()]
     assert len(langs) == 15
     for lang in langs:

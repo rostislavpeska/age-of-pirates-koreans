@@ -10,9 +10,9 @@ cannot be patched partially, so the mod ships a full copy of each vanilla animfi
   * one more child of the Japanese "Tech" logic, <zpkoreanvisuals>. It is the LAST child, so it wins
     over colonialize/industrialize while the owner has the tech - the vanilla pattern of
     <dehciturbidepalace> in the Mediterranean branch of town_center.xml and of the mod's
-    <zpazteccitydefendersetup> in dock.xml. Inside it a nested age switch: <none> = the vanilla
+    <zpazteccitydefendersetup> in dock.xml. Inside it a nested switch: <none> = the vanilla
     Discovery Age look (generic Asian, as Japan), <colonialize> = the Korean model from the first
-    upgrade (Colonial Age) on.
+    upgrade (Colonial Age) on; the castle switches on its own first upgrade, <ypfrontiercastle>.
 
 zpKoreanVisuals is activated only by zpAge0Korean (data/techtreemods.xml), so Japanese buildings
 stay Japanese. Every byte of the base file is kept (the base is AoP's own override of that animfile when AoP has
@@ -34,7 +34,11 @@ AOP = os.environ.get('AOP_ROOT') or os.path.join(os.path.dirname(REPO), 'age-of-
 BARTOOL = os.path.join(AOP, '.claude', 'skills', 'aoe3de-bar-archives', 'scripts', 'bartool.py')
 BS = chr(92)
 
-# (vanilla archive animfile, mod output, Korean source animfile, culture branch, add attack anims)
+# (vanilla archive animfile, mod output, Korean source animfile, culture branch, add attack anims[, first upgrade tech])
+# The first upgrade tech switches to the Korean model: 'colonialize' (the age) for buildings whose vanilla look changes by
+# age; the castle changes by its OWN upgrades (ypfrontiercastle / ypfortifiedcastle), so its Korean look comes with the
+# castle's first upgrade (owner 2026-10-10: "as castle 1st upgrade Korean variant", "you need to edit vanilla anim file
+# too", "Check barracks and stables", "So two places - final (castle variant) + test bed").
 # Korean Town Center: ON by the owner's go of 2026-10-08 ("So GO with the Town center modification") while
 # `gr2_lint.py --profile korean_tc art/buildings/korean_tc` still FAILs 6 checks (texture budget, texel density,
 # UV lineage - the open texturing work, AGENTS.md rule 13). Overriding town_center.xml touches every civ's Town
@@ -46,11 +50,13 @@ BUILDINGS = [
      'art/zbench_korean_military/barracks/korean_barracks_physics.xml', 'japanese', True),
     ('Art/buildings/asian_civs/stable/stable.xml.XMB', 'art/buildings/asian_civs/stable/stable.xml',
      'art/zbench_korean_military/stable/korean_stable_physics.xml', 'japanese', False),
-    # Korean castle (owner 2026-10-10: "implement the model to the game incl. destruction and construction"): the Colonial
-    # castle (premium textures M7) for the Japanese castle proto under zpKoreanVisuals - Frontier/Fortified castle techs
-    # keep the Korean look (one Korean castle model so far); gr2_lint korean_castle / korean_castle_con pass
+    # Korean castle (owner 2026-10-10: "implement the model to the game incl. destruction and construction", then "as
+    # castle 1st upgrade Korean variant"): the vanilla Japanese castle until the castle's first upgrade (ypFrontierCastle),
+    # the Korean castle from it on - ypFrontierCastle stays active, so the Fortified castle keeps the Korean look too (one
+    # Korean castle model so far; the Industrial one waits). The test bed zzTESTKoreanCastle shows it directly.
+    # gr2_lint korean_castle / korean_castle_con pass
     ('Art/buildings/asian_civs/castle/castle.xml.XMB', 'art/buildings/asian_civs/castle/castle.xml',
-     'art/buildings/korean_castle/korean_castle.xml', 'japanese', False),
+     'art/buildings/korean_castle/korean_castle.xml', 'japanese', False, 'ypfrontiercastle'),
 ]
 
 MARKER = 'zpkoreanvisuals'
@@ -123,7 +129,7 @@ def tech_logic_span(text, culture):
     raise ValueError('unbalanced Tech logic in <%s>' % culture)
 
 
-def merge(vanilla, korean_text, culture, add_attack):
+def merge(vanilla, korean_text, culture, add_attack, first='colonialize'):
     bones, subs, completion = korean_parts(korean_text, add_attack)
     have = {b.lower() for b in re.findall(r'<definebone>([^<]+)</definebone>', vanilla)}
     vsubs = {s.lower() for s in re.findall(r'<submodel>([^<\s]+)', vanilla)}
@@ -154,7 +160,7 @@ def merge(vanilla, korean_text, culture, add_attack):
     if ind.strip():                              # a compact base (AoP's castle.xml: one line per culture branch):
         none = re.match(r'<logic type="Tech">\s*(<none>.*?</none>)', out[t0:t1], re.S)   # the marker goes in inline
         block = ''.join(['<%s><logic type="Tech">' % MARKER, none.group(1) if none else '',
-                         '<colonialize>', completion, '</colonialize></logic></%s>' % MARKER])
+                         '<%s>' % first, completion, '</%s></logic></%s>' % (first, MARKER)])
         return out[:close] + block + out[close:]
     none = re.search(r'\n(%s  <none>\n.*?\n%s  </none>)\n' % (ind, ind), out[t0:t1], re.S)
     korean = '\n'.join((ind + '        ' + l[4:]) if l.startswith('    ') else (ind + '        ' + l)
@@ -162,7 +168,7 @@ def merge(vanilla, korean_text, culture, add_attack):
     parts = ['%s  <%s>' % (ind, MARKER), '%s    <logic type="Tech">' % ind]
     if none:                                     # the vanilla stable has no <none> branch
         parts.append('\n'.join('    ' + l for l in none.group(1).split('\n')))
-    parts += ['%s      <colonialize>' % ind, korean, '%s      </colonialize>' % ind,
+    parts += ['%s      <%s>' % (ind, first), korean, '%s      </%s>' % (ind, first),
               '%s    </logic>' % ind, '%s  </%s>' % (ind, MARKER)]
     out = out[:line0] + '\n'.join(parts) + '\n' + out[line0:]
     return out
@@ -172,7 +178,7 @@ def canon(e):
     return (e.tag, sorted(e.attrib.items()), (e.text or '').strip(), [canon(c) for c in e])
 
 
-def verify(text, culture):
+def verify(text, culture, first='colonialize'):
     root = ET.fromstring(text)
     # case-insensitive: vanilla town_center.xml itself refers to lak_sub_construction_stage_02 in another case
     names = {(s.text or '').strip().lower() for s in root.iter('submodel')}
@@ -190,7 +196,7 @@ def verify(text, culture):
             inner = tech.find(MARKER).find('logic')
             assert inner.get('type') == 'Tech'
             ages = [c.tag for c in inner]
-            assert ages[-1] == 'colonialize' and ages[:-1] in ([], ['none']), ages
+            assert ages[-1] == first and ages[:-1] in ([], ['none']), ages
             if 'none' in kids:   # the Discovery Age branch is a copy of vanilla's (indentation aside)
                 assert canon(inner.find('none')) == canon(tech.find('none'))
             return kids + ['/'.join(ages)]
@@ -200,11 +206,12 @@ def verify(text, culture):
 def build(aop_root=AOP):
     """{add-on relative path: CRLF bytes} for every Korean building animfile."""
     out = {}
-    for archive, out_path, src, culture, attack in BUILDINGS:
+    for archive, out_path, src, culture, attack, *opt in BUILDINGS:
+        first = opt[0] if opt else 'colonialize'
         own = os.path.join(aop_root, out_path)
         base = read(out_path) if os.path.isfile(own) else vanilla_text(archive)
-        merged = merge(base, read(src, REPO), culture, attack)   # the Korean model: this repo
-        out[out_path] = (merged.replace('\n', '\r\n').encode('utf-8'), verify(merged, culture),
+        merged = merge(base, read(src, REPO), culture, attack, first)   # the Korean model: this repo
+        out[out_path] = (merged.replace('\n', '\r\n').encode('utf-8'), verify(merged, culture, first),
                          'AoP override' if os.path.isfile(own) else 'vanilla')
     return out
 
