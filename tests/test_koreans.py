@@ -55,11 +55,12 @@ def test_techs_activate_japan_and_the_visual_marker():
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(87)]          # 600022-600027: zzTEST House benches A/B/C; 600048-49: zzTEST castle;
+    assert ids == [str(600000 + i) for i in range(93)]          # 600022-600027: zzTEST House benches A/B/C; 600048-49: zzTEST castle;
                                                                 # 600077-600078: zzTEST Dock
                                                                 # 600079-600080: zzTEST Consulate
                                                                 # 600081-600082: zzTEST Monastery
                                                                 # 600083-600084: zzTEST Rice Paddy
+                                                                # 600087-600092: zzTEST straw Hanok (age 0) A/B/C
                                                                 # 600085-600086: zzTEST Market
                                                                 # 600028-600037: the monks' random names
                                                                 # 600038-600043: zzTEST TC/Barracks/Stable names

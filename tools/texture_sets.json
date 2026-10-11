@@ -320,7 +320,7 @@
   {
    "id": "korean_house_walls",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15d over texture-r14 WALLS: weathering, gable player-colour frieze + image-harness emblem in Details.R placed by game-camera visibility; Normals unchanged); r16-colonial Details: one player-colour stripe on the plaster walls, 2.60-2.78 m (owner \"only the stripe of player color should be enough\"); one page shared by House A/B/C, all stages",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15d over texture-r14 WALLS: weathering, gable player-colour frieze + image-harness emblem in Details.R placed by game-camera visibility; Normals unchanged); r16-colonial Details: one player-colour stripe on the plaster walls, 2.60-2.78 m (owner \"only the stripe of player color should be enough\"); one page shared by House A/B/C, all stages; r16d BaseColor: the stripe's dark outline (the reviewed Colonial skin)",
    "page": [
     2048,
     2048
@@ -329,7 +329,7 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_walls_BaseColor",
-     "sha256": "51f8a5d2f6f25a1563e68740d3d48479b984edf6c5dd176753094f866e454efd"
+     "sha256": "132a62ed96afbba72b5f3b7a86a6919c93916f3da3d91bcd516757ae3ddab7eb"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_walls_Normals",
@@ -606,6 +606,58 @@
     "Masks": {
      "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Masks",
      "sha256": "c4cc66ba7e9cf39adcb64a71b97774ae6f940208de7c9d302524a693452be3e0"
+    }
+   }
+  },
+  {
+   "id": "korean_house_age0_walls",
+   "status": "current",
+   "record": "C:/work/korean-house-skins maps_r9 S_WALLS_* (the Discovery straw Hanok skin, reviewed scene r9h): wooden walls (Gemini planks, Painter weathering), one player-colour board",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_house/textures/korean_house_age0_walls_BaseColor",
+     "sha256": "0657f09b81c16314c6f57cc7dd911b8b63e5ccdea1d9a45333acbc0951eec096"
+    },
+    "Normals": {
+     "path": "buildings/korean_house/textures/korean_house_age0_walls_Normals",
+     "sha256": "7d4572b104270ccbf199013cd3cb7aa974b991c2a9e41357d2a48ebf910c1dd7"
+    },
+    "Masks": {
+     "path": "buildings/korean_house/textures/korean_house_age0_walls_Masks",
+     "sha256": "c601f4833d7b7c7968aa0b50f0f989e30ab4b9f0b1ffaf875a95cc32dd98547b"
+    },
+    "Details": {
+     "path": "buildings/korean_house/textures/korean_house_age0_walls_Details",
+     "sha256": "d1340eb76c5be83a32c27103e7551425115a620ebbf06be5d8ce8428fc7af063"
+    }
+   }
+  },
+  {
+   "id": "korean_house_age0_roofs",
+   "status": "current",
+   "record": "C:/work/korean-house-skins maps_r9 S_ROOFS_* (the Discovery straw Hanok skin, reviewed scene r9h): the roof page in straw: eave strips, skirt fringe (cutout), barge boards and rafters in dark wood",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_house/textures/korean_house_age0_roofs_BaseColor",
+     "sha256": "e5a09be0a0aca75d06f7ae0041b645525e6e6131e92b1aeebf1c1cbcda32238d"
+    },
+    "Normals": {
+     "path": "buildings/korean_house/textures/korean_house_age0_roofs_Normals",
+     "sha256": "d9f9e59bb46f8f9d40b94992596a3394b33e5b2aad3d6bb3d8ee2a7250fe0182"
+    },
+    "Masks": {
+     "path": "buildings/korean_house/textures/korean_house_age0_roofs_Masks",
+     "sha256": "468f68d21b41e5c4a9bda65b1469190e302a49c8fd54532b88534a684ec0a96e"
     }
    }
   }

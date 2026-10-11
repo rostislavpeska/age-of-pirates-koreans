@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "construction r16 + roof skeleton x1.1 + ridge section x1.5",
+  "author_blend_sha256": "21dac5ac759ba5e9e4cdd8124d52b06bccda6f3baa7e10e2569a313b4219a9ef",
+  "author_payload_sha256": "290f4d075c981ef5168d0f9116d714933ef5f655929103a495e53a62035098ef",
+  "provenance": "House C construction r16 + roof skeleton x1.1 + ridge section x1.5: payload House_C_con_r16d.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 6396,
+        "position_f32_sha256": "4858294a7d9e5aec968839a000e3d6d35d80a1b7a7b7181c0bef61f8ee8a7feb",
+        "raw_uv_f16_sha256": "0695f5f3526d9dc8e85533c8f9ea8e4983b1299f15689dbd81eec597bd41ae1d"
+      },
+      "mata": {
+        "corners": 984,
+        "position_f32_sha256": "bb660e0ceae7bfb490f2be00366a695477779439a66a4ae6c77a864cf361200a",
+        "raw_uv_f16_sha256": "5f381d492e10d391213e1656fbcc594274106c30a8a769aac68868c7f1fb33f0"
+      }
+    },
+    "damaged": {}
+  }
+}

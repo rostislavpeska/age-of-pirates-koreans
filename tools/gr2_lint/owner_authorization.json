@@ -232,6 +232,25 @@
       "context": "the House skins run: Korean props on the Colonial (age 1-2) Houses A/B/C, from the shared Korean props library (korean-props props-r6.1 = the shared page korean_shared_props_r6)",
       "source": "Owner message in the Claude Code House skins session (koreans add-on, 2026-10-11; no app message id).",
       "recorded_by": "claude (House r16-colonial install)"
+    },
+    {
+      "id": "owner-house-age0-game-2026-10-11",
+      "text": "you export and implement both into game",
+      "context": "after \"and Wokou ... strip the Wokou version. i don't like it. But let's use the age0 and age1 ones- Make them canonical\": the age-1 Colonial houses (r16d) and the age-0 straw Hanok A/B/C, intact, damaged and construction",
+      "source": "Owner message in the Claude Code House skins session (koreans add-on, 2026-10-11; no app message id).",
+      "recorded_by": "claude (House age-0 install)"
+    },
+    {
+      "id": "owner-house-4x2048-2026-10-12",
+      "text": "Yes: House A/B/C = 4x2048",
+      "question": "To record your approval in the lint's owner store (it must name the class and the building, like your earlier 'Yes: House A/B/C = large'), confirm:",
+      "options": [
+        "Yes: House A/B/C = 4x2048",
+        "No, keep large"
+      ],
+      "context": "Asked first: 'The age-0 straw houses need their own 2 texture pages (straw-skin walls 2048 + roofs 2048). With the Colonial pages the House family becomes 4x2048, above the largest lint class large (2x2048). ... How do you want the texture budget?' - owner: 'Approve 4x2048 (Recommended)' (options: Approve 4x2048 / Straw pages at 1024 / Straw house not yet).",
+      "source": "Owner-selected options in the Claude Code House skins session (koreans add-on), 2026-10-12; no app message id.",
+      "recorded_by": "claude (House age-0 install)"
     }
   ]
 }

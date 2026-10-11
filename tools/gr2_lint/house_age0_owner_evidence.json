@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner message in the Claude Code House skins session (koreans add-on, 2026-10-11; no app message id), after \"let's use the age0 and age1 ones- Make them canonical\": the Discovery (age 0) straw Hanok A/B/C as reviewed in Blender (scene Korean_House_Skins_r9h) - its generic parts on the shared Korean matc r65 atlas, its pottery on the TC pottery page, its props (\"Plus also these need some props\") on the shared Korean props page r6, exactly as the Colonial houses. Same words: owner_authorization.json item owner-house-age0-game-2026-10-11.",
+  "owner_quote": "you export and implement both into game",
+  "models": [
+    "korean_house_a_age0",
+    "korean_house_a_age0_damaged",
+    "korean_house_a_age0_con",
+    "korean_house_b_age0",
+    "korean_house_b_age0_damaged",
+    "korean_house_b_age0_con",
+    "korean_house_c_age0",
+    "korean_house_c_age0_damaged",
+    "korean_house_c_age0_con"
+  ],
+  "source_names": [
+    "Korean TC shared matC",
+    "Korean TC pots",
+    "Korean shared props r6"
+  ]
+}
