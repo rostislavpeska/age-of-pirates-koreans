@@ -541,15 +541,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_market/textures/korean_market_mata_BaseColor",
-     "sha256": "74547618caff35b1d09baf6372d6380392ce1fccac0136770ffe454b8ec1ae8a"
+     "sha256": "f1949ca1eafd7fd70f300d0e824406338857bcc7fbf668d5dcfcbabc2335159b"
     },
     "Normals": {
      "path": "buildings/korean_market/textures/korean_market_mata_Normals",
-     "sha256": "30057e414cdcb1e7edad16cd74c3a3405987b008539a80693b442f4cd9dc8faf"
+     "sha256": "70eeb0506ffd9285ed25637945caf4e7b2109bd3fea5e38712f3bc60612cea8d"
     },
     "Masks": {
      "path": "buildings/korean_market/textures/korean_market_mata_Masks",
-     "sha256": "dd37e0d22eb2e91a748197038fb1eb7970c9d18252a5c96b95465690ef7f5a45"
+     "sha256": "8b4c3adf8c01d69bb3876ddc2e05687a107cca68c99266f974fb7d4847d40e63"
     },
     "Details": {
      "path": "buildings/korean_market/textures/korean_market_mata_Details",

@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "construction r2 (market_construction.py: checklist port of the shipped Dock p66) on UV r7c",
+  "author_blend_sha256": "75ad9299d9060c22142bb0d8f403d1cc761443d88647082a07ecdab3d986bc7d",
+  "author_payload_sha256": "e2442eede6c0eceaa125da306e2b0d5d0b8588cd9a809300176f8e8bf331d671",
+  "provenance": "Korean Market korean_market_con construction r2 (market_construction.py: checklist port of the shipped Dock p66) on UV r7c: payload korean_market_con_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 33825,
+        "position_f32_sha256": "dcb1c67d20274f2c4aef7daa2dddf9d1dd75d9ac5ecff417f28868b7e3e12044",
+        "raw_uv_f16_sha256": "2c2c51dde23a324c83dbc1792e31c065debcb9d491c992e4beaba44e89070f32"
+      },
+      "mata": {
+        "corners": 5511,
+        "position_f32_sha256": "ad8489ba25516810d13bb2c4cd29efb653116aa204cdf91e109633c6ce2843c0",
+        "raw_uv_f16_sha256": "d60b110bc73abd0eb18b1fbc7d678dce9013c51df06fbbabb12229b325e6e3c9"
+      },
+      "matb": {
+        "corners": 1020,
+        "position_f32_sha256": "9f8a0aaf28025d901742619bb5ee3bec2e68cdf17bbcf7a155077409749a894d",
+        "raw_uv_f16_sha256": "bae2ca8b2e37678126a74f60cb96e0bb0e10c4c4a1bef6f59b03ce2f9ba5331c"
+      }
+    },
+    "damaged": {}
+  }
+}

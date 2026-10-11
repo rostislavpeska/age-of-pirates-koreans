@@ -204,6 +204,27 @@
       "context": "the shared Korean props page r6.2 (cart deck repainted, every other texel preserved); the Market ships it as korean_shared_props_r6_2, the installed Dock keeps korean_shared_props_r6",
       "source": "Owner message in the Claude Code Market session (korean-buildings-blender, 2026-10-11; no app message id).",
       "recorded_by": "claude (Market export r1)"
+    },
+    {
+      "id": "owner-market-flag-height-2026-10-11",
+      "text": "plus market flag sits too high on the flag pile",
+      "context": "game test of the Korean Market: bone_flag_civ sat 0.20 m under the pole tip (the engine hangs the cloth ABOVE the bone); r2 puts it 1.378 m under the tip, the vanilla civ-flag median (AoP flag_heights.py survey)",
+      "source": "Owner message in the Claude Code Market session (korean-buildings-blender, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Market export r2)"
+    },
+    {
+      "id": "owner-market-construction-r2-2026-10-11",
+      "text": "construction now TOP!",
+      "context": "the owner's review of construction p66 r2 in the live viewer (scene \"Market | construction p66 r2\") after \"IDENTIFY WHY YOU CLEARLY IGNORED THE CONSTRUCTION GUIDELINES, THEN FIX\"",
+      "source": "Owner message in the Claude Code Market session (korean-buildings-blender, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Market export r2)"
+    },
+    {
+      "id": "owner-market-roof-artifact-2026-10-11",
+      "text": "and I also see some artifact on the roof",
+      "context": "game test: a black slit along the hall's south-west hip cap = the field's tile pan beside the narrow cap; r2 paints the caps' lime mortar bed over it (market_hip_mortar_paint.py) and repairs unpainted roof specks and AO-0 bands",
+      "source": "Owner message in the Claude Code Market session (korean-buildings-blender, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Market export r2)"
     }
   ]
 }

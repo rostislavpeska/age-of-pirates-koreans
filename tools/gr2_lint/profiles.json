@@ -1944,7 +1944,7 @@
     "Market",
     "Korean Market"
    ],
-   "_doc": "Korean Market last construction stage (p66): the masonry (foundations, post plinths, stairs), the timber frame (posts, girders, sills, lintels, floor bands, rafters) and the gallery decks; the vanilla asi_4x4_stage2 scaffold is attached by the animfile",
+   "_doc": "Korean Market last construction stage (p66) r2 (market_construction.py, the checklist port of the shipped Dock recipe; owner \"construction now TOP!\"): foundations, stairs, plinths; the Tower standing without its roof; the Hall's finished ground storey; the entry bay, gallery deck and stall frames kept; the Hall's upper storey as its fresh-timber beam frame; fresh-timber roof frames under the real roofs (hall paljak, entry gable, tower and pavilion pyramids, tower skirt on ledgers) on the shared r65 atlas; the vanilla asi_4x4_stage2 scaffold is attached by the animfile",
    "files": {
     "intact": "korean_market_con.gr2",
     "intact_material": "korean_market_con.material",
@@ -2036,8 +2036,8 @@
     "japan_market_age2_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_market_con_r1.json",
-    "sha256": "770446750649514afabef06e59cd1358e33de8ab79ec8f8fde6072de91099035"
+    "path": "tools/gr2_lint/uv_contracts/korean_market_con_r2.json",
+    "sha256": "1e582498f7d124a72d51d38eddc44d1c04f7621535c429481f812cc886e760b8"
    },
    "handedness": {
     "expect_sign": 1,
