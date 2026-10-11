@@ -73,6 +73,16 @@ def test_strings_flags_personality_and_sounds():
         assert (K / 'sound' / s.get('filename').replace(BS, '/')).is_file(), s.get('filename')
 
 
+def test_fishing_boats_do_not_build_the_korean_house():
+    """Owner's test 2026-10-09: "fishing boats can for some reason build houses". The House goes to every
+    AbstractVillager, and every fishing boat (vanilla and AoP) is one: zpKoreanBuildings takes it off
+    AbstractFishingBoat right after."""
+    eff = [(e.get('type'), e.get('proto'), e.findtext('target'))
+           for e in {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}['zpKoreanBuildings'].iter('effect')]
+    add = eff.index(('CommandAdd', 'zpHouseKorean', 'AbstractVillager'))
+    assert eff.index(('CommandRemove', 'zpHouseKorean', 'AbstractFishingBoat')) > add
+
+
 def test_korean_house_replaces_the_shrine_as_a_refuge():
     """Owner decisions 2026-10-08: standard-house values, refuge for 3 villagers or infantry (5 was too strong, 2026-10-09), arrows only while
     occupied (Chinese Village tactics) from the Colonial Age, Shrine model as placeholder, every villager builds it
@@ -98,6 +108,7 @@ def test_korean_house_replaces_the_shrine_as_a_refuge():
             e.get('column'), e.findtext('target') or (e.text or '').strip()) for e in techs['zpKoreanBuildings'].iter('effect')]
     assert eff == [('Data', 'Enable', '1.00', None, None, None, 'zpHouseKorean'),
                    ('CommandAdd', None, None, 'zpHouseKorean', '6', '0', 'AbstractVillager'),   # the Shrine's slot
+                   ('CommandRemove', None, None, 'zpHouseKorean', None, None, 'AbstractFishingBoat'),   # not on boats
                    ('Data', 'Enable', '0.00', None, None, None, 'ypShrineJapanese'),
                    # an UNOBTAINABLE shadow tech fires on its prereqs only once armed (owner's test 2026-10-09)
                    ('TechStatus', 'obtainable', None, None, None, None, 'zpKoreanHouseArrows')]

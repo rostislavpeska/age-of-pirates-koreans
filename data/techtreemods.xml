@@ -59,6 +59,12 @@
       <effect type="CommandAdd" proto="zpHouseKorean" page="6" column="0">
         <target type="ProtoUnit">AbstractVillager</target>
       </effect>
+      <!-- every fishing boat is an AbstractVillager too (vanilla FishingBoat, ypFishingBoatAsian ...; AoP's
+           zpDockBuilder, zpWaterFortBuilder, zpWokouDiver): no House for them (owner's test 2026-10-09). A
+           CommandRemove on an abstract type, as vanilla ypConsulateJapaneseMeijiRestoration (AbstractShogunate) -->
+      <effect type="CommandRemove" proto="zpHouseKorean">
+        <target type="ProtoUnit">AbstractFishingBoat</target>
+      </effect>
       <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
         <target type="ProtoUnit">ypShrineJapanese</target>
       </effect>
