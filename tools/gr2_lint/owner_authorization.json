@@ -176,6 +176,34 @@
       "context": "the Rice Paddy run: only the shelter is Korean; the field (vanilla paddy / paddy_con attachments, footprint decal, asi_2x2 construction kit) stays vanilla, the shared Korean atlas r65 backs footings and the frame",
       "source": "Owner message in the Claude Code Rice Paddy session (koreans add-on, 2026-10-11; no app message id).",
       "recorded_by": "claude (Rice Paddy export r1 install)"
+    },
+    {
+      "id": "owner-market-ingame-2026-10-11",
+      "text": "When done, add the market to the game as market asian",
+      "context": "followed by 'same as japanese / chinese': the Korean Market replaces the vanilla Asian market (ypTradeMarketAsian, trade_market.xml) for Korean players, as the Japanese and Chinese markets are branches of that animfile; from the Discovery Age (the Dock / Consulate / Monastery / Rice Paddy precedent)",
+      "source": "Owner message in the Claude Code Market session (korean-buildings-blender, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Market export r1)"
+    },
+    {
+      "id": "owner-market-testbed-2026-10-11",
+      "text": "plus the destruction test bed and skill update - add",
+      "context": "the zzTESTKoreanMarket bench (AGENTS rule 7) shows the Korean Market directly, incl. construction and Havok destruction",
+      "source": "Owner message in the Claude Code Market session (korean-buildings-blender, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Market export r1)"
+    },
+    {
+      "id": "owner-market-pages-2026-10-11",
+      "text": "2048+1024  is ok",
+      "context": "Market UV r4 (texture space): 'Medium class: one 2048 + one 1024 owned page'. The words name neither the class nor the building, so the class medium stays PROPOSED in profiles korean_market(_con)",
+      "source": "Owner message in the Claude Code Market + Dock session (UV r4), 2026-10-11.",
+      "recorded_by": "claude (Market export r1)"
+    },
+    {
+      "id": "owner-market-props-page-2026-10-11",
+      "text": "can you pleasse fix these artifacts on the Props UV map? I think it takes some wrong spot...",
+      "context": "the shared Korean props page r6.2 (cart deck repainted, every other texel preserved); the Market ships it as korean_shared_props_r6_2, the installed Dock keeps korean_shared_props_r6",
+      "source": "Owner message in the Claude Code Market session (korean-buildings-blender, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Market export r1)"
     }
   ]
 }

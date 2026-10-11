@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "UV r7c (Korean_Market_UV_r7c.blend) + texture r7c step 10 + corners",
+  "author_blend_sha256": "75ad9299d9060c22142bb0d8f403d1cc761443d88647082a07ecdab3d986bc7d",
+  "author_payload_sha256": "44b483aec4dfcbbbee47cb3df694a0a78e0584d7d6558f0ee3124e0bbda38faf",
+  "provenance": "Korean Market korean_market_con UV r7c (Korean_Market_UV_r7c.blend) + texture r7c step 10 + corners: payload korean_market_con_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 4695,
+        "position_f32_sha256": "565775ac150ecc2a14bf3853d0492ef4a2c8c672bcf78d46c60a930fe8c6e3a7",
+        "raw_uv_f16_sha256": "ff95ac61ea0ddb0f6b9cbcf122bf5c24719aef348d1f1ce7f342461c827329d2"
+      },
+      "mata": {
+        "corners": 5007,
+        "position_f32_sha256": "8713cfd56d2b11753df4b265acd7afec7d55f2768d4c56c173b31d524e08af43",
+        "raw_uv_f16_sha256": "6d68007f0465b77e6d6be0a6182ab7f19084ebae2e91165be16d5071be2825c9"
+      },
+      "matb": {
+        "corners": 990,
+        "position_f32_sha256": "c6083b0dacd451f3d287fa4104cb3fabb962756ef8666d93f962f57329ab0f85",
+        "raw_uv_f16_sha256": "0a20f9dda21aacef9b8da3f562702473a428cddf46ad286a7f77045d43a31d43"
+      }
+    },
+    "damaged": {}
+  }
+}

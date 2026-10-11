@@ -528,6 +528,86 @@
      "sha256": "ce4e5f676dcd73a7f39836567e40c7ec422613d7dcc1ba78aad8df93bd9d36de"
     }
    }
+  },
+  {
+   "id": "korean_market_mata",
+   "status": "current",
+   "record": "C:/work/korean-market-dock export_market r1 (Market page P0, market_tex_r7 final after texture r7c step 10 + corners, 2026-10-11)",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_market/textures/korean_market_mata_BaseColor",
+     "sha256": "74547618caff35b1d09baf6372d6380392ce1fccac0136770ffe454b8ec1ae8a"
+    },
+    "Normals": {
+     "path": "buildings/korean_market/textures/korean_market_mata_Normals",
+     "sha256": "30057e414cdcb1e7edad16cd74c3a3405987b008539a80693b442f4cd9dc8faf"
+    },
+    "Masks": {
+     "path": "buildings/korean_market/textures/korean_market_mata_Masks",
+     "sha256": "dd37e0d22eb2e91a748197038fb1eb7970c9d18252a5c96b95465690ef7f5a45"
+    },
+    "Details": {
+     "path": "buildings/korean_market/textures/korean_market_mata_Details",
+     "sha256": "5e7ce91c8570e59bf16cce23e95017b5af17efd519246c9fec4774225b7470be"
+    }
+   }
+  },
+  {
+   "id": "korean_market_matb",
+   "status": "current",
+   "record": "C:/work/korean-market-dock export_market r1 (Market alpha page P5, market_tex_r7 final after texture r7c step 10 + corners, 2026-10-11)",
+   "page": [
+    1024,
+    1024
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_market/textures/korean_market_matb_BaseColor",
+     "sha256": "704f6b46d4bb5484230208baee7270d9fc4304d06f62eca6ca8f75a8b2a416d5"
+    },
+    "Normals": {
+     "path": "buildings/korean_market/textures/korean_market_matb_Normals",
+     "sha256": "465c0b7d60f3e4f75b8d273811d0d3d4a1abee55a2a37e805d786ab0f22ba192"
+    },
+    "Masks": {
+     "path": "buildings/korean_market/textures/korean_market_matb_Masks",
+     "sha256": "a61ccbe99e5b61949f4b933f96fc7e33ceec201fbfff103bfc17de7e05bea143"
+    },
+    "Details": {
+     "path": "buildings/korean_market/textures/korean_market_matb_Details",
+     "sha256": "cabb6c4613ad066de10dc5c3cee1e1915dc61f508575880ac4b29197fcc1ddf6"
+    }
+   }
+  },
+  {
+   "id": "korean_shared_props_r6_2",
+   "status": "current",
+   "record": "C:/work/korean-market-dock props_r6_2 (props r6.1 + the Balcha cart deck repainted, 2026-10-11; used by the Market)",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_BaseColor",
+     "sha256": "db92d6f3fd321745618108f305ab047d795ced0a5453108e0cd6bc04b7c2ffe1"
+    },
+    "Normals": {
+     "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Normals",
+     "sha256": "89df41eb1b6640fa054588dbd2e60b2ab9c3b676c5c987f1836e4de5d765c014"
+    },
+    "Masks": {
+     "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Masks",
+     "sha256": "c4cc66ba7e9cf39adcb64a71b97774ae6f940208de7c9d302524a693452be3e0"
+    }
+   }
   }
  ]
 }

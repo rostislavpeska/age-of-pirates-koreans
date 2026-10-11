@@ -85,6 +85,13 @@ BUILDINGS = [
     # (the Consulate / Monastery precedent). gr2_lint korean_rice_paddy / korean_rice_paddy_con (tools/gr2_lint/profiles.json)
     ('Art/buildings/asian_civs/rice_paddy/rice_paddy.xml.XMB', 'art/buildings/asian_civs/rice_paddy/rice_paddy.xml',
      'art/buildings/korean_rice_paddy/korean_rice_paddy.xml', 'japanese', False, 'none'),
+    # Korean Market (owner 2026-10-11: "When done, add the market to the game as market asian", "same as japanese / chinese",
+    # "plus the destruction test bed"): ypTradeMarketAsian's animfile, which AoP does not override; the Japanese and Chinese
+    # markets are culture branches of it. First upgrade 'none' = the Korean Market from the Discovery Age (the Dock / Consulate /
+    # Monastery / Rice Paddy precedent; one Korean Market model so far, so it holds in every age). gr2_lint korean_market /
+    # korean_market_con (tools/gr2_lint/profiles.json)
+    ('Art/buildings/asian_civs/trade_market/trade_market.xml.XMB', 'art/buildings/asian_civs/trade_market/trade_market.xml',
+     'art/buildings/korean_market/korean_market.xml', 'japanese', False, 'none'),
 ]
 
 MARKER = 'zpkoreanvisuals'

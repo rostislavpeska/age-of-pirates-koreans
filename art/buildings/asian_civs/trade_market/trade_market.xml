@@ -1,0 +1,1805 @@
+<animfile>
+  <definebone>bone_flag_civ</definebone>
+  <definebone>bone_debris_1A</definebone>
+  <definebone>bone_debris_1B</definebone>
+  <definebone>bone_debris_1C</definebone>
+  <definebone>bone_debris_1D</definebone>
+  <definebone>bone_debris_1E</definebone>
+  <definebone>bone_debris_1F</definebone>
+  <definebone>bone_debris_1G</definebone>
+  <definebone>bone_debris_1H</definebone>
+  <definebone>bone_debris_1I</definebone>
+  <definebone>bone_debris_1J</definebone>
+  <definebone>bone_debris_1K</definebone>
+  <definebone>bone_debris_1L</definebone>
+  <definebone>bone_debris_1M</definebone>
+  <definebone>bone_debris_1N</definebone>
+  <definebone>bone_debris_1o</definebone>
+  <definebone>bone_debris_1p</definebone>
+  <definebone>bone_debris_1q</definebone>
+  <definebone>bone_debris_2A</definebone>
+  <definebone>bone_debris_2B</definebone>
+  <definebone>bone_debris_2C</definebone>
+  <definebone>bone_debris_2D</definebone>
+  <definebone>bone_debris_2E</definebone>
+  <definebone>bone_debris_2F</definebone>
+  <definebone>bone_debris_2G</definebone>
+  <definebone>bone_debris_2H</definebone>
+  <definebone>bone_debris_2I</definebone>
+  <definebone>bone_debris_2J</definebone>
+  <definebone>bone_debris_2k</definebone>
+  <definebone>bone_debris_2l</definebone>
+  <definebone>bone_debris_2m</definebone>
+  <definebone>bone_debris_2n</definebone>
+  <definebone>bone_debris_2o</definebone>
+  <definebone>bone_debris_2p</definebone>
+  <definebone>bone_debris_2q</definebone>
+  <definebone>bone_debris_2r</definebone>
+  <definebone>bone_debris_2s</definebone>
+  <definebone>bone_debris_2t</definebone>
+  <definebone>bone_debris_2u</definebone>
+  <definebone>bone_debris_3A</definebone>
+  <definebone>bone_debris_3B</definebone>
+  <definebone>bone_debris_3C</definebone>
+  <definebone>bone_debris_3D</definebone>
+  <definebone>bone_debris_3E</definebone>
+  <definebone>bone_debris_3F</definebone>
+  <definebone>bone_debris_3G</definebone>
+  <definebone>bone_debris_3H</definebone>
+  <definebone>bone_debris_3I</definebone>
+  <definebone>bone_debris_3J</definebone>
+  <definebone>bone_debris_3K</definebone>
+  <definebone>bone_debris_4A</definebone>
+  <definebone>bone_debris_4B</definebone>
+  <definebone>bone_debris_4C</definebone>
+  <definebone>bone_debris_4D</definebone>
+  <definebone>bone_debris_4E</definebone>
+  <definebone>bone_debris_4F</definebone>
+  <definebone>bone_debris_4g</definebone>
+  <definebone>bone_debris_4h</definebone>
+  <definebone>bone_debris_4i</definebone>
+  <definebone>bone_debris_4j</definebone>
+  <definebone>bone_debris_5A</definebone>
+  <definebone>bone_debris_5B</definebone>
+  <definebone>bone_debris_5C</definebone>
+  <definebone>bone_debris_5D</definebone>
+  <definebone>bone_debris_5E</definebone>
+  <definebone>bone_debris_5F</definebone>
+  <definebone>bone_debris_5G</definebone>
+  <definebone>bone_debris_5H</definebone>
+  <definebone>bone_debris_5I</definebone>
+  <definebone>bone_debris_5J</definebone>
+  <definebone>bone_debris_5K</definebone>
+  <definebone>bone_fire</definebone>
+  <definebone>bone_debris_2f</definebone>
+  <definebone>bone_debris_4k</definebone>
+  <definebone>bone_debris_4l</definebone>
+  <submodel>east_age2<attachment>damageFire<component>fireEmitter<assetreference type="ParticleSystem">
+          <file>effects\fire\grassFire_medium.particle</file>
+        </assetreference>
+      </component>
+      <anim>None<component>fireEmitter</component>
+      </anim>
+    </attachment>
+    <attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>east_age2<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\market\EAST\AGE_2\east_market_age2_damaged</file>
+              </assetreference>
+              <attach a="damageFire" frombone="ATTACHPOINT" tobone="bone_fire" syncanims="0" />
+            </p1>
+            <p50>
+              <assetreference type="GrannyModel">
+                <file>buildings\market\EAST\AGE_2\east_market_age2_damaged</file>
+              </assetreference>
+            </p50>
+            <p99>
+              <assetreference type="GrannyModel" shape="east_market_age2">
+                <file>buildings\market\EAST\AGE_2\east_market_age2</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel" shape="east_market_age2">
+            <file>buildings\market\EAST\AGE_2\lp_east_market_age2</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>east_age2_death<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\EAST\AGE_2\east_market_age2_deathModel</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\EAST\AGE_2\lp_east_market_age2</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>east_age2</component>
+      <simskeleton>
+        <model>buildings\market\EAST\AGE_2\east_market_age2_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<assetreference type="GrannyAnim">
+        <file>buildings\market\EAST\AGE_2\east_market_age2_deathAnim</file>
+      </assetreference>
+      <component>east_age2_death</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>east_age3<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>east_age3<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\market\EAST\AGE_3\east_market_age3_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="east_market_age3">
+                <file>buildings\market\EAST\AGE_3\east_market_age3</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel" shape="east_market_age3">
+            <file>buildings\market\EAST\AGE_3\lp_east_market_age3</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>east_age3_death<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\east\age_3\east_market_age3_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\EAST\AGE_3\lp_east_market_age3</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>east_age3</component>
+      <simskeleton>
+        <model>buildings\market\EAST\AGE_3\east_market_age3_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>east_age3_death</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>west_age2<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>west_age2<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel" shape="west_market_age2">
+                <file>buildings\market\WEST\AGE_2\west_market_age2_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="west_market_age2">
+                <file>buildings\market\WEST\AGE_2\west_market_age2</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel" shape="west_market_age2">
+            <file>buildings\market\west\age_2\lp_west_market_age2</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>default</effecttype>
+        <texture>buildings\market\market_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>west_age2_death<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\west\age_2\west_market_age2_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\WEST\AGE_2\lp_west_market_age2</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>default</effecttype>
+        <texture>buildings\market\market_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>west_age2</component>
+      <simskeleton>
+        <model>buildings\market\WEST\AGE_2\west_market_age2_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>west_age2_death</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>west_age3<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>west_age3<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\market\WEST\AGE_3\west_market_age3_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="west_market_age3">
+                <file>buildings\market\WEST\AGE_3\west_market_age3</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel" shape="west_market_age3">
+            <file>buildings\market\west\age_3\lp_west_market_age3</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>default</effecttype>
+        <texture>buildings\market\market_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>west_age3_death<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\west\age_3\west_market_age3_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\WEST\AGE_3\lp_west_market_age3</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>default</effecttype>
+        <texture>buildings\market\market_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>west_age3</component>
+      <simskeleton>
+        <model>buildings\market\WEST\AGE_3\west_market_age3_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>west_age3_death</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>med_age2<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>med_age2<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\market\MED\AGE_2\med_market_age2_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="med_market_age2">
+                <file>buildings\market\MED\AGE_2\med_market_age2</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel" shape="med_market_age2">
+            <file>buildings\market\med\age_2\lp_med_market_age2</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\Market\market_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>med_age2_death<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\med\age_2\med_market_age2_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\MED\AGE_2\lp_med_market_age2</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\Market\market_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>med_age2</component>
+      <simskeleton>
+        <model>buildings\market\MED\AGE_2\med_market_age2_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>med_age2_death</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>med_age3<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>med_age3<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\market\MED\AGE_3\med_market_age3_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="med_market_age3">
+                <file>buildings\market\MED\AGE_3\med_market_age3</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel" shape="med_market_age3">
+            <file>buildings\market\med\age_3\lp_med_market_age3</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\Market\market_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>med_age3_death<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\med\age_3\med_market_age3_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\MED\AGE_3\lp_med_market_age3</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+    </component>
+    <anim>Idle<component>med_age3</component>
+      <simskeleton>
+        <model>buildings\market\MED\AGE_3\med_market_age3_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>med_age3_death</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>generic<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>market_generic<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\market\generic_market_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="generic_market">
+                <file>buildings\market\market_generic</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel" shape="generic_market">
+            <file>buildings\market\lp_market_generic</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>market_generic_death<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\generic_market_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\market\lp_market_generic</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+    </component>
+    <anim>Idle<component>market_generic</component>
+      <simskeleton>
+        <model>buildings\market\generic_market_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>market_generic_death</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>east_age2_con2<attachment>con<component>scaffolding<assetreference type="GrannyModel">
+          <file>buildings\market\east\age_2\east_market_age2_con</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scaffolding</component>
+      </anim>
+    </attachment>
+    <component>market<assetreference type="GrannyModel">
+        <file>buildings\constructions\5x5_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="con" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>market</component>
+    </anim>
+  </submodel>
+  <submodel>east_age3_con2<attachment>con<component>scaffolding<assetreference type="GrannyModel">
+          <file>buildings\market\east\age_3\east_market_age3_con</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scaffolding</component>
+      </anim>
+    </attachment>
+    <component>market<assetreference type="GrannyModel">
+        <file>buildings\constructions\5x5_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="con" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>market</component>
+    </anim>
+  </submodel>
+  <submodel>med_age2_con2<attachment>con<component>scaffolding<assetreference type="GrannyModel">
+          <file>buildings\market\MED\AGE_2\med_market_age2_con</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scaffolding</component>
+      </anim>
+    </attachment>
+    <component>market<assetreference type="GrannyModel">
+        <file>buildings\constructions\5x5_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="con" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>market</component>
+    </anim>
+  </submodel>
+  <submodel>med_age3_con2<attachment>con<component>scaffolding<assetreference type="GrannyModel">
+          <file>buildings\market\MED\AGE_3\med_market_age3_con</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scaffolding</component>
+      </anim>
+    </attachment>
+    <component>market<assetreference type="GrannyModel">
+        <file>buildings\constructions\5x5_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="con" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>market</component>
+    </anim>
+  </submodel>
+  <submodel>west_age2_con2<attachment>con<component>scaffolding<assetreference type="GrannyModel">
+          <file>buildings\market\WEST\AGE_2\west_market_age2_con</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scaffolding</component>
+      </anim>
+    </attachment>
+    <component>market<assetreference type="GrannyModel">
+        <file>buildings\constructions\5x5_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="con" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>market</component>
+    </anim>
+  </submodel>
+  <submodel>west_age3_con2<attachment>con<component>scaffolding<assetreference type="GrannyModel">
+          <file>buildings\market\WEST\AGE_3\west_market_age3_con</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scaffolding</component>
+      </anim>
+    </attachment>
+    <component>market<assetreference type="GrannyModel">
+        <file>buildings\constructions\5x5_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="con" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>market</component>
+    </anim>
+  </submodel>
+  <submodel>generic_con2<attachment>con<component>scaffolding<assetreference type="GrannyModel">
+          <file>buildings\market\market_generic_con</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scaffolding</component>
+      </anim>
+    </attachment>
+    <component>market<assetreference type="GrannyModel">
+        <file>buildings\constructions\5x5_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="con" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>market</component>
+    </anim>
+  </submodel>
+  <submodel>japanese_market_age_01<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>LIVE<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\market_japanese\japanese_market_age1_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="japan_market_age1">
+                <file>buildings\asian_civs\trade_market\japan\age_1\japan_market_age1</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\japan\age_1\japan_market_age1_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>DEAD<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\market_japanese\japanese_market_age1_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\japan\age_1\japan_market_age1_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\barracks\WEST\AGE_2\west_barracks_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>10.00</width>
+        <height>10.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>LIVE</component>
+      <simskeleton>
+        <model>buildings\asian_civs\market_japanese\japanese_market_age1_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>DEAD</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>japanese_market_age_02<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>LIVE<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\market_japanese\japanese_market_age2_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="japanese_market_age2">
+                <file>buildings\asian_civs\trade_market\japan\age_2\japan_market_age2</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\japan\age_2\japan_market_age2_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>DEAD<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\market_japanese\japanese_market_age2_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\japan\age_2\japan_market_age2_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\barracks\WEST\AGE_2\west_barracks_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>10.00</width>
+        <height>10.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>LIVE</component>
+      <simskeleton>
+        <model>buildings\asian_civs\market_japanese\japanese_market_age2_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>DEAD</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>japanese_market_age_04<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>LIVE<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\market_japanese\japanese_market_age4_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="japanese_market_age2">
+                <file>buildings\asian_civs\trade_market\japan\age_4\japan_market_age4</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\japan\age_4\japan_market_age4_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>DEAD<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\market_japanese\japanese_market_age4_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\japan\age_4\japan_market_age4_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\barracks\WEST\AGE_2\west_barracks_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>10.00</width>
+        <height>10.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>LIVE</component>
+      <simskeleton>
+        <model>buildings\asian_civs\market_japanese\japanese_market_age4_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>DEAD</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>sub_construction_stage_01<component>construction_stage_01<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\construction\asi_4x4_stage1</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>construction_stage_01</component>
+    </anim>
+  </submodel>
+  <submodel>sub_construction_stage_02<attachment>frame<component>india_barracks_Frame<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_frame</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>india_barracks_Frame</component>
+      </anim>
+    </attachment>
+    <component>sub_construction_stage_02<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="frame" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>sub_construction_stage_02</component>
+    </anim>
+  </submodel>
+  <submodel>japanese_sub_construction_age_01_stage_03<attachment>scalf<component>scalf<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scalf</component>
+      </anim>
+    </attachment>
+    <component>indian_sub_construction_age_02_stage_03<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\trade_market\japan\age_1\japan_market_age1_con_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="scalf" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>indian_sub_construction_age_02_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>japanese_sub_construction_age_02_stage_03<attachment>scalf<component>scalf<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scalf</component>
+      </anim>
+    </attachment>
+    <component>indian_sub_construction_age_02_stage_03<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\trade_market\japan\age_2\japan_market_age2_con_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="scalf" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>indian_sub_construction_age_02_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>japanese_sub_construction_age_04_stage_03<attachment>scalf<component>scalf<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scalf</component>
+      </anim>
+    </attachment>
+    <component>indian_sub_construction_age_02_stage_03<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\trade_market\japan\age_4\japan_market_age4_con_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="scalf" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>indian_sub_construction_age_02_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>chinese_market_age_02<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>LIVE<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\trade_market\china\age_2\china_market_age2_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="japan_market_age1">
+                <file>buildings\asian_civs\trade_market\china\age_2\china_market_age2</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\china\age_2\china_market_age2_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>DEAD<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\china\age_2\china_market_age2_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\china\age_2\china_market_age2_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\barracks\WEST\AGE_2\west_barracks_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>10.00</width>
+        <height>10.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>LIVE</component>
+      <simskeleton>
+        <model>buildings\asian_civs\trade_market\china\age_2\china_market_age2_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>DEAD</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>chinese_market_age_04<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>LIVE<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\trade_market\china\age_4\china_market_age4_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="japan_market_age1">
+                <file>buildings\asian_civs\trade_market\china\age_4\china_market_age4</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\china\age_4\china_market_age4_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>DEAD<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\china\age_4\china_market_age4_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\china\age_4\china_market_age4_lp</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\barracks\WEST\AGE_2\west_barracks_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>10.00</width>
+        <height>10.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>LIVE</component>
+      <simskeleton>
+        <model>buildings\asian_civs\trade_market\china\age_4\china_market_age4_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>DEAD</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>chinese_sub_construction_age_02_stage_03<attachment>scalf<component>scalf<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scalf</component>
+      </anim>
+    </attachment>
+    <component>indian_sub_construction_age_02_stage_03<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\trade_market\china\age_2\china_market_age2_con_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="scalf" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>indian_sub_construction_age_02_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>chinese_sub_construction_age_04_stage_03<attachment>scalf<component>scalf<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scalf</component>
+      </anim>
+    </attachment>
+    <component>indian_sub_construction_age_02_stage_03<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\trade_market\china\age_4\china_market_age4_con_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="scalf" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>indian_sub_construction_age_02_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>indian_market_age_01<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>LIVE<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\market_indian\indian_market_age1_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\trade_market\india\age_1\india_market_age1</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\india\age_1\india_market_age1</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>DEAD<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\market_indian\indian_market_age1_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\india\age_1\india_market_age1</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\barracks\WEST\AGE_2\west_barracks_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>10.00</width>
+        <height>10.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>LIVE</component>
+      <simskeleton>
+        <model>buildings\asian_civs\market_indian\indian_market_age1_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>DEAD</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>indian_market_age_02<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>LIVE<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\market_indian\indian_market_age2_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="japan_market_age1">
+                <file>buildings\asian_civs\trade_market\india\age_2\india_market_age2</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\india\age_2\india_market_age2</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>DEAD<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\market_indian\indian_market_age2_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\india\age_2\india_market_age2</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\barracks\WEST\AGE_2\west_barracks_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>10.00</width>
+        <height>10.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>LIVE</component>
+      <simskeleton>
+        <model>buildings\asian_civs\market_indian\indian_market_age2_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>DEAD</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>indian_market_age_04<attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+          <file>smoke\collapse_smoke_5x5.pkfx</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>collapse_smoke</component>
+      </anim>
+    </attachment>
+    <component>LIVE<logic type="LowPoly">
+        <normal>
+          <logic type="Destruction">
+            <p1>
+              <assetreference type="GrannyModel">
+                <file>buildings\asian_civs\market_indian\indian_market_age4_damaged</file>
+              </assetreference>
+            </p1>
+            <p99>
+              <assetreference type="GrannyModel" shape="japan_market_age1">
+                <file>buildings\asian_civs\trade_market\india\age_4\india_market_age4</file>
+              </assetreference>
+            </p99>
+          </logic>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\india\age_4\india_market_age4</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <component>DEAD<logic type="LowPoly">
+        <normal>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\market_indian\indian_market_age4_damaged</file>
+          </assetreference>
+        </normal>
+        <lowpoly>
+          <assetreference type="GrannyModel">
+            <file>buildings\asian_civs\trade_market\india\age_4\india_market_age4</file>
+          </assetreference>
+        </lowpoly>
+      </logic>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\barracks\WEST\AGE_2\west_barracks_ground</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>10.00</width>
+        <height>10.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>LIVE</component>
+      <simskeleton>
+        <model>buildings\asian_civs\market_indian\indian_market_age4_damaged</model>
+      </simskeleton>
+    </anim>
+    <anim>Death<component>DEAD</component>
+      <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </anim>
+  </submodel>
+  <submodel>indian_sub_construction_age_01_stage_03<attachment>scalf<component>scalf<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scalf</component>
+      </anim>
+    </attachment>
+    <component>indian_sub_construction_age_02_stage_03<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\trade_market\india\age_1\india_market_age1_con_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="scalf" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>indian_sub_construction_age_02_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>indian_sub_construction_age_02_stage_03<attachment>scalf<component>scalf<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scalf</component>
+      </anim>
+    </attachment>
+    <component>indian_sub_construction_age_02_stage_03<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\trade_market\india\age_2\india_market_age2_con_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="scalf" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>indian_sub_construction_age_02_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>indian_sub_construction_age_04_stage_03<attachment>scalf<component>scalf<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>scalf</component>
+      </anim>
+    </attachment>
+    <component>indian_sub_construction_age_02_stage_03<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\trade_market\india\age_4\india_market_age4_con_stage3</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="scalf" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>indian_sub_construction_age_02_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>korean_market_construction_stage_01<component>korean_market_construction_stage_01<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\construction\asi_4x4_stage1</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+    </component>
+    <anim>Idle<component>korean_market_construction_stage_01</component>
+    </anim>
+  </submodel>
+  <submodel>korean_market_construction_stage_02<attachment>korean_market_frame<component>korean_market_frame<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_frame</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>korean_market_frame</component>
+      </anim>
+    </attachment>
+    <component>korean_market_construction_stage_02<assetreference type="GrannyModel">
+        <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\constructions\2x2_construction_decal</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="korean_market_frame" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>korean_market_construction_stage_02</component>
+    </anim>
+  </submodel>
+  <submodel>korean_market_construction_stage_03<attachment>korean_market_scaffold<component>korean_market_scaffold<assetreference type="GrannyModel">
+          <file>buildings\asian_civs\construction\asi_4x4_stage2</file>
+        </assetreference>
+      </component>
+      <anim>Idle<component>korean_market_scaffold</component>
+      </anim>
+    </attachment>
+    <component>korean_market_construction_stage_03<assetreference type="GrannyModel">
+        <file>buildings\korean_market\korean_market_con</file>
+      </assetreference>
+      <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+      <attach a="korean_market_scaffold" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    </component>
+    <anim>Idle<component>korean_market_construction_stage_03</component>
+    </anim>
+  </submodel>
+  <submodel>korean_market_built
+  <!--Korean Market (Discovery Age, korean-market-dock UV r7c, texture r7c step 10): intact AI-painted model + destruction on
+      the vanilla Japanese market age 2 donor body graph; props on the shared Korean props page (props r6.2).-->
+  <attachment>collapse_smoke<component>collapse_smoke<assetreference type="popcornFx">
+        <file>smoke\collapse_smoke_5x5.pkfx</file>
+      </assetreference>
+    </component>
+    <anim>Idle<component>collapse_smoke</component>
+    </anim>
+  </attachment>
+  <component>LIVE<logic type="Destruction">
+      <p1>
+        <assetreference type="GrannyModel">
+          <file>buildings\korean_market\korean_market_damaged</file>
+        </assetreference>
+      </p1>
+      <p99>
+        <assetreference type="GrannyModel" shape="japanese_market_age2">
+          <file>buildings\korean_market\korean_market</file>
+        </assetreference>
+      </p99>
+    </logic>
+    <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+  </component>
+  <component>DEAD<assetreference type="GrannyModel">
+      <file>buildings\korean_market\korean_market_damaged</file>
+    </assetreference>
+    <decal>
+        <effecttype>bump</effecttype>
+        <texture>buildings\market\market_ground_generic</texture>
+        <selectedtexture>shadows_selections\selection_square_128x128</selectedtexture>
+        <bumptexture>shadows_selections\flat_normal_black_spec</bumptexture>
+        <width>12.00</width>
+        <height>12.00</height>
+      </decal>
+  </component>
+  <anim>Idle<component>LIVE</component>
+    <simskeleton>
+      <model>buildings\korean_market\korean_market_damaged</model>
+    </simskeleton>
+  </anim>
+  <anim>Death<component>DEAD</component>
+    <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+  </anim>
+  </submodel>
+  <component>Market<logic type="Culture">
+      <japanese>
+        <logic type="Tech">
+          <none>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="japanese_sub_construction_age_01_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="japanese_market_age_01" />
+              </p100>
+            </logic>
+          </none>
+          <colonialize>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="japanese_sub_construction_age_02_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="japanese_market_age_02" />
+              </p100>
+            </logic>
+          </colonialize>
+          <industrialize>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="japanese_sub_construction_age_04_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="japanese_market_age_04" />
+              </p100>
+            </logic>
+          </industrialize>
+          <zpkoreanvisuals>
+            <logic type="Tech">
+              <none>
+                <logic type="BuildingCompletion">
+                  <p0>
+                    <submodelref ref="korean_market_construction_stage_01" />
+                  </p0>
+                  <p33>
+                    <submodelref ref="korean_market_construction_stage_02" />
+                  </p33>
+                  <p66>
+                    <submodelref ref="korean_market_construction_stage_03" />
+                  </p66>
+                  <p100>
+                    <submodelref ref="korean_market_built" />
+                  </p100>
+                </logic>
+              </none>
+            </logic>
+          </zpkoreanvisuals>
+        </logic>
+      </japanese>
+      <chinese>
+        <logic type="Tech">
+          <none>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="japanese_sub_construction_age_01_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="japanese_market_age_01" />
+              </p100>
+            </logic>
+          </none>
+          <colonialize>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="chinese_sub_construction_age_02_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="chinese_market_age_02" />
+              </p100>
+            </logic>
+          </colonialize>
+          <industrialize>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="chinese_sub_construction_age_04_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="chinese_market_age_04" />
+              </p100>
+            </logic>
+          </industrialize>
+        </logic>
+      </chinese>
+      <indian>
+        <logic type="Tech">
+          <none>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="indian_sub_construction_age_01_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="indian_market_age_01" />
+              </p100>
+            </logic>
+          </none>
+          <colonialize>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="indian_sub_construction_age_02_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="indian_market_age_02" />
+              </p100>
+            </logic>
+          </colonialize>
+          <industrialize>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="indian_sub_construction_age_04_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="indian_market_age_04" />
+              </p100>
+            </logic>
+          </industrialize>
+        </logic>
+      </indian>
+      <africaeast>
+        <logic type="Tech">
+          <none>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="indian_sub_construction_age_01_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="indian_market_age_01" />
+              </p100>
+            </logic>
+          </none>
+          <colonialize>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="indian_sub_construction_age_02_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="indian_market_age_02" />
+              </p100>
+            </logic>
+          </colonialize>
+          <industrialize>
+            <logic type="BuildingCompletion">
+              <p0>
+                <submodelref ref="sub_construction_stage_01" />
+              </p0>
+              <p33>
+                <submodelref ref="sub_construction_stage_02" />
+              </p33>
+              <p66>
+                <submodelref ref="indian_sub_construction_age_04_stage_03" />
+              </p66>
+              <p100>
+                <submodelref ref="indian_market_age_04" />
+              </p100>
+            </logic>
+          </industrialize>
+        </logic>
+      </africaeast>
+    </logic>
+  </component>
+</animfile>

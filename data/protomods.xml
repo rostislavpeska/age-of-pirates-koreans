@@ -1039,7 +1039,7 @@
      each, the shipped GR2s through art/zbench_korean_house (no age logic: the editor shows the Korean model) -
      the zpHouseKorean values, to test construction, garrison flag and destruction. zzTESTKoreanCastle (22011, 2026-10-10): the Korean
      castle through its own BuildingCompletion-only animfile (buildings\korean_castle\korean_castle.xml), ypCastle values. zzTESTKoreanDock (22015, 2026-10-11): the Korean
-     Dock through its own animfile (buildings\korean_dock\korean_dock.xml), YPDockAsian values, placed on water like a dock. zzTESTKoreanConsulate (22016, 2026-10-11): the Korean Consulate through its own animfile (buildings\korean_consulate\korean_consulate.xml), vanilla ypConsulate values. zzTESTKoreanMonastery (22017, 2026-10-11): the Korean Monastery through its own animfile (buildings\korean_monastery\korean_monastery.xml), vanilla ypMonastery values. zzTESTKoreanRicePaddy (22018, 2026-10-11): the Korean Rice Paddy shelter through its own animfile (buildings\korean_rice_paddy\korean_rice_paddy.xml) on the vanilla field attachment, vanilla ypRicePaddy values (gatherable). Moved from AoP (21207, 30160, 30162, 30164); vanilla string ids. -->
+     Dock through its own animfile (buildings\korean_dock\korean_dock.xml), YPDockAsian values, placed on water like a dock. zzTESTKoreanConsulate (22016, 2026-10-11): the Korean Consulate through its own animfile (buildings\korean_consulate\korean_consulate.xml), vanilla ypConsulate values. zzTESTKoreanMonastery (22017, 2026-10-11): the Korean Monastery through its own animfile (buildings\korean_monastery\korean_monastery.xml), vanilla ypMonastery values. zzTESTKoreanRicePaddy (22018, 2026-10-11): the Korean Rice Paddy shelter through its own animfile (buildings\korean_rice_paddy\korean_rice_paddy.xml) on the vanilla field attachment, vanilla ypRicePaddy values (gatherable). zzTESTKoreanMarket (22019, 2026-10-11): the Korean Market through its own animfile (buildings\korean_market\korean_market.xml), vanilla ypTradeMarketAsian values (no techs or trade commands). Moved from AoP (21207, 30160, 30162, 30164); vanilla string ids. -->
 <unit id="22003" name="zzTESTKoreanTownCenter">
     <dbid>22003</dbid>
     <displaynameid>600038</displaynameid>
@@ -2028,6 +2028,70 @@
       <rate type="Food">1.000000</rate>
     </protoaction>
   </unit>
+<unit id="22019" name="zzTESTKoreanMarket">
+    <dbid>22019</dbid>
+    <displaynameid>600085</displaynameid>
+    <editornameid>600086</editornameid>
+    <obstructionradiusx>5.0000</obstructionradiusx>
+    <obstructionradiusz>5.0000</obstructionradiusz>
+    <maxvelocity>0.0000</maxvelocity>
+    <movementtype>land</movementtype>
+    <animfile>buildings\korean_market\korean_market.xml</animfile>
+    <impacttype>Wood</impacttype>
+    <physicsinfo>house</physicsinfo>
+    <placementfile>buildinglarge.xml</placementfile>
+    <icon>resources\art\buildings\asian_civs\trade_market\japan\japanese_market_icon_64.png</icon>
+    <portraiticon>resources\art\buildings\asian_civs\trade_market\japan\japanese_market_icon_portrait.png</portraiticon>
+    <rollovertextid>65499</rollovertextid>
+    <shortrollovertextid>65498</shortrollovertextid>
+    <initialhitpoints>2000.0000</initialhitpoints>
+    <maxhitpoints>2000.0000</maxhitpoints>
+    <los>12.0000</los>
+    <buildpoints>15.0000</buildpoints>
+    <buildlimit>999</buildlimit>
+    <bounty>40.0000</bounty>
+    <buildbounty>20.0000</buildbounty>
+    <cost resourcetype="Wood">100.0000</cost>
+    <buildingworkrate>1.0000</buildingworkrate>
+    <allowedage>0</allowedage>
+    <armor type="Siege" value="0.0000" />
+    <builderlimit>8</builderlimit>
+    <unittype>LogicalTypeValidSabotage</unittype>
+    <unittype>LogicalTypeMinimapFilterEconomic</unittype>
+    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeBuildingsNotWalls</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttackNoVillagers</unittype>
+    <unittype>LogicalTypeVillagersAttack</unittype>
+    <unittype>LogicalTypeHandUnitsAttack</unittype>
+    <unittype>LogicalTypeShipsAndBuildings</unittype>
+    <unittype>LogicalTypeRangedUnitsAttack</unittype>
+    <unittype>LogicalTypeBuildingsNotWallsOrGroves</unittype>
+    <unittype>Economic</unittype>
+    <unittype>BuildingClass</unittype>
+    <unittype>Building</unittype>
+    <unittype>LogicalTypeBuildingsNoRangedAttack</unittype>
+    <unittype>CountsTowardEconomicScore</unittype>
+    <unittype>HasBountyValue</unittype>
+    <unittype>ConvertsHerds</unittype>
+    <unittype>EconomicBuilding</unittype>
+    <unittype>ConstructableBuilding</unittype>
+    <flag>EnterHotkeyContext</flag>
+    <flag>CollidesWithProjectiles</flag>
+    <flag>Immoveable</flag>
+    <flag>NoBloodOnDeath</flag>
+    <flag>ObscuresUnits</flag>
+    <flag>NoIdleActions</flag>
+    <flag>NonAutoFormedUnit</flag>
+    <flag>Doppled</flag>
+    <flag>SelectWithObstruction</flag>
+    <flag>PaintTextureWhenPlacing</flag>
+    <flag>FlattenGround</flag>
+    <flag>Tracked</flag>
+    <flag>StartEnabled</flag>
+    <command page="10" column="7">Delete</command>
+    <tactics>autogatherer.tactics</tactics>
+  </unit>
 <unit id="22006" name="zzTESTKoreanBuilderWagon">
   <dbid>22006</dbid>
   <displaynameid>30679</displaynameid>
@@ -2101,6 +2165,7 @@
   <train row="0" page="6" column="8">zzTESTKoreanConsulate</train>
   <train row="0" page="6" column="9">zzTESTKoreanMonastery</train>
   <train row="1" page="6" column="0">zzTESTKoreanRicePaddy</train>
+  <train row="1" page="6" column="1">zzTESTKoreanMarket</train>
   <command page="10" column="1">Stop</command>
   <command page="10" column="7">Delete</command>
   <tactics>test_korean_builder.tactics</tactics>

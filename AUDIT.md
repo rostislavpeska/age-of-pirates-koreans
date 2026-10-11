@@ -101,6 +101,23 @@ everything still missing for a fully playable, fully Korean civilization, most i
    ROOT attaches) - the game test decides whether ROOT is engine-provided like ATTACHPOINT. Two roof bodies of the on-death
    model exceed the compactness target (3.64 / 3.96 m against 3.0 / 3.24 m). Test bed `zzTESTKoreanRicePaddy` (22018,
    test builder wagon row 1). Workspace C:/work/korean-rice-paddy (r6, export out_r6, recipes). Not yet seen in game.
+   **The Market** is Korean from the Discovery Age on (2026-10-11; owner: "When done, add the market to the game as market
+   asian", "same as japanese / chinese", "plus the destruction test bed and skill update - add"): `art/buildings/korean_market/`
+   = the Korean Market (hall, tower, entry bay, gallery, two stalls with goods and alpha straw thatch, Hangul signboard 장터,
+   castle-graded masonry; korean-market-dock UV r7c + texture r7c step 10 + corner seams) + construction p66 (masonry, the
+   timber frame, rafters and gallery decks; no walls, roofs, opening frames, rails or props; vanilla asi_4x4_stage2 scaffold;
+   190 parts all grounded) + Havok destruction on the vanilla Japanese market age 2 donor (`japanese_market_age2_damaged`: 142
+   of 273 bodies refit, 902 cut caps on the vanilla destruction sheet; foundations, plinths and stone stairs stay as the
+   ruin). Merged into `asian_civs/trade_market/trade_market.xml` (vanilla base; AoP has no override) as a `zpkoreanvisuals`
+   branch of only `<none>` in the Japanese culture; the Chinese branch is untouched. Pages: own 2048 (opaque, player colour)
+   + own 1024 (alpha cutout: thatch fringe, railing wind-holes, eave scallops; player colour) + the shared r65 + the shared
+   props page **r6.2** (`korean_shared_props_r6_2`: the cart deck fix; the installed Dock keeps r6 - two props pages in memory
+   until the Dock moves). gr2_lint korean_market 33 PASS / 2 FAIL, korean_market_con 16 / 1: the only FAIL is texture_budget -
+   class medium (2048 + 1024) is PROPOSED; the owner's "2048+1024  is ok" names neither the class nor the building, so it
+   waits for "Market = medium". state frames PASS (construction 547 pairs, damaged 2114 pairs, inliers 1.0); attachment_check
+   PASS. Three on-death bodies exceed the compactness target (6.1 / 4.1 / 4.4 m against 3.0 m). Test bed
+   `zzTESTKoreanMarket` (22019, test builder wagon row 1 column 1). Workspace C:/work/korean-market-dock (export_market,
+   recipes). Not yet seen in game.
 9. **Villagers and explorers**: villagers are now the Asian (Chinese) villager (owner, 2026-10-08), but the
    home city still ships **Japanese** villagers (`YPHCShipSettlersAsian1/2/5`) and Zen Diet targets the Japanese
    one (debt B1, plan section 8); explorers are now the mounted Korean monks (own model and icons; knocked out they fall like the vanilla mounted

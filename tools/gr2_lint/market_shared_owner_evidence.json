@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner message in the Claude Code Market + Dock session, 2026-10-09 (the batch contract C:/work/korean-market-dock/CONTRACT.json owner_quotes; no app message id): the Market props go on a shared Korean props page; the batch contract lists korean_shared_matc_r65 as the shared atlas.",
+  "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate",
+  "models": [
+    "korean_market",
+    "korean_market_damaged",
+    "korean_market_con"
+  ],
+  "source_names": [
+    "Korean shared matc r65",
+    "Korean shared props r6.2"
+  ]
+}

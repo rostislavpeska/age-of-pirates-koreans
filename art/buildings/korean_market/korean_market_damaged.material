@@ -1,0 +1,44 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_market\textures\korean_market_mata_BaseColor" />
+      <texture name="Normals" override="buildings\korean_market\textures\korean_market_mata_Normals" />
+      <texture name="Masks" override="buildings\korean_market\textures\korean_market_mata_Masks" />
+      <texture name="Details" override="buildings\korean_market\textures\korean_market_mata_Details" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matb">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_market\textures\korean_market_matb_BaseColor" />
+      <texture name="Normals" override="buildings\korean_market\textures\korean_market_matb_Normals" />
+      <texture name="Masks" override="buildings\korean_market\textures\korean_market_matb_Masks" />
+      <texture name="Details" override="buildings\korean_market\textures\korean_market_matb_Details" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matc">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\korean_shared_matc_r65_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\korean_shared_matc_r65_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\korean_shared_matc_r65_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matd">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\korean_shared_props_r6_2_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\korean_shared_props_r6_2_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\korean_shared_props_r6_2_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matz">
+    <materialdef name="destructible_doublesided_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="generic_props\destruction\textures\destructionsheet_mata_BaseColor" />
+      <texture name="Normals" override="generic_props\destruction\textures\destructionsheet_mata_Normals" />
+      <texture name="Masks" override="generic_props\destruction\textures\destructionsheet_mata_Masks" />
+    </parameters>
+  </submaterial>
+</material>

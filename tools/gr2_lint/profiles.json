@@ -1819,6 +1819,232 @@
     "name_board": null,
     "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
    }
+  },
+  "korean_market": {
+   "model": "korean_market",
+   "names": [
+    "Market",
+    "Korean Market"
+   ],
+   "_doc": "Korean Market (Discovery Age, korean-market-dock UV r7c + texture r7c step 10 + corners, AI-painted pages): intact + damaged + HKT on the vanilla Japanese market age 2 donor graph (japan_market_age2 / japanese_market_age2_damaged); bone_flag_civ on the Tower flagpole, BONE_HITPOINTBAR over the hall roof (no garrison flag, as the vanilla market); props on the shared Korean props page r6.2 (matd).",
+   "files": {
+    "intact": "korean_market.gr2",
+    "damaged": "korean_market_damaged.gr2",
+    "hkt": "korean_market_damaged.hkt",
+    "intact_material": "korean_market.material",
+    "damaged_material": "korean_market_damaged.material",
+    "animfile": "korean_market.xml"
+   },
+   "texture_budget": {
+    "class": "medium",
+    "status": "proposed, owner to confirm by name (the pages are the owner's: \"2048+1024  is ok\", owner-market-pages-2026-10-11, which names neither the class nor the building)",
+    "models": [
+     "korean_market"
+    ],
+    "_doc": "Market: one own 2048 page (P0: walls, roofs, structure, masonry, Hangul signboard, player colour; opaque) + one own 1024 page (P5: the alpha cutout surfaces - stall thatch, railing wind-holes, eave scallops - player colour) for every stage; the shared r65 atlas and the shared Korean props page r6.2 are pinned, not counted.",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/market_shared_owner_evidence.json",
+       "sha256": "b08a12c46c4869ceb2c2a00b1fa155d2d84c5ab37b1b9f1ceb6a7a8c36b82933",
+       "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6.2"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_BaseColor.ddt",
+        "sha256": "db92d6f3fd321745618108f305ab047d795ced0a5453108e0cd6bc04b7c2ffe1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Normals.ddt",
+        "sha256": "89df41eb1b6640fa054588dbd2e60b2ab9c3b676c5c987f1836e4de5d765c014",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Masks.ddt",
+        "sha256": "c4cc66ba7e9cf39adcb64a71b97774ae6f940208de7c9d302524a693452be3e0",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/market_shared_owner_evidence.json",
+       "sha256": "b08a12c46c4869ceb2c2a00b1fa155d2d84c5ab37b1b9f1ceb6a7a8c36b82933",
+       "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate"
+      },
+      "_doc": "the Korean props page r6.2 (props r6.1 + the Balcha cart deck repainted, owner \"fix these artifacts on the Props UV map\")"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "japan_market_age02",
+    "BONE_HITPOINTBAR",
+    "bone_flag_civ",
+    "japan_market_age2_M0",
+    "japan_market_age2_M1",
+    "japan_market_age2_M2",
+    "japan_market_age2"
+   ],
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   },
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_market_r1.json",
+    "sha256": "378d702e59a190165a4021d16b544a1bd1b23ee8b5cad75045105bfeb2374831"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
+  },
+  "korean_market_con": {
+   "model": "korean_market",
+   "names": [
+    "Market",
+    "Korean Market"
+   ],
+   "_doc": "Korean Market last construction stage (p66): the masonry (foundations, post plinths, stairs), the timber frame (posts, girders, sills, lintels, floor bands, rafters) and the gallery decks; the vanilla asi_4x4_stage2 scaffold is attached by the animfile",
+   "files": {
+    "intact": "korean_market_con.gr2",
+    "intact_material": "korean_market_con.material",
+    "animfile": "korean_market.xml"
+   },
+   "texture_budget": {
+    "class": "medium",
+    "status": "proposed, owner to confirm by name (the pages are the owner's: \"2048+1024  is ok\", owner-market-pages-2026-10-11, which names neither the class nor the building)",
+    "models": [
+     "korean_market"
+    ],
+    "_doc": "Market: one own 2048 page (P0: walls, roofs, structure, masonry, Hangul signboard, player colour; opaque) + one own 1024 page (P5: the alpha cutout surfaces - stall thatch, railing wind-holes, eave scallops - player colour) for every stage; the shared r65 atlas and the shared Korean props page r6.2 are pinned, not counted.",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/market_shared_owner_evidence.json",
+       "sha256": "b08a12c46c4869ceb2c2a00b1fa155d2d84c5ab37b1b9f1ceb6a7a8c36b82933",
+       "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6.2"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_BaseColor.ddt",
+        "sha256": "db92d6f3fd321745618108f305ab047d795ced0a5453108e0cd6bc04b7c2ffe1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Normals.ddt",
+        "sha256": "89df41eb1b6640fa054588dbd2e60b2ab9c3b676c5c987f1836e4de5d765c014",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Masks.ddt",
+        "sha256": "c4cc66ba7e9cf39adcb64a71b97774ae6f940208de7c9d302524a693452be3e0",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/market_shared_owner_evidence.json",
+       "sha256": "b08a12c46c4869ceb2c2a00b1fa155d2d84c5ab37b1b9f1ceb6a7a8c36b82933",
+       "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate"
+      },
+      "_doc": "the Korean props page r6.2 (props r6.1 + the Balcha cart deck repainted, owner \"fix these artifacts on the Props UV map\")"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "japan_market_age02_construction",
+    "BONE_HITPOINTBAR",
+    "japan_market_age2_con_stage3",
+    "japan_market_age2_con_stage3_M0"
+   ],
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_market_con_r1.json",
+    "sha256": "770446750649514afabef06e59cd1358e33de8ab79ec8f8fde6072de91099035"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
   }
  }
 }
