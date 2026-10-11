@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "construction p66 r16: windows and doors stripped (postproduction; r14c members minus 972 faces)",
+  "author_blend_sha256": "21dac5ac759ba5e9e4cdd8124d52b06bccda6f3baa7e10e2569a313b4219a9ef",
+  "author_payload_sha256": "70db714daefbbf2a14bf94f1f656c0a1f39bff98fbdc475f86bcb85c80ede7bf",
+  "provenance": "House A construction p66 r16: windows and doors stripped (postproduction; r14c members minus 972 faces): payload House_A_payload_r16.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 4542,
+        "position_f32_sha256": "f6d30e4b579ab489dda534749573095a9fedf1017c8581cbc9ced889f386e3a3",
+        "raw_uv_f16_sha256": "647731983fd41518dbe590dc775d2615d0f109de4050fc0d317affc46a5ad595"
+      },
+      "mata": {
+        "corners": 810,
+        "position_f32_sha256": "77ee91c885859c685ccf2b161f97e1879802d8e2834b94f7a6f713b34e4f5db3",
+        "raw_uv_f16_sha256": "e650526fd02acfce312afed7613d4357db4bdbf4dff5eff9832f8286a08fca62"
+      }
+    },
+    "damaged": {}
+  }
+}

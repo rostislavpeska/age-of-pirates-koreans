@@ -300,8 +300,8 @@
     "japan_shrine_age2_01_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_a_con_r14c.json",
-    "sha256": "f68d8dc3f5f6dc642a80a3c0836c084a66c64d6f1fc9f17b3a338f2d3ce29a95"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_a_con_r16.json",
+    "sha256": "ef3f8fc0a4c903c8f0b6c26727c1a97c9e4e23523f76e410a2e09ddea4ef3ed8"
    },
    "handedness": {
     "expect_sign": 1,
@@ -605,8 +605,8 @@
     "japan_shrine_age2_02_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_b_con_r14c.json",
-    "sha256": "27dbb6fe427c9c8a95744c7fb061cfa0124e7bae9cc230938565f459042a47af"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_b_con_r16.json",
+    "sha256": "a2cb3db31a1976fe5605a6959d8f4f360a5fe198d5e2635e77badadec3ba67d3"
    },
    "handedness": {
     "expect_sign": 1,
@@ -909,8 +909,8 @@
     "japan_shrine_age2_03_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_c_con_r14c.json",
-    "sha256": "d717b8491b76ccff723d1d675871465e7222baa61ee2d07dc9833f1118cab6b0"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_c_con_r16.json",
+    "sha256": "0fd48b79312884f1902d304125b5f26265ad0ff83ebdaa177f2b9fe7b1327c1f"
    },
    "handedness": {
     "expect_sign": 1,
