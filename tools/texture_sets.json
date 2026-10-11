@@ -368,6 +368,82 @@
      "sha256": "8431091b0599c2311e78f7eaec673621d9d4d77d2edef493dc6959885e5e337e"
     }
    }
+  },
+  {
+   "id": "korean_shared_props_r6",
+   "status": "current",
+   "record": "korean-buildings-blender library/aoe-buildings/subprojects/korean/subprojects/colonial/3d-assets/korean-props/versions/props-r6/PACKAGE.json (owner: \"Props aproved\", 2026-10-10)",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor",
+     "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1"
+    },
+    "Normals": {
+     "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals",
+     "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7"
+    },
+    "Masks": {
+     "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks",
+     "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7"
+    }
+   }
+  },
+  {
+   "id": "korean_dock_mata",
+   "status": "current",
+   "record": "C:/work/korean-market-dock export r1 (Dock page R1, dock_r5 texture chain 2026-10-11)",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_dock/textures/korean_dock_mata_BaseColor",
+     "sha256": "34dd143b158d8e0460e03c67cb8394dd72d2266e7775d5f7fb207ad3922b05a5"
+    },
+    "Normals": {
+     "path": "buildings/korean_dock/textures/korean_dock_mata_Normals",
+     "sha256": "79543dc73aa62f3a626edd1b5fb1f33a160aa9758ae3bcfa0b6e5e5e9a915208"
+    },
+    "Masks": {
+     "path": "buildings/korean_dock/textures/korean_dock_mata_Masks",
+     "sha256": "59a64a9d2ff3a47649c71803268ce30a822060187c0156526c114e74ed3926c0"
+    },
+    "Details": {
+     "path": "buildings/korean_dock/textures/korean_dock_mata_Details",
+     "sha256": "83c81fa7a3e4f98208bc62b3f375719215d5211dde06b518a7c92bebfe345a78"
+    }
+   }
+  },
+  {
+   "id": "korean_dock_matb",
+   "status": "current",
+   "record": "C:/work/korean-market-dock export r1 (platform page R2, dock_r5 texture chain 2026-10-11)",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_dock/textures/korean_dock_matb_BaseColor",
+     "sha256": "1b0c6ef56875dc28f011a071b6788e26a2ec11df3075f3b7221e434e53c94726"
+    },
+    "Normals": {
+     "path": "buildings/korean_dock/textures/korean_dock_matb_Normals",
+     "sha256": "5aff62903a3327ae9022e2c0dbd40902ab71d42f632c8de9fd46917c3e72c06c"
+    },
+    "Masks": {
+     "path": "buildings/korean_dock/textures/korean_dock_matb_Masks",
+     "sha256": "752d4120c4e52a799b8c39dd0d4e3b14c9f30cff2b5a0b6eabdd4c0971a9d972"
+    }
+   }
   }
  ]
 }

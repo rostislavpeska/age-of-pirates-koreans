@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner-selected option in the Claude Code Market + Dock session, 2026-10-10T21:46:26Z (no app message id); the same words are tools/gr2_lint/owner_authorization.json item owner-dock-large-2026-10-10. The question named the props page 2048 and r65 as shared with other buildings, not counted.",
+  "owner_quote": "Large: 2 x 2048 (Recommended)",
+  "question": "Texture budget for the Korean Dock (the export gate needs your confirmation): the Dock page 2048 + the platform page 2048 = 'large' (2 x 2048); the props page 2048 and r65 are shared with other buildings. Which class?",
+  "models": [
+    "korean_dock",
+    "korean_dock_damaged",
+    "korean_dock_con"
+  ],
+  "source_names": [
+    "Korean shared matc r65",
+    "Korean shared props r6"
+  ]
+}

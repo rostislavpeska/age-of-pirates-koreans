@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "dock-construction-r3d",
+  "author_blend_sha256": "049f5ab46984bfa142e9a75a0af930f3d1fb8e6548bee9e8c2a2e914181523c7",
+  "author_payload_sha256": "92a026d10a909063460b0097d67cfdfb1876fb1eea648a484383cbfbf5734b94",
+  "provenance": "Korean Dock korean_dock_con dock-construction-r3d: payload korean_dock_con_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matb": {
+        "corners": 5952,
+        "position_f32_sha256": "46ade510276b1610a8fe6cdfcfd3f553c392cbadfca5b461f4041479ee2762a3",
+        "raw_uv_f16_sha256": "e7cfb1a085466b08eb17175e3e216b102a518949172f1b3e0f7eee65dc743f3b"
+      },
+      "matc": {
+        "corners": 29814,
+        "position_f32_sha256": "13ca722148cb2fe8503ff61f3864e562ca4988c5e171fd9dbe1c06eaf05baa43",
+        "raw_uv_f16_sha256": "8d2b0e1e283403e90e156a0205238fdc92072e7077b8faee248a1783bc795d28"
+      },
+      "mata": {
+        "corners": 1926,
+        "position_f32_sha256": "8636fdbd94a539bfbced4a4cb223f25e79a6c4dffe210074b095bfcdb9517866",
+        "raw_uv_f16_sha256": "fdfdc9e5142b6e57f4285ab86ba33cdd4d045756f22f17134da294abf1792dbd"
+      }
+    },
+    "damaged": {}
+  }
+}

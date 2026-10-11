@@ -57,6 +57,12 @@ BUILDINGS = [
     # gr2_lint korean_castle / korean_castle_con pass
     ('Art/buildings/asian_civs/castle/castle.xml.XMB', 'art/buildings/asian_civs/castle/castle.xml',
      'art/buildings/korean_castle/korean_castle.xml', 'japanese', False, 'ypfrontiercastle'),
+    # Korean Dock (owner 2026-10-10: "export dock to the game - construction, destruction - ... then add as age1 Korean
+    # Dock"): YPDockAsian's animfile, which AoP does not override. First upgrade 'none' = the Korean Dock from the
+    # Discovery Age on (no vanilla branch inside the marker); one Korean Dock model so far, so it holds in every age.
+    # gr2_lint korean_dock / korean_dock_con (tools/gr2_lint/profiles.json)
+    ('Art/buildings/asian_civs/dock/dock.xml.XMB', 'art/buildings/asian_civs/dock/dock.xml',
+     'art/buildings/korean_dock/korean_dock.xml', 'japanese', False, 'none'),
 ]
 
 MARKER = 'zpkoreanvisuals'
@@ -159,14 +165,14 @@ def merge(vanilla, korean_text, culture, add_attack, first='colonialize'):
     ind = out[line0:close]                       # indentation of the Tech logic's closing tag
     if ind.strip():                              # a compact base (AoP's castle.xml: one line per culture branch):
         none = re.match(r'<logic type="Tech">\s*(<none>.*?</none>)', out[t0:t1], re.S)   # the marker goes in inline
-        block = ''.join(['<%s><logic type="Tech">' % MARKER, none.group(1) if none else '',
+        block = ''.join(['<%s><logic type="Tech">' % MARKER, none.group(1) if none and first != 'none' else '',
                          '<%s>' % first, completion, '</%s></logic></%s>' % (first, MARKER)])
         return out[:close] + block + out[close:]
     none = re.search(r'\n(%s  <none>\n.*?\n%s  </none>)\n' % (ind, ind), out[t0:t1], re.S)
     korean = '\n'.join((ind + '        ' + l[4:]) if l.startswith('    ') else (ind + '        ' + l)
                        for l in completion.split('\n'))
     parts = ['%s  <%s>' % (ind, MARKER), '%s    <logic type="Tech">' % ind]
-    if none:                                     # the vanilla stable has no <none> branch
+    if none and first != 'none':                 # the vanilla stable has no <none> branch; first 'none' = Korean from age 1
         parts.append('\n'.join('    ' + l for l in none.group(1).split('\n')))
     parts += ['%s      <%s>' % (ind, first), korean, '%s      </%s>' % (ind, first),
               '%s    </logic>' % ind, '%s  </%s>' % (ind, MARKER)]
@@ -197,7 +203,7 @@ def verify(text, culture, first='colonialize'):
             assert inner.get('type') == 'Tech'
             ages = [c.tag for c in inner]
             assert ages[-1] == first and ages[:-1] in ([], ['none']), ages
-            if 'none' in kids:   # the Discovery Age branch is a copy of vanilla's (indentation aside)
+            if 'none' in kids and first != 'none':   # the Discovery Age branch is a copy of vanilla's (indentation aside)
                 assert canon(inner.find('none')) == canon(tech.find('none'))
             return kids + ['/'.join(ages)]
     raise AssertionError('no %s branch' % culture)

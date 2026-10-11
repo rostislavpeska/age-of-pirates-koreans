@@ -905,6 +905,233 @@
     "name_board": null,
     "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
    }
+  },
+  "korean_dock": {
+   "model": "korean_dock",
+   "names": [
+    "Dock",
+    "Korean Dock"
+   ],
+   "_doc": "Korean Dock (Discovery Age, korean-market-dock r5, AI-painted pages): intact + damaged + HKT on the vanilla Japanese dock age 1 donor graph (japan_dock_age1(_damaged)); bone_flag_civ and BONE_GARRISONFLAG on the Dock mast (donor heights), BONE_HITPOINTBAR over the hall roof; props on the shared Korean props page (matd).",
+   "files": {
+    "intact": "korean_dock.gr2",
+    "damaged": "korean_dock_damaged.gr2",
+    "hkt": "korean_dock_damaged.hkt",
+    "intact_material": "korean_dock.material",
+    "damaged_material": "korean_dock_damaged.material",
+    "animfile": "korean_dock.xml"
+   },
+   "texture_budget": {
+    "class": "large",
+    "confirmed_by": "owner-dock-large-confirm-2026-10-11",
+    "models": [
+     "korean_dock"
+    ],
+    "_doc": "owner 2026-10-10/11: Dock = large - the own Dock page 2048 (walls, roofs, crane, player colour) + the platform page 2048 (piles, deck, quay, ladders, bollards), one set for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/dock_shared_owner_evidence.json",
+       "sha256": "3cc89709a878996a6b684ee85a94d64f591aee885d5fd257a8e1f71a938c1d3d",
+       "owner_quote": "Large: 2 x 2048 (Recommended)"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/dock_shared_owner_evidence.json",
+       "sha256": "3cc89709a878996a6b684ee85a94d64f591aee885d5fd257a8e1f71a938c1d3d",
+       "owner_quote": "Large: 2 x 2048 (Recommended)"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6, owner \"Props aproved\"), shared by the Market, Dock, Consulate and Monastery"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "bone_flag_civ",
+    "BONE_HITPOINTBAR",
+    "Japan_Dock_Age01",
+    "BONE_GARRISONFLAG",
+    "japan_dock_age1_M1",
+    "japan_dock_age1_M0",
+    "japan_dock_age1_M2",
+    "japan_dock_age1"
+   ],
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   },
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_dock_r1.json",
+    "sha256": "bcacb58335ffdebb64a8512ef213a2f981204ac3a61b85d24025c820257629e9"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
+  },
+  "korean_dock_con": {
+   "model": "korean_dock",
+   "names": [
+    "Dock",
+    "Korean Dock"
+   ],
+   "_doc": "Korean Dock last construction stage (p66): the platform (piles, deck, quay) and the buildings' timber frame; the vanilla dock_stage2 scaffold is attached by the animfile",
+   "files": {
+    "intact": "korean_dock_con.gr2",
+    "intact_material": "korean_dock_con.material",
+    "animfile": "korean_dock.xml"
+   },
+   "texture_budget": {
+    "class": "large",
+    "confirmed_by": "owner-dock-large-confirm-2026-10-11",
+    "models": [
+     "korean_dock"
+    ],
+    "_doc": "owner 2026-10-10/11: Dock = large - the own Dock page 2048 (walls, roofs, crane, player colour) + the platform page 2048 (piles, deck, quay, ladders, bollards), one set for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/dock_shared_owner_evidence.json",
+       "sha256": "3cc89709a878996a6b684ee85a94d64f591aee885d5fd257a8e1f71a938c1d3d",
+       "owner_quote": "Large: 2 x 2048 (Recommended)"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/dock_shared_owner_evidence.json",
+       "sha256": "3cc89709a878996a6b684ee85a94d64f591aee885d5fd257a8e1f71a938c1d3d",
+       "owner_quote": "Large: 2 x 2048 (Recommended)"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6, owner \"Props aproved\"), shared by the Market, Dock, Consulate and Monastery"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "BONE_HITPOINTBAR",
+    "Japan_Dock_Age01",
+    "japan_dock_age1_con_stage3",
+    "japan_dock_age1_con_stage3_M0"
+   ],
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_dock_con_r1.json",
+    "sha256": "ed40aec86cb8005b844316ec2cc428c9cf432525681e517f90df5209ae847df4"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
   }
  }
 }

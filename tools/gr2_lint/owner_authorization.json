@@ -58,6 +58,46 @@
       "context": "review of construction r1 (a generic hip frame); r2 builds the pavilion members on their real geometry",
       "source": "Owner messages in the Claude Code castle session, 2026-10-10.",
       "recorded_by": "claude (castle states r1)"
+    },
+    {
+      "id": "owner-dock-large-2026-10-10",
+      "text": "Large: 2 x 2048 (Recommended)",
+      "question": "Texture budget for the Korean Dock (the export gate needs your confirmation): the Dock page 2048 + the platform page 2048 = 'large' (2 x 2048); the props page 2048 and r65 are shared with other buildings. Which class?",
+      "options": [
+        "Large: 2 x 2048 (Recommended)",
+        "Medium: platform back to 1024"
+      ],
+      "option_detail": "Keep the platform at 2048 as you asked earlier ('improve to 2048'); props 2048 and r65 counted as shared pages.",
+      "supersedes": "the Dock's 2026-10-09 answer 'One 2048 set (Recommended)' (before the platform page and the props page grew to 2048)",
+      "source": "Owner-selected option in the Claude Code Market + Dock session, 2026-10-10T21:46:26Z.",
+      "recorded_by": "claude (Dock export r1)"
+    },
+    {
+      "id": "owner-dock-export-2026-10-10",
+      "text": "Props aproved, last thing, the dock crane - check it, paint with proper textures, then export dock to the game - construction, destruction - check other dock hlt, then add as age1 Korean Dock",
+      "context": "'hlt' read as the Havok destruction file (.hkt) of the vanilla docks; the Dock replaces the Discovery Age (age 1) Asian dock for Korean players",
+      "source": "Owner message in the Claude Code Market + Dock session, 2026-10-10.",
+      "recorded_by": "claude (Dock export r1)"
+    },
+    {
+      "id": "owner-dock-player-colour-2026-10-10",
+      "text": "and also don't forget the player color",
+      "context": "the Dock page Details map (player colour on plaster, boards and beams) is bound in mata",
+      "source": "Owner message in the Claude Code Market + Dock session, 2026-10-10.",
+      "recorded_by": "claude (Dock export r1)"
+    },
+    {
+      "id": "owner-dock-large-confirm-2026-10-11",
+      "text": "Yes: Dock = large",
+      "question": "Texture class of the Korean Dock: Dock page 2048 + platform page 2048 (the props page and r65 are shared, not counted). The export gate needs your words naming the Dock.",
+      "options": [
+        "Yes: Dock = large",
+        "No: Dock = medium"
+      ],
+      "option_detail": "Confirms the two own 2048 pages; closes the only failing export check (texture_budget).",
+      "confirms": "owner-dock-large-2026-10-10 (its option text did not name the Dock)",
+      "source": "Owner-selected option in the Claude Code Market + Dock session, 2026-10-10T23:08Z (01:08 local, 2026-10-11).",
+      "recorded_by": "claude (Dock export r1)"
     }
   ]
 }
