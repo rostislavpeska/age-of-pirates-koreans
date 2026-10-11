@@ -1,0 +1,58 @@
+{
+ "request": {
+  "operation": "generate",
+  "provider": "gemini",
+  "prompt": "Paint a new Age of Empires III unit portrait in exactly the painting style of the first two reference images (official Age of Empires III unit portraits): close-up of head and shoulders, the head large in the upper half, three-quarter view, smooth airbrushed painterly skin, simplified stylised forms and folds, soft warm key light, hand-painted video-game look, NOT a photograph. The third image is only a costume reference (a low-poly game model), not a style reference. Subject: a Joseon Korean spearman (jangchang soldier) of the late 16th century, a man of about 35 with masculine East Asian features, a black moustache, stern look. He wears a Korean steel helmet (tugu) with a rounded bowl, a tall spike with a red horsehair plume on top and a mail neck guard; a studded cloth armour coat (dujeong-gap) covered with rows of round brass studs, with black edging; red sleeves. The armour coat cloth is one flat pure magenta colour (#FF00FF) with no shading, the brass studs and the black edging stay on top of it. He holds a long spear upright beside him (steel blade, red tassel below the blade, dark wooden shaft). Background: flat pure green (#00FF00), nothing else. No text, no border.",
+  "aspect_ratio": "1:1",
+  "image_size": "1K"
+ },
+ "operation": "generate",
+ "inputs": [
+  "ref_qiang.png",
+  "ref_ashigaru.png",
+  "ref_costume.png"
+ ],
+ "inputs_sha256": [
+  "405caf1ce8ac8738293cca528e437c4ecf3a24294d05d1307dbca3cbac8824df",
+  "4c866205a39082c31f3b5096c112d44c35cc48ef2e0baecb2fa4e2ad67cdffaf",
+  "33acaca16eda59e05be333867eebde98a4d29295130eea7d73649a1d749aba9b"
+ ],
+ "mask": null,
+ "mask_sha256": null,
+ "references": [
+  "ref_qiang.png",
+  "ref_ashigaru.png",
+  "ref_costume.png"
+ ],
+ "provider": "gemini",
+ "model": "gemini-3.1-flash-image-preview",
+ "usage": {
+  "promptTokenCount": 1055,
+  "candidatesTokenCount": 1571,
+  "totalTokenCount": 2626,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 281
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 774
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "estimate_usd": null,
+ "request_sha256": "12656001a1dc36eb092adb11ceb00a343269e4624ef8e50e2466f9485be0b5ad",
+ "revised_prompts": [],
+ "files": [
+  "jangchang_gA_1.jpg"
+ ],
+ "time": "2026-10-09T20:44:46"
+}

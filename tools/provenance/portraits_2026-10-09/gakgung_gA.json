@@ -1,0 +1,58 @@
+{
+ "request": {
+  "operation": "generate",
+  "provider": "gemini",
+  "prompt": "Paint a new Age of Empires III unit portrait in exactly the painting style of the first two reference images (official Age of Empires III unit portraits): close-up of head and shoulders, the head large in the upper half, three-quarter view, smooth airbrushed painterly skin, simplified stylised forms and folds, soft warm key light, hand-painted video-game look, NOT a photograph. The third image is only a costume reference (a low-poly game model), not a style reference. Subject: a Joseon Korean archer of the late 16th century, a man of about 28 with masculine East Asian features, a thin black moustache, focused calm look. He wears a conical Korean steel helmet with a dark mail neck guard covering the neck and ears; a long military coat with broad black edging along the collar and shoulders; white sleeves. The coat cloth is one flat pure magenta colour (#FF00FF) with no shading; the black edging and the white sleeves stay on top of it. He holds a short, strongly recurved Korean horn bow (gakgung, dark horn and birch bark, curled tips) in his left hand, and fletched arrows show from a quiver behind his shoulder. Background: flat pure green (#00FF00), nothing else. No text, no border.",
+  "aspect_ratio": "1:1",
+  "image_size": "1K"
+ },
+ "operation": "generate",
+ "inputs": [
+  "ref_changdao.png",
+  "ref_yumi.png",
+  "ref_costume.png"
+ ],
+ "inputs_sha256": [
+  "27b3ea3f0ca8776322f5cba5243ac9fbbce15662ce08bdbaa363ca1f0735b288",
+  "50325fa3097ff8fa1b799d3718d76173cb26038822cde1674c9fca63105f84f6",
+  "cf13cb3bec28bd6c59ec5024d529f10c14bf8b6452b76f5782a51b1a85d5db9a"
+ ],
+ "mask": null,
+ "mask_sha256": null,
+ "references": [
+  "ref_changdao.png",
+  "ref_yumi.png",
+  "ref_costume.png"
+ ],
+ "provider": "gemini",
+ "model": "gemini-3.1-flash-image-preview",
+ "usage": {
+  "promptTokenCount": 1048,
+  "candidatesTokenCount": 1483,
+  "totalTokenCount": 2531,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 274
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 774
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "estimate_usd": null,
+ "request_sha256": "dde985b95c208e4471bf773380c377902d9d4cc10519df37d9765060b019fe42",
+ "revised_prompts": [],
+ "files": [
+  "gakgung_gA_1.jpg"
+ ],
+ "time": "2026-10-09T21:01:20"
+}

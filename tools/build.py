@@ -26,6 +26,9 @@ Generated files - never edit them by hand, edit the source named here:
                                    one: the Japanese voices as their Korean twins (tools/korean_sounds.py)
   art/units/korean_monk/*.xml, data/tactics/zpmonkkorean.tactics
                                    the Korean monk's animfiles and tactics (tools/korean_monk.py)
+  art/units/korean_jochong/*.xml|.material, art/units/korean_jangchang/*.xml|.material
+                                   the Korean infantry's animfiles and materials (tools/korean_infantry.py; their models:
+                                   tools/korean_infantry_model.py)
 
 Every runtime XML (.xml .material .lgt .tactics .personality) under art/ data/ game/ sound/ is written with CRLF
 line endings: an LF-only file is silently ignored by the engine.
@@ -44,6 +47,7 @@ sys.path.insert(0, HERE)
 import korean_visuals  # noqa: E402
 import korean_sounds  # noqa: E402
 import korean_monk  # noqa: E402
+import korean_infantry  # noqa: E402
 
 AOP = korean_visuals.AOP
 sys.path.insert(0, os.path.join(AOP, '.claude', 'skills', 'aoe3de-bar-archives', 'scripts'))
@@ -112,6 +116,7 @@ def build():
         out[path] = data
     out.update(korean_sounds.build())
     out.update(korean_monk.build())
+    out.update(korean_infantry.build())
     out['sound/soundsetsde.mods.xml'] = merged_soundsets()
     return out
 

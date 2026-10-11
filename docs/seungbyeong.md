@@ -13,7 +13,7 @@ Yeonggyu's monks helped retake Cheongju (1592). So the unit stays; it becomes Ko
 
 | Question | Vanilla precedent | Decision |
 |---|---|---|
-| Same unit from a hero and a building? | Inca War Chief and Kancha house both train Inca dogs; Hetman and Town Center both train Envoys | Barracks (Colonial Age) and the Seungjang (after the tech) |
+| Same unit from a hero and a building? | Inca War Chief and Kancha house both train Inca dogs; Hetman and Town Center both train Envoys | the Seungjang only, after the tech (owner 2026-10-09: "special unit - not trainable from barracks"; the Barracks slot was removed) |
 | What is it worth if it costs population? | Owner: nothing - at 1 pop it is just another pikeman | no population, with a cap |
 | How are no-pop units held back? | Disciple: 0 pop, cap 5; native Sohei: 0 pop, cap 16; Inca dog: 0 pop, cap 7 | cap 10, 15 after `zpMonasterySeungbyeong` |
 

@@ -1,0 +1,11 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default_doublesided_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="units/korean_gakgung/textures/korean_gakgung_age2_matA_BaseColor" />
+      <texture name="Normals" override="units/korean_gakgung/textures/korean_gakgung_age2_matA_Normals" />
+      <texture name="Masks" override="units/korean_gakgung/textures/korean_gakgung_age2_matA_Masks" />
+      <texture name="Details" override="units/korean_gakgung/textures/korean_gakgung_age2_matA_Details" />
+    </parameters>
+  </submaterial>
+</material>

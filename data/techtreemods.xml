@@ -121,12 +121,10 @@
       <effect type="CommandAdd" proto="zpMonkKorean2" page="0" column="6">
         <target type="ProtoUnit">TownCenter</target>
       </effect>
-      <!-- the Seungbyeong (zpSeungbyeong): Korea only, in the Barracks' free slot (Japan uses 0-2) -->
+      <!-- the Seungbyeong (zpSeungbyeong): a special unit, not in the Barracks (owner 2026-10-09); only the Seungjang
+           trains it, after zpMonasterySeungbyeong -->
       <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
         <target type="ProtoUnit">zpSeungbyeong</target>
-      </effect>
-      <effect type="CommandAdd" proto="zpSeungbyeong" page="0" column="3">
-        <target type="ProtoUnit">ypBarracksJapanese</target>
       </effect>
       <effect type="TechStatus" status="obtainable">zpSeungbyeongColonial</effect>
       <effect type="TechStatus" status="obtainable">zpSeungbyeongFortress</effect>
@@ -152,6 +150,148 @@
       <effect type="CommandAdd" tech="zpMonasterySeungbyeong" page="1" column="4">
         <target type="ProtoUnit">ypMonastery</target>
       </effect>
+      <!-- the Jochong Musketeer (zpJochong, owner 2026-10-09) replaces the Ashigaru: trained in every slot that
+           trains ypAshigaru (vanilla and AoP trainers, same columns), its own three upgrades in the Ashigaru
+           upgrade slot of the Barracks (page 1, column 1); the Japanese Ashigaru upgrades are switched off -->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpJochong</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypAshigaru</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="2">
+        <target type="ProtoUnit">ypAtakabune</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">ypDaimyoKiyomasa</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">ypDaimyoMototada</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">ypDaimyoMasamune</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">deMayaCastle</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">zpMilitaryCamp</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">zpFortConvertable</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJochong" page="0" column="1">
+        <target type="ProtoUnit">zpSPCMontezumaPalace</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">YPDisciplinedAshigaru</effect>
+      <effect type="TechStatus" status="unobtainable">YPHonoredAshigaru</effect>
+      <effect type="TechStatus" status="unobtainable">YPExaltedAshigaru</effect>
+      <effect type="TechStatus" status="obtainable">zpDisciplinedJochong</effect>
+      <effect type="CommandAdd" tech="zpDisciplinedJochong" page="1" column="1">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpHonoredJochong</effect>
+      <effect type="CommandAdd" tech="zpHonoredJochong" page="1" column="1">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpExaltedJochong</effect>
+      <effect type="CommandAdd" tech="zpExaltedJochong" page="1" column="1">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpJochongPostIndustrial</effect>
+      <effect type="TechStatus" status="obtainable">zpJochongMeiji</effect>
+      <effect type="TechStatus" status="obtainable">zpJochongPostImperial</effect>
+      <!-- the Jangchang Spearman (zpJangchang, owner 2026-10-09): an added anti-cavalry unit in the free
+           Barracks column 4 for Korea, from the Colonial Age (owner 2026-10-10), its three upgrades in the same
+           column of the upgrade page -->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpJangchang" page="0" column="4">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpDisciplinedJangchang</effect>
+      <effect type="CommandAdd" tech="zpDisciplinedJangchang" page="1" column="4">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpHonoredJangchang</effect>
+      <effect type="CommandAdd" tech="zpHonoredJangchang" page="1" column="4">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpExaltedJangchang</effect>
+      <effect type="CommandAdd" tech="zpExaltedJangchang" page="1" column="4">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <!-- the Samurai (ypKensei) is not a Korean unit (owner 2026-10-09: "strip Samurai from korean barracks"): off
+           for Korea only, as the Ashigaru and the Yumi, its three Barracks upgrades switched off; Japan keeps it -->
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypKensei</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">YPDisciplinedSamurai</effect>
+      <effect type="TechStatus" status="unobtainable">YPHonoredSamurai</effect>
+      <effect type="TechStatus" status="unobtainable">YPExaltedSamurai</effect>
+      <!-- the Gakgung Archer (zpGakgung, owner 2026-10-09) replaces the Yumi: trained in every slot that trains
+           ypYumi (vanilla and AoP trainers, same columns), its own three upgrades in the Yumi upgrade slot of
+           the Barracks (page 1, column 0); the Japanese Yumi upgrades are switched off -->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpGakgung</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypYumi</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">deMayaCastle</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">ypAtakabune</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">ypDaimyoKiyomasa</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">ypDaimyoMasamune</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">ypDaimyoMototada</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">zpFortConvertable</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">zpMilitaryCamp</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpGakgung" page="0" column="0">
+        <target type="ProtoUnit">zpSPCMontezumaPalace</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">YPDisciplinedYumi</effect>
+      <effect type="TechStatus" status="unobtainable">YPHonoredYumi</effect>
+      <effect type="TechStatus" status="unobtainable">YPExaltedYumi</effect>
+      <effect type="TechStatus" status="obtainable">zpDisciplinedGakgung</effect>
+      <effect type="CommandAdd" tech="zpDisciplinedGakgung" page="1" column="0">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpHonoredGakgung</effect>
+      <effect type="CommandAdd" tech="zpHonoredGakgung" page="1" column="0">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpExaltedGakgung</effect>
+      <effect type="CommandAdd" tech="zpExaltedGakgung" page="1" column="0">
+        <target type="ProtoUnit">ypBarracksJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpGakgungPostIndustrial</effect>
+      <effect type="TechStatus" status="obtainable">zpGakgungPostImperial</effect>
     </effects>
   </tech>
   <!-- zpKoreanEconomy: Koreans hunt (Asian villager), so their market offers the hunting pair (Hunting Eagles, Professional Hunters) instead of the Japanese berry pair - same slot (page 1, column 0) and costs; debt B9 -->
@@ -379,6 +519,357 @@
       <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
         <target type="ProtoUnit">zpSeungbyeong</target>
       </effect>
+    </effects>
+  </tech>
+  <!-- Jochong Musketeer upgrades: the vanilla Ashigaru upgrades (YPDisciplined/Honored/ExaltedAshigaru) field for
+       field on zpJochong - same ages, costs and +20/+30/+50% hit points and attack; Disciplined and Honored switch
+       the skin (art/units/korean_jochong/korean_jochong.xml), Exalted keeps the Honored skin like the vanilla
+       Arquebusier. zpKoreanUnits makes them obtainable and puts them in the Barracks. -->
+  <tech name="zpDisciplinedJochong" type="Normal">
+    <dbid>60014</dbid>
+    <displaynameid>600054</displaynameid>
+    <cost resourcetype="Wood">200.0000</cost>
+    <cost resourcetype="Gold">100.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\disciplined_ranged_infantry.png</icon>
+    <rollovertextid>600057</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Fortressize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpJochong</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpJochong</target>
+      </effect>
+      <effect type="SetName" proto="zpJochong" culture="none" newname="600054" />
+      <effect type="Data" amount="0.00" subtype="UpdateVisual" unittype="zpJochong" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpHonoredJochong" type="Normal">
+    <dbid>60015</dbid>
+    <displaynameid>600055</displaynameid>
+    <cost resourcetype="Wood">600.0000</cost>
+    <cost resourcetype="Gold">600.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\honored_ranged_infantry.png</icon>
+    <rollovertextid>600057</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Industrialize</techstatus>
+      <techstatus status="Active">zpDisciplinedJochong</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.30" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpJochong</target>
+      </effect>
+      <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpJochong</target>
+      </effect>
+      <effect type="SetName" proto="zpJochong" culture="none" newname="600055" />
+      <effect type="Data" amount="0.00" subtype="UpdateVisual" unittype="zpJochong" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpExaltedJochong" type="Normal">
+    <dbid>60016</dbid>
+    <displaynameid>600056</displaynameid>
+    <cost resourcetype="Wood">1500.0000</cost>
+    <cost resourcetype="Gold">1500.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\exalted_ranged_infantry.png</icon>
+    <rollovertextid>600058</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">zpHonoredJochong</techstatus>
+      <techstatus status="Active">Imperialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpJochong</target>
+      </effect>
+      <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpJochong</target>
+      </effect>
+      <effect type="SetName" proto="zpJochong" culture="none" newname="600056" />
+      <effect type="Data" amount="0.00" subtype="UpdateVisual" unittype="zpJochong" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+    </effects>
+  </tech>
+  <!-- the two vanilla Japanese techs that grant the Ashigaru upgrades for free grant the Jochong ones for Korea:
+       a post-industrial start (ypPostIndustrialJapanese: Disciplined + Honored) and the Meiji Restoration
+       (ypConsulateJapaneseMeijiRestoration: all three). Shadow techs armed by zpKoreanUnits. -->
+  <tech name="zpJochongPostIndustrial" type="Normal">
+    <dbid>60017</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostIndustrialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpDisciplinedJochong</effect>
+      <effect type="TechStatus" status="active">zpHonoredJochong</effect>
+    </effects>
+  </tech>
+  <tech name="zpJochongMeiji" type="Normal">
+    <dbid>60018</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypConsulateJapaneseMeijiRestoration</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpDisciplinedJochong</effect>
+      <effect type="TechStatus" status="active">zpHonoredJochong</effect>
+      <effect type="TechStatus" status="active">zpExaltedJochong</effect>
+    </effects>
+  </tech>
+  <!-- Jangchang Spearman upgrades: the vanilla Qiang Pikeman upgrades (YPDisciplined/Honored/ExaltedQiangPikeman)
+       on zpJangchang - same ages, costs, prereqs, +20/+30/+50% and the +0.5 hand range: a Colonial unit like the Qiang
+       (owner 2026-10-10: "Korea has no colonial age melee infantry", "add Colonial state too"). The Barracks look:
+       the hand-infantry medallions (the Samurai's, not the Chinese framed pike icons) and without
+       YPGridShiftRowRightOne (a Chinese War Academy layout flag: in the Barracks it moved the upgrade one column off,
+       owner's test 2026-10-09). Skins (art/units/korean_jangchang/korean_jangchang.xml): Colonial the steel-helmet
+       body, Disciplined the studded-armour body with white sleeves, Honored the same body with red sleeves and gilt
+       studs and helmet fittings (its material variant 1), Exalted keeps the Honored skin; the Qiang's fur-cap body is
+       not used. zpKoreanUnits makes them obtainable and puts them in the Barracks (page 1, column 4). -->
+  <tech name="zpDisciplinedJangchang" type="Normal">
+    <dbid>60019</dbid>
+    <displaynameid>600063</displaynameid>
+    <cost resourcetype="Wood">100.0000</cost>
+    <cost resourcetype="Gold">50.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\disciplined_infantry.png</icon>
+    <rollovertextid>600066</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Fortressize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="SetName" proto="zpJangchang" culture="none" newname="600063" />
+      <effect type="Data" action="MeleeHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" action="CoverHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" action="DefendHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpHonoredJangchang" type="Normal">
+    <dbid>60020</dbid>
+    <displaynameid>600064</displaynameid>
+    <cost resourcetype="Wood">350.0000</cost>
+    <cost resourcetype="Gold">350.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\honored_infantry.png</icon>
+    <rollovertextid>600066</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Industrialize</techstatus>
+      <techstatus status="Active">zpDisciplinedJangchang</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.30" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="SetName" proto="zpJangchang" culture="none" newname="600064" />
+      <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" action="MeleeHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" action="CoverHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" action="DefendHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpExaltedJangchang" type="Normal">
+    <dbid>60021</dbid>
+    <displaynameid>600065</displaynameid>
+    <cost resourcetype="Wood">750.0000</cost>
+    <cost resourcetype="Gold">750.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\exalted_infantry.png</icon>
+    <rollovertextid>600067</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">zpHonoredJangchang</techstatus>
+      <techstatus status="Active">Imperialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="SetName" proto="zpJangchang" culture="none" newname="600065" />
+      <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" action="MeleeHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" action="CoverHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+      <effect type="Data" action="DefendHandAttack" amount="0.50" subtype="MaximumRange" relativity="Absolute">
+        <target type="ProtoUnit">zpJangchang</target>
+      </effect>
+    </effects>
+  </tech>
+  <!-- the vanilla post-imperial start (ypPostImperialJapanese) grants the Exalted Ashigaru: the Exalted Jochong for
+       Korea (missed in the first Jochong build, found with the archer) -->
+  <tech name="zpJochongPostImperial" type="Normal">
+    <dbid>60022</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostImperialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpExaltedJochong</effect>
+    </effects>
+  </tech>
+  <!-- Gakgung Archer upgrades: the vanilla Yumi upgrades (YPDisciplined/Honored/ExaltedYumi) field for field on
+       zpGakgung - same ages, costs and +20/+30/+50%; Disciplined and Honored switch the skin
+       (art/units/korean_gakgung/korean_gakgung.xml), Exalted keeps the Honored skin. zpKoreanUnits makes them
+       obtainable and puts them in the Yumi upgrade slot of the Barracks (page 1, column 0); the vanilla techs
+       that grant the Yumi upgrades (post-industrial and post-imperial starts) grant these. -->
+  <tech name="zpDisciplinedGakgung" type="Normal">
+    <dbid>60023</dbid>
+    <displaynameid>600072</displaynameid>
+    <cost resourcetype="Wood">200.0000</cost>
+    <cost resourcetype="Gold">100.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\disciplined_ranged_infantry.png</icon>
+    <rollovertextid>600075</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Fortressize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpGakgung</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpGakgung</target>
+      </effect>
+      <effect type="SetName" proto="zpGakgung" culture="none" newname="600072" />
+      <effect type="Data" amount="0.00" subtype="UpdateVisual" unittype="zpGakgung" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpHonoredGakgung" type="Normal">
+    <dbid>60024</dbid>
+    <displaynameid>600073</displaynameid>
+    <cost resourcetype="Wood">600.0000</cost>
+    <cost resourcetype="Gold">600.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\honored_ranged_infantry.png</icon>
+    <rollovertextid>600075</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">zpDisciplinedGakgung</techstatus>
+      <techstatus status="Active">Industrialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="SetName" proto="zpGakgung" culture="none" newname="600073" />
+      <effect type="Data" amount="1.30" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpGakgung</target>
+      </effect>
+      <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpGakgung</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="UpdateVisual" unittype="zpGakgung" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpExaltedGakgung" type="Normal">
+    <dbid>60025</dbid>
+    <displaynameid>600074</displaynameid>
+    <cost resourcetype="Wood">1500.0000</cost>
+    <cost resourcetype="Gold">1500.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\exalted_ranged_infantry.png</icon>
+    <rollovertextid>600076</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Imperialize</techstatus>
+      <techstatus status="Active">zpHonoredGakgung</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="SetName" proto="zpGakgung" culture="none" newname="600074" />
+      <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpGakgung</target>
+      </effect>
+      <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpGakgung</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpGakgungPostIndustrial" type="Normal">
+    <dbid>60026</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostIndustrialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpDisciplinedGakgung</effect>
+      <effect type="TechStatus" status="active">zpHonoredGakgung</effect>
+    </effects>
+  </tech>
+  <tech name="zpGakgungPostImperial" type="Normal">
+    <dbid>60027</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostImperialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpExaltedGakgung</effect>
     </effects>
   </tech>
 </techtreemods>

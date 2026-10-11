@@ -1,0 +1,58 @@
+{
+ "request": {
+  "operation": "generate",
+  "provider": "gemini",
+  "prompt": "Paint a new Age of Empires III unit portrait in exactly the painting style of the first two reference images (official Age of Empires III unit portraits): close-up of head and shoulders, the head large in the upper half, three-quarter view, smooth airbrushed painterly skin, simplified stylised forms and folds, soft warm key light, hand-painted video-game look, NOT a photograph. The third image is only a costume reference (a low-poly game model), not a style reference. Subject: a Joseon Korean musketeer (jochong soldier) of the late 16th century, a man of about 30 with masculine East Asian features, a short black moustache and goatee, calm determined look. He wears a black felt jeollip hat with a round dome crown and a wide flat brim, a bunch of red horsehair tassel falling from the top of the crown over its sides, a small brass knob on the very top; a white hemp coat with white sleeves, and over it a sleeveless vest (jeonbok) open at the front showing a white strip of the coat. The vest is one flat pure magenta colour (#FF00FF) with no shading. He holds a matchlock musket upright at his shoulder (dark wood stock, iron barrel). Background: flat pure green (#00FF00), nothing else. No text, no border.",
+  "aspect_ratio": "1:1",
+  "image_size": "1K"
+ },
+ "operation": "generate",
+ "inputs": [
+  "ref_ashigaru.png",
+  "ref_arquebusier.png",
+  "ref_costume.png"
+ ],
+ "inputs_sha256": [
+  "4c866205a39082c31f3b5096c112d44c35cc48ef2e0baecb2fa4e2ad67cdffaf",
+  "cd1db4106e931e1839f5812f9140b165d8eec2ae7bc2832bc7419a9baf8b06ac",
+  "57b1fd7a2c2514c95bbfcfbcc9a5dd24845f4cad59ea9417a6b37f113ed048cc"
+ ],
+ "mask": null,
+ "mask_sha256": null,
+ "references": [
+  "ref_ashigaru.png",
+  "ref_arquebusier.png",
+  "ref_costume.png"
+ ],
+ "provider": "gemini",
+ "model": "gemini-3.1-flash-image-preview",
+ "usage": {
+  "promptTokenCount": 1060,
+  "candidatesTokenCount": 1493,
+  "totalTokenCount": 2553,
+  "promptTokensDetails": [
+   {
+    "modality": "TEXT",
+    "tokenCount": 286
+   },
+   {
+    "modality": "IMAGE",
+    "tokenCount": 774
+   }
+  ],
+  "candidatesTokensDetails": [
+   {
+    "modality": "IMAGE",
+    "tokenCount": 1120
+   }
+  ],
+  "serviceTier": "standard"
+ },
+ "estimate_usd": null,
+ "request_sha256": "8781327ba009a9f87288af4f308a041e62566f7314d0295de2ae9b63f37b83a3",
+ "revised_prompts": [],
+ "files": [
+  "jochong_gA_1.jpg"
+ ],
+ "time": "2026-10-09T20:13:20"
+}

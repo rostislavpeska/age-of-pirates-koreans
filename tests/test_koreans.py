@@ -43,7 +43,11 @@ def test_techs_activate_japan_and_the_visual_marker():
     assert [t.get('name') for t in techs] == ['zpKoreanVisuals', 'zpAge0Korean', 'zpKoreanBuildings', 'zpKoreanHouseArrows',
                                                   'zpKoreanUnits', 'zpKoreanEconomy', 'zpMonasteryHyangyak', 'zpMonasteryDure',
                                                   'zpMonasteryPyeonjeon', 'zpMonasterySeungbyeong', 'zpSeungbyeongColonial', 'zpSeungbyeongFortress',
-                                                  'zpSeungbyeongIndustrial', 'zpSeungbyeongImperial']
+                                                  'zpSeungbyeongIndustrial', 'zpSeungbyeongImperial', 'zpDisciplinedJochong',
+                                                  'zpHonoredJochong', 'zpExaltedJochong', 'zpJochongPostIndustrial', 'zpJochongMeiji',
+                                                  'zpDisciplinedJangchang', 'zpHonoredJangchang', 'zpExaltedJangchang',
+                                                  'zpJochongPostImperial', 'zpDisciplinedGakgung', 'zpHonoredGakgung',
+                                                  'zpExaltedGakgung', 'zpGakgungPostIndustrial', 'zpGakgungPostImperial']
     active = [e.text for e in techs[1].iter('effect') if e.get('type') == 'TechStatus' and e.get('status') == 'active']
     assert active == ['YPAge0Japanese', 'zpKoreanVisuals', 'zpKoreanBuildings', 'zpKoreanUnits', 'zpKoreanEconomy']
     assert all(60000 <= int(t.findtext('dbid')) < 61000 for t in techs)
@@ -55,6 +59,9 @@ def test_strings_flags_personality_and_sounds():
                                                                 # 600028-600037: the monks' random names
                                                                 # 600038-600043: zzTEST TC/Barracks/Stable names
                                                                 # 600044-600047: the Seungbyeong
+                                                                # 600050-600058: the Jochong Musketeer
+                                                                # 600059-600067: the Jangchang Spearman
+                                                                # 600068-600076: the Gakgung Archer
     civ = xml(K / 'data/civmods.xml').find('civ')
     for field in ('homecityflagiconwpf', 'homecityflagbuttonwpf', 'postgameflagiconwpf'):
         assert (K / 'data/wpfg' / civ.findtext(field).replace(BS, '/')).is_file(), field
@@ -178,7 +185,8 @@ def test_korean_monks_replace_the_japanese_monks():
     """Owner 2026-10-09: a mounted monk-explorer (WoL principle) on the Manchu horse archer model as placeholder."""
     units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
     # zzTEST* = the 3D test benches in their own marked block (owner 2026-10-09, strip before release)
-    assert {n for n in units if not n.startswith('zzTEST')} == {'zpHouseKorean', 'zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong'}
+    assert {n for n in units if not n.startswith('zzTEST')} == {'zpHouseKorean', 'zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong',
+                                                               'zpJochong', 'zpJangchang', 'zpGakgung'}
     civ = xml(K / 'data/civmods.xml').find('civ')
     assert [u.text for u in civ.findall('startingunit')][:2] == ['zpMonkKorean', 'zpMonkKorean2']
     assert 'ypMonkJapanese' not in (K / 'data/civmods.xml').read_text(encoding='utf-8')
@@ -215,7 +223,7 @@ def test_korean_monks_replace_the_japanese_monks():
 def test_seungbyeong_is_a_zero_pop_monk_soldier_with_a_glaive():
     """Owner 2026-10-09: "extra unit like disciple", "no pop costs but lower stats", "distinct from Disciple", the white
     monk "as footman". The native Sohei's glaive and pikeman.tactics on the Disciple body with the monk's white
-    retexture; trained in the Barracks (Korea only) and, after zpMonasterySeungbyeong, by the Seungjang in the field."""
+    retexture; a special unit: only the Seungjang trains it, in the field, after zpMonasterySeungbyeong."""
     units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
     u = units['zpSeungbyeong']
     assert u.findtext('populationcount') is None and u.findtext('buildlimit') == '10' and u.findtext('allowedage') == '1'
@@ -240,8 +248,8 @@ def test_seungbyeong_is_a_zero_pop_monk_soldier_with_a_glaive():
     assert {s.get('name') for s in snds.iter('soundset')} >= {'Korean_Soldier_Select', 'Korean_Soldier_Attack'}
     techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
     eff = list(techs['zpKoreanUnits'].iter('effect'))
-    assert ('zpSeungbyeong', '0', '3', 'ypBarracksJapanese') in [
-        (e.get('proto'), e.get('page'), e.get('column'), e.findtext('target')) for e in eff if e.get('type') == 'CommandAdd']
+    # owner 2026-10-09: "This one is special unit - not trainable from barracks" - only the Seungjang trains it
+    assert [e.findtext('target') for e in eff if e.get('type') == 'CommandAdd' and e.get('proto') == 'zpSeungbyeong'] == []
     assert 'zpSeungbyeong' in [e.findtext('target') for e in eff if e.get('subtype') == 'Enable' and e.get('amount') == '1.00']
     sb = [(e.get('type'), e.get('subtype'), e.get('amount'), e.get('proto'), e.get('page'), e.get('column'),
            e.findtext('target')) for e in techs['zpMonasterySeungbyeong'].iter('effect')]
@@ -275,7 +283,7 @@ def test_monk_portraits_and_icons_carry_the_player_colour():
     it (owner's test 2026-10-09: stored black showed a near-black sash), as the vanilla monk sashes."""
     from PIL import Image
     units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
-    for name in ('zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong'):
+    for name in ('zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong', 'zpJochong', 'zpJangchang', 'zpGakgung'):   # coats
         u = units[name]
         for field, size in (('portraiticon', 512), ('icon', 128)):
             im = Image.open(K / 'data/wpfg' / u.findtext(field).replace(BS, '/')).convert('RGBA')
@@ -411,7 +419,8 @@ def test_every_tactics_animation_exists_and_moves():
 def test_korean_monastery_replaces_the_japanese_monk_techs():
     techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
     eff = list(techs['zpKoreanUnits'].iter('effect'))
-    removed = [(e.text or '').strip() for e in eff if e.get('status') == 'unobtainable']
+    removed = [(e.text or '').strip() for e in eff if e.get('status') == 'unobtainable'
+               and not any(u in (e.text or '') for u in ('Ashigaru', 'Yumi', 'Samurai'))]   # infantry: own tests
     assert removed == ['ypMonasteryJapaneseHealing', 'ypMonasteryJapaneseCombat', 'ypMonasteryKillingBlowUpgrade',
                        'ypMonasteryRangedSplash']
     slots = [(e.get('tech'), e.get('column')) for e in eff
@@ -419,7 +428,8 @@ def test_korean_monastery_replaces_the_japanese_monk_techs():
     assert slots == [('zpMonasteryHyangyak', '1'), ('zpMonasteryDure', '2'), ('zpMonasteryPyeonjeon', '3'),
                      ('zpMonasterySeungbyeong', '4')]
     armed = [(e.text or '').strip() for e in eff if e.get('status') == 'obtainable'
-             and not (e.text or '').strip().startswith('zpSeungbyeong')]     # the age-up techs: their own test
+             and not (e.text or '').strip().startswith('zpSeungbyeong')      # the age-up techs: their own test
+             and not any(u in (e.text or '') for u in ('Jochong', 'Jangchang', 'Gakgung'))]   # infantry: own tests
     assert armed == [s[0] for s in slots]
     for name, _ in slots:
         t = techs[name]
@@ -483,3 +493,347 @@ def test_generated_files_are_current_and_buildings_switch_at_the_first_upgrade()
     for path in ('data/civmods.xml.xmb', 'data/techtreemods.xml.xmb', 'data/homecityzpkoreans.xml.xmb',
                  'data/protomods.xml.xmb'):
         assert files[path][:4] == b'alz4', path
+
+
+# ---------------------------------------------------------------- the Korean infantry (Jochong Musketeer, Jangchang Spearman)
+# owner 2026-10-09: "Jochong can stay Jochong", "the upgrades are must have ... vanilla always upgrades skins", "full
+# retextures"; the Jangchang Spearman added as anti-cavalry (roster proposal accepted, "good, next one")
+OWN_FIELDS = {'displaynameid', 'editornameid', 'animfile', 'icon', 'portraiticon', 'rollovertextid',
+              'shortrollovertextid', 'dbid'}
+INFANTRY = {
+    # unit: (vanilla proto it copies, id, name, folder, vanilla animfile, ages, skin techs, {vanilla upgrade: own})
+    'zpJochong': ('ypAshigaru', '22012', 'Jochong Musketeer', 'korean_jochong',
+                  'art/units/asians/chinese/arquebusier/arquebusier.xml.xmb', (1, 2, 3),
+                  ['none', 'zpdisciplinedjochong', 'zphonoredjochong'],
+                  {'YPDisciplinedAshigaru': 'zpDisciplinedJochong', 'YPHonoredAshigaru': 'zpHonoredJochong',
+                   'YPExaltedAshigaru': 'zpExaltedJochong'}),
+    'zpJangchang': ('ypQiangPikeman', '22013', 'Jangchang Spearman', 'korean_jangchang',
+                    'art/units/asians/chinese/qiang_pikeman/qiang_pikeman.xml.xmb', (1, 2, 2),   # fur cap unused
+                    ['none', 'zpdisciplinedjangchang', 'zphonoredjangchang'],
+                    {'YPDisciplinedQiangPikeman': 'zpDisciplinedJangchang', 'YPHonoredQiangPikeman': 'zpHonoredJangchang',
+                     'YPExaltedQiangPikeman': 'zpExaltedJangchang'}),
+    'zpGakgung': ('ypYumi', '22014', 'Gakgung Archer', 'korean_gakgung',
+                  'art/units/asians/japanese/yumi/yumi.xml.xmb', (0, 1, 2),
+                  ['none', 'zpdisciplinedgakgung', 'zphonoredgakgung'],
+                  {'YPDisciplinedYumi': 'zpDisciplinedGakgung', 'YPHonoredYumi': 'zpHonoredGakgung',
+                   'YPExaltedYumi': 'zpExaltedGakgung'}),
+}
+REPLACING = ('zpJochong', 'zpGakgung')          # in the place of the Ashigaru and the Yumi; the Jangchang is added
+# skins that are a material variant of a body (owner 2026-10-10: "split industrial - one with red sleeves - industrial
+# and one with white sleeves - fortress"): {unit: {tech branch: materialvariant index}}
+VARIANTS = {'zpJangchang': {'zphonoredjangchang': '1'}}
+
+
+def _game():
+    try:
+        import korean_sounds
+        return korean_sounds.bartool()
+    except BaseException:
+        pytest.skip('game archives not readable here')
+
+
+def _vanilla(path):
+    bt, index = _game()
+    return bt.decode(bt.read_entry(index[path]), True, 'lf')[0].decode('utf-8-sig')
+
+
+def _canon(e):
+    return (e.tag, sorted(e.attrib.items()), (e.text or '').strip(), [_canon(c) for c in e])
+
+
+@pytest.mark.parametrize('unit', sorted(INFANTRY))
+def test_infantry_is_its_vanilla_unit_with_its_own_look(unit):
+    """Every field of the live vanilla unit it stands for except its identity, its strings and its art: the Jochong
+    is the Ashigaru, the Jangchang the Qiang Pikeman."""
+    van_name, uid, name, folder = INFANTRY[unit][:4]
+    van = next(u for u in ET.fromstring(_vanilla('data/protoy.xml.xmb')).findall('unit') if u.get('name') == van_name)
+    ours = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}[unit]
+    assert [_canon(c) for c in ours if c.tag not in OWN_FIELDS] == [_canon(c) for c in van if c.tag not in OWN_FIELDS]
+    assert ours.get('id') == ours.findtext('dbid') == uid
+    assert ours.findtext('animfile') == BS.join(['units', folder, folder + '.xml'])
+    strings = dict(re.findall(r'_locid="(\d+)">([^<]*)<', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8')))
+    assert strings[ours.findtext('displaynameid')] == name
+    snds = xml(K / 'sound' / ('%s_snds.xml' % unit.lower()))
+    assert snds.find('protounit').get('name') == unit
+    assert {s.get('name') for s in snds.iter('soundset')} >= {'Korean_Soldier_Select', 'Korean_Soldier_Attack'}
+
+
+@needs_aop
+def test_infantry_replaces_its_vanilla_unit_wherever_it_is_trained():
+    """Every vanilla and AoP building or unit that trains the Ashigaru (the Yumi) trains the Jochong (the Gakgung) for
+    Korea, in the same slot (vanilla campaign protos ypSPC* aside); the replaced units are switched off for Korea. The
+    Jangchang, an added unit, sits in the free Barracks column 4."""
+    units = (ET.fromstring(_vanilla('data/protoy.xml.xmb')).findall('unit') + xml(AOP / 'data/protomods.xml').findall('unit'))
+    techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    eff = list(techs['zpKoreanUnits'].iter('effect'))
+    adds = lambda proto: {(e.findtext('target'), e.get('page'), e.get('column')) for e in eff
+                          if e.get('type') == 'CommandAdd' and e.get('proto') == proto}
+    enable = {e.findtext('target'): e.get('amount') for e in eff if e.get('subtype') == 'Enable'}
+    for unit in REPLACING:
+        van = INFANTRY[unit][0]
+        want = set()
+        for u in units:
+            if not u.get('name', '').startswith('ypSPC'):
+                want |= {(u.get('name'), t.get('page'), t.get('column')) for t in u.findall('train') if t.text == van}
+        assert want and adds(unit) == want, unit
+        assert enable[unit] == '1.00' and enable[van] == '0.00', unit
+    assert adds('zpJangchang') == {('ypBarracksJapanese', '0', '4')} and enable['zpJangchang'] == '1.00'
+    columns = [e.get('column') for e in eff if e.get('type') == 'CommandAdd' and e.findtext('target') == 'ypBarracksJapanese'
+               and e.get('page') == '0']
+    assert sorted(columns) == ['0', '1', '4']                      # Gakgung, Jochong, Jangchang (no Seungbyeong)
+
+
+def test_samurai_is_off_for_korea_only():
+    """Owner 2026-10-09: "strip Samurai from korean barracks", "We must NOT touch Japan at all": the Korean-only
+    zpKoreanUnits switches the Samurai (ypKensei) and its three Barracks upgrades off; no record of this add-on
+    touches a Japanese unit, tech or building otherwise."""
+    techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    eff = list(techs['zpKoreanUnits'].iter('effect'))
+    assert [e.get('amount') for e in eff if e.get('subtype') == 'Enable' and e.findtext('target') == 'ypKensei'] == ['0.00']
+    status = {e.text: e.get('status') for e in eff if e.get('type') == 'TechStatus'}
+    for up in ('YPDisciplinedSamurai', 'YPHonoredSamurai', 'YPExaltedSamurai'):
+        assert status[up] == 'unobtainable', up
+    assert 'ypKensei' not in [e.get('proto') for e in eff if e.get('type') == 'CommandAdd']
+    others = [t.get('name') for t in techs.values() if t.get('name') != 'zpKoreanUnits'
+              and ('ypKensei' in ET.tostring(t, encoding='unicode') or 'Samurai<' in ET.tostring(t, encoding='unicode'))]
+    assert others == []
+
+
+@pytest.mark.parametrize('unit', sorted(INFANTRY))
+def test_infantry_upgrades_are_the_vanilla_upgrades(unit):
+    """Owner 2026-10-09: "the upgrades are must have". The vanilla unit's three upgrades field for field on the Korean
+    unit (ages, costs, effects), in the Barracks; for the Jochong the Japanese Ashigaru ones are off for Korea and the
+    two vanilla techs that grant them (post-industrial start, Meiji Restoration) grant the Jochong's."""
+    van_name, mapping = INFANTRY[unit][0], dict(INFANTRY[unit][7], **{INFANTRY[unit][0]: unit})
+    van = {t.get('name'): t for t in ET.fromstring(_vanilla('data/techtreey.xml.xmb')).findall('tech')}
+    ours = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    ren = lambda s: mapping.get(s, s)
+    eff = lambda t: sorted((e.get('type'), e.get('subtype'), e.get('amount'), e.get('relativity'), e.get('allactions'),
+                            e.get('action'), ren(e.findtext('target') or e.get('proto') or e.get('unittype') or ''))
+                           for e in t.iter('effect'))
+    k = list(ours['zpKoreanUnits'].iter('effect'))
+    status = {(e.text or '').strip(): e.get('status') for e in k if e.get('type') == 'TechStatus'}
+    column = [e.get('column') for e in k if e.get('proto') == unit][0]       # its Barracks column (listed first)
+    for a, j in INFANTRY[unit][7].items():
+        v, o = van[a], ours[j]
+        for f in ('researchpoints', 'status'):
+            assert o.findtext(f) == v.findtext(f), (j, f)
+        # the Japanese Barracks look (owner's test 2026-10-09: "weird upgrade icon"): the hand-infantry medallion for
+        # the spearman, never the Chinese War Academy layout flag (it moved the upgrade one column off)
+        assert o.findtext('icon') == v.findtext('icon').replace('_pikeman.png', '_infantry.png'), j
+        assert [(c.get('resourcetype'), c.text) for c in o.findall('cost')] == [(c.get('resourcetype'), c.text) for c in v.findall('cost')]
+        assert [f.text for f in o.findall('flag')] == [f.text for f in v.findall('flag') if f.text != 'YPGridShiftRowRightOne']
+        assert [p.text for p in o.iter('techstatus')] == [ren(p.text) for p in v.iter('techstatus')]
+        assert eff(o) == eff(v), j
+        assert status[j] == 'obtainable'
+        assert (j, '1', column, 'ypBarracksJapanese') in [(e.get('tech'), e.get('page'), e.get('column'), e.findtext('target')) for e in k]
+    if unit not in REPLACING:
+        return
+    for a in INFANTRY[unit][7]:
+        assert status[a] == 'unobtainable'
+    # every vanilla tech that grants the replaced unit's upgrades grants the Korean ones through an armed shadow
+    shadows = {}
+    for name, tt in ours.items():
+        pre = [p.text for p in tt.iter('techstatus')]
+        if 'Shadow' in [f.text for f in tt.findall('flag')] and len(pre) == 1:
+            shadows.setdefault(pre[0], []).append((name, [(e.text or '').strip() for e in tt.iter('effect')]))
+    granting = 0
+    for vname, vt in van.items():
+        granted = [x for x in INFANTRY[unit][7] if x in {(e.text or '').strip() for e in vt.iter('effect') if e.get('status') == 'active'}]
+        if not granted or vname in INFANTRY[unit][7]:
+            continue
+        granting += 1
+        want = [INFANTRY[unit][7][x] for x in granted]
+        hits = [n for n, e in shadows.get(vname, []) if e == want]
+        assert len(hits) == 1 and status[hits[0]] == 'obtainable', (unit, vname, want)
+    assert granting >= 2, unit
+
+
+def test_upgrade_buttons_are_visible_from_the_start():
+    """Owner 2026-10-10: "These techs should be visible permanently", "That's off pattern!!!! Check other civs. tests
+    should cover that". A building shows an upgrade button only once the tech's prereqs other than its age are met: a
+    button tech chained to a shadow that an age-up fires stays hidden until then (the Honored Jangchang until Fortress).
+    Vanilla: every unit with a free Disciplined shadow (Chinese, Indian, Japanese) has an Honored that needs only
+    Industrialize. So every Korean button tech needs only ages and the button before it in its own slot."""
+    ages = {'Colonialize', 'Fortressize', 'Industrialize', 'Imperialize'}
+    van = {t.get('name'): t for t in ET.fromstring(_vanilla('data/techtreey.xml.xmb')).findall('tech')}
+    low = {n.lower(): n for n in van}
+    pattern = []
+    for n in van:
+        m = re.fullmatch(r'ypDisciplined(\w+)Shadow', n, re.I)
+        honored = low.get(('ypHonored' + m.group(1)).lower()) if m else None
+        if honored:
+            assert [p.text for p in van[honored].iter('techstatus')] == ['Industrialize'], honored
+            pattern.append(honored)
+    assert len(pattern) >= 7                                   # Arquebusier, Changdao, Iron Flail, Yabusame, Howdah ...
+    ours = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    buttons = {}
+    for t in ours.values():
+        for e in t.iter('effect'):
+            if e.get('type') == 'CommandAdd' and e.get('tech'):
+                buttons[e.get('tech')] = (e.findtext('target'), e.get('page'), e.get('column'))
+    own = [b for b in buttons if b in ours]
+    assert len(own) >= 12
+    armed = {(e.text or '').strip() for t in ours.values() for e in t.iter('effect')
+             if e.get('type') == 'TechStatus' and e.get('status') in ('obtainable', 'active')}
+    for name in own:
+        for p in ours[name].iter('techstatus'):
+            assert p.text in ages or buttons.get(p.text) == buttons[name], (name, p.text)
+        # an UNOBTAINABLE tech nobody arms never shows at all
+        assert ours[name].findtext('status') != 'UNOBTAINABLE' or name in armed, name
+
+
+@pytest.mark.parametrize('unit', sorted(INFANTRY))
+def test_infantry_animfile_switches_skins(unit):
+    """Owner 2026-10-09: "vanilla always upgrades skins" - the vanilla animfile: the same animations, the unit's own
+    bodies switched by its own upgrades (Exalted keeps the Honored skin), the Jochong's crafted jeollip on every age;
+    every file it names exists in the repo or in the game."""
+    folder, src, ages, tags = INFANTRY[unit][3:7]
+    bt, index = _game()
+    ours = (K / 'art/units' / folder / (folder + '.xml')).read_text(encoding='utf-8')
+    assert set(_top_anims(ours)) == set(_top_anims(_vanilla(src)))
+    logic = ET.fromstring(ours).find('component/logic')
+    assert logic.get('type') == 'Tech' and [c.tag for c in logic] == tags
+    for branch, age in zip(logic, ages):
+        for state in ('normal', 'lowpoly'):
+            s = branch.find('logic/' + state)
+            assert [f.text for f in s.iter('file')] == [BS.join(['units', folder, '%s_age%d' % (folder, age)])]
+            want = VARIANTS.get(unit, {}).get(branch.tag)
+            assert [[c.tag for c in r] for r in s.iter('assetreference')] == [['file'] + (['materialvariant'] if want else [])]
+            assert [m.get('index') for m in s.iter('materialvariant')] == ([want] if want else []), (unit, branch.tag)
+            attach = {(a.get('a'), a.get('tobone')) for a in s.findall('attach')}
+            if unit == 'zpJochong':
+                assert attach == {('gun_age%d' % age, 'BIP01 PROP1'), ('hats', 'HEAD')}
+            elif unit == 'zpJangchang':
+                assert attach == {('pikes', 'Pikeman Prop1')}
+            else:
+                assert attach == set()                             # the Yumi attaches bow and quiver for all ages
+    if unit == 'zpGakgung':
+        comp = ET.fromstring(ours).find('component')
+        assert {(a.get('a'), a.get('tobone')) for a in comp.findall('attach')} == {('quivers', 'SPINE1'), ('bows', 'Bip01 Prop1')}
+        assert BS.join(['units', 'infantry', 'azap', 'azap_bow']) in ours and 'longbow_bows' not in ours
+    if unit == 'zpJochong':
+        assert BS.join(['units', folder, 'korean_jochong_hat']) in ours and 'arquebusier_age3_hat' not in ours
+    for f in set(re.findall(r'<file>([^<]+)</file>', ours)):
+        p = 'art/' + f.replace(BS, '/').lower()
+        if f.startswith(BS.join(['units', folder, ''])):
+            assert (K / (p + '.gr2')).is_file() and (K / (p + '.material')).is_file(), f
+        else:
+            assert any(p + ext in index for ext in ('.gr2', '.xmb', '')), f
+
+
+@pytest.mark.parametrize('unit', sorted(INFANTRY))
+def test_infantry_materials_resolve_within_the_texture_budget(unit):
+    """Owner 2026-10-09: "unit textures 1024 only", "hats only 512px". Every texture a unit's materials name is a repo
+    DDT of that size or a vanilla map by archive path (maps the retexture did not change); the jeollip has no Details
+    (no player colour, as 41 of 198 vanilla hats)."""
+    import struct
+    folder, ages = INFANTRY[unit][3], INFANTRY[unit][5]
+    bt, index = _game()
+    mats = sorted((K / 'art/units' / folder).glob('*.material'))
+    want = ['%s_age%d.material' % (folder, a) for a in sorted(set(ages))] + (['korean_jochong_hat.material'] if unit == 'zpJochong' else [])
+    assert [m.name for m in mats] == want
+    import korean_infantry as ki
+    spec = ki.UNITS[folder]
+    own = set()
+    for m in mats:
+        blocks = list(xml(m).iter('parameters'))
+        # a skin variant (VARIANTS) has its own <parameters variant="N"> block, every other material one block
+        variants = sorted(set(VARIANTS.get(unit, {}).values())) if m.stem in [s for s, v in spec['materials'].items() if len(v) > 3] else []
+        assert [b.get('variant') for b in blocks] == [None] + variants, m.name
+        # the vanilla model's own materialdef, per model (owner's test 2026-10-09: the Gakgung's cards drew as solid
+        # squares under default_doublesided; vanilla changdao_1/2 are default_doublesided_cutout, changdao_0 is not)
+        van = spec['materials'][m.stem][1]
+        want = 'default'                                             # the crafted jeollip
+        if van:
+            src = 'art/' + (spec.get('tex', spec['van']) + van).replace(BS, '/').lower() + '.material.xmb'
+            want = re.search(r'<materialdef name="([^"]+)"', _vanilla(src)).group(1)
+        assert xml(m).find('submaterial/materialdef').get('name') == want, m.name
+        hat = 'hat' in m.name
+        for b in blocks:
+            tex = {t.get('name'): t.get('override') for t in b.iter('texture')}
+            assert set(tex) == ({'BaseColor', 'Normals', 'Masks'} | (set() if hat else {'Details'}))
+            for ch, path in tex.items():
+                p = path.replace(BS, '/')
+                if p.startswith('units/%s/' % folder):
+                    ddt = (K / 'art' / (p + '.ddt')).read_bytes()
+                    assert ddt[:4] == b'RTS3' and struct.unpack_from('<II', ddt, 8) == ((512, 512) if hat else (1024, 1024)), p
+                    if unit == 'zpGakgung' and ch == 'BaseColor':
+                        assert ddt[5:7] == bytes([4, 9]), p            # DXT5: the Changdao's cut-out cards
+                    own.add(p.lower())
+                else:
+                    assert 'art/%s.ddt' % p.lower() in index, p
+    assert len(list((K / 'art/units' / folder / 'textures').glob('*.ddt'))) == len(own)
+
+
+def test_infantry_models_rebuild_identically():
+    """The bodies are the vanilla Arquebusier, Qiang pikeman and Changdao GR2s byte for byte; the jeollip GR2 rebuilds from its
+    frozen geometry (tools/infantry_texture/jeollip_parts.json) through AoP's INC-187-safe writer."""
+    import korean_infantry_model
+    try:
+        files = korean_infantry_model.build()
+    except SystemExit:
+        pytest.skip('needs the installed game and the AoP checkout')
+    assert len(files) == 9                                       # the Jangchang's fur-cap body 0 is unused
+    for path, data in files.items():
+        assert open(path, 'rb').read() == data, 'run python tools/korean_infantry_model.py: %s' % path
+
+
+def _dxt5_mip(data, level):
+    """RGBA array of one mip of an RTS3 DXT5 DDT, decoded by Pillow's own BC3 reader (independent of our writer)."""
+    import io
+    import struct
+    import numpy as np
+    from PIL import Image
+    w, h = struct.unpack_from('<II', data, 8)
+    off, size = struct.unpack_from('<II', data, 16 + 8 * level)
+    w, h = w >> level, h >> level
+    dds = struct.pack('<4sI', b'DDS ', 124) + struct.pack('<IIIIII', 0x1007 | 0x80000, h, w, size, 0, 1) + bytes(44)
+    dds += struct.pack('<II4sIIIII', 32, 4, b'DXT5', 0, 0, 0, 0, 0) + struct.pack('<IIII', 0x1000, 0, 0, 0) + bytes(4)
+    return np.asarray(Image.open(io.BytesIO(dds + data[off:off + size])).convert('RGBA')).astype(int)
+
+
+@pytest.mark.parametrize('unit', sorted(INFANTRY))
+def test_infantry_basecolor_keeps_the_vanilla_cut_out_alpha(unit):
+    """Owner's test 2026-10-09: black squares over the Honored Gakgung helmets - "check the alpha channel ... test for
+    missing alpha". A BaseColor whose vanilla source is a DXT5 with cut-out alpha (format 9, alpha flag 4: plumes and
+    ornaments on cards) must stay one in the same profile (mips to 4x4), with colour - not black - under the cut-out
+    texels in the smaller mips (an RGBA resize premultiplies: black cards in game)."""
+    import struct
+    import korean_infantry as ki
+    bt, index = _game()
+    folder = INFANTRY[unit][3]
+    spec = ki.UNITS[folder]
+    checked = 0
+    for model, (sub, van, maps, *variants) in spec['materials'].items():
+        if not maps.get('BaseColor') or van is None:
+            continue
+        vkey = 'art/' + (spec.get('tex', spec['van']) + 'textures' + BS + '%s_%s_BaseColor' % (van, sub)).replace(BS, '/').lower() + '.ddt'
+        vhead = bt.read_entry(index[vkey])[:8]
+        ours = (K / 'art/units' / folder / 'textures' / ('%s_matA_BaseColor.ddt' % model)).read_bytes()
+        if vhead[6] != 9:
+            continue                                            # no cut-out alpha in the vanilla source
+        checked += 1
+        assert list(ours[4:8]) == list(vhead[4:8]), (model, list(ours[4:8]), list(vhead[4:8]))
+        assert struct.unpack_from('<II', ours, 16 + 8 * (ours[7] - 1))[1] == 16, model    # last mip = one 4x4 block
+        for level in (2, 4):
+            a = _dxt5_mip(ours, level)
+            cut = a[..., 3] < 64
+            assert cut.any() and a[cut][:, :3].mean() > 20, (model, level, 'black under the cut-out texels')
+    assert checked == (3 if unit == 'zpGakgung' else 0), (unit, checked)
+
+
+@needs_aop
+def test_materials_keep_their_source_materialdef():
+    """Owner's game tests 2026-10-09: the Gakgung Archer's cards drew solid (one default_doublesided for the unit, vanilla
+    changdao_1/2 are default_doublesided_cutout). AoP's aoe-xml material_source.py on every material of the add-on: the
+    def treats the BaseColor alpha (cut / ignore) as the vanilla material it retextures does, no finding at all."""
+    import importlib.util
+    _game()
+    spec = importlib.util.spec_from_file_location('material_source', AOP / '.claude/skills/aoe-xml/scripts/material_source.py')
+    ms = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ms)
+    data = ms.load_index()
+    mats = sorted((K / 'art').rglob('*.material'))
+    found = [m for p in mats for part in ms.check_file(str(p), str(K), data) for m in part]
+    assert len(mats) > 20 and found == []

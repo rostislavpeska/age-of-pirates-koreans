@@ -1,0 +1,11 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="units/korean_jangchang/textures/korean_jangchang_age1_matA_BaseColor" />
+      <texture name="Normals" override="units/korean_jangchang/textures/korean_jangchang_age1_matA_Normals" />
+      <texture name="Masks" override="units/korean_jangchang/textures/korean_jangchang_age1_matA_Masks" />
+      <texture name="Details" override="units/korean_jangchang/textures/korean_jangchang_age1_matA_Details" />
+    </parameters>
+  </submaterial>
+</material>

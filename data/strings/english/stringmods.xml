@@ -54,6 +54,33 @@
       <string _locid="600047">Monk soldier: no population cost, good against cavalry.</string>
       <string _locid="600048">Korean Castle (test)</string>
       <string _locid="600049">zzTEST Korean Castle (destruction bench)</string>
+      <string _locid="600050">Jochong Musketeer</string>
+      <string _locid="600051">INF Jochong</string>
+      <string _locid="600052">Korean heavy foot soldier armed with a matchlock musket. Good against cavalry in a melee.</string>
+      <string _locid="600053">Heavy ranged infantry. Good against cavalry and hand infantry.</string>
+      <string _locid="600054">Disciplined Jochong</string>
+      <string _locid="600055">Honored Jochong</string>
+      <string _locid="600056">Exalted Jochong</string>
+      <string _locid="600057">Jochong Musketeer attack and hitpoints increased.</string>
+      <string _locid="600058">Exalted upgrade for Jochong Musketeers.</string>
+      <string _locid="600059">Jangchang Spearman</string>
+      <string _locid="600060">INF Jangchang</string>
+      <string _locid="600061">Korean foot soldier armed with a long spear. Good against cavalry and buildings.</string>
+      <string _locid="600062">Hand infantry, good against cavalry and buildings</string>
+      <string _locid="600063">Disciplined Jangchang</string>
+      <string _locid="600064">Honored Jangchang</string>
+      <string _locid="600065">Exalted Jangchang</string>
+      <string _locid="600066">Jangchang Spearman attack and hitpoints increased.</string>
+      <string _locid="600067">Exalted upgrade for Jangchang Spearmen.</string>
+      <string _locid="600068">Gakgung Archer</string>
+      <string _locid="600069">INF Gakgung Archer</string>
+      <string _locid="600070">Ranged infantry armed with the Korean horn bow. Good against infantry.</string>
+      <string _locid="600071">Archer, good against heavy infantry</string>
+      <string _locid="600072">Disciplined Gakgung Archer</string>
+      <string _locid="600073">Honored Gakgung Archer</string>
+      <string _locid="600074">Exalted Gakgung Archer</string>
+      <string _locid="600075">Gakgung Archer attack and hitpoints increased.</string>
+      <string _locid="600076">Exalted upgrade for Gakgung Archers.</string>
     </language>
   </stringtable>
 </stringmods>
