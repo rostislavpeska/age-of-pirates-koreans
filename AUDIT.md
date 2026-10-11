@@ -157,8 +157,9 @@ everything still missing for a fully playable, fully Korean civilization, most i
   later").** Found by a read-only check of every installed `*_con.gr2` (floating = a mesh island not connected to the
   ground through contacts of <= 2 cm; renders in C:/work/korean-market-dock/export/other_con_check). Rules: the
   construction checklist (korean-buildings-blender `docs/methods/construction_models.md`, AoP `aoe3de-building-states` s.4):
-  windows and doors stay only when baked into the wall texture, separate window/door shapes are removed and the wall
-  keeps its rough opening (owner 2026-10-11); no floating member.
+  windows and doors are removed, including wooden door/window panels that are faces of their own; the frame and the
+  plaster wall stay and the wall keeps its rough opening (owner 2026-10-11 evening, which withdrew the morning's
+  "if baked like Town center, they must stay"); no floating member.
   - House A/B/C (`korean_house_*_con.gr2`): 81 separate window/door parts each (jambs, stiles, mullions, paper receivers,
     lower panels; house_states_r1 CONSTRUCTION_QA r13 `retained`) -> remove in `build_construction.py` (class rule), rebuild,
     re-export, gr2_lint, frame check.
@@ -166,7 +167,9 @@ everything still missing for a fully playable, fully Korean civilization, most i
     GEOMETRY_QA `retained`: window*/door-light/Clerestory) -> remove; both courtyard gate frames (3,080 triangles) end
     0.30 m above the ground with nothing under their posts -> posts down to the ground (or footings).
   - Stable (`korean_stable_physics_con.gr2`): separate rear-hall windows and door light -> remove.
-  - Town Center (`korean_tc_con.gr2`): windows baked into the wall texture -> they stay; one 1.7 x 1.27 m upright
+  - Town Center (`korean_tc_con.gr2`): the 14 wooden panels (plank door + lattice window) go (owner 2026-10-11:
+    "TownCenterCon -> strip all the wooden pannels and leave only the beams"; candidate construction-r74 in the library,
+    not installed yet); one 1.7 x 1.27 m upright
     panel (12 triangles, raw y 7.17-8.90) in the top tower touches nothing, 0.81 m from the nearest structure (likely
     the signboard without its support) -> remove from the construction stage.
   Done for the Dock (export-r5): Store rough openings, 0 floating members.
