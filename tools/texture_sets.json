@@ -320,7 +320,7 @@
   {
    "id": "korean_house_walls",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15d over texture-r14 WALLS: weathering, gable player-colour frieze + image-harness emblem in Details.R placed by game-camera visibility; Normals unchanged); one page shared by House A/B/C, all stages",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15d over texture-r14 WALLS: weathering, gable player-colour frieze + image-harness emblem in Details.R placed by game-camera visibility; Normals unchanged); r16-colonial Details: one player-colour stripe on the plaster walls, 2.60-2.78 m (owner \"only the stripe of player color should be enough\"); one page shared by House A/B/C, all stages",
    "page": [
     2048,
     2048
@@ -341,7 +341,7 @@
     },
     "Details": {
      "path": "buildings/korean_house/textures/korean_house_walls_Details",
-     "sha256": "071ef0ab180d7ac0c6c8f671a8c117afaf15bfd692a0aac7601f443835b968ec"
+     "sha256": "4d38c6bb4d6a40a97857ad2ad85cb15e9f74ce27bc980a021ec5d3be7e2805e0"
     }
    }
   },

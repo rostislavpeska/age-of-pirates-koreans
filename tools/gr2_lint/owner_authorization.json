@@ -225,6 +225,13 @@
       "context": "game test: a black slit along the hall's south-west hip cap = the field's tile pan beside the narrow cap; r2 paints the caps' lime mortar bed over it (market_hip_mortar_paint.py) and repairs unpainted roof specks and AO-0 bands",
       "source": "Owner message in the Claude Code Market session (korean-buildings-blender, 2026-10-11; no app message id).",
       "recorded_by": "claude (Market export r2)"
+    },
+    {
+      "id": "owner-house-props-2026-10-11",
+      "text": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models",
+      "context": "the House skins run: Korean props on the Colonial (age 1-2) Houses A/B/C, from the shared Korean props library (korean-props props-r6.1 = the shared page korean_shared_props_r6)",
+      "source": "Owner message in the Claude Code House skins session (koreans add-on, 2026-10-11; no app message id).",
+      "recorded_by": "claude (House r16-colonial install)"
     }
   ]
 }

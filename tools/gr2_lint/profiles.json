@@ -92,6 +92,38 @@
         "height": 2048
        }
       ]
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/house_props_owner_evidence.json",
+       "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+       "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
      }
     ]
    },
@@ -127,8 +159,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_a_r14d.json",
-    "sha256": "aebaef432ac1111c0f1aee8bd2f8ab9d46762c1c35bf9e6364dd0ff60b6741a5"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_a_r16c.json",
+    "sha256": "c6e3340674716eb511855fd5be1e899a5f3f4ce628db38b98eb5f48451e5dd25"
    },
    "handedness": {
     "expect_sign": 1,
@@ -220,6 +252,38 @@
         "height": 2048
        }
       ]
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/house_props_owner_evidence.json",
+       "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+       "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
      }
     ]
    },
@@ -332,6 +396,38 @@
         "height": 2048
        }
       ]
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/house_props_owner_evidence.json",
+       "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+       "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
      }
     ]
    },
@@ -368,8 +464,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_b_r14d.json",
-    "sha256": "e9f98ec3be9ded6ad4c3880a93a2edd8966ebb59721dadb6bd5125e834c8a589"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_b_r16c.json",
+    "sha256": "fbc8b01693b957aa840a49f689f8032b81fc5624d8a91dc32829424405ffdd62"
    },
    "handedness": {
     "expect_sign": 1,
@@ -461,6 +557,38 @@
         "height": 2048
        }
       ]
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/house_props_owner_evidence.json",
+       "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+       "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
      }
     ]
    },
@@ -573,6 +701,38 @@
         "height": 2048
        }
       ]
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/house_props_owner_evidence.json",
+       "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+       "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
      }
     ]
    },
@@ -608,8 +768,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_c_r14d.json",
-    "sha256": "f4679f6b41c0c6db6996c9cdf68ecf792646c8f66138a231c3e7a1060f0f0c4d"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_c_r16c.json",
+    "sha256": "dd1e0a7c9b54295499d40c53e7b0fa399f60e2263827c4a20d46e478a9ec067c"
    },
    "handedness": {
     "expect_sign": 1,
@@ -701,6 +861,38 @@
         "height": 2048
        }
       ]
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/house_props_owner_evidence.json",
+       "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+       "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
      }
     ]
    },

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner message in the Claude Code House skins session (koreans add-on, 2026-10-11; no app message id), followed by \"use different props for each or at least different positions what you have is too regular and geometric\" and \"export the age1 houses, make these canonical version\". The props (jars, baskets, barrels, lanterns, A-frame carrier, chests) come from the shared Korean props library korean-props props-r6.1 = the shared page korean_shared_props_r6 (the Dock, Consulate, Monastery and Rice Paddy share it). Same words: owner_authorization.json item owner-house-props-2026-10-11.",
+  "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models",
+  "models": [
+    "korean_house_a",
+    "korean_house_a_damaged",
+    "korean_house_a_con",
+    "korean_house_b",
+    "korean_house_b_damaged",
+    "korean_house_b_con",
+    "korean_house_c",
+    "korean_house_c_damaged",
+    "korean_house_c_con"
+  ],
+  "source_names": [
+    "Korean shared props r6"
+  ]
+}
