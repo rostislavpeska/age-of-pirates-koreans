@@ -104,9 +104,11 @@ everything still missing for a fully playable, fully Korean civilization, most i
    **The Market** is Korean from the Discovery Age on (2026-10-11; owner: "When done, add the market to the game as market
    asian", "same as japanese / chinese", "plus the destruction test bed and skill update - add"): `art/buildings/korean_market/`
    = the Korean Market (hall, tower, entry bay, gallery, two stalls with goods and alpha straw thatch, Hangul signboard 장터,
-   castle-graded masonry; korean-market-dock UV r7c + texture r7c step 10 + corner seams) + construction p66 (masonry, the
-   timber frame, rafters and gallery decks; no walls, roofs, opening frames, rails or props; vanilla asi_4x4_stage2 scaffold;
-   190 parts all grounded) + Havok destruction on the vanilla Japanese market age 2 donor (`japanese_market_age2_damaged`: 142
+   castle-graded masonry; korean-market-dock UV r7c + texture r7c step 10 + corner seams) + construction p66 **r2** (owner:
+   "IDENTIFY WHY YOU CLEARLY IGNORED THE CONSTRUCTION GUIDELINES, THEN FIX" -> "construction now TOP!": the checklist port of
+   the shipped Dock recipe - finished lower walls, the Tower standing without its roof, the Hall's upper storey as a
+   fresh-timber beam frame, fresh-timber roof frames under the real roofs on r65, 0 floating; r1 was a payload filter without
+   walls or roof frames; vanilla asi_4x4_stage2 scaffold) + Havok destruction on the vanilla Japanese market age 2 donor (`japanese_market_age2_damaged`: 142
    of 273 bodies refit, 902 cut caps on the vanilla destruction sheet; foundations, plinths and stone stairs stay as the
    ruin). Merged into `asian_civs/trade_market/trade_market.xml` (vanilla base; AoP has no override) as a `zpkoreanvisuals`
    branch of only `<none>` in the Japanese culture; the Chinese branch is untouched. Pages: own 2048 (opaque, player colour)
@@ -115,7 +117,10 @@ everything still missing for a fully playable, fully Korean civilization, most i
    until the Dock moves). gr2_lint korean_market 33 PASS / 2 FAIL, korean_market_con 16 / 1: the only FAIL is texture_budget -
    class medium (2048 + 1024) is PROPOSED; the owner's "2048+1024  is ok" names neither the class nor the building, so it
    waits for "Market = medium". state frames PASS (construction 547 pairs, damaged 2114 pairs, inliers 1.0); attachment_check
-   PASS. Three on-death bodies exceed the compactness target (6.1 / 4.1 / 4.4 m against 3.0 m). Test bed
+   PASS. Three on-death bodies exceed the compactness target (6.1 / 4.1 / 4.4 m against 3.0 m). r2 (2026-10-11 game test):
+   bone_flag_civ 1.378 m under the pole tip ("flag sits too high"; r1 0.20 m; AoP flag_heights.py vanilla median), and one
+   minimal roof patch on the r1 maps ("some artifact on the roof": the hall field's tile pan beside the corner ridge caps,
+   shifted half a tile period; ~10k P0 texels, all other texels byte-identical to r1). Test bed
    `zzTESTKoreanMarket` (22019, test builder wagon row 1 column 1). Workspace C:/work/korean-market-dock (export_market,
    recipes). Not yet seen in game.
 9. **Villagers and explorers**: villagers are now the Asian (Chinese) villager (owner, 2026-10-08), but the
