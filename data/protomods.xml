@@ -2165,7 +2165,7 @@
   <train row="0" page="6" column="8">zzTESTKoreanConsulate</train>
   <train row="0" page="6" column="9">zzTESTKoreanMonastery</train>
   <train row="1" page="6" column="0">zzTESTKoreanRicePaddy</train>
-  <train row="1" page="6" column="1">zzTESTKoreanMarket</train>
+  <train row="0" page="6" column="10">zzTESTKoreanMarket</train>
   <command page="10" column="1">Stop</command>
   <command page="10" column="7">Delete</command>
   <tactics>test_korean_builder.tactics</tactics>
