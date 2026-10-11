@@ -1584,6 +1584,241 @@
     "name_board": null,
     "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
    }
+  },
+  "korean_rice_paddy": {
+   "model": "korean_rice_paddy",
+   "names": [
+    "Rice Paddy",
+    "Rice paddy",
+    "Korean Rice Paddy"
+   ],
+   "_doc": "Korean Rice Paddy shelter (Discovery Age, korean-rice-paddy r6 export r1, own page RICEPADDY_1024): intact + damaged + HKT on the vanilla Japanese rice paddy age 1 donor graph (japan_ricepaddy_age1(_damaged)); bone_flag_civ on the mast through the roof apex at the donor distance below the tip, BONE_HITPOINTBAR over the roof at the donor clearance; the field is the vanilla paddy attachment (animfile), never in these GR2s; props on the shared Korean props page (matd).",
+   "files": {
+    "intact": "korean_rice_paddy.gr2",
+    "damaged": "korean_rice_paddy_damaged.gr2",
+    "hkt": "korean_rice_paddy_damaged.hkt",
+    "intact_material": "korean_rice_paddy.material",
+    "damaged_material": "korean_rice_paddy_damaged.material",
+    "animfile": "korean_rice_paddy.xml"
+   },
+   "texture_budget": {
+    "class": "small",
+    "status": "proposed, owner to confirm by name (the page is the owner's: \"Try 1x1024 texture with alpha layer\", owner-ricepaddy-1024-2026-10-11, which names neither the class nor the building)",
+    "models": [
+     "korean_rice_paddy"
+    ],
+    "_doc": "Rice Paddy: one own 1024 page (RICEPADDY_1024: roof field, eave end tiles with alpha cutout, hip caps, timber with edge wear, plaster panel, player colour) for every stage, under the small ceiling 1x2048; the shared r65 atlas and the shared Korean props page are pinned, not counted.",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/ricepaddy_r65_owner_evidence.json",
+       "sha256": "852aec2919742b14f75e04d9e1b5d4e56b75b2abc2d04be6739f2c6c1ec1b902",
+       "owner_quote": "for field. you create only the shelter. rest is generic and should be reused"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/ricepaddy_props_owner_evidence.json",
+       "sha256": "7afb0db0c755a1ce1953f468856a6b4c76a9b0218b29b573bccc676b068f65d7",
+       "owner_quote": "Use some props from the generic props"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate, Monastery and Rice Paddy"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "bone_flag_civ",
+    "BONE_HITPOINTBAR",
+    "japan_rice_paddy_age01_simple",
+    "bone_corn01",
+    "bone_corn02",
+    "bone_corn03",
+    "bone_corn04",
+    "bone_corn05",
+    "bone_corn06",
+    "bone_corn07",
+    "bone_corn08",
+    "bone_corn09",
+    "bone_corn10",
+    "japan_ricepaddy_age1",
+    "japan_ricepaddy_age1_matb"
+   ],
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   },
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_rice_paddy_r1.json",
+    "sha256": "502c5d95db6fb29d9239b125e99b226275b2e18e1c84e35347683ffa3ef290a8"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
+  },
+  "korean_rice_paddy_con": {
+   "model": "korean_rice_paddy",
+   "names": [
+    "Rice Paddy",
+    "Rice paddy",
+    "Korean Rice Paddy"
+   ],
+   "_doc": "Korean Rice Paddy last construction stage (p66): footings, posts, floor, ladder, back panel and plate ring of the final shelter under a fresh-timber roof frame on r65 (king post, four hip rafters, jack rafters); no roof, mast or props; written on the vanilla japan_ricepaddy_age1_con_stage3 donor (no flag bone); the animfile attaches the vanilla asi_2x2_stage2 scaffold and the vanilla paddy_con field",
+   "files": {
+    "intact": "korean_rice_paddy_con.gr2",
+    "intact_material": "korean_rice_paddy_con.material",
+    "animfile": "korean_rice_paddy.xml"
+   },
+   "texture_budget": {
+    "class": "small",
+    "status": "proposed, owner to confirm by name (the page is the owner's: \"Try 1x1024 texture with alpha layer\", owner-ricepaddy-1024-2026-10-11, which names neither the class nor the building)",
+    "models": [
+     "korean_rice_paddy"
+    ],
+    "_doc": "Rice Paddy: one own 1024 page (RICEPADDY_1024: roof field, eave end tiles with alpha cutout, hip caps, timber with edge wear, plaster panel, player colour) for every stage, under the small ceiling 1x2048; the shared r65 atlas and the shared Korean props page are pinned, not counted.",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/ricepaddy_r65_owner_evidence.json",
+       "sha256": "852aec2919742b14f75e04d9e1b5d4e56b75b2abc2d04be6739f2c6c1ec1b902",
+       "owner_quote": "for field. you create only the shelter. rest is generic and should be reused"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/ricepaddy_props_owner_evidence.json",
+       "sha256": "7afb0db0c755a1ce1953f468856a6b4c76a9b0218b29b573bccc676b068f65d7",
+       "owner_quote": "Use some props from the generic props"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate, Monastery and Rice Paddy"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "japan_rice_paddy_age01_simple_construction",
+    "japan_ricepaddy_age1_con_stage3",
+    "japan_ricepaddy_age1_con_stage3_MT0"
+   ],
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_rice_paddy_con_r1.json",
+    "sha256": "86a47dbeca4bcb718bb908abedd64ea23285957a19dcbb97d68b6d0d8d9e2d21"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
   }
  }
 }

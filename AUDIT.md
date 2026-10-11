@@ -51,7 +51,7 @@ everything still missing for a fully playable, fully Korean civilization, most i
    turtle ship, long-range archers, Panokseon).
 7. **Wonders** are the five Japanese ones (Golden Pavilion, Great Buddha, Shogunate, Torii Gates, Toshogu Shrine)
    with Japanese art, names and age-up bonuses.
-8. **Every other building** is Japanese by culture (the Hanok has its Korean model from the Colonial Age; from 2026-10-10 the Castle has its Korean model from its first upgrade, which the player researches - the castle has no automatic upgrade; the Castle: intact + construction p66 + Havok destruction on the Japanese castle donor, `art/buildings/korean_castle/`, shown from the castle's FIRST UPGRADE `ypFrontierCastle` on (owner 2026-10-10: "as castle 1st upgrade Korean variant"; vanilla Japanese castle before it, the Korean look holds through Fortified) and on the test bed `zzTESTKoreanCastle`; roof = the Town Center's own tile and cap texels (owner-approved mock C15); destruction r5 (2026-10-10: roof cut over all 63 donor roof bodies, cut faces on the vanilla destruction sheet, masses by hull volume; workspace states_r1/REPRODUCE_r5.md); gr2_lint 37/0/0 and 17/0/0; not yet seen in game): Dojo, Rice Paddy,
+8. **Every other building** is Japanese by culture (the Hanok has its Korean model from the Colonial Age; from 2026-10-10 the Castle has its Korean model from its first upgrade, which the player researches - the castle has no automatic upgrade; the Castle: intact + construction p66 + Havok destruction on the Japanese castle donor, `art/buildings/korean_castle/`, shown from the castle's FIRST UPGRADE `ypFrontierCastle` on (owner 2026-10-10: "as castle 1st upgrade Korean variant"; vanilla Japanese castle before it, the Korean look holds through Fortified) and on the test bed `zzTESTKoreanCastle`; roof = the Town Center's own tile and cap texels (owner-approved mock C15); destruction r5 (2026-10-10: roof cut over all 63 donor roof bodies, cut faces on the vanilla destruction sheet, masses by hull volume; workspace states_r1/REPRODUCE_r5.md); gr2_lint 37/0/0 and 17/0/0; not yet seen in game): Dojo,
    Market, walls, Trading Post. **The Dock** is Korean from the Discovery Age on (2026-10-11; owner 2026-10-10: "export
    dock to the game - construction, destruction - ... then add as age1 Korean Dock"): `art/buildings/korean_dock/` =
    intact + construction p66 r3 (2026-10-11, AoP aoe3de-building-states s.4 pattern as the castle/houses; owner: "One
@@ -83,6 +83,24 @@ everything still missing for a fully playable, fully Korean civilization, most i
    + the shared r65 + the shared Korean props page (owner: "Yes: Consulate = small, Monastery = small"). gr2_lint
    korean_consulate / korean_monastery 35/0/0, *_con 17/0/0. Test beds `zzTESTKoreanConsulate` (22016) and
    `zzTESTKoreanMonastery` (22017) on the test builder wagon. Workspace korean-civic-pair-claude export_r1. Not yet seen in game.
+   **The Rice Paddy** is Korean from the Discovery Age on (2026-10-11; owner: "finish the last model - the very simplest one -
+   Rice paddy ... in the Korean style with proper roof", "Let's try fully automated run on simple model - no checkpoints",
+   "for field. you create only the shelter. rest is generic and should be reused", "and Ricepaddy also needs construction and
+   destruction"): `art/buildings/korean_rice_paddy/` = a raised timber shelter at vanilla detail (square pyramid tile roof,
+   hip caps, mast through the apex, ladder, back plaster panel, props from the shared props page) on the VANILLA field
+   (`paddy` / `paddy_con` attachments at ROOT, the footprint decal, the asi_2x2 construction kit) + construction p66 (the
+   shelter without roof under a fresh r65 roof frame: king post, hip and jack rafters; vanilla asi_2x2_stage2 scaffold) + Havok
+   destruction r1 on the vanilla Japanese rice paddy age 1 donor (130 bodies, 140 cut caps on the vanilla destruction sheet).
+   Merged into `asian_civs/rice_paddy/rice_paddy.xml` (vanilla base; AoP has no override) as a `zpkoreanvisuals` branch of
+   only `<none>`. Page: ONE own 1024 page with an alpha cutout (owner "Try 1x1024 texture with alpha layer"; roof field from
+   the TC tile canon, eave end tiles cut out, timber with analytic edge wear, plaster + player colour band) + the shared r65
+   + the shared props page. gr2_lint korean_rice_paddy 33 PASS / 2 FAIL, korean_rice_paddy_con 16 / 1: the only FAIL is
+   texture_budget - class small (1x2048 ceiling, the page is 1024) is PROPOSED; the owner's words name neither the class nor
+   the building, so it waits for "Rice Paddy = small". state frames PASS (damaged on mata, construction on matc).
+   attachment_check flags the field attach at ROOT: none of the vanilla rice paddy models has a ROOT bone either (20 vanilla
+   ROOT attaches) - the game test decides whether ROOT is engine-provided like ATTACHPOINT. Two roof bodies of the on-death
+   model exceed the compactness target (3.64 / 3.96 m against 3.0 / 3.24 m). Test bed `zzTESTKoreanRicePaddy` (22018,
+   test builder wagon row 1). Workspace C:/work/korean-rice-paddy (r6, export out_r6, recipes). Not yet seen in game.
 9. **Villagers and explorers**: villagers are now the Asian (Chinese) villager (owner, 2026-10-08), but the
    home city still ships **Japanese** villagers (`YPHCShipSettlersAsian1/2/5`) and Zen Diet targets the Japanese
    one (debt B1, plan section 8); explorers are now the mounted Korean monks (own model and icons; knocked out they fall like the vanilla mounted

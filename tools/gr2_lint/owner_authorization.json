@@ -149,6 +149,33 @@
       "context": "correction right after choosing AoP-hosting for consulate.xml: the Korean Consulate and Monastery branches ship only in this add-on (tools/korean_visuals.py BUILDINGS), each merged onto AoP's own animfile when AoP has one (consulate.xml) else vanilla (monastery.xml); AoP is not edited",
       "source": "Owner messages in the civic-pair Claude Code session, 2026-10-11.",
       "recorded_by": "claude (civic export r1 install)"
+    },
+    {
+      "id": "owner-ricepaddy-start-2026-10-11",
+      "text": "Another agent took the consulate uissue. Your task now is to finish the last model - the very simplest one - Rice paddy - check Chinese and Japanese and finish these in the Korean style with proper roof etc...",
+      "source": "Owner message in the Claude Code Rice Paddy session (koreans add-on, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Rice Paddy export r1 install)"
+    },
+    {
+      "id": "owner-ricepaddy-1024-2026-10-11",
+      "text": "Let's try fully automated run on simple model - no checkpoints. You do everything. Try 1x1024 texture with alpha layer",
+      "context": "the Rice Paddy run: one own 1024 page with an alpha (cutout) layer; the message names neither the texture class nor the building, so the class small stays PROPOSED in profiles korean_rice_paddy(_con)",
+      "source": "Owner message in the Claude Code Rice Paddy session (koreans add-on, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Rice Paddy export r1 install)"
+    },
+    {
+      "id": "owner-ricepaddy-props-2026-10-11",
+      "text": "Use some props from the generic props",
+      "context": "the Rice Paddy run: props from the shared Korean props library (korean-props props-r6.1 = the shared page korean_shared_props_r6)",
+      "source": "Owner message in the Claude Code Rice Paddy session (koreans add-on, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Rice Paddy export r1 install)"
+    },
+    {
+      "id": "owner-ricepaddy-field-generic-2026-10-11",
+      "text": "for field. you create only the shelter. rest is generic and should be reused",
+      "context": "the Rice Paddy run: only the shelter is Korean; the field (vanilla paddy / paddy_con attachments, footprint decal, asi_2x2 construction kit) stays vanilla, the shared Korean atlas r65 backs footings and the frame",
+      "source": "Owner message in the Claude Code Rice Paddy session (koreans add-on, 2026-10-11; no app message id).",
+      "recorded_by": "claude (Rice Paddy export r1 install)"
     }
   ]
 }

@@ -15,7 +15,7 @@ Generated files - never edit them by hand, edit the source named here:
                                    (new strings are English only; owner rule 2026-10-08)
   art/buildings/town_center/town_center.xml, art/buildings/asian_civs/bansho/bansho.xml,
   art/buildings/asian_civs/stable/stable.xml, art/buildings/asian_civs/dock/dock.xml,
-  art/buildings/asian_civs/monastery/monastery.xml
+  art/buildings/asian_civs/monastery/monastery.xml, art/buildings/asian_civs/rice_paddy/rice_paddy.xml
                                    vanilla plus the Korean branch (tools/korean_visuals.py); AoP overrides none of them
 
 Hosted by AoP, not shipped here (owner 2026-10-10 castle, 2026-10-11 consulate, korean_visuals.AOP_HOSTED):

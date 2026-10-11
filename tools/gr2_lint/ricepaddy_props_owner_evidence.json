@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner message in the Claude Code Rice Paddy session (koreans add-on, 2026-10-11; no app message id). The owner's words of the Rice Paddy run: the props (mat, straw bales, jars, firewood, baskets, A-frame carrier) come from the shared Korean props library, page korean_shared_props_r6 (the Market, Dock, Consulate and Monastery share it). Same words: owner_authorization.json item owner-ricepaddy-props-2026-10-11.",
+  "owner_quote": "Use some props from the generic props",
+  "models": [
+    "korean_rice_paddy",
+    "korean_rice_paddy_damaged",
+    "korean_rice_paddy_con"
+  ],
+  "source_names": [
+    "Korean shared props r6"
+  ]
+}

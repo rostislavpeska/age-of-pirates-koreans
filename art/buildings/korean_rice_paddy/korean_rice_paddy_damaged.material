@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<material>
+  <submaterial name="mata">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_rice_paddy\textures\korean_rice_paddy_mata_BaseColor" />
+      <texture name="Normals" override="buildings\korean_rice_paddy\textures\korean_rice_paddy_mata_Normals" />
+      <texture name="Masks" override="buildings\korean_rice_paddy\textures\korean_rice_paddy_mata_Masks" />
+      <texture name="Details" override="buildings\korean_rice_paddy\textures\korean_rice_paddy_mata_Details" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matc">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\korean_shared_matc_r65_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\korean_shared_matc_r65_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\korean_shared_matc_r65_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matd">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\korean_shared_props_r6_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\korean_shared_props_r6_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\korean_shared_props_r6_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matz">
+    <materialdef name="destructible" />
+    <parameters>
+      <texture name="BaseColor" override="generic_props\destruction\textures\destructionsheet_mata_BaseColor" />
+      <texture name="Normals" override="generic_props\destruction\textures\destructionsheet_mata_Normals" />
+      <texture name="Masks" override="generic_props\destruction\textures\destructionsheet_mata_Masks" />
+    </parameters>
+  </submaterial>
+</material>

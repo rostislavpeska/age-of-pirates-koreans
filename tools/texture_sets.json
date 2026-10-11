@@ -500,6 +500,34 @@
      "sha256": "b314deb15073fac5bea2efeda92a27520af5d8cf1850f1bcf8358539edddd5e6"
     }
    }
+  },
+  {
+   "id": "korean_rice_paddy_mata",
+   "status": "current",
+   "record": "korean-rice-paddy r6 export r1 (own page RICEPADDY_1024 with alpha cutout, textures r6)",
+   "page": [
+    1024,
+    1024
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_BaseColor",
+     "sha256": "033b2524734d4475443e88851ab0b7ea0e6d1972733e59b0fd66bbdf2485a6f1"
+    },
+    "Normals": {
+     "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Normals",
+     "sha256": "31f5a856bf9f2dbea891beb799dcc3a1645667b8a5d309760c830a34c3029464"
+    },
+    "Masks": {
+     "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Masks",
+     "sha256": "a12f018986adf0bec5c44cf55983bd598fc5004208ce35f444079ac6f62fd839"
+    },
+    "Details": {
+     "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Details",
+     "sha256": "ce4e5f676dcd73a7f39836567e40c7ec422613d7dcc1ba78aad8df93bd9d36de"
+    }
+   }
   }
  ]
 }

@@ -78,6 +78,13 @@ BUILDINGS = [
     # Discovery"). gr2_lint korean_monastery / korean_monastery_con (tools/gr2_lint/profiles.json)
     ('Art/buildings/asian_civs/monastery/monastery.xml.XMB', 'art/buildings/asian_civs/monastery/monastery.xml',
      'art/buildings/korean_monastery/korean_monastery.xml', 'japanese', False, 'none'),
+    # Korean Rice Paddy (owner 2026-10-11: "finish the last model - the very simplest one - Rice paddy ... in the Korean style
+    # with proper roof", "for field. you create only the shelter. rest is generic and should be reused", "and Ricepaddy also
+    # needs construction and destruction"): the Korean shelter on the vanilla field (paddy / paddy_con attachments, footprint,
+    # asi_2x2 kit); AoP does not override rice_paddy.xml. First upgrade 'none' = the Korean Rice Paddy from the Discovery Age
+    # (the Consulate / Monastery precedent). gr2_lint korean_rice_paddy / korean_rice_paddy_con (tools/gr2_lint/profiles.json)
+    ('Art/buildings/asian_civs/rice_paddy/rice_paddy.xml.XMB', 'art/buildings/asian_civs/rice_paddy/rice_paddy.xml',
+     'art/buildings/korean_rice_paddy/korean_rice_paddy.xml', 'japanese', False, 'none'),
 ]
 
 MARKER = 'zpkoreanvisuals'

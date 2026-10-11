@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "rice paddy r6 construction export r1",
+  "author_blend_sha256": "3892eeb7fb6f1f00fa7664e23239dfe6417c02ab01ef4fa6e8bed0ac68c2770c",
+  "author_payload_sha256": "d357617d812bf9f599a0182e302650f5f4c7504d29907bf0be62a95fd0d52789",
+  "provenance": "Korean Rice Paddy korean_rice_paddy_con rice paddy r6 construction export r1: payload korean_rice_paddy_con_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 984,
+        "position_f32_sha256": "693540ac3c9f490c23f0fc5fed512ee7d86c19015a3cdfe4f2696b91185cf1c2",
+        "raw_uv_f16_sha256": "2c4e4ccd6103c732c399c33171164effc751338f018a994bc901b9f3f50d28b5"
+      },
+      "matc": {
+        "corners": 1764,
+        "position_f32_sha256": "bf5fbb0e14f6641905fd276411f42cd9404aae01b92c3b8e7b0e9dcf8053b7bb",
+        "raw_uv_f16_sha256": "37b9f7d8b754e313f7caa26914abfbc0be38caf06ccd719d30ed8e18e2842495"
+      }
+    },
+    "damaged": {}
+  }
+}

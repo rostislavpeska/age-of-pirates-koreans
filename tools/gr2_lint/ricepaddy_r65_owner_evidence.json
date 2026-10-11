@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner message in the Claude Code Rice Paddy session (koreans add-on, 2026-10-11; no app message id). The owner's words of the Rice Paddy run: only the shelter is made new, the rest is generic and reused. The shelter's footings, clay collar and its construction frame use the shared Korean atlas r65 - the one generic atlas of every Korean building (tests/test_texture_sets.py; the castle precedent owner-castle-construction-generic-atlas-2026-10-10 \"the rest will be beams using the generic atlas\"). Same words: owner_authorization.json item owner-ricepaddy-field-generic-2026-10-11.",
+  "owner_quote": "for field. you create only the shelter. rest is generic and should be reused",
+  "models": [
+    "korean_rice_paddy",
+    "korean_rice_paddy_damaged",
+    "korean_rice_paddy_con"
+  ],
+  "source_names": [
+    "Korean shared matc r65"
+  ]
+}
