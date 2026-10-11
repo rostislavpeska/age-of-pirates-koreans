@@ -1209,8 +1209,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_dock_r1.json",
-    "sha256": "bcacb58335ffdebb64a8512ef213a2f981204ac3a61b85d24025c820257629e9"
+    "path": "tools/gr2_lint/uv_contracts/korean_dock_postproduction_r1.json",
+    "sha256": "63f966e7a329bc697065df24324db8b784c6097d3091262cc18f2e83b49070e4"
    },
    "handedness": {
     "expect_sign": 1,
@@ -1317,8 +1317,8 @@
     "japan_dock_age1_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_dock_con_r1.json",
-    "sha256": "ed40aec86cb8005b844316ec2cc428c9cf432525681e517f90df5209ae847df4"
+    "path": "tools/gr2_lint/uv_contracts/korean_dock_con_postproduction_r1.json",
+    "sha256": "4567b91caf496837b5f20d50ba9cde1ef4ab6ef366e956a0f42993b077a14e25"
    },
    "handedness": {
     "expect_sign": 1,
