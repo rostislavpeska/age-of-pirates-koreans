@@ -448,7 +448,7 @@
   {
    "id": "korean_consulate_mata",
    "status": "current",
-   "record": "korean-civic-pair-claude export_r1 (Consulate page CONSULATE_2048, tex_r1/final_r7, UV c4r9c)",
+   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_S2B: stone-tile coping, stone piers + caps, masonry v3 castle tone; UV c4r9f)",
    "page": [
     2048,
     2048
@@ -457,15 +457,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_BaseColor",
-     "sha256": "96199833a89788b8fc883692eae772862bca7c9b108d141850f71db30dcae5bf"
+     "sha256": "360f09686898c2cdfbf5559720fc144a093b296e86334d30b0f6e2c241b25280"
     },
     "Normals": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Normals",
-     "sha256": "fef760410ea9f48e915a0e23273ee2d4f82f0a4ced0810d33ff54ca9162e7aa4"
+     "sha256": "303edd8a5684ecbe0cd5df81efb0663b3ad376cc3bc69f64dd48e8cefb04f497"
     },
     "Masks": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Masks",
-     "sha256": "00a6c37c641549d363000e89a6b8d088fae1dfeddd04eb93027ccf2ee8435acb"
+     "sha256": "6e5fd0f8eaaeb5621b1d3ab06a39bb7acf2f8d59c58330cd0678d851dbb24662"
     },
     "Details": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Details",

@@ -1240,8 +1240,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_consulate_r1.json",
-    "sha256": "180da07a0198a8c70797800a3074f686ad7ee08a1a1eb5edfd84ee082ab729f5"
+    "path": "tools/gr2_lint/uv_contracts/korean_consulate_r2.json",
+    "sha256": "d70d6b7e42182b776f36b3679e61c93b1714cfb170fd9bd4ee772a29324aa285"
    },
    "handedness": {
     "expect_sign": 1,
