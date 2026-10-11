@@ -920,6 +920,8 @@
    }
   },
   "korean_castle": {
+      "ao_shared_uv_max_m2": 0.8,
+      "ao_shared_uv_owner": {"quote": "Castkle - no visible bugs", "at": "2026-10-12"},
    "model": "korean_castle",
    "names": [
     "Castle",
