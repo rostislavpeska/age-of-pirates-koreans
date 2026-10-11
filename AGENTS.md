@@ -21,3 +21,9 @@ This repository is the Koreans civilization add-on for Age of Pirates (AoP) and 
    translated.
 6. Ids: protos 22000-22999, tech dbids 60000-60999, strings 600000+. Open work and debts: [AUDIT.md](AUDIT.md).
    Design plan: korean-buildings-blender `research/Koreans_Civ_18/PLAN.md`.
+7. **Every Korean building ships with its test bed unit** (owner 2026-10-11: "test bed must always be part of the
+   package"). In the same change that installs or changes a building model, add or update its `zzTEST<Name>` bench in
+   the marked zzTEST block of `data/protomods.xml`: it loads the building's own Korean animfile directly (no civ/age
+   logic), copies the vanilla unit's values (placement, physics, flags), sits on `zzTESTKoreanBuilderWagon`, and has
+   its two strings. `tests/test_korean_test_beds.py` fails when a building in `tools/korean_visuals.py` has no bench,
+   or a bench points at a missing animfile or model.
