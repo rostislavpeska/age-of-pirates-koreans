@@ -513,7 +513,7 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_BaseColor",
-     "sha256": "e058bfa63fe6a1631670d731a14d5a9624385d75563b4fc5a39ca28e7380db90"
+     "sha256": "373ca2c6a6b7921285b2b153d929250fc14ed2f910231e6939e5c7014890cda2"
     },
     "Normals": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Normals",
@@ -521,11 +521,11 @@
     },
     "Masks": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Masks",
-     "sha256": "a12f018986adf0bec5c44cf55983bd598fc5004208ce35f444079ac6f62fd839"
+     "sha256": "8aa70bb9e0812075723c4ad09473ad5285cc18e4f63e37ef08b1cfc3ad20c0d3"
     },
     "Details": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Details",
-     "sha256": "9bd855b65175c1a19de56703a8248a1631b27e0f76d5bf624499a6bcf221c5c1"
+     "sha256": "69a27c2696e49417793d65e18df505fefbacc2b6ef2e867dedd3e0dcf28ac2e1"
     }
    }
   },
