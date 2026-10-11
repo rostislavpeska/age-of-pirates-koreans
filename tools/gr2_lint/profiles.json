@@ -821,7 +821,7 @@
    },
    "uv_contract": {
     "path": "tools/gr2_lint/uv_contracts/korean_castle_r1.json",
-    "sha256": "bc1f8be1bc7ca6c7797c207c7af2e307cd06f7d13a8e5c06f2e602c56621db58"
+    "sha256": "bb3bd529b331684b3999371efbcbd68aa26cc2da3454a89c312cb003f5b62290"
    },
    "handedness": {
     "expect_sign": 1,

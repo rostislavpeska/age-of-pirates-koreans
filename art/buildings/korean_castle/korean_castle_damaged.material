@@ -24,4 +24,12 @@
       <texture name="Masks" override="buildings\korean_shared\textures\korean_shared_matc_r65_Masks" />
     </parameters>
   </submaterial>
+  <submaterial name="matz">
+    <materialdef name="destructible" />
+    <parameters>
+      <texture name="BaseColor" override="generic_props\destruction\textures\destructionsheet_mata_BaseColor" />
+      <texture name="Normals" override="generic_props\destruction\textures\destructionsheet_mata_Normals" />
+      <texture name="Masks" override="generic_props\destruction\textures\destructionsheet_mata_Masks" />
+    </parameters>
+  </submaterial>
 </material>
