@@ -1,0 +1,11 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default_doublesided_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_castle\banner\textures\korean_castle_banner_BaseColor" />
+      <texture name="Normals" override="units\asians\japanese\japanese_banners\textures\japanese_banner_white_matA_Normals" />
+      <texture name="Masks" override="units\asians\japanese\japanese_banners\textures\japanese_banner_white_matA_Masks" />
+      <texture name="Details" override="buildings\korean_castle\banner\textures\korean_castle_banner_Details" />
+    </parameters>
+  </submaterial>
+</material>

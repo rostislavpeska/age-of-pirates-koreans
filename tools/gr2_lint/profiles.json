@@ -799,7 +799,9 @@
     "bone_launchpoint03",
     "bone_launchpoint04",
     "bone_launchpoint05",
-    "bone_launchpoint06"
+    "bone_launchpoint06",
+    "bone_banner_l",
+    "bone_banner_r"
    ],
    "physical_mounts": [
     {

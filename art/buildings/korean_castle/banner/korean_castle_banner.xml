@@ -1,0 +1,14 @@
+<animfile>
+  <!--Korean castle banner (owner 2026-10-11: "Good, banners  then!", "there is a special Japanese banner. So maybe only resin"):
+      the vanilla Japanese white nobori banner model reskinned (player-colour cloth, sam-taegeuk medallion), animated by
+      the vanilla long-banner animation (referenced by path).-->
+  <component>korean_castle_banner<assetreference type="GrannyModel">
+      <file>buildings\korean_castle\banner\korean_castle_banner</file>
+    </assetreference>
+  </component>
+  <anim>Idle<assetreference type="GrannyAnim">
+      <file>units\asians\japanese\japanese_banners\Japanese_banner_long_animation</file>
+    </assetreference>
+    <component>korean_castle_banner</component>
+  </anim>
+</animfile>
