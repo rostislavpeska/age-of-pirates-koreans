@@ -448,7 +448,7 @@
   {
    "id": "korean_consulate_mata",
    "status": "current",
-   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_S2C: stone-tile coping, stone piers + caps, masonry v3 castle tone, pronounced stone relief r8c; UV c4r9f)",
+   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_S2F: stone-tile coping, stone piers + caps, masonry v3 castle tone, pronounced stone relief r8c; UV c4r9f) + roof valley KR-ROOF-VALLEY-01 + member de-repeat D11 (mast, wood ridges, facade-2 lintel) + gable medallion pair clear of the king post (occlusion-gated)",
    "page": [
     2048,
     2048
@@ -457,19 +457,19 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_BaseColor",
-     "sha256": "88681826b8894bef7072804d3543286168f3f35fb3f4d787547d2094164330b4"
+     "sha256": "3ddfe42f55933cf4f18a2a9e8a6cec5d401a8236ed595fe4e93e3b1717d03de4"
     },
     "Normals": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Normals",
-     "sha256": "14dc48b37fd69cf112e3e355c671d035725d910df793c797e3b5f3afac5c83b2"
+     "sha256": "5723bf186ca5fac6525128800d52e1abeb699961d327044ae1f1805cb4ecc87b"
     },
     "Masks": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Masks",
-     "sha256": "0ddafbb4e2b557e2866bb0cd52cf0e33e2854d8d95481660fd869a7e956d45f6"
+     "sha256": "bd8781f2b0ddf21fa4108bcbf5131e5a302fe58a61fe7aea8acdf78ddb538e27"
     },
     "Details": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Details",
-     "sha256": "3d8c1839eb8bfa72849995b092089d16d1449ec5227dac0300289f232e651b37"
+     "sha256": "468cd66b2c2244a5bb8c09c16ccacf179e67fd8ab416d66520e0f19063364dec"
     }
    }
   },
