@@ -18,7 +18,9 @@ zpKoreanVisuals is activated only by zpAge0Korean (data/techtreemods.xml), so Ja
 stay Japanese. Every byte of the base file is kept (the base is AoP's own override of that animfile when AoP has
 one, else vanilla from the installed game). The Korean model animfiles are read from this repo's art/ (moved from
 AoP on 2026-10-09: all Korean content lives here for now, owner). tools/build.py writes the merged files into this repo; they are never edited by hand
-and never live in AoP's art/ (they would replace every civ's Town Center for AoP players without the add-on).
+and never live in AoP's art/ (they would replace every civ's Town Center for AoP players without the add-on). The one
+exception is AOP_HOSTED below: an animfile AoP already overrides (the castle, the consulate), whose Korean branch AoP
+carries itself.
 
     python tools/korean_visuals.py            # summary of what tools/build.py generates
 """
@@ -79,6 +81,17 @@ BUILDINGS = [
 ]
 
 MARKER = 'zpkoreanvisuals'
+
+# Hosted by AoP (owner 2026-10-10: "OR AoP can directly have Korean civ in that file. If civ doesn't exist nothing
+# happens", "So only castle.xml edit"): AoP ships its own castle.xml override, so a copy here lost to it whenever AoP
+# stood above the add-on in mod priority (the Japanese castle in game, 2026-10-10). AoP's file now carries the Korean
+# branch itself - inert without this add-on, where zpKoreanVisuals never exists (the pattern of AoP's zpAotWKhmers,
+# keyed on Age of the World's Age0Khmers). This add-on ships no copy; the Korean source stays here
+# (art/buildings/korean_castle/korean_castle.xml). tools/build.py --check fails when AoP's file drifts from it, and
+# `python tools/korean_visuals.py --write-aop` refreshes AoP's file. The rule for every building (owner 2026-10-11, "follow
+# pattern"): an animfile AoP overrides is hosted by AoP, never shipped here - AoP has priority 1 above this add-on, so a copy
+# here never shows. tests/test_no_shadowed_files.py fails when this add-on ships a replacing file AoP also ships.
+AOP_HOSTED = ('art/buildings/asian_civs/castle/castle.xml', 'art/buildings/asian_civs/consulate/consulate.xml')
 
 # The vanilla barracks fires from its RangedAttack/RangedAttackShip anims (barracks.tactics); the Korean
 # bench animfile has none, so the merged copy adds them to the Korean built submodel (vanilla bansho text,
@@ -193,6 +206,15 @@ def merge(vanilla, korean_text, culture, add_attack, first='colonialize'):
     return out
 
 
+def strip(text, korean_text):
+    """AoP's own animfile back from an AoP-hosted merge: the Korean submodels and the marker branch removed (a no-op on
+    a file without them). Only for merges that add no definebone (the castle: its 39 bones are AoP's)."""
+    for name in re.findall(r'(?m)^  <submodel>([^<\s]+)', korean_text):
+        text = re.sub(r'  <submodel>%s(?=[<\s]).*?</submodel>\n' % re.escape(name), '', text, count=1, flags=re.S)
+    text = re.sub(r'(?ms)^[ \t]*<%s>.*?</%s>\n' % (MARKER, MARKER), '', text)     # indented base: own lines
+    return re.sub(r'(?s)<%s>.*?</%s>' % (MARKER, MARKER), '', text)                # compact base: inline
+
+
 def canon(e):
     return (e.tag, sorted(e.attrib.items()), (e.text or '').strip(), [canon(c) for c in e])
 
@@ -223,21 +245,44 @@ def verify(text, culture, first='colonialize'):
 
 
 def build(aop_root=AOP):
-    """{add-on relative path: CRLF bytes} for every Korean building animfile."""
+    """{add-on relative path: CRLF bytes} for every Korean building animfile this add-on ships (not the AoP-hosted)."""
     out = {}
     for archive, out_path, src, culture, attack, *opt in BUILDINGS:
+        if out_path in AOP_HOSTED:
+            continue
         first = opt[0] if opt else 'colonialize'
         own = os.path.join(aop_root, out_path)
-        base = read(out_path) if os.path.isfile(own) else vanilla_text(archive)
+        base = read(out_path, aop_root) if os.path.isfile(own) else vanilla_text(archive)
         merged = merge(base, read(src, REPO), culture, attack, first)   # the Korean model: this repo
         out[out_path] = (merged.replace('\n', '\r\n').encode('utf-8'), verify(merged, culture, first),
                          'AoP override' if os.path.isfile(own) else 'vanilla')
     return out
 
 
+def aop_hosted(aop_root=AOP):
+    """{AoP relative path: (wanted CRLF bytes, AoP's current bytes, Tech children)} for the animfiles AoP hosts: AoP's
+    own file with the Korean parts stripped, merged again with this repo's Korean source."""
+    out = {}
+    for archive, out_path, src, culture, attack, *opt in BUILDINGS:
+        if out_path not in AOP_HOSTED:
+            continue
+        first = opt[0] if opt else 'colonialize'
+        korean = read(src, REPO)
+        have = open(os.path.join(aop_root, out_path), 'rb').read()
+        merged = merge(strip(read(out_path, aop_root), korean), korean, culture, attack, first)
+        out[out_path] = (merged.replace('\n', '\r\n').encode('utf-8'), have, verify(merged, culture, first))
+    return out
+
+
 def main():
     for path, (data, kids, base) in build().items():
         print('%-50s base %-12s %7d bytes  Tech children %s' % (path, base, len(data), kids))
+    for path, (want, have, kids) in aop_hosted().items():
+        state = 'current' if want == have else 'STALE'
+        if state == 'STALE' and '--write-aop' in sys.argv:
+            open(os.path.join(AOP, path), 'wb').write(want)
+            state = 'written'
+        print('%-50s hosted by AoP %-8s %7d bytes  Tech children %s' % (path, state, len(want), kids))
     return 0
 
 

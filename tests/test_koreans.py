@@ -492,14 +492,30 @@ def test_generated_files_are_current_and_buildings_switch_at_the_first_upgrade()
         branch = tech.find('zpkoreanvisuals/logic')
         assert [c.tag for c in tech][-1] == 'zpkoreanvisuals' and [c.tag for c in branch][-1] == 'colonialize'
     # the castle switches on its OWN first upgrade (owner 2026-10-10: "as castle 1st upgrade Korean variant"): vanilla
-    # Japanese castle before ypFrontierCastle, the Korean castle from it on
-    root = ET.fromstring(files['art/buildings/asian_civs/castle/castle.xml'].decode('utf-8'))
-    tech = next(lg.find('japanese/logic') for lg in root.iter('logic') if lg.find('japanese/logic') is not None)
-    branch = tech.find('zpkoreanvisuals/logic')
-    assert [c.tag for c in tech][-1] == 'zpkoreanvisuals'
-    assert [c.tag for c in branch] == ['none', 'ypfrontiercastle'], [c.tag for c in branch]
-    refs = [r.get('ref') for r in branch.find('ypfrontiercastle').iter('submodelref')]
-    assert refs[-1] == 'korean_castle_built' and all(r.startswith('korean_castle') for r in refs), refs
+    # Japanese castle before ypFrontierCastle, the Korean castle from it on. AoP hosts that animfile (owner 2026-10-10:
+    # "OR AoP can directly have Korean civ in that file", "So only castle.xml edit"): AoP's copy carries the branch,
+    # matches this repo's Korean source, and the add-on ships no copy that a mod priority could put above or below it
+    # The consulate follows the same pattern (owner 2026-10-11: "Consulate still original Japanese ... follow pattern"):
+    # AoP overrides consulate.xml and has mod priority 1, so only AoP's own file can carry the Korean branch.
+    import korean_visuals
+    castle = 'art/buildings/asian_civs/castle/castle.xml'
+    consulate = 'art/buildings/asian_civs/consulate/consulate.xml'
+    assert korean_visuals.AOP_HOSTED == (castle, consulate)
+    for path in korean_visuals.AOP_HOSTED:
+        assert path not in files and not (K / path).exists(), path
+    assert build.hosted_problems() == [], 'run python tools/korean_visuals.py --write-aop'
+    hosted = korean_visuals.aop_hosted()
+    for path, last, prefix in ((castle, 'ypfrontiercastle', 'korean_castle'), (consulate, 'none', 'korean_consulate')):
+        want, have, _ = hosted[path]
+        assert want == have, path
+        root = ET.fromstring(have.decode('utf-8'))
+        tech = next(lg.find('japanese/logic') for lg in root.iter('logic') if lg.find('japanese/logic') is not None)
+        branch = tech.find('zpkoreanvisuals/logic')
+        assert [c.tag for c in tech][-1] == 'zpkoreanvisuals', path
+        kids = [c.tag for c in branch]
+        assert kids == (['none', 'ypfrontiercastle'] if path == castle else ['none']), (path, kids)
+        refs = [r.get('ref') for r in branch.find(last).iter('submodelref')]
+        assert refs and refs[-1] == prefix + '_built' and all(r.startswith(prefix) for r in refs), (path, refs)
     langs = [d for d in os.listdir(K / 'data/strings') if (K / 'data/strings' / d).is_dir()]
     assert len(langs) == 15
     for lang in langs:

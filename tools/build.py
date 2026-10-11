@@ -14,9 +14,14 @@ Generated files - never edit them by hand, edit the source named here:
                                    compiled from data/strings/english/stringmods.xml into every language folder
                                    (new strings are English only; owner rule 2026-10-08)
   art/buildings/town_center/town_center.xml, art/buildings/asian_civs/bansho/bansho.xml,
-  art/buildings/asian_civs/stable/stable.xml, art/buildings/asian_civs/castle/castle.xml
-                                   AoP's override of that animfile when AoP has one, else vanilla, plus the Korean
-                                   branch (tools/korean_visuals.py; the Korean models stay in AoP's art/)
+  art/buildings/asian_civs/stable/stable.xml, art/buildings/asian_civs/dock/dock.xml,
+  art/buildings/asian_civs/monastery/monastery.xml
+                                   vanilla plus the Korean branch (tools/korean_visuals.py); AoP overrides none of them
+
+Hosted by AoP, not shipped here (owner 2026-10-10 castle, 2026-10-11 consulate, korean_visuals.AOP_HOSTED):
+art/buildings/asian_civs/castle/castle.xml, art/buildings/asian_civs/consulate/consulate.xml - AoP overrides them and has
+priority 1 above this add-on, so AoP's own file carries the Korean branch (inert without this add-on). --check fails when
+AoP's file drifts from the Korean source; `python tools/korean_visuals.py --write-aop` refreshes it.
   sound/soundsetsde.mods.xml       AoP's file + tools/korean_soundsets.xml (the engine's merge of this file across
                                    two mods is unverified, so the add-on carries both)
   sound/ypsettlerasian_snds.xml    AoP's copy if any, else vanilla, with Korean voices for zpKoreans
@@ -130,23 +135,36 @@ def stale(files):
     return bad
 
 
+def hosted_problems():
+    """AoP-hosted animfiles: a copy in this repo (it would shadow AoP's when the add-on stands above AoP) or an AoP
+    file that drifted from this repo's Korean source."""
+    bad = ['%s: AoP hosts this file - delete the add-on copy' % p for p in korean_visuals.AOP_HOSTED
+           if os.path.isfile(os.path.join(REPO, *p.split('/')))]
+    bad += ['%s: AoP copy is stale - run python tools/korean_visuals.py --write-aop' % p
+            for p, (want, have, _) in korean_visuals.aop_hosted().items() if want != have]
+    return bad
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--check', action='store_true')
     a = ap.parse_args()
     files = build()
     bad = stale(files)
+    hosted = hosted_problems()
+    for line in hosted:
+        print('AOP-HOSTED', line)
     if a.check:
         for path in bad:
             print('STALE', path)
         print('%d files, %s' % (len(files), 'up to date' if not bad else '%d stale' % len(bad)))
-        return 1 if bad else 0
+        return 1 if bad or hosted else 0
     for path in bad:
         p = os.path.join(REPO, *path.split('/'))
         os.makedirs(os.path.dirname(p), exist_ok=True)
         open(p, 'wb').write(files[path])
     print('%d files checked, %d written' % (len(files), len(bad)))
-    return 0
+    return 1 if hosted else 0
 
 
 if __name__ == '__main__':
