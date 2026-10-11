@@ -251,6 +251,18 @@
       "context": "Asked first: 'The age-0 straw houses need their own 2 texture pages (straw-skin walls 2048 + roofs 2048). With the Colonial pages the House family becomes 4x2048, above the largest lint class large (2x2048). ... How do you want the texture budget?' - owner: 'Approve 4x2048 (Recommended)' (options: Approve 4x2048 / Straw pages at 1024 / Straw house not yet).",
       "source": "Owner-selected options in the Claude Code House skins session (koreans add-on), 2026-10-12; no app message id.",
       "recorded_by": "claude (House age-0 install)"
+    },
+    {
+      "id": "owner-ricepaddy-market-classes-2026-10-12",
+      "text": "Yes: Rice Paddy = small, Market = medium",
+      "question": "Texture classes for the model checker's owner record (it must name the building and the class): confirm both?",
+      "options": [
+        "Yes: Rice Paddy = small, Market = medium",
+        "No, keep them open"
+      ],
+      "option_detail": "Rice Paddy: one own 1024 page. Market: own 2048 + 1024 pages. Closes texture_budget on both.",
+      "source": "Owner-selected option in the Claude Code post-production session (korean-buildings-blender worktree optimistic-cerf-45037b), 2026-10-12.",
+      "recorded_by": "claude (post-production)"
     }
   ]
 }
