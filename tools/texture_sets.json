@@ -417,7 +417,7 @@
     },
     "Details": {
      "path": "buildings/korean_dock/textures/korean_dock_mata_Details",
-     "sha256": "83c81fa7a3e4f98208bc62b3f375719215d5211dde06b518a7c92bebfe345a78"
+     "sha256": "29105031659fa02d7904afb7eda685ae9706501afebb8658ead66edce8bbdf4f"
     }
    }
   },
@@ -513,7 +513,7 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_BaseColor",
-     "sha256": "033b2524734d4475443e88851ab0b7ea0e6d1972733e59b0fd66bbdf2485a6f1"
+     "sha256": "e058bfa63fe6a1631670d731a14d5a9624385d75563b4fc5a39ca28e7380db90"
     },
     "Normals": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Normals",
@@ -525,7 +525,7 @@
     },
     "Details": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Details",
-     "sha256": "ce4e5f676dcd73a7f39836567e40c7ec422613d7dcc1ba78aad8df93bd9d36de"
+     "sha256": "9bd855b65175c1a19de56703a8248a1631b27e0f76d5bf624499a6bcf221c5c1"
     }
    }
   },
