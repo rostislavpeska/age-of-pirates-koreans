@@ -2124,8 +2124,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_market_r1.json",
-    "sha256": "378d702e59a190165a4021d16b544a1bd1b23ee8b5cad75045105bfeb2374831"
+    "path": "tools/gr2_lint/uv_contracts/korean_market_gr2canon_r1.json",
+    "sha256": "cef55b44ff307e44478edf206a6d5f9a17d2ae73fd41c14c62e697d16d3468d9"
    },
    "handedness": {
     "expect_sign": 1,

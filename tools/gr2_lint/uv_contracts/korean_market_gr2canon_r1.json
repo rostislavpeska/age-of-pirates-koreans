@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "market r2 + vanilla rubble heaps on base, top-down on the grey stone block (owner: market has no rubbles)",
+  "author_payload_sha256": "dc142063dceed00ff32975fedf137009e49893e3238294781b74c6ed9bddae2f",
+  "author_damaged_payload_sha256": "b6d62e868e2c65ee5a5cde4029fc76323d9813bcab1602ee4bf62400abc11e78",
+  "provenance": "korean_market market r2 + vanilla rubble heaps on base, top-down on the grey stone block (owner: market has no rubbles): payloads korean_market_intact_payload.json + korean_market_damaged_payload.json, derived from the installed GR2s (korean_market.gr2 508987b3fb43, korean_market_damaged.gr2 3c2187096c33) on the owner's instruction ['Barracks and stables - ignore. Use files we have!!!!', 'Explort what we have. Create new canonical version from GR12 or whatever!']; contract from the payloads (from_author), proven equal to from_runtime",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 45708,
+        "position_f32_sha256": "a4033a68a9de10bf3c0dc8cb98e9e2660caefb8b66c52fdfeaf40145c20dff7d",
+        "raw_uv_f16_sha256": "b5fc5ae48b55b1bda356087c07b89338e2c6779f44056bfed7f70a087381222c"
+      },
+      "mata": {
+        "corners": 17628,
+        "position_f32_sha256": "7acde13159728c7bc8234f0a92dcefb90b53d7a003eb126b5d797e9c6f1bb395",
+        "raw_uv_f16_sha256": "f2c4fdebcd4e050d61c06d22c1f5ec3d04a3191752c4e11a65b8ef4a090457f1"
+      },
+      "matb": {
+        "corners": 34356,
+        "position_f32_sha256": "3a916439ae7dc77587e312153c4ad255ac061b2e4ff1bacf152ec021f25ed933",
+        "raw_uv_f16_sha256": "a1cafe939b2b4719382ff34e6a3904b51a017e559e7a54a81fdc750b5f4cc38d"
+      },
+      "matd": {
+        "corners": 16812,
+        "position_f32_sha256": "51dd72ee70f4224425c5f868649309d2be900a56c53eb5dd2df8c3043a30e981",
+        "raw_uv_f16_sha256": "2aebaec1adfaa240d59471f9e6cff5aa73e531f7331db1aee11d8dd5896dc565"
+      }
+    },
+    "damaged": {
+      "mata": {
+        "corners": 22569,
+        "position_f32_sha256": "90146f73243add4570139e7f927ea151050254652101e580ce097ea781a1380f",
+        "raw_uv_f16_sha256": "b4d27a5f588705989cc8a60e67acb3a4edb627b2b7b0f269b17d1f0284c6a84e"
+      },
+      "matc": {
+        "corners": 53679,
+        "position_f32_sha256": "aadfd078a13e74bee3c23a66f50a597e633093b9af15104e9b121d60bb0e7a28",
+        "raw_uv_f16_sha256": "3d3bcc681f2e3cbef113f6dff1ed3e86a72f7f00c79f3ab33d3a2adbc3f6a6d0"
+      },
+      "matb": {
+        "corners": 36420,
+        "position_f32_sha256": "ec48a38cf4777484db667472240fed62902a752aab481a8251c2af2371dccd4a",
+        "raw_uv_f16_sha256": "cc94aa316fc5907380e24aacb67eb5988911abf9f6896a1855fb013b60ca10a6"
+      },
+      "matz": {
+        "corners": 15963,
+        "position_f32_sha256": "dfb3c87a2d61d44f775866de35b9ce14118ffe943cd8e6741da07351f5e2b87b",
+        "raw_uv_f16_sha256": "9e36dd4d23764625866860b2fab14cd124f8ad252311b7d53455bea77fb626d4"
+      },
+      "matd": {
+        "corners": 17178,
+        "position_f32_sha256": "3bf3be1734b9081d8046f1ea92f2a1b008e295cc1ecf40bf9060b9633b65a2c5",
+        "raw_uv_f16_sha256": "e7859053bb786bf7ed12e32f6cacef9480559ff011878cec3dd7244801d05a5e"
+      }
+    }
+  }
+}
