@@ -98,6 +98,57 @@
       "confirms": "owner-dock-large-2026-10-10 (its option text did not name the Dock)",
       "source": "Owner-selected option in the Claude Code Market + Dock session, 2026-10-10T23:08Z (01:08 local, 2026-10-11).",
       "recorded_by": "claude (Dock export r1)"
+    },
+    {
+      "id": "owner-civic-small-2026-10-11",
+      "text": "Small: 1x2048 each (Recommended)",
+      "question": "Texture class: one own 2048 page per model + the shared r65 backing page + the shared Korean props page = class 'small'. Confirm?",
+      "models": [
+        "Consulate",
+        "Monastery"
+      ],
+      "source": "Owner-selected option in the civic-pair Claude Code session (stream claude-civic-pair, KTC-289), 2026-10-11; recorded in korean-civic-pair-claude work/OWNER_DECISIONS_2026-10-11.json decision id 'texture-class-small'.",
+      "recorded_by": "claude (Consulate export r1, proposal)",
+      "note": "names the class, not the model: gr2_lint texture_budget needs a confirmation naming the Consulate (Dock precedent owner-dock-large-confirm-2026-10-11)"
+    },
+    {
+      "id": "owner-civic-props-shared-2026-10-11",
+      "text": "Yes: Consulate + Monastery use the shared props page (Recommended)",
+      "source": "Owner answer in the Dock/props Claude Code session 2026-10-10T23:08Z, relayed into korean-civic-pair-claude work/OWNER_DECISIONS_2026-10-11.json decision id 'props-shared-page'.",
+      "recorded_by": "claude (Consulate export r1, proposal)"
+    },
+    {
+      "id": "owner-civic-export-2026-10-11",
+      "text": "After you're done. add both models into game - incl damaged and construction states.",
+      "source": "Owner message in the civic-pair Claude Code session 2026-10-11 (EXPORT_BRIEF.md of export_r1).",
+      "recorded_by": "claude (Consulate export r1, proposal)"
+    },
+    {
+      "id": "owner-civic-discovery-2026-10-11",
+      "text": "From Discovery (Recommended)",
+      "question": "From which age should Korean players see the new Consulate and Monastery? (one Korean model each; vanilla Japanese age 1-4 variants)",
+      "source": "Owner-selected option in the civic-pair Claude Code session (stream claude-civic-pair, KTC-289), 2026-10-11; recorded in korean-civic-pair-claude work/OWNER_DECISIONS_2026-10-11.json decision id 'export switch age'.",
+      "recorded_by": "claude (Consulate export r1, proposal)"
+    },
+    {
+      "id": "owner-civic-small-confirm-2026-10-11",
+      "text": "Yes: Consulate = small, Monastery = small",
+      "question": "Export gate (texture budget) needs your words naming each building. Texture class: Consulate = small (one own 2048 page) and Monastery = small (one own 2048 page); the r65 atlas and the Korean props page are shared, not counted. Confirm?",
+      "options": [
+        "Yes: Consulate = small, Monastery = small",
+        "No, discuss"
+      ],
+      "confirms": "owner-civic-small-2026-10-11 (its option text did not name the buildings)",
+      "source": "Owner-selected option in the civic-pair Claude Code session (stream claude-civic-pair, KTC-289), 2026-10-11.",
+      "recorded_by": "claude (civic export r1 install)"
+    },
+    {
+      "id": "owner-civic-korean-mod-2026-10-11",
+      "text": "Oh no, in Korean mod",
+      "followed_by": "Same monastery, but override in both using aop code",
+      "context": "correction right after choosing AoP-hosting for consulate.xml: the Korean Consulate and Monastery branches ship only in this add-on (tools/korean_visuals.py BUILDINGS), each merged onto AoP's own animfile when AoP has one (consulate.xml) else vanilla (monastery.xml); AoP is not edited",
+      "source": "Owner messages in the civic-pair Claude Code session, 2026-10-11.",
+      "recorded_by": "claude (civic export r1 install)"
     }
   ]
 }

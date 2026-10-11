@@ -63,6 +63,19 @@ BUILDINGS = [
     # gr2_lint korean_dock / korean_dock_con (tools/gr2_lint/profiles.json)
     ('Art/buildings/asian_civs/dock/dock.xml.XMB', 'art/buildings/asian_civs/dock/dock.xml',
      'art/buildings/korean_dock/korean_dock.xml', 'japanese', False, 'none'),
+    # Korean Consulate (owner 2026-10-11: "add both models into game - incl damaged and construction states"; "Oh no, in Korean
+    # mod", "Same monastery, but override in both using aop code"). AoP overrides consulate.xml, so a copy here lost to it
+    # (the Japanese consulate in the owner's game, 2026-10-11: "Consulate still original Japanese ... follow pattern"):
+    # AoP hosts the branch, like the castle (AOP_HOSTED). First upgrade 'none' = the Korean Consulate from the Discovery Age
+    # (owner "From Discovery"). gr2_lint korean_consulate / korean_consulate_con (tools/gr2_lint/profiles.json)
+    ('Art/buildings/asian_civs/consulate/consulate.xml.XMB', 'art/buildings/asian_civs/consulate/consulate.xml',
+     'art/buildings/korean_consulate/korean_consulate.xml', 'japanese', False, 'none'),
+    # Korean Monastery (owner 2026-10-11: "add both models into game - incl damaged and construction states"; "Oh no, in Korean
+    # mod", "Same monastery, but override in both using aop code"): this add-on ships the merged animfile, built on AoP's own
+    # override when AoP has one, else vanilla. First upgrade 'none' = the Korean Monastery from the Discovery Age (owner "From
+    # Discovery"). gr2_lint korean_monastery / korean_monastery_con (tools/gr2_lint/profiles.json)
+    ('Art/buildings/asian_civs/monastery/monastery.xml.XMB', 'art/buildings/asian_civs/monastery/monastery.xml',
+     'art/buildings/korean_monastery/korean_monastery.xml', 'japanese', False, 'none'),
 ]
 
 MARKER = 'zpkoreanvisuals'

@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner-selected option in the civic-pair Claude Code session (stream claude-civic-pair, KTC-289), 2026-10-11; recorded in korean-civic-pair-claude work/OWNER_DECISIONS_2026-10-11.json decision id 'texture-class-small'. The question named the shared r65 backing page and the shared Korean props page as shared, not counted; the props page for the Monastery is also the owner's answer 'Yes: Consulate + Monastery use the shared props page (Recommended)' (item owner-civic-props-shared-2026-10-11); the class is confirmed by name in owner-civic-small-confirm-2026-10-11 'Yes: Consulate = small, Monastery = small'.",
+  "owner_quote": "Small: 1x2048 each (Recommended)",
+  "question": "Texture class: one own 2048 page per model + the shared r65 backing page + the shared Korean props page = class 'small'. Confirm?",
+  "models": [
+    "korean_monastery",
+    "korean_monastery_damaged",
+    "korean_monastery_con"
+  ],
+  "source_names": [
+    "Korean shared matc r65",
+    "Korean shared props r6"
+  ]
+}

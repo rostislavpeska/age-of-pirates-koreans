@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "export_r1 Monastery (UV c4r9e, freeze bbe13ef2)",
+  "author_blend_sha256": "1fbeab877605ecb3895e94af14dddb312cd190805e0bdcb11db5e32e662f69b5",
+  "author_payload_sha256": "125925458e1f3b0ec5e66fcabb73f3dcb9f13c6b908fcd042671c3f94c5ebe25",
+  "author_damaged_payload_sha256": "4069807760553318781fd876d7f049939afef04fdde9c9d7547014b9473644e7",
+  "provenance": "Korean Monastery korean_monastery export_r1 Monastery (UV c4r9e, freeze bbe13ef2): payload korean_monastery_payload.json + monastery_damaged_payload_final.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 17640,
+        "position_f32_sha256": "9f7a00421ec0ffa38a66883e05b060eca9cad0ed1868e80287527c6da0c06926",
+        "raw_uv_f16_sha256": "ee1075903fab53dd3ff2422c6b0179f850d48691251f8af9abce0226a9c73061"
+      },
+      "mata": {
+        "corners": 30576,
+        "position_f32_sha256": "a4e13e81eb1f4252ce400f775e9b5b14b3594db4ac8c114ae058fcc7565ff0fe",
+        "raw_uv_f16_sha256": "4c1c442158b100fa2876cbe9ffac90e7f3c1aa9fd6f95d04cd56b588202a424a"
+      },
+      "matd": {
+        "corners": 10608,
+        "position_f32_sha256": "6e6c8283471d7bd0abb628d2a5ad9ef3018243a5b4c43b7ef9c38029b5946143",
+        "raw_uv_f16_sha256": "12080d481e625fdf40125c2484e720b0e5dbded3740b2f3b6d9a72bd807eef06"
+      }
+    },
+    "damaged": {
+      "matc": {
+        "corners": 21168,
+        "position_f32_sha256": "ffd10561f900ae5f5825522d7a249ca7af1eb5462f6d633938bc1c3816f98946",
+        "raw_uv_f16_sha256": "b4d2bec0d87eab2dc01d907ad9c59a5fbc5fdab15d9f9bd275eb57e94cfb8720"
+      },
+      "mata": {
+        "corners": 38301,
+        "position_f32_sha256": "c98a64848812eee2ec630f3013c5dcbd58e3d32b89b3d3a58b3b1d926db15884",
+        "raw_uv_f16_sha256": "e2e7ec09dc267d047b57c91f56fabbd9a9b764a2e541e26524ab97418fa6389a"
+      },
+      "matz": {
+        "corners": 8400,
+        "position_f32_sha256": "dc4eccdb6454ff07409d434a33be03d0d0ffb3a4dca1c297cb065da52247ac5f",
+        "raw_uv_f16_sha256": "0976279fb8d8649d884c5df03de60a214c3571fd6817c60ff9f776039c5eacac"
+      },
+      "matd": {
+        "corners": 10608,
+        "position_f32_sha256": "73bacb55a8db28bff22c7460a4c329052a8fc3e35b8fdd2cac5c92b36ac1b429",
+        "raw_uv_f16_sha256": "d0e0e0552f4b259c87d06c05db0027e6e40111d74eaa17d104aeca6747e9e61d"
+      }
+    }
+  }
+}

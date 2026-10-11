@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "consulate-export-r1 construction p66 r1",
+  "author_blend_sha256": "476cc86cb3b31b1aee84e197ba1acdbbc95e91c2ad172e8afcb5235cc31ff2b9",
+  "author_payload_sha256": "63b82d5cf3491f2f7c79360491afcf19dc9f85661236b36fe4890e492c4333f0",
+  "provenance": "Korean Consulate korean_consulate_con consulate-export-r1 construction p66 r1: payload korean_consulate_con_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 18552,
+        "position_f32_sha256": "9ab770a0f4edc42c00c2b86e6ea8881db59a0263bc1487bcd882b2d939e9582e",
+        "raw_uv_f16_sha256": "2cd37b127f47fda2936048e73bf7b4736db9fb5296e9d8e8bdc9e23e4122f146"
+      },
+      "mata": {
+        "corners": 4740,
+        "position_f32_sha256": "1afb73e67095bdb0b33bce46c47dd40d41db39ddac9328654b1bc2bdba836c82",
+        "raw_uv_f16_sha256": "8dd1f865fcfc527a9ffc4d4e45d7ec22edecbbaca74097e713f4af06188014b9"
+      }
+    },
+    "damaged": {}
+  }
+}

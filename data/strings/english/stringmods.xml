@@ -83,6 +83,10 @@
       <string _locid="600076">Exalted upgrade for Gakgung Archers.</string>
       <string _locid="600077">Korean Dock (test)</string>
       <string _locid="600078">zzTEST Korean Dock (destruction bench)</string>
+      <string _locid="600079">Korean Consulate (test)</string>
+      <string _locid="600080">zzTEST Korean Consulate (construction and destruction bench)</string>
+      <string _locid="600081">Korean Monastery (test)</string>
+      <string _locid="600082">zzTEST Korean Monastery (construction and destruction bench)</string>
     </language>
   </stringtable>
 </stringmods>

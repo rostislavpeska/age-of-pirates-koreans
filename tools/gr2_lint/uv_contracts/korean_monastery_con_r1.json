@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "export_r1 Monastery construction p66 (UV c4r9e, freeze bbe13ef2)",
+  "author_blend_sha256": "1fbeab877605ecb3895e94af14dddb312cd190805e0bdcb11db5e32e662f69b5",
+  "author_payload_sha256": "6cd53a21f4f6cedc01d45b9b763b6e6dee42469fa7edfaea2aba2e28e618f3a2",
+  "provenance": "Korean Monastery korean_monastery_con export_r1 Monastery construction p66 (UV c4r9e, freeze bbe13ef2): payload korean_monastery_con_payload.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 20088,
+        "position_f32_sha256": "1d195359d2aa64c1a37c55240888e97392503063ceedd741c7a9d45ac8c909e2",
+        "raw_uv_f16_sha256": "540496690447a2efe49b303630b267c79462a907bb99544d03d242fc7188d049"
+      },
+      "mata": {
+        "corners": 1620,
+        "position_f32_sha256": "e2fc132275d7eae377c50b6a29d8c762263d12017b635ea1b89efb216c298872",
+        "raw_uv_f16_sha256": "9418e786fdf8827eff8862fc02a1ee3d0121b69a11d50337c9a6a12cfe500867"
+      }
+    },
+    "damaged": {}
+  }
+}

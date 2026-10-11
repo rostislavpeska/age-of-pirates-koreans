@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "consulate-export-r1 (UV c4r9c 1329c0d7, destruction r1)",
+  "author_blend_sha256": "1ad2f3b555e05c09a2255ca016da3763f780ca9ea80d3079655f89a6f84effb1",
+  "author_payload_sha256": "56d6a9f6fb7c7022f3c2ea864a8f7156cb28babf8c738ff461e6f2028e828cda",
+  "author_damaged_payload_sha256": "447a06c65e58977e2b35679a12a25136fc946c3a9364c62339cf3450efbfcab6",
+  "provenance": "Korean Consulate korean_consulate consulate-export-r1 (UV c4r9c 1329c0d7, destruction r1): payload korean_consulate_payload.json + consulate_damaged_payload_final.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 12615,
+        "position_f32_sha256": "7316e46f22c859c129d1d59fee7c0f33f1f645dcc118760354b2500c3fd34074",
+        "raw_uv_f16_sha256": "6980912b9c1afffc2743648976f1f2a523805e6a5100b8f93a90746c2838fa13"
+      },
+      "matc": {
+        "corners": 13125,
+        "position_f32_sha256": "95687ee25702dce68a011e300b34044f9119bb1502c23d616271d66ec38d529a",
+        "raw_uv_f16_sha256": "da72fb8bbe54f4decafa9a8244ef747e628dae0e80488afcd8639320e98aaf8e"
+      },
+      "matd": {
+        "corners": 22416,
+        "position_f32_sha256": "6c16c691053b94a810031c562e503eb76736074b44c1b322d40ee55e1bfd4eab",
+        "raw_uv_f16_sha256": "7c3d618a5cff1d6b841dca5195483ec7ca32cd41a3dfbdd73f5a08840c5f6cdb"
+      }
+    },
+    "damaged": {
+      "matc": {
+        "corners": 16905,
+        "position_f32_sha256": "ce394f39fb44fd740e33bbae04821ff22cab55cc2f705e4f9c89cfe9d7869f9e",
+        "raw_uv_f16_sha256": "025c7f461af38e25c3f0f9f8e4089c8e8e557bf854a8a6556f2c1b1a2331472c"
+      },
+      "mata": {
+        "corners": 19257,
+        "position_f32_sha256": "c1862be37d9aa16c64f2e3215c347ddc0a79caa9e27a0a4a5fb1c813a0d0111b",
+        "raw_uv_f16_sha256": "603112f15a3444dc201e864a760ad42d7fab41d1463e3ca0a0b93cefddd32885"
+      },
+      "matz": {
+        "corners": 7590,
+        "position_f32_sha256": "958009ebc500e66651b8551bd9e088188deb925ffc51b66d109685a006d51786",
+        "raw_uv_f16_sha256": "661db62458ad56421c5cbf379bf2801460e7e11dde6d8125d40480becc4bdaaa"
+      },
+      "matd": {
+        "corners": 22416,
+        "position_f32_sha256": "39e7294daf590e92fafabc336603dbced155708607bb9fc8731e91e2d1be3095",
+        "raw_uv_f16_sha256": "1c6937566d742c58cd016292b5d33580c21e9835a6468f57ce4b9d7994ad3610"
+      }
+    }
+  }
+}

@@ -1132,6 +1132,458 @@
     "name_board": null,
     "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
    }
+  },
+  "korean_consulate": {
+   "model": "korean_consulate",
+   "names": [
+    "Consulate",
+    "Korean Consulate"
+   ],
+   "_doc": "Korean Consulate (Discovery Age, korean-civic-pair export r1, UV c4r9c, pages final_r7): intact + damaged + HKT on the vanilla Japanese consulate age 1 donor graph (japan_consulate_age1(_damaged)); bone_flag_civ on the Consulate mast at the donor's own height below the tip, BONE_HITPOINTBAR over the roof; props on the shared Korean props page (matd).",
+   "files": {
+    "intact": "korean_consulate.gr2",
+    "damaged": "korean_consulate_damaged.gr2",
+    "hkt": "korean_consulate_damaged.hkt",
+    "intact_material": "korean_consulate.material",
+    "damaged_material": "korean_consulate_damaged.material",
+    "animfile": "korean_consulate.xml"
+   },
+   "texture_budget": {
+    "class": "small",
+    "confirmed_by": "owner-civic-small-confirm-2026-10-11",
+    "models": [
+     "korean_consulate"
+    ],
+    "_doc": "owner 2026-10-11: texture class small = one own 2048 page (CONSULATE_2048: walls, roofs, player colour) for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted. Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\".",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/consulate_shared_owner_evidence.json",
+       "sha256": "9c7e097f9bf1c0588d283c10bdea8da250b2e7a0f236759426dd403c8e12f89a",
+       "owner_quote": "Small: 1x2048 each (Recommended)"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/consulate_shared_owner_evidence.json",
+       "sha256": "9c7e097f9bf1c0588d283c10bdea8da250b2e7a0f236759426dd403c8e12f89a",
+       "owner_quote": "Small: 1x2048 each (Recommended)"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate and Monastery"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "bone_flag_civ",
+    "BONE_HITPOINTBAR",
+    "japan_consulate_age2",
+    "japan_consulate_age1_M0",
+    "japan_consulate_age1_M1",
+    "japan_consulate_age1"
+   ],
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   },
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_consulate_r1.json",
+    "sha256": "180da07a0198a8c70797800a3074f686ad7ee08a1a1eb5edfd84ee082ab729f5"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
+  },
+  "korean_consulate_con": {
+   "model": "korean_consulate",
+   "names": [
+    "Consulate",
+    "Korean Consulate"
+   ],
+   "_doc": "Korean Consulate last construction stage (p66): walls standing without roof under a fresh-timber roof frame on r65 (no windows, doors, gates, rails, flag or props); written on the intact donor with bone_flag_civ renamed bone_con_none (the vanilla con_stage3 donors have an unproven first-mesh vertex layout); the vanilla asi_4x4_stage2 scaffold is attached by the animfile",
+   "files": {
+    "intact": "korean_consulate_con.gr2",
+    "intact_material": "korean_consulate_con.material",
+    "animfile": "korean_consulate.xml"
+   },
+   "texture_budget": {
+    "class": "small",
+    "confirmed_by": "owner-civic-small-confirm-2026-10-11",
+    "models": [
+     "korean_consulate"
+    ],
+    "_doc": "owner 2026-10-11: texture class small = one own 2048 page (CONSULATE_2048: walls, roofs, player colour) for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted. Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\".",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/consulate_shared_owner_evidence.json",
+       "sha256": "9c7e097f9bf1c0588d283c10bdea8da250b2e7a0f236759426dd403c8e12f89a",
+       "owner_quote": "Small: 1x2048 each (Recommended)"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/consulate_shared_owner_evidence.json",
+       "sha256": "9c7e097f9bf1c0588d283c10bdea8da250b2e7a0f236759426dd403c8e12f89a",
+       "owner_quote": "Small: 1x2048 each (Recommended)"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate and Monastery"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "bone_con_none",
+    "BONE_HITPOINTBAR",
+    "japan_consulate_age2",
+    "japan_consulate_age1_M0",
+    "japan_consulate_age1_M1",
+    "japan_consulate_age1"
+   ],
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_consulate_con_r1.json",
+    "sha256": "2332ad7b4d772a809733b7668e228e143ad5bc5e18e2cb7a2cf8cdfe551a8c05"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
+  },
+  "korean_monastery": {
+   "model": "korean_monastery",
+   "names": [
+    "Monastery",
+    "Korean Monastery"
+   ],
+   "_doc": "Korean Monastery (Discovery Age, korean-civic-pair export r1, UV c4r9e incl. the lantern cap fixes, pages final_r7): intact + damaged + HKT on the vanilla Japanese monastery age 1 donor graph (japan_monastery_age1(_damaged)); bone_flag_civ on the finial mast at the donor's own distance below the spire tip, BONE_HITPOINTBAR over the crown roof at the donor clearance and beside the spire as the donor; four lanterns in the building model; props on the shared Korean props page (matd).",
+   "files": {
+    "intact": "korean_monastery.gr2",
+    "damaged": "korean_monastery_damaged.gr2",
+    "hkt": "korean_monastery_damaged.hkt",
+    "intact_material": "korean_monastery.material",
+    "damaged_material": "korean_monastery_damaged.material",
+    "animfile": "korean_monastery.xml"
+   },
+   "texture_budget": {
+    "class": "small",
+    "confirmed_by": "owner-civic-small-confirm-2026-10-11",
+    "models": [
+     "korean_monastery"
+    ],
+    "_doc": "owner 2026-10-11: texture class small = one own 2048 page (MONASTERY_2048: walls, roofs, lanterns, player colour) for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted. Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\". Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\".",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/monastery_shared_owner_evidence.json",
+       "sha256": "b3d324448089961fbe563df1aeae6da7fac03367cba425cc7e6a63dbbfc27911",
+       "owner_quote": "Small: 1x2048 each (Recommended)"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/monastery_shared_owner_evidence.json",
+       "sha256": "b3d324448089961fbe563df1aeae6da7fac03367cba425cc7e6a63dbbfc27911",
+       "owner_quote": "Small: 1x2048 each (Recommended)"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate and Monastery"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "China_MN_age01",
+    "bone_flag_civ",
+    "BONE_HITPOINTBAR",
+    "japan_monastery_age1",
+    "japan_monastery_age1_MT0"
+   ],
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   },
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_monastery_r1.json",
+    "sha256": "25d43ac300f203fa214eadec42cc53ef527461ad97edbd910f5b0156cef83848"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
+  },
+  "korean_monastery_con": {
+   "model": "korean_monastery",
+   "names": [
+    "Monastery",
+    "Korean Monastery"
+   ],
+   "_doc": "Korean Monastery last construction stage (p66): plinth, stair and the finished tier 1 walls/posts (rough openings) under a fresh-timber frame on r65 (tier 1/2 skirt roof frames, attic posts, gallery floor frames, tiers 2/3 as their final beam shape, the crown gable roof frame; no windows, doors, rails, roofs, finial, lanterns or props; no ladder); written on the vanilla japan_monastery_age1_con_stage3 donor (no flag bone); the vanilla asi_3x3_stage2 scaffold is attached by the animfile",
+   "files": {
+    "intact": "korean_monastery_con.gr2",
+    "intact_material": "korean_monastery_con.material",
+    "animfile": "korean_monastery.xml"
+   },
+   "texture_budget": {
+    "class": "small",
+    "confirmed_by": "owner-civic-small-confirm-2026-10-11",
+    "models": [
+     "korean_monastery"
+    ],
+    "_doc": "owner 2026-10-11: texture class small = one own 2048 page (MONASTERY_2048: walls, roofs, lanterns, player colour) for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted. Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\". Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\".",
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean shared matc r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/monastery_shared_owner_evidence.json",
+       "sha256": "b3d324448089961fbe563df1aeae6da7fac03367cba425cc7e6a63dbbfc27911",
+       "owner_quote": "Small: 1x2048 each (Recommended)"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/monastery_shared_owner_evidence.json",
+       "sha256": "b3d324448089961fbe563df1aeae6da7fac03367cba425cc7e6a63dbbfc27911",
+       "owner_quote": "Small: 1x2048 each (Recommended)"
+      },
+      "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate and Monastery"
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "China_MN_age01",
+    "BONE_HITPOINTBAR",
+    "japan_monastery_age1_con_stage3",
+    "japan_monastery_age1_con_stage3_M0",
+    "japan_monastery_age1_con_stage3_M1"
+   ],
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_monastery_con_r1.json",
+    "sha256": "4369b86870c093c3f821f993443e274c387847d67eee34d558544f3c53b904ec"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   }
   }
  }
 }

@@ -444,6 +444,62 @@
      "sha256": "752d4120c4e52a799b8c39dd0d4e3b14c9f30cff2b5a0b6eabdd4c0971a9d972"
     }
    }
+  },
+  {
+   "id": "korean_consulate_mata",
+   "status": "current",
+   "record": "korean-civic-pair-claude export_r1 (Consulate page CONSULATE_2048, tex_r1/final_r7, UV c4r9c)",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_consulate/textures/korean_consulate_mata_BaseColor",
+     "sha256": "96199833a89788b8fc883692eae772862bca7c9b108d141850f71db30dcae5bf"
+    },
+    "Normals": {
+     "path": "buildings/korean_consulate/textures/korean_consulate_mata_Normals",
+     "sha256": "fef760410ea9f48e915a0e23273ee2d4f82f0a4ced0810d33ff54ca9162e7aa4"
+    },
+    "Masks": {
+     "path": "buildings/korean_consulate/textures/korean_consulate_mata_Masks",
+     "sha256": "00a6c37c641549d363000e89a6b8d088fae1dfeddd04eb93027ccf2ee8435acb"
+    },
+    "Details": {
+     "path": "buildings/korean_consulate/textures/korean_consulate_mata_Details",
+     "sha256": "3d8c1839eb8bfa72849995b092089d16d1449ec5227dac0300289f232e651b37"
+    }
+   }
+  },
+  {
+   "id": "korean_monastery_mata",
+   "status": "current",
+   "record": "korean-civic-pair-claude export_r1 (Monastery page MONASTERY_2048, tex_r1/final_r7, UV c4r9e)",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_monastery/textures/korean_monastery_mata_BaseColor",
+     "sha256": "d85807291db044a7a7c120c5d95a64dcb7c8bd428b8332cb50ce68761efb82b1"
+    },
+    "Normals": {
+     "path": "buildings/korean_monastery/textures/korean_monastery_mata_Normals",
+     "sha256": "8d846a28ebf6a7c09e818c044ed7f527f26b780923ef172d0f1d3af94db7856f"
+    },
+    "Masks": {
+     "path": "buildings/korean_monastery/textures/korean_monastery_mata_Masks",
+     "sha256": "3f81d7061c78c190070e76ad6e7deef48d5a3e750336b5946b0a77e1a49f2c9a"
+    },
+    "Details": {
+     "path": "buildings/korean_monastery/textures/korean_monastery_mata_Details",
+     "sha256": "b314deb15073fac5bea2efeda92a27520af5d8cf1850f1bcf8358539edddd5e6"
+    }
+   }
   }
  ]
 }
