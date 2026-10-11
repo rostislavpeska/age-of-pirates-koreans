@@ -159,8 +159,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_a_r16d.json",
-    "sha256": "cf7c3263983fdfb99c65a1f06ddbec595e137869174aa14d4123bc664d488c8d"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_a_r16e.json",
+    "sha256": "6462db8bb010354eaf83c19a4ea07d0850c9c81b92e2eaa26ad9af31747d3caa"
    },
    "handedness": {
     "expect_sign": 1,
@@ -464,8 +464,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_b_r16d.json",
-    "sha256": "e2027cc318897722c420d79419f6b796ab798342e43ee5f34294b11cac3413e7"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_b_r16e.json",
+    "sha256": "efa80b5d1edd619abe44debc4346270679659974b0cfa38182a67c0708caade5"
    },
    "handedness": {
     "expect_sign": 1,
@@ -768,8 +768,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_c_r16d.json",
-    "sha256": "50609e8c4a163e26d95a4d554bb48f7429585f954b8cf7df914975faf30d808a"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_c_r16e.json",
+    "sha256": "2ef4b22e0dea49a75853254abc000c482336c5362da7e1fea82b30281beaa703"
    },
    "handedness": {
     "expect_sign": 1,
@@ -2394,8 +2394,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_a_age0_r1.json",
-    "sha256": "d764fe9c95dc71a194e6d752516d5015107464ef9c6fe75eca4cfbcccbac2e82"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_a_age0_r2.json",
+    "sha256": "1d12a49ed656c07e4de7b70de5c967f4284d2f00ee52465434f201e92c0f729c"
    },
    "handedness": {
     "expect_sign": 1,
@@ -2701,8 +2701,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_b_age0_r1.json",
-    "sha256": "c5a6d67d783de644b0ad51f92b7d5059306b2ac50e02f657d53fd648d6f4dc5a"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_b_age0_r2.json",
+    "sha256": "1a4f6e4dc94dbe57bd51112f1df38578224c156b3380c76f1c45064d80991def"
    },
    "handedness": {
     "expect_sign": 1,
@@ -3007,8 +3007,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_c_age0_r1.json",
-    "sha256": "8d1c025edda91755b65e2ac7d61bb8419c36ce4dd0e08aa23876dd2598a1c181"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_c_age0_r2.json",
+    "sha256": "cd9870bfb34daecb65ced3143bb191b6abf96d45af5113b16ac9e8a5686a5a89"
    },
    "handedness": {
     "expect_sign": 1,
