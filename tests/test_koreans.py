@@ -55,7 +55,7 @@ def test_techs_activate_japan_and_the_visual_marker():
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(93)]          # 600022-600027: zzTEST House benches A/B/C; 600048-49: zzTEST castle;
+    assert ids == [str(600000 + i) for i in range(95)]          # 600093-600094: Industrial Castle bench
                                                                 # 600077-600078: zzTEST Dock
                                                                 # 600079-600080: zzTEST Consulate
                                                                 # 600081-600082: zzTEST Monastery
@@ -508,7 +508,7 @@ def test_generated_files_are_current_and_buildings_switch_at_the_first_upgrade()
         assert path not in files and not (K / path).exists(), path
     assert build.hosted_problems() == [], 'run python tools/korean_visuals.py --write-aop'
     hosted = korean_visuals.aop_hosted()
-    for path, last, prefix in ((castle, 'ypfrontiercastle', 'korean_castle'), (consulate, 'none', 'korean_consulate')):
+    for path, last, prefix in ((castle, 'ypfortifiedcastle', 'korean_castle_industrial'), (consulate, 'none', 'korean_consulate')):
         want, have, _ = hosted[path]
         assert want == have, path
         root = ET.fromstring(have.decode('utf-8'))
@@ -516,7 +516,7 @@ def test_generated_files_are_current_and_buildings_switch_at_the_first_upgrade()
         branch = tech.find('zpkoreanvisuals/logic')
         assert [c.tag for c in tech][-1] == 'zpkoreanvisuals', path
         kids = [c.tag for c in branch]
-        assert kids == (['none', 'ypfrontiercastle'] if path == castle else ['none']), (path, kids)
+        assert kids == (['none', 'ypfrontiercastle', 'ypfortifiedcastle'] if path == castle else ['none']), (path, kids)
         refs = [r.get('ref') for r in branch.find(last).iter('submodelref')]
         assert refs and refs[-1] == prefix + '_built' and all(r.startswith(prefix) for r in refs), (path, refs)
     langs = [d for d in os.listdir(K / 'data/strings') if (K / 'data/strings' / d).is_dir()]

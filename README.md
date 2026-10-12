@@ -16,6 +16,17 @@ home city name and the AI personality Empress Myeongseong. What is still missing
 
 ## For maintainers and agents: this repository is the single source of truth
 
+Castle update (12 October 2026): the Colonial castle keeps the first researched
+upgrade (`ypFrontierCastle`); the Industrial castle now uses the second
+(`ypFortifiedCastle`). The Industrial set includes intact, construction and damaged
+models, donor-bound Havok, alpha reliefs and player-colour masks, including both
+top timber gables. Its editor bench is `zzTESTKoreanCastleIndustrial` (22023).
+Run `python tools/industrial_castle_qa.py --out <scratch-directory>` for the installed
+native-model, state-frame, collision-hull and attachment checks. These pass;
+destination-game rendering and destruction playback remain to be tested.
+Both upgrade branches are generated into AoP's hosted castle animfile by
+`python tools/korean_visuals.py --write-aop`; keep the two repositories updated together.
+
 Every Korean record, asset, tool and test lives here and is edited here. There is no second copy and no export
 from another repository (owner, 2026-10-08: "One source of truth"). AoP stays free of Korean civ records; its
 guard test is `scripts/tools/tests/test_no_korean_civ_in_aop.py` in AoP.

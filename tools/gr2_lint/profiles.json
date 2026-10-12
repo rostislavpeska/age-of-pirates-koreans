@@ -3160,6 +3160,326 @@
     "name_board": null,
     "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
    }
+  },
+  "korean_castle_industrial": {
+   "model": "korean_castle_industrial",
+   "names": [
+    "Castle",
+    "Industrial castle"
+   ],
+   "_doc": "Industrial castle canonical r14, full states: exact intact, new connected p66 frame, donor-bound fracture. No new geometry or texture tuning to the approved intact.",
+   "files": {
+    "intact": "korean_castle_industrial.gr2",
+    "intact_material": "korean_castle_industrial.material",
+    "damaged": "korean_castle_industrial_damaged.gr2",
+    "hkt": "korean_castle_industrial_damaged.hkt",
+    "damaged_material": "korean_castle_industrial_damaged.material",
+    "animfile": "korean_castle_industrial.xml"
+   },
+   "texture_budget": {
+    "class": "medium",
+    "confirmed_by": "owner-castle-medium-2026-10-10",
+    "models": [
+     "korean_castle_industrial"
+    ],
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean generic atlas r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_korean_generic_atlas_r65_owner.json",
+       "sha256": "24c55e148daa0ca0073c7686ce598c6af2cc4da62f226536c5ec6845ec343a2b",
+       "owner_quote": "This atlas has several tiles with severat materials. The invisivble inner faces should use these. NOT special separate textures which eats space amnd THEREFORE EATS MONEY FROM MY CREDIT CARD!!!!!"
+      }
+     },
+     {
+      "source_names": [
+       "Colonial castle basement"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor.ddt",
+        "sha256": "c1403a37bdf42e998f708e49b3ed8f84d5d0838c3f47d29379771102e9337cd2",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_castle/textures/korean_castle_mata_Normals.ddt",
+        "sha256": "cd652cbf4f2f14266ded5352f559c2ec2351ee2d81475b49fda563e883b9e119",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_castle/textures/korean_castle_mata_Masks.ddt",
+        "sha256": "feda11a02c403ab83434258d3e2de76aac03dddd7d27967f92a5fcad3e0980f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_colonial_castle_basement_owner.json",
+       "sha256": "1927464fbc0d3a0f37b1bf5a125b668b63f794191ae7509eb47ead5ae487ecf4",
+       "owner_quote": "and also we already have the basement texture . shared with colonial castle, so add it"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared guardian512"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_BaseColor.ddt",
+        "sha256": "2a66e13ffe247caa3205a836d7ecc6b0522c43d5ff3af7ab8c52741b75c14d3c",
+        "width": 512,
+        "height": 512
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Normals.ddt",
+        "sha256": "d3f43749dc4d02a70d694786af42bb5ae77f9aa66d2a57f088ca18e89920d274",
+        "width": 512,
+        "height": 512
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Masks.ddt",
+        "sha256": "2986ad3585f141a620276cac5d9aeb292dabc08595a31758690b23e4d3494721",
+        "width": 512,
+        "height": 512
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_korean_shared_guardian512_owner.json",
+       "sha256": "9b79f1bccc7688ebcda5d171200dc9fc00222bb3dc861f8bb7f55481e97d33c7",
+       "owner_quote": "and the jade figures - maybe define some standardized ones on 256 or 512 map so we can use them everywhere - rather 512 amnd possibly more types. I see at leat two here"
+      }
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "Object02",
+    "japanese_castle_age2",
+    "bone_garrisonflag",
+    "BONE_HITPOINTBAR",
+    "bone_launchpoint01",
+    "bone_launchpoint02",
+    "bone_launchpoint03",
+    "bone_launchpoint04",
+    "bone_launchpoint05",
+    "bone_launchpoint06"
+   ],
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r1.json",
+    "sha256": "77d4f54b8646c92a8b0f21e105235d6e78c127faa95b6406644d5db704fe7424"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   },
+   "ao_shared_uv_accepted_pages": [
+    {
+     "file": "korean_castle_mata_Masks.ddt",
+     "sha256": "feda11a02c403ab83434258d3e2de76aac03dddd7d27967f92a5fcad3e0980f7",
+     "max_m2": 0.8,
+     "owner_quote": "Castkle - no visible bugs",
+     "date": "2026-10-12",
+     "source_acceptance": "Existing korean_castle profile ao_shared_uv_owner; owner explicitly requested the unchanged shared Colonial basement on Industrial. Industrial uses exactly the same pinned Masks bytes. Its own pages retain the default 0.5 m2 limit."
+    }
+   ],
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   },
+   "physical_mounts": [
+    {
+     "bone": "bone_garrisonflag",
+     "position": [
+      0,
+      15.137509689331,
+      0
+     ],
+     "body": "flagpolegarrison_wood_solid_p2b_ondeath_01",
+     "bottom_y": 14.777509689331,
+     "top_y": 16.237509689331,
+     "radius_m": 0.09
+    }
+   ]
+  },
+  "korean_castle_industrial_con": {
+   "model": "korean_castle_industrial",
+   "names": [
+    "Castle",
+    "Industrial castle construction"
+   ],
+   "_doc": "Construction does not bake new AO; original shared/retained maps unchanged; full static and contact gates required.",
+   "files": {
+    "intact": "korean_castle_industrial_con.gr2",
+    "intact_material": "korean_castle_industrial_con.material"
+   },
+   "texture_budget": {
+    "class": "medium",
+    "confirmed_by": "owner-castle-medium-2026-10-10",
+    "models": [
+     "korean_castle_industrial"
+    ],
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Korean generic atlas r65"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+        "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+        "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+        "width": 1024,
+        "height": 1024
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+        "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+        "width": 1024,
+        "height": 1024
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_korean_generic_atlas_r65_owner.json",
+       "sha256": "24c55e148daa0ca0073c7686ce598c6af2cc4da62f226536c5ec6845ec343a2b",
+       "owner_quote": "This atlas has several tiles with severat materials. The invisivble inner faces should use these. NOT special separate textures which eats space amnd THEREFORE EATS MONEY FROM MY CREDIT CARD!!!!!"
+      }
+     },
+     {
+      "source_names": [
+       "Colonial castle basement"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor.ddt",
+        "sha256": "c1403a37bdf42e998f708e49b3ed8f84d5d0838c3f47d29379771102e9337cd2",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_castle/textures/korean_castle_mata_Normals.ddt",
+        "sha256": "cd652cbf4f2f14266ded5352f559c2ec2351ee2d81475b49fda563e883b9e119",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_castle/textures/korean_castle_mata_Masks.ddt",
+        "sha256": "feda11a02c403ab83434258d3e2de76aac03dddd7d27967f92a5fcad3e0980f7",
+        "width": 2048,
+        "height": 2048
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_colonial_castle_basement_owner.json",
+       "sha256": "1927464fbc0d3a0f37b1bf5a125b668b63f794191ae7509eb47ead5ae487ecf4",
+       "owner_quote": "and also we already have the basement texture . shared with colonial castle, so add it"
+      }
+     },
+     {
+      "source_names": [
+       "Korean shared guardian512"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_BaseColor.ddt",
+        "sha256": "2a66e13ffe247caa3205a836d7ecc6b0522c43d5ff3af7ab8c52741b75c14d3c",
+        "width": 512,
+        "height": 512
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Normals.ddt",
+        "sha256": "d3f43749dc4d02a70d694786af42bb5ae77f9aa66d2a57f088ca18e89920d274",
+        "width": 512,
+        "height": 512
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Masks.ddt",
+        "sha256": "2986ad3585f141a620276cac5d9aeb292dabc08595a31758690b23e4d3494721",
+        "width": 512,
+        "height": 512
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_korean_shared_guardian512_owner.json",
+       "sha256": "9b79f1bccc7688ebcda5d171200dc9fc00222bb3dc861f8bb7f55481e97d33c7",
+       "owner_quote": "and the jade figures - maybe define some standardized ones on 256 or 512 map so we can use them everywhere - rather 512 amnd possibly more types. I see at leat two here"
+      }
+     }
+    ]
+   },
+   "waivers": [],
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "Object02",
+    "japanese_castle_age2_construction",
+    "japanese_castle_age2_construction_M0",
+    "BONE_HITPOINTBAR"
+   ],
+   "uv_contract": {
+    "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_con_r1.json",
+    "sha256": "489a0253dbc825f6af2512572fccb792d6af8abc64562c35b671316b765f5bb1"
+   },
+   "handedness": {
+    "expect_sign": 1,
+    "min_fraction": 0.6,
+    "name_board": null,
+    "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+   },
+   "ao_shared_uv_accepted_pages": [
+    {
+     "file": "korean_castle_mata_Masks.ddt",
+     "sha256": "feda11a02c403ab83434258d3e2de76aac03dddd7d27967f92a5fcad3e0980f7",
+     "max_m2": 0.8,
+     "owner_quote": "Castkle - no visible bugs",
+     "date": "2026-10-12",
+     "source_acceptance": "Existing korean_castle profile ao_shared_uv_owner; owner explicitly requested the unchanged shared Colonial basement on Industrial. Industrial uses exactly the same pinned Masks bytes. Its own pages retain the default 0.5 m2 limit."
+    }
+   ]
   }
  }
 }

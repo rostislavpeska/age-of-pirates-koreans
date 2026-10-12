@@ -27,7 +27,7 @@ def norm(path):
 
 def test_every_korean_building_has_a_test_bed():
     by_anim = {norm(u.findtext("animfile")): n for n, u in BENCHES.items()}
-    missing = [src for _, _, src, *_ in korean_visuals.BUILDINGS if norm(src) not in by_anim]
+    missing = [src for src in korean_visuals.source_animfiles() if norm(src) not in by_anim]
     assert not missing, f"no zzTEST bench loads these Korean animfiles: {missing} (add one to the zzTEST block of data/protomods.xml)"
     assert all(h in BENCHES for h in HOUSE_BENCHES)
 

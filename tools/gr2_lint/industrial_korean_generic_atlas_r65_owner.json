@@ -1,0 +1,13 @@
+{
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner instructions in active Codex Korean castle conversation, 2026-10-12; exact text retained. Existing pages are reused by this derivative.",
+  "owner_quote": "This atlas has several tiles with severat materials. The invisivble inner faces should use these. NOT special separate textures which eats space amnd THEREFORE EATS MONEY FROM MY CREDIT CARD!!!!!",
+  "models": [
+    "korean_castle_industrial"
+  ],
+  "source_names": [
+    "Korean generic atlas r65"
+  ]
+}

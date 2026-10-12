@@ -1,0 +1,13 @@
+{
+  "authority": "owner",
+  "kind": "recorded_owner_chat",
+  "purpose": "shared_mod_dependencies",
+  "source_citation": "Owner instructions in active Codex Korean castle conversation, 2026-10-12; exact text retained. Existing pages are reused by this derivative.",
+  "owner_quote": "and also we already have the basement texture . shared with colonial castle, so add it",
+  "models": [
+    "korean_castle_industrial"
+  ],
+  "source_names": [
+    "Colonial castle basement"
+  ]
+}

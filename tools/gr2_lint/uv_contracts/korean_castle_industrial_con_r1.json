@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "Industrial p66 from r14, retained exact, fresh atlas timber",
+  "expected": {
+    "intact": {
+      "matc": {
+        "corners": 24060,
+        "position_f32_sha256": "206b2e8879f06f24f67cda66ff79c3fa7ec4cf5f9505fda7bd73520f25859b85",
+        "raw_uv_f16_sha256": "bb9e589be0bb3f4acb5ca336f64642fcd6d91a18b5de0707efa771285ed20d94"
+      },
+      "mata": {
+        "corners": 1362,
+        "position_f32_sha256": "718bfbe823bb4371e1d00cdf378502cf8c66b2af42d49e36ac29c93af3540015",
+        "raw_uv_f16_sha256": "16b209cdf4071ddbcb26c28e99ccb78fc11706b030e25ca848c0b5928a54c56a"
+      },
+      "matd": {
+        "corners": 6918,
+        "position_f32_sha256": "4cd6e14a7a98611b23eea8a70a9d283aad36757685523ebe20f77c8ce6643315",
+        "raw_uv_f16_sha256": "8ba18dfc7b269ac9879b1c9e569859f40acc65e68eb09e78c90266b1094df736"
+      },
+      "matb": {
+        "corners": 84,
+        "position_f32_sha256": "f47ca84bbf9c13263c26666868f47aeaba23ef5ebfc016b79ae7ffb0eb9145f9",
+        "raw_uv_f16_sha256": "8dd01529c37661e88b358cf753351bf24c683363509caeb62e71b1c6d10cf454"
+      }
+    },
+    "damaged": {}
+  }
+}

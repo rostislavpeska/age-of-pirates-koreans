@@ -96,6 +96,18 @@ BUILDINGS = [
 
 MARKER = 'zpkoreanvisuals'
 
+# Owner 2026-10-12: both canonical castles implemented, Industrial on the second upgrade.
+UPGRADES = {
+    'art/buildings/asian_civs/castle/castle.xml': [
+        ('ypfortifiedcastle', 'art/buildings/korean_castle_industrial/korean_castle_industrial.xml', False),
+    ],
+}
+
+
+def source_animfiles():
+    """Every own variant, including later tiers that also need a test bed."""
+    return [b[2] for b in BUILDINGS] + [src for tiers in UPGRADES.values() for _, src, _ in tiers]
+
 # Hosted by AoP (owner 2026-10-10: "OR AoP can directly have Korean civ in that file. If civ doesn't exist nothing
 # happens", "So only castle.xml edit"): AoP ships its own castle.xml override, so a copy here lost to it whenever AoP
 # stood above the add-on in mod priority (the Japanese castle in game, 2026-10-10). AoP's file now carries the Korean
@@ -175,13 +187,21 @@ def tech_logic_span(text, culture):
     raise ValueError('unbalanced Tech logic in <%s>' % culture)
 
 
-def merge(vanilla, korean_text, culture, add_attack, first='colonialize'):
+def merge(vanilla, korean_text, culture, add_attack, first='colonialize', upgrades=()):
     bones, subs, completion = korean_parts(korean_text, add_attack)
+    tiers = [(first, completion)]
+    for tech, text, attack in upgrades:
+        more_bones, more_subs, more_completion = korean_parts(text, attack)
+        bones += more_bones
+        subs += more_subs
+        tiers.append((tech, more_completion))
+    assert len({t for t, _ in tiers}) == len(tiers), 'duplicate Korean art tier'
     have = {b.lower() for b in re.findall(r'<definebone>([^<]+)</definebone>', vanilla)}
     vsubs = {s.lower() for s in re.findall(r'<submodel>([^<\s]+)', vanilla)}
     for s in subs:
         name = re.match(r'  <submodel>([^<\s]+)', s).group(1)
         assert name.lower() not in vsubs, 'submodel name collides with vanilla: ' + name
+        vsubs.add(name.lower())
     out = vanilla
     # 1. bones vanilla lacks, after the last vanilla definebone
     new_bones, seen = [], set()
@@ -206,16 +226,18 @@ def merge(vanilla, korean_text, culture, add_attack, first='colonialize'):
     if ind.strip():                              # a compact base (AoP's castle.xml: one line per culture branch):
         none = re.match(r'<logic type="Tech">\s*(<none>.*?</none>)', out[t0:t1], re.S)   # the marker goes in inline
         block = ''.join(['<%s><logic type="Tech">' % MARKER, none.group(1) if none and first != 'none' else '',
-                         '<%s>' % first, completion, '</%s></logic></%s>' % (first, MARKER)])
+                         ''.join('<%s>%s</%s>' % (tech, comp, tech) for tech, comp in tiers),
+                         '</logic></%s>' % MARKER])
         return out[:close] + block + out[close:]
     none = re.search(r'\n(%s  <none>\n.*?\n%s  </none>)\n' % (ind, ind), out[t0:t1], re.S)
-    korean = '\n'.join((ind + '        ' + l[4:]) if l.startswith('    ') else (ind + '        ' + l)
-                       for l in completion.split('\n'))
     parts = ['%s  <%s>' % (ind, MARKER), '%s    <logic type="Tech">' % ind]
     if none and first != 'none':                 # the vanilla stable has no <none> branch; first 'none' = Korean from age 1
         parts.append('\n'.join('    ' + l for l in none.group(1).split('\n')))
-    parts += ['%s      <%s>' % (ind, first), korean, '%s      </%s>' % (ind, first),
-              '%s    </logic>' % ind, '%s  </%s>' % (ind, MARKER)]
+    for tech, comp in tiers:
+        korean = '\n'.join((ind + '        ' + l[4:]) if l.startswith('    ') else (ind + '        ' + l)
+                           for l in comp.split('\n'))
+        parts += ['%s      <%s>' % (ind, tech), korean, '%s      </%s>' % (ind, tech)]
+    parts += ['%s    </logic>' % ind, '%s  </%s>' % (ind, MARKER)]
     out = out[:line0] + '\n'.join(parts) + '\n' + out[line0:]
     return out
 
@@ -233,7 +255,7 @@ def canon(e):
     return (e.tag, sorted(e.attrib.items()), (e.text or '').strip(), [canon(c) for c in e])
 
 
-def verify(text, culture, first='colonialize'):
+def verify(text, culture, first='colonialize', upgrades=()):
     root = ET.fromstring(text)
     # case-insensitive: vanilla town_center.xml itself refers to lak_sub_construction_stage_02 in another case
     names = {(s.text or '').strip().lower() for s in root.iter('submodel')}
@@ -251,7 +273,8 @@ def verify(text, culture, first='colonialize'):
             inner = tech.find(MARKER).find('logic')
             assert inner.get('type') == 'Tech'
             ages = [c.tag for c in inner]
-            assert ages[-1] == first and ages[:-1] in ([], ['none']), ages
+            expected = [first] + list(upgrades)
+            assert ages in (expected, ['none'] + expected if first != 'none' else expected), ages
             if 'none' in kids and first != 'none':   # the Discovery Age branch is a copy of vanilla's (indentation aside)
                 assert canon(inner.find('none')) == canon(tech.find('none'))
             return kids + ['/'.join(ages)]
@@ -267,8 +290,9 @@ def build(aop_root=AOP):
         first = opt[0] if opt else 'colonialize'
         own = os.path.join(aop_root, out_path)
         base = read(out_path, aop_root) if os.path.isfile(own) else vanilla_text(archive)
-        merged = merge(base, read(src, REPO), culture, attack, first)   # the Korean model: this repo
-        out[out_path] = (merged.replace('\n', '\r\n').encode('utf-8'), verify(merged, culture, first),
+        upgrades = [(tech, read(path, REPO), atk) for tech, path, atk in UPGRADES.get(out_path, [])]
+        merged = merge(base, read(src, REPO), culture, attack, first, upgrades)   # the Korean model: this repo
+        out[out_path] = (merged.replace('\n', '\r\n').encode('utf-8'), verify(merged, culture, first, [t[0] for t in upgrades]),
                          'AoP override' if os.path.isfile(own) else 'vanilla')
     return out
 
@@ -283,8 +307,13 @@ def aop_hosted(aop_root=AOP):
         first = opt[0] if opt else 'colonialize'
         korean = read(src, REPO)
         have = open(os.path.join(aop_root, out_path), 'rb').read()
-        merged = merge(strip(read(out_path, aop_root), korean), korean, culture, attack, first)
-        out[out_path] = (merged.replace('\n', '\r\n').encode('utf-8'), have, verify(merged, culture, first))
+        upgrades = [(tech, read(path, REPO), atk) for tech, path, atk in UPGRADES.get(out_path, [])]
+        base = strip(read(out_path, aop_root), korean)
+        for _, text, _ in upgrades:
+            base = strip(base, text)
+        merged = merge(base, korean, culture, attack, first, upgrades)
+        out[out_path] = (merged.replace('\n', '\r\n').encode('utf-8'), have,
+                         verify(merged, culture, first, [t[0] for t in upgrades]))
     return out
 
 

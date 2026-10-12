@@ -660,6 +660,86 @@
      "sha256": "468f68d21b41e5c4a9bda65b1469190e302a49c8fd54532b88534a684ec0a96e"
     }
    }
+  },
+  {
+   "id": "korean_castle_industrial_mata",
+   "status": "current",
+   "record": "korean-buildings-blender research/Industrial_Castle_21/runtime_r1/README.md; exact r14 source, runtime-r1 export",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_mata_BaseColor",
+     "sha256": "5e1c1f5cbb988a94cdbaa508ef7ca700d710452c95716e8eda9d8422923c376c"
+    },
+    "Normals": {
+     "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_mata_Normals",
+     "sha256": "f26188a4bc20120fe306682a3f0fd91e78681f27c5985b87160c3caf50843211"
+    },
+    "Masks": {
+     "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_mata_Masks",
+     "sha256": "8731b595d7f8972e9e0ce69d7a6b9689523ec3223b21e9c73f1b014fddb4282f"
+    },
+    "Details": {
+     "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_mata_Details",
+     "sha256": "59a795afda3a4f4d614272388f7d41ea076ba050f1e3f3eac524fe3d506e11ef"
+    }
+   }
+  },
+  {
+   "id": "korean_castle_industrial_matb",
+   "status": "current",
+   "record": "korean-buildings-blender research/Industrial_Castle_21/runtime_r1/README.md; exact r14 source, runtime-r1 export",
+   "page": [
+    1024,
+    1024
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_matb_BaseColor",
+     "sha256": "f6ca85e017b40b3c57f38ecd955d9c93af361ccf4d0e96430c271c97d5f89f65"
+    },
+    "Normals": {
+     "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_matb_Normals",
+     "sha256": "3d7400559d006fca033135c5b447b20c49b28618b52038a8cef5f5452b8e8323"
+    },
+    "Masks": {
+     "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_matb_Masks",
+     "sha256": "afd6599e1356e6ccd614c59414997a57a8f02106ca7f60d90d3ded476219fcfc"
+    },
+    "Details": {
+     "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_matb_Details",
+     "sha256": "ebfb3c2bdd0f33e5ce9ce6361b8203770ab7194fe56d3960ad0f6e15aba68915"
+    }
+   }
+  },
+  {
+   "id": "korean_shared_guardians_r14",
+   "status": "current",
+   "record": "korean-buildings-blender research/Industrial_Castle_21/runtime_r1/README.md; exact r14 source, runtime-r1 export",
+   "page": [
+    512,
+    512
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_BaseColor",
+     "sha256": "2a66e13ffe247caa3205a836d7ecc6b0522c43d5ff3af7ab8c52741b75c14d3c"
+    },
+    "Normals": {
+     "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Normals",
+     "sha256": "d3f43749dc4d02a70d694786af42bb5ae77f9aa66d2a57f088ca18e89920d274"
+    },
+    "Masks": {
+     "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Masks",
+     "sha256": "2986ad3585f141a620276cac5d9aeb292dabc08595a31758690b23e4d3494721"
+    }
+   }
   }
  ]
 }

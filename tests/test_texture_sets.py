@@ -29,7 +29,8 @@ from gr2_lint import read_raw  # noqa: E402
 REGISTRY = K / "tools" / "texture_sets.json"
 REG = TS.load_registry(REGISTRY)
 KOREAN_TEXTURE_DIRS = ("buildings/korean_tc/textures", "buildings/korean_shared/textures",
-                       "zbench_korean_military/barracks/textures", "zbench_korean_military/stable/textures")
+                       "zbench_korean_military/barracks/textures", "zbench_korean_military/stable/textures",
+                       "buildings/korean_castle_industrial/textures")
 KOREAN_MODELS = [("buildings/korean_tc/korean_tc.gr2", "buildings/korean_tc/korean_tc.material"),
                  ("buildings/korean_tc/korean_tc_damaged.gr2", "buildings/korean_tc/korean_tc_damaged.material"),
                  ("buildings/korean_tc/korean_tc_con.gr2", "buildings/korean_tc/korean_tc_con.material"),
@@ -37,6 +38,9 @@ KOREAN_MODELS = [("buildings/korean_tc/korean_tc.gr2", "buildings/korean_tc/kore
                  ("zbench_korean_military/barracks/korean_barracks_physics_damaged.gr2", "zbench_korean_military/barracks/korean_barracks_physics_damaged.material"),
                  ("zbench_korean_military/stable/korean_stable_physics.gr2", "zbench_korean_military/stable/korean_stable_physics.material"),
                  ("zbench_korean_military/stable/korean_stable_physics_damaged.gr2", "zbench_korean_military/stable/korean_stable_physics_damaged.material")]
+KOREAN_MODELS += [("buildings/korean_castle_industrial/korean_castle_industrial" + s + ".gr2",
+                   "buildings/korean_castle_industrial/korean_castle_industrial" + s + ".material")
+                  for s in ("", "_con", "_damaged")]
 
 
 def test_the_models_find_this_registry():

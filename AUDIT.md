@@ -5,6 +5,19 @@ everything still missing for a fully playable, fully Korean civilization, most i
 
 ## Done
 
+**Castle checkpoint, 12 October 2026:** the historical castle paragraph below
+describes the first installation. It is superseded by Colonial r15 textures and
+Industrial r16 runtime: the first upgrade is Colonial, the second Industrial.
+Industrial has all three states and a separate bench (22023); 38 intact/damaged
+and 17 construction native checks pass, plus strict HKT pairing/containment,
+state alignment and attachments. Its 2048 + 1024 own pages reuse the existing
+generic atlas, Colonial basement and shared 512 guardian resource. Gable player
+colour survives in both intact/damaged material bindings. Alpha cutoff matches
+source at every mip. Add-on suite: 73 passed, 2 existing expected failures.
+This is installed/offline-verified, not an in-game visual or physics acceptance.
+Unused donor hulls and convex-hull bridging remain a gameplay-test limitation.
+The two pre-existing wagon-sound shadows are still open; no new castle shadow.
+
 | Part | State | Verified |
 |---|---|---|
 | Civ `zpKoreans` (lobby + editor, hotkey K) | vanilla Japanese entry field for field, own name/rollover | owner's match 2026-10-08: civ picked, match started |
