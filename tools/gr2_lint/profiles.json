@@ -1936,7 +1936,7 @@
    },
    "texture_budget": {
     "class": "small",
-    "status": "proposed, owner to confirm by name (the page is the owner's: \"Try 1x1024 texture with alpha layer\", owner-ricepaddy-1024-2026-10-11, which names neither the class nor the building)",
+    "confirmed_by": "owner-ricepaddy-market-classes-2026-10-12",
     "models": [
      "korean_rice_paddy"
     ],
