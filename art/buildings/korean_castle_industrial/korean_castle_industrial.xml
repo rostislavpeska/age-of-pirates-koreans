@@ -1,4 +1,6 @@
 <animfile>
+  <definebone>bone_banner_l</definebone>
+  <definebone>bone_banner_r</definebone>
   <definebone>bone_flag_civ</definebone>
   <definebone>bone_smoke</definebone>
   <definebone>bone_fire</definebone>
@@ -109,6 +111,8 @@
     <anim>Idle<component>collapse_smoke</component>
     </anim>
   </attachment>
+  <attachment>korean_castle_banner<include>buildings\korean_castle\banner\korean_castle_banner.xml</include>
+  </attachment>
   <component>LIVE<logic type="Destruction">
       <p1>
         <assetreference type="GrannyModel">
@@ -146,6 +150,8 @@
     <simskeleton>
       <model>buildings\korean_castle_industrial\korean_castle_industrial_damaged</model>
     </simskeleton>
+    <attach a="korean_castle_banner" frombone="bone_main" tobone="bone_banner_l" syncanims="0"/>
+    <attach a="korean_castle_banner" frombone="bone_main" tobone="bone_banner_r" syncanims="0"/>
     </anim>
     <anim>RangedAttack<assetreference type="GrannyAnim">
         <file>animation_library\building\ranged_attack</file>
@@ -156,6 +162,8 @@
       <simskeleton>
         <model>buildings\korean_castle_industrial\korean_castle_industrial_damaged</model>
       </simskeleton>
+    <attach a="korean_castle_banner" frombone="bone_main" tobone="bone_banner_l" syncanims="0"/>
+    <attach a="korean_castle_banner" frombone="bone_main" tobone="bone_banner_r" syncanims="0"/>
     </anim>
     <anim>RangedAttackShip<assetreference type="GrannyAnim">
         <file>animation_library\building\ranged_attack</file>
@@ -166,6 +174,8 @@
       <simskeleton>
         <model>buildings\korean_castle_industrial\korean_castle_industrial_damaged</model>
       </simskeleton>
+    <attach a="korean_castle_banner" frombone="bone_main" tobone="bone_banner_l" syncanims="0"/>
+    <attach a="korean_castle_banner" frombone="bone_main" tobone="bone_banner_r" syncanims="0"/>
     </anim>
   <anim>Death<component>DEAD</component>
     <attach a="collapse_smoke" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0"/>

@@ -920,8 +920,11 @@
    }
   },
   "korean_castle": {
-      "ao_shared_uv_max_m2": 0.8,
-      "ao_shared_uv_owner": {"quote": "Castkle - no visible bugs", "at": "2026-10-12"},
+   "ao_shared_uv_max_m2": 0.8,
+   "ao_shared_uv_owner": {
+    "quote": "Castkle - no visible bugs",
+    "at": "2026-10-12"
+   },
    "model": "korean_castle",
    "names": [
     "Castle",
@@ -1100,7 +1103,17 @@
     "min_fraction": 0.6,
     "name_board": null,
     "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
-   }
+   },
+   "ao_shared_uv_accepted_pages": [
+    {
+     "file": "korean_castle_mata_Masks.ddt",
+     "sha256": "1a017798c9905e7c945a5e77b903a2e41e1f3ddaa876cd5d3c00a798091e7767",
+     "max_m2": 0.8,
+     "owner_quote": "Castkle - no visible bugs",
+     "date": "2026-10-12",
+     "source_acceptance": "Same unchanged AO channel and same Colonial castle own page accepted by owner on 2026-10-12 (b7f542c). Existing Industrial construction profile already carries this page-specific acceptance. Restores missing coverage for the Colonial construction state; does not accept any new AO or other pages."
+    }
+   ]
   },
   "korean_dock": {
    "model": "korean_dock",
@@ -3221,7 +3234,7 @@
       "files": [
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor.ddt",
-        "sha256": "c1403a37bdf42e998f708e49b3ed8f84d5d0838c3f47d29379771102e9337cd2",
+        "sha256": "f6a1c5ba1bdc677190840d606b57dfb5e219cba68cc2fdd387384a82342152bc",
         "width": 2048,
         "height": 2048
        },
@@ -3233,7 +3246,7 @@
        },
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_Masks.ddt",
-        "sha256": "feda11a02c403ab83434258d3e2de76aac03dddd7d27967f92a5fcad3e0980f7",
+        "sha256": "1a017798c9905e7c945a5e77b903a2e41e1f3ddaa876cd5d3c00a798091e7767",
         "width": 2048,
         "height": 2048
        }
@@ -3294,7 +3307,9 @@
     "bone_launchpoint03",
     "bone_launchpoint04",
     "bone_launchpoint05",
-    "bone_launchpoint06"
+    "bone_launchpoint06",
+    "bone_banner_l",
+    "bone_banner_r"
    ],
    "uv_contract": {
     "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r1.json",
@@ -3309,7 +3324,7 @@
    "ao_shared_uv_accepted_pages": [
     {
      "file": "korean_castle_mata_Masks.ddt",
-     "sha256": "feda11a02c403ab83434258d3e2de76aac03dddd7d27967f92a5fcad3e0980f7",
+     "sha256": "1a017798c9905e7c945a5e77b903a2e41e1f3ddaa876cd5d3c00a798091e7767",
      "max_m2": 0.8,
      "owner_quote": "Castkle - no visible bugs",
      "date": "2026-10-12",
@@ -3391,7 +3406,7 @@
       "files": [
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor.ddt",
-        "sha256": "c1403a37bdf42e998f708e49b3ed8f84d5d0838c3f47d29379771102e9337cd2",
+        "sha256": "f6a1c5ba1bdc677190840d606b57dfb5e219cba68cc2fdd387384a82342152bc",
         "width": 2048,
         "height": 2048
        },
@@ -3403,7 +3418,7 @@
        },
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_Masks.ddt",
-        "sha256": "feda11a02c403ab83434258d3e2de76aac03dddd7d27967f92a5fcad3e0980f7",
+        "sha256": "1a017798c9905e7c945a5e77b903a2e41e1f3ddaa876cd5d3c00a798091e7767",
         "width": 2048,
         "height": 2048
        }
@@ -3473,7 +3488,7 @@
    "ao_shared_uv_accepted_pages": [
     {
      "file": "korean_castle_mata_Masks.ddt",
-     "sha256": "feda11a02c403ab83434258d3e2de76aac03dddd7d27967f92a5fcad3e0980f7",
+     "sha256": "1a017798c9905e7c945a5e77b903a2e41e1f3ddaa876cd5d3c00a798091e7767",
      "max_m2": 0.8,
      "owner_quote": "Castkle - no visible bugs",
      "date": "2026-10-12",

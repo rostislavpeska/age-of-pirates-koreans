@@ -47,4 +47,15 @@ def test_industrial_player_colour_is_bound_in_intact_and_damaged():
     root = E.parse(folder / 'korean_castle_industrial.xml')
     models = [m.text for m in root.findall('.//simskeleton/model')]
     assert models and set(models) == {'buildings\\korean_castle_industrial\\korean_castle_industrial_damaged'}
-    assert not any('banner' in (e.text or '') for e in root.iter('attachment'))
+    banner = root.find(".//attachment[include='buildings\\korean_castle\\banner\\korean_castle_banner.xml']")
+    assert banner is not None and (banner.text or '').strip() == 'korean_castle_banner'
+    # Each live action uses the same existing left/right Korean banners.
+    live_anims = [a for a in root.findall('.//anim') if a.findtext('component') == 'LIVE']
+    assert len(live_anims) == 3
+    for anim in live_anims:
+        banners = anim.findall("attach[@a='korean_castle_banner']")
+        assert {b.get('tobone') for b in banners} == {'bone_banner_l', 'bone_banner_r'}
+        assert all(b.get('frombone') == 'bone_main' for b in banners)
+    for anim in root.findall('.//anim'):
+        if anim.findtext('component') != 'LIVE':
+            assert not anim.findall("attach[@a='korean_castle_banner']")
