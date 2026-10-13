@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "Owner-authorized door relocation, two rails removed and rear TOP gable from existing chart; original gr2canon_r2 UVs frozen",
+  "author_payload_sha256": "acc2f474ffc5df05665dda9df04fb564ed479be77e7428506842dffdd046a6dc",
+  "provenance": "Expected from ORIGINAL canonical GR2 source + explicit geometric transform/filter recipe and GABLE_ADDITION.npz, independent of edited runtime file. Original UV values unchanged; new crown UVs interpolate within existing gable chart.",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 5652,
+        "position_f32_sha256": "5af1b3ff9257ef1c05a5b047451ae887f8ea629cf5fe27fc9293ace1ff969526",
+        "raw_uv_f16_sha256": "9d58f24cf30a92befe0f64c036351eeb6d8dcccac5ceb32584a3ac315e594b47"
+      },
+      "matc": {
+        "corners": 20043,
+        "position_f32_sha256": "20a6eaaa4ec2791e8d68539bca41a67b234fdf3ef53f12ccf85a95bff41abeb4",
+        "raw_uv_f16_sha256": "6aae63c2e393c84bfd663f2c20b5d47b7ae53a218d589089d5d8b654c1833316"
+      }
+    },
+    "damaged": {}
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "Owner-authorized door relocation, two rails removed and rear TOP gable from existing chart; original gr2canon_r2 UVs frozen",
+  "author_payload_sha256": "acc2f474ffc5df05665dda9df04fb564ed479be77e7428506842dffdd046a6dc",
+  "provenance": "Expected from ORIGINAL canonical GR2 source + explicit geometric transform/filter recipe and GABLE_ADDITION.npz, independent of edited runtime file. Original UV values unchanged; new crown UVs interpolate within existing gable chart.",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 15999,
+        "position_f32_sha256": "2ed62f6b073e43dc0f659074abfebcab87cdb3f94b5cfaa559d65f3181e137ec",
+        "raw_uv_f16_sha256": "ee10fabb6a25dca26d4327e9c0076cb79ff9a858a1fc73b7182862f87bea9b06"
+      },
+      "matc": {
+        "corners": 11478,
+        "position_f32_sha256": "2f5d6af59b474d0514cc6ded1e3ecead26611cccdca9b630e0ee3e7b0aa886dc",
+        "raw_uv_f16_sha256": "44b8de22f1d18a2c8f53563cac54a7f37ba69ec50df0ea0d012133876efc5a8a"
+      },
+      "matb": {
+        "corners": 1344,
+        "position_f32_sha256": "9682884ddb1f5892622ee300e0aa410672969488fc470993c5bbdf16fa48cea2",
+        "raw_uv_f16_sha256": "140663c7cacee569388adc2585374ad8509699ba45384a6fe03d0a5b05b64557"
+      }
+    },
+    "damaged": {
+      "mata": {
+        "corners": 26442,
+        "position_f32_sha256": "d5d0d85cac6fbd8413ec87999dcfdec6adad27c1239d8b0077b0183560564479",
+        "raw_uv_f16_sha256": "e7e7c6d3210575484bdf5263622b7372bb3ab7631f57c0a05c463e392ec65bb3"
+      },
+      "matc": {
+        "corners": 26460,
+        "position_f32_sha256": "3dc62129db4208e77234dba0531cb05527b1789d6072579c257c17d61999e836",
+        "raw_uv_f16_sha256": "7d11493d4a1ee3d4d160e51d799b3234b1e98f6a3f9f1f879dd8706a41d826e4"
+      },
+      "matb": {
+        "corners": 1344,
+        "position_f32_sha256": "9682884ddb1f5892622ee300e0aa410672969488fc470993c5bbdf16fa48cea2",
+        "raw_uv_f16_sha256": "140663c7cacee569388adc2585374ad8509699ba45384a6fe03d0a5b05b64557"
+      },
+      "matz": {
+        "corners": 9135,
+        "position_f32_sha256": "0a137515933f6d212f027796f727fec14358516d18bc69c4266a48b88a7fcd95",
+        "raw_uv_f16_sha256": "68dbc0233716b4d54590ede6b24aef0646988250471d340478a79eeed046eefa"
+      }
+    }
+  }
+}
