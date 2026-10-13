@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "rice-receiver-r2-20261013",
+  "author_blend_sha256": "59b32a2d8c63911abf1fdd51cab94b67723e5defda26c38c16525a64bfce5844",
+  "author_payload_sha256": "d44f80cbe10ab3b8d5cfb2c63c45ff5f7e3446c0f85c46d184f3b9ec5b9477e4",
+  "author_damaged_payload_sha256": "a9ca81c60e7f7ae05ffc8e5505dda91e0bab630dc8082cb4cdcd39ab3d383ce1",
+  "provenance": "Korean Rice Paddy korean_rice_paddy rice-receiver-r2-20261013: payload korean_rice_paddy_payload.json + paddy_damaged_payload_final.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 5892,
+        "position_f32_sha256": "76c47dd42921847a788975446f4754bd7be1fd99a0503177a03f5c3d480731a4",
+        "raw_uv_f16_sha256": "0b1a1dc21c3159a3cc74369151b4af957de1d30b6622fe91e5e219811d76e917"
+      },
+      "matc": {
+        "corners": 3252,
+        "position_f32_sha256": "de66ade9a0ae059d58c8f19c27693ae3e9f47e7bd4f454b088b636415e9ad1f9",
+        "raw_uv_f16_sha256": "32a10baa2a90c793e36572ff9687684ba13c27c40e73e186004496ffadefed02"
+      },
+      "matd": {
+        "corners": 6348,
+        "position_f32_sha256": "0d392375fbf0d0a61888c39aafe84b8d5a1f9bd8e1887c135537fdcc2fbdca7f",
+        "raw_uv_f16_sha256": "01824618b6cd8e5310db5859cf75b7e06ee1986991f479fb97f2247f8564ce52"
+      }
+    },
+    "damaged": {
+      "mata": {
+        "corners": 8355,
+        "position_f32_sha256": "1031e67f487e39c161b1ba651aea4fcef2fdb1af3a1d080fbbbfdcdb04fe2123",
+        "raw_uv_f16_sha256": "54cb5255088c666c1c413a0cd891300fb25268e0d94a83f4f7671d17519025e5"
+      },
+      "matc": {
+        "corners": 4083,
+        "position_f32_sha256": "d14e07cba0e0d1ff1d609288ce82ebd15a11706da093c159efa98e1fa601aa29",
+        "raw_uv_f16_sha256": "1ff149a010da20a19a308d15489ca572d7fc14b5c2e057da28940614cb9236f4"
+      },
+      "matz": {
+        "corners": 864,
+        "position_f32_sha256": "efddac40cfe5457226342a35d44d3c3e2b905ea043c2fd3b0f9647acbc797518",
+        "raw_uv_f16_sha256": "251f99577968c45d6a02a9894f0e3f98060312c6828ac3bfb6106066c4472e66"
+      },
+      "matd": {
+        "corners": 6348,
+        "position_f32_sha256": "d43075d5f8362afbe1bfdb4a3f9b504f4dbbf672c0dc91d78c8f8d7aa49c7991",
+        "raw_uv_f16_sha256": "5711c20b2379201c045e287f7dc48501c94d6dfd130d0f6b934b6c19ad999354"
+      }
+    }
+  }
+}
