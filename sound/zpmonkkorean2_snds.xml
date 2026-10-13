@@ -1,17 +1,29 @@
 <protounitsounddef>
   <protounit name="zpMonkKorean2">
     <soundtype name="Select">
-      <soundset name="Korean_Soldier_Select" />
+      <soundset name="zpKoreanMonk_Select" />
     </soundtype>
     <soundtype name="Acknowledge">
       <targetlogic>
         <choice name="default">
-          <soundset name="Korean_Soldier_Acknowledge" />
+          <soundset name="zpKoreanMonk_Acknowledge" />
         </choice>
         <choice name="enemy">
-          <soundset name="Korean_Soldier_Attack" />
+          <soundset name="zpKoreanMonk_Attack" />
+        </choice>
+        <choice name="build">
+          <soundset name="zpKoreanMonk_Acknowledge" />
         </choice>
       </targetlogic>
+    </soundtype>
+    <soundtype name="Claim">
+      <soundset name="zpKoreanMonk_Claim" />
+    </soundtype>
+    <soundtype name="KnockOut">
+      <soundset name="zpKoreanMonk_KnockOut" />
+    </soundtype>
+    <soundtype name="KnockOutRevived">
+      <soundset name="zpKoreanMonk_Revived" />
     </soundtype>
     <soundtype name="Grunt">
       <soundset name="CavalryGrunt" />
@@ -20,7 +32,7 @@
       <soundset name="GenericMaleDeath" />
     </soundtype>
     <soundtype name="Creation">
-      <soundset name="MilitaryBirth" />
+      <soundset name="zpKoreanMonk_Revived" />
     </soundtype>
   </protounit>
 </protounitsounddef>

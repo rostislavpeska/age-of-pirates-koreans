@@ -5,7 +5,7 @@
            export copies the compiled table to every language folder (stringsync rule for a table without
            REWRITES). Ascending ids. ===== -->
       <string _locid="600000">Koreans</string>
-      <string _locid="600001">&lt;color=1.0, 1.0, 0.0&gt;Civilization bonus:&lt;/color&gt;\nVillagers can hunt and herd livestock.\n&lt;color=1.0, 1.0, 0.0&gt;Unique units:&lt;/color&gt;\nAshigaru Musketeer, Atakebune, Daimyo, Flaming Arrow, Fune, Sohei Archer, Morutaru, Naginata Rider, Tekkousen, Samurai, Yabusame Archer and Yumi Archer.\n&lt;color=1.0, 1.0, 0.0&gt;Unique buildings:&lt;/color&gt;\nHanok (Korean House), Korean Town Center, Barracks and Stable. Hanoks shelter up to 3 villagers or infantry and, from the Colonial Age, shoot while occupied. Cherry Orchard is a resource for food. Dojo generates armies automatically.\n&lt;color=1.0, 1.0, 0.0&gt;Wonders:&lt;/color&gt;\nGolden Pavilion, Great Buddha, The Shogunate, Torii Gates and Toshogu Shrine\n\nThe Joseon dynasty ruled Korea from Hanseong for five centuries and proclaimed the Korean Empire in 1897.</string>
+      <string _locid="600001">&lt;color=1.0, 1.0, 0.0&gt;Civilization bonus:&lt;/color&gt;\nVillagers can hunt and herd livestock.\n&lt;color=1.0, 1.0, 0.0&gt;Unique units:&lt;/color&gt;\nAshigaru Musketeer, Atakebune, Daimyo, Flaming Arrow, Fune, Sohei Archer, Morutaru, Geomsabok, Tekkousen, Samurai, Gungdo Cavalry, Pyeongon Cavalry and Yumi Archer.\n&lt;color=1.0, 1.0, 0.0&gt;Unique buildings:&lt;/color&gt;\nHanok (Korean House), Korean Town Center, Barracks and Stable. Hanoks shelter up to 3 villagers or infantry and, from the Colonial Age, shoot while occupied. Cherry Orchard is a resource for food. Dojo generates armies automatically.\n&lt;color=1.0, 1.0, 0.0&gt;Wonders:&lt;/color&gt;\nGolden Pavilion, Great Buddha, The Shogunate, Torii Gates and Toshogu Shrine\n\nThe Joseon dynasty ruled Korea from Hanseong for five centuries and proclaimed the Korean Empire in 1897.</string>
       <string _locid="600002">Hanseong</string>
       <string _locid="600003">Samyeong Daesa</string>
       <string _locid="600004">Empress Myeongseong</string>
@@ -99,6 +99,31 @@
       <string _locid="600092">zzTEST Korean Straw Hanok C (Discovery age, construction and destruction bench)</string>
       <string _locid="600093">Korean Industrial Castle (test)</string>
       <string _locid="600094">zzTEST Korean Industrial Castle (construction and destruction bench)</string>
+      <string _locid="600095">Geomsabok</string>
+      <string _locid="600096">CAV Geomsabok</string>
+      <string _locid="600097">Armored cavalry with a woldo. Good against infantry.</string>
+      <string _locid="600098">Polearm cavalry, good against infantry</string>
+      <string _locid="600099">Disciplined Geomsabok</string>
+      <string _locid="600100">Honored Geomsabok</string>
+      <string _locid="600101">Exalted Geomsabok</string>
+      <string _locid="600102">Geomsabok attack and hitpoints increased.</string>
+      <string _locid="600103">Exalted upgrade for Geomsabok.</string>
+      <string _locid="600104">Gungdo Cavalry</string>
+      <string _locid="600105">CAV Gungdo Cavalry</string>
+      <string _locid="600106">Horse archers. Good against artillery.</string>
+      <string _locid="600107">Mounted archer</string>
+      <string _locid="600108">Honored Gungdo Cavalry</string>
+      <string _locid="600109">Exalted Gungdo Cavalry</string>
+      <string _locid="600110">Gungdo Cavalry attack and hitpoints increased.</string>
+      <string _locid="600111">Exalted upgrade for Gungdo Cavalry.</string>
+      <string _locid="600112">Pyeongon Cavalry</string>
+      <string _locid="600113">CAV Pyeongon Cavalry</string>
+      <string _locid="600114">Scout cavalry with a flail. Good against archers and artillery.</string>
+      <string _locid="600115">Scout cavalry, good against archers</string>
+      <string _locid="600116">Honored Pyeongon Cavalry</string>
+      <string _locid="600117">Exalted Pyeongon Cavalry</string>
+      <string _locid="600118">Pyeongon Cavalry attack and hitpoints increased.</string>
+      <string _locid="600119">Exalted upgrade for Pyeongon Cavalry.</string>
     </language>
   </stringtable>
 </stringmods>

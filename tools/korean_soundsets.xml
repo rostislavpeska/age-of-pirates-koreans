@@ -126,4 +126,57 @@
     <sound filename="korean\Koreans_Villager_Male_Task_2_AoE2.wav" volume="1.0000">
     </sound>
   </soundset>
+  <!-- Seungjang (zpMonkKorean, zpMonkKorean2). Select and move are the AoE2 monk.
+       Attack, claim, knockout and revival are new lines in that register (George, 2026-10-13):
+       the API key cannot clone, so these four sets are not the monk's own voice. -->
+  <soundset name="zpKoreanMonk_Select" volume="0.7000" maxnum="4" distance="1.0000">
+    <sound filename="korean\Koreans_Monk_Select_1_AoE2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Select_2_AoE2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Select_3_AoE2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Select_4_AoE2.wav" volume="1.0000">
+    </sound>
+  </soundset>
+  <soundset name="zpKoreanMonk_Acknowledge" volume="0.7000" maxnum="4" distance="1.0000">
+    <sound filename="korean\Koreans_Monk_Move_1_AoE2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Move_2_AoE2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Move_3_AoE2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Move_4_AoE2.wav" volume="1.0000">
+    </sound>
+  </soundset>
+  <soundset name="zpKoreanMonk_Attack" volume="0.7000" maxnum="3" distance="1.0000">
+    <sound filename="korean\Koreans_Monk_Attack_1.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Attack_2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Attack_3.wav" volume="1.0000">
+    </sound>
+  </soundset>
+  <soundset name="zpKoreanMonk_Claim" volume="0.7000" maxnum="3" distance="1.0000">
+    <sound filename="korean\Koreans_Monk_Claim_1.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Claim_2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Claim_3.wav" volume="1.0000">
+    </sound>
+  </soundset>
+  <soundset name="zpKoreanMonk_KnockOut" volume="0.7000" maxnum="2" distance="1.0000">
+    <sound filename="korean\Koreans_Monk_KnockOut_1.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_KnockOut_2.wav" volume="1.0000">
+    </sound>
+  </soundset>
+  <soundset name="zpKoreanMonk_Revived" volume="0.7000" maxnum="3" distance="1.0000">
+    <sound filename="korean\Koreans_Monk_Revived_1.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Revived_2.wav" volume="1.0000">
+    </sound>
+    <sound filename="korean\Koreans_Monk_Revived_3.wav" volume="1.0000">
+    </sound>
+  </soundset>
 </soundsetdefmods>

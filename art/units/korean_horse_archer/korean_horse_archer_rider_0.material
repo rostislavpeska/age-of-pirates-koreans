@@ -1,0 +1,10 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="units\asians\japanese\yabusame\textures\yabusamerider_0_matA_BaseColor" />
+      <texture name="Normals" override="units\asians\japanese\yabusame\textures\yabusamerider_0_matA_Normals" />
+      <texture name="Masks" override="units\asians\japanese\yabusame\textures\yabusamerider_0_matA_Masks" />
+    </parameters>
+  </submaterial>
+</material>

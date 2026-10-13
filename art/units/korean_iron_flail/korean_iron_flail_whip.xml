@@ -1,0 +1,26 @@
+<animfile>
+  <definebone>bip01_attach_rt</definebone>
+  <component>whip<logic type="Tech">
+      <none>
+        <assetreference type="GrannyModel">
+          <file>units\cavalry\oprichnik\oprichnik_2age_whip</file>
+        </assetreference>
+      </none>
+      <guardoprichniks>
+        <assetreference type="GrannyModel">
+          <file>units\cavalry\oprichnik\oprichnik_3age_whip</file>
+        </assetreference>
+      </guardoprichniks>
+    </logic>
+  </component>
+  <anim>Idle<assetreference type="GrannyAnim">
+      <file>units\cavalry\oprichnik\oprichnik_whip_idle_a</file>
+    </assetreference>
+    <component>whip</component>
+  </anim>
+  <anim>HandAttack<assetreference type="GrannyAnim">
+      <file>units\cavalry\oprichnik\oprichnik_whip_attack_a</file>
+    </assetreference>
+    <component>whip</component>
+  </anim>
+</animfile>

@@ -1,0 +1,11 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default_doublesided_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="units\asians\japanese\naginata_rider\textures\naginata_horse_matA_BaseColor" />
+      <texture name="Normals" override="units\asians\japanese\naginata_rider\textures\naginata_horse_matA_Normals" />
+      <texture name="Masks" override="units\asians\japanese\naginata_rider\textures\naginata_horse_matA_Masks" />
+      <texture name="Details" override="units\asians\japanese\naginata_rider\textures\naginata_horse_matA_Details" />
+    </parameters>
+  </submaterial>
+</material>

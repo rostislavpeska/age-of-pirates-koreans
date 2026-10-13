@@ -1033,6 +1033,330 @@
       <damagebonus type="AbstractLightInfantry">0.600000</damagebonus>
     </protoaction>
   </unit>
+  <!-- zpKoreanLancer, displayed as Geomsabok (the community hand-cavalry name; the body is still the Naginata Rider). Vanilla ypNaginataRider field for field, on its own GR2 clones and animfiles (tools/korean_cavalry.py). Textures are still the vanilla archive paths. -->
+  <unit id="22023" name="zpKoreanLancer">
+    <dbid>22023</dbid>
+    <displaynameid>600095</displaynameid>
+    <editornameid>600096</editornameid>
+    <populationcount>2</populationcount>
+    <obstructionradiusx>0.7900</obstructionradiusx>
+    <obstructionradiusz>0.7900</obstructionradiusz>
+    <formationcategory>Mobile</formationcategory>
+    <maxvelocity>6.7500</maxvelocity>
+    <maxrunvelocity>8.7500</maxrunvelocity>
+    <movementtype>land</movementtype>
+    <turnrate>18.0000</turnrate>
+    <animfile>units\korean_lancer\korean_lancer_horse.xml</animfile>
+    <impacttype>Flesh</impacttype>
+    <physicsinfo>cav</physicsinfo>
+    <icon>resources\art\units\korean_lancer\korean_lancer_icon.png</icon>
+    <portraiticon>resources\art\units\korean_lancer\korean_lancer_portrait.png</portraiticon>
+    <rollovertextid>600097</rollovertextid>
+    <shortrollovertextid>600098</shortrollovertextid>
+    <initialhitpoints>300.0000</initialhitpoints>
+    <maxhitpoints>300.0000</maxhitpoints>
+    <los>15.0000</los>
+    <unitaitype>HandCombative</unitaitype>
+    <trainpoints>40.0000</trainpoints>
+    <bounty>20.0000</bounty>
+    <buildbounty>20.0000</buildbounty>
+    <cost resourcetype="Food">100.0000</cost>
+    <cost resourcetype="Gold">100.0000</cost>
+    <allowedage>1</allowedage>
+    <armor type="Ranged" value="0.3000" />
+    <unittype>LogicalTypeHealed</unittype>
+    <unittype>LogicalTypeValidSharpshoot</unittype>
+    <unittype>LogicalTypeNeededForVictory</unittype>
+    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeLandMilitary</unittype>
+    <unittype>LogicalTypeScout</unittype>
+    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+    <unittype>LogicalTypeGarrisonInShips</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttackNoVillagers</unittype>
+    <unittype>LogicalTypeVillagersAttack</unittype>
+    <unittype>LogicalTypeHandUnitsAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAttack</unittype>
+    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
+    <unittype>ConvertsHerds</unittype>
+    <unittype>AbstractHandCavalry</unittype>
+    <unittype>HasBountyValue</unittype>
+    <unittype>AbstractLancer</unittype>
+    <unittype>AbstractHeavyCavalry</unittype>
+    <unittype>CountsTowardMilitaryScore</unittype>
+    <unittype>AbstractCavalryInfantry</unittype>
+    <unittype>UnitClass</unittype>
+    <unittype>Military</unittype>
+    <unittype>Unit</unittype>
+    <unittype>AbstractCavalry</unittype>
+    <flag>CollidesWithProjectiles</flag>
+    <flag>ApplyHandicapTraining</flag>
+    <flag>CorpseDecays</flag>
+    <flag>ShowGarrisonButton</flag>
+    <flag>DontRotateObstruction</flag>
+    <flag>ObscuredByUnits</flag>
+    <flag>ConstrainOrientation</flag>
+    <flag>OrientUnitWithGround</flag>
+    <flag>Tracked</flag>
+    <command page="10" column="1">Stop</command>
+    <command page="10" column="0">Garrison</command>
+    <command page="10" column="7">Delete</command>
+    <tactics>handCavalry.tactics</tactics>
+    <protoaction>
+      <name>BuildingAttack</name>
+      <damage>22.000000</damage>
+      <damagetype>Siege</damagetype>
+      <rof>3.000000</rof>
+    </protoaction>
+    <protoaction>
+      <name>DefendHandAttack</name>
+      <damage>28.000000</damage>
+      <damagetype>Hand</damagetype>
+      <rof>1.500000</rof>
+      <damagebonus type="AbstractInfantry">1.500000</damagebonus>
+      <damagebonus type="AbstractHeavyInfantry">0.667000</damagebonus>
+    </protoaction>
+    <protoaction>
+      <name>GuardianAttack</name>
+      <damage>28.000000</damage>
+      <damagetype>Hand</damagetype>
+      <damagebonus type="AbstractInfantry">1.500000</damagebonus>
+      <damagebonus type="AbstractHeavyInfantry">0.667000</damagebonus>
+    </protoaction>
+    <protoaction>
+      <name>MeleeHandAttack</name>
+      <damage>28.000000</damage>
+      <damagetype>Hand</damagetype>
+      <rof>1.500000</rof>
+      <damagebonus type="AbstractInfantry">1.500000</damagebonus>
+      <damagebonus type="AbstractHeavyInfantry">0.667000</damagebonus>
+    </protoaction>
+    <protoaction>
+      <name>TrampleHandAttack</name>
+      <damage>20.000000</damage>
+      <damagetype>Hand</damagetype>
+      <rof>2.000000</rof>
+      <damagecap>75.000000</damagecap>
+      <damagearea>3.000000</damagearea>
+      <damageflags>Enemy</damageflags>
+      <damagebonus type="AbstractInfantry">1.500000</damagebonus>
+      <damagebonus type="AbstractHeavyInfantry">0.667000</damagebonus>
+    </protoaction>
+  </unit>
+  <!-- zpKoreanHorseArcher, displayed as Gungdo Cavalry (WoL's horse archer). Vanilla ypYabusame field for field, on its own GR2 clones and animfiles (tools/korean_cavalry.py). Textures are still the vanilla archive paths. -->
+  <unit id="22024" name="zpKoreanHorseArcher">
+    <dbid>22024</dbid>
+    <displaynameid>600104</displaynameid>
+    <editornameid>600105</editornameid>
+    <populationcount>2</populationcount>
+    <obstructionradiusx>0.7900</obstructionradiusx>
+    <obstructionradiusz>0.7900</obstructionradiusz>
+    <formationcategory>Mobile</formationcategory>
+    <maxvelocity>6.8000</maxvelocity>
+    <maxrunvelocity>8.8000</maxrunvelocity>
+    <movementtype>land</movementtype>
+    <turnrate>18.0000</turnrate>
+    <animfile>units\korean_horse_archer\korean_horse_archer_horse.xml</animfile>
+    <impacttype>Flesh</impacttype>
+    <physicsinfo>cav</physicsinfo>
+    <icon>resources\art\units\korean_horse_archer\korean_horse_archer_icon.png</icon>
+    <portraiticon>resources\art\units\korean_horse_archer\korean_horse_archer_portrait.png</portraiticon>
+    <rollovertextid>600106</rollovertextid>
+    <shortrollovertextid>600107</shortrollovertextid>
+    <initialhitpoints>200.0000</initialhitpoints>
+    <maxhitpoints>200.0000</maxhitpoints>
+    <los>22.0000</los>
+    <projectileprotounit>Arrow</projectileprotounit>
+    <unitaitype>RangedCombative</unitaitype>
+    <trainpoints>40.0000</trainpoints>
+    <bounty>21.0000</bounty>
+    <buildbounty>21.0000</buildbounty>
+    <cost resourcetype="Food">60.0000</cost>
+    <cost resourcetype="Gold">150.0000</cost>
+    <allowedage>2</allowedage>
+    <armor type="Ranged" value="0.4500" />
+    <unittype>LogicalTypeHealed</unittype>
+    <unittype>LogicalTypeValidSharpshoot</unittype>
+    <unittype>LogicalTypeNeededForVictory</unittype>
+    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeLandMilitary</unittype>
+    <unittype>LogicalTypeScout</unittype>
+    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+    <unittype>LogicalTypeGarrisonInShips</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttackNoVillagers</unittype>
+    <unittype>LogicalTypeVillagersAttack</unittype>
+    <unittype>LogicalTypeHandUnitsAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAttack</unittype>
+    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
+    <unittype>ConvertsHerds</unittype>
+    <unittype>AbstractRangedCavalry</unittype>
+    <unittype>HasBountyValue</unittype>
+    <unittype>Ranged</unittype>
+    <unittype>CountsTowardMilitaryScore</unittype>
+    <unittype>AbstractCavalryInfantry</unittype>
+    <unittype>UnitClass</unittype>
+    <unittype>Military</unittype>
+    <unittype>Unit</unittype>
+    <unittype>AbstractCavalry</unittype>
+    <unittype>AbstractArcher</unittype>
+    <unittype>AbstractLightCavalry</unittype>
+    <flag>CollidesWithProjectiles</flag>
+    <flag>ApplyHandicapTraining</flag>
+    <flag>CorpseDecays</flag>
+    <flag>ShowGarrisonButton</flag>
+    <flag>DontRotateObstruction</flag>
+    <flag>ObscuredByUnits</flag>
+    <flag>ConstrainOrientation</flag>
+    <flag>OrientUnitWithGround</flag>
+    <flag>Tracked</flag>
+    <command page="10" column="1">Stop</command>
+    <command page="10" column="0">Garrison</command>
+    <command page="10" column="7">Delete</command>
+    <tactics>bowCavalryAccurate.tactics</tactics>
+    <protoaction>
+      <name>BowAttack</name>
+      <damagebonus type="AbstractArtillery">7.000000</damagebonus>
+      <damagebonus type="AbstractCoyoteMan">2.500000</damagebonus>
+      <damage>9.000000</damage>
+      <damagetype>Ranged</damagetype>
+      <maxrange>18.000000</maxrange>
+      <rof>1.500000</rof>
+      <damagebonus type="AbstractVillager">0.500000</damagebonus>
+      <damagebonus type="AbstractHeavyCavalry">3.250000</damagebonus>
+    </protoaction>
+    <protoaction>
+      <name>BuildingAttack</name>
+      <damage>13.000000</damage>
+      <damagetype>Siege</damagetype>
+      <rof>3.000000</rof>
+      <projectile>ArrowFlaming</projectile>
+      <damagebonus type="deMalteseGun">7.000000</damagebonus>
+    </protoaction>
+    <protoaction>
+      <name>ChargeAttack</name>
+      <damagebonus type="AbstractHeavyCavalry">3.250000</damagebonus>
+      <damagebonus type="AbstractCoyoteMan">2.500000</damagebonus>
+      <damage>6.000000</damage>
+      <damagetype>Hand</damagetype>
+      <rof>1.500000</rof>
+      <damagebonus type="AbstractArtillery">7.000000</damagebonus>
+    </protoaction>
+  </unit>
+  <!-- zpKoreanIronFlail, displayed as Pyeongon Cavalry (Joseon cavalry flail). Vanilla ypIronFlail rider, flail skinned in, on the Yabusame horse. Own GR2 clones and animfiles (tools/korean_cavalry.py). A Korean rider mesh is technical debt. Textures are still the vanilla archive paths. -->
+  <unit id="22025" name="zpKoreanIronFlail">
+    <dbid>22025</dbid>
+    <displaynameid>600112</displaynameid>
+    <editornameid>600113</editornameid>
+    <populationcount>2</populationcount>
+    <obstructionradiusx>0.7900</obstructionradiusx>
+    <obstructionradiusz>0.7900</obstructionradiusz>
+    <formationcategory>Mobile</formationcategory>
+    <maxvelocity>6.5000</maxvelocity>
+    <maxrunvelocity>8.5000</maxrunvelocity>
+    <movementtype>land</movementtype>
+    <turnrate>18.0000</turnrate>
+    <animfile>units\korean_iron_flail\korean_iron_flail_horse.xml</animfile>
+    <impacttype>Flesh</impacttype>
+    <physicsinfo>cav</physicsinfo>
+    <icon>resources\art\units\asians\chinese\iron_flail\iron_flail_icon_64.png</icon>
+    <portraiticon>resources\art\units\asians\chinese\iron_flail\iron_flail_icon_portrait.png</portraiticon>
+    <rollovertextid>600114</rollovertextid>
+    <shortrollovertextid>600115</shortrollovertextid>
+    <initialhitpoints>292.0000</initialhitpoints>
+    <maxhitpoints>292.0000</maxhitpoints>
+    <los>15.0000</los>
+    <unitaitype>HandCombative</unitaitype>
+    <trainpoints>40.0000</trainpoints>
+    <bounty>24.0000</bounty>
+    <buildbounty>24.0000</buildbounty>
+    <cost resourcetype="Food">240.0000</cost>
+    <allowedage>2</allowedage>
+    <armor type="Ranged" value="0.3000" />
+    <unittype>LogicalTypeHealed</unittype>
+    <unittype>LogicalTypeValidSharpshoot</unittype>
+    <unittype>LogicalTypeNeededForVictory</unittype>
+    <unittype>LogicalTypeHandUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeLandMilitary</unittype>
+    <unittype>LogicalTypeScout</unittype>
+    <unittype>LogicalTypeValidSPCUnitsDeadCondition</unittype>
+    <unittype>LogicalTypeGarrisonInShips</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAutoAttackNoVillagers</unittype>
+    <unittype>LogicalTypeVillagersAttack</unittype>
+    <unittype>LogicalTypeHandUnitsAttack</unittype>
+    <unittype>LogicalTypeRangedUnitsAttack</unittype>
+    <unittype>LogicalTypeMinimapFilterMilitary</unittype>
+    <unittype>ConvertsHerds</unittype>
+    <unittype>AbstractHandCavalry</unittype>
+    <unittype>HasBountyValue</unittype>
+    <unittype>AbstractHeavyCavalry</unittype>
+    <unittype>AbstractCavalryInfantry</unittype>
+    <unittype>CountsTowardMilitaryScore</unittype>
+    <unittype>UnitClass</unittype>
+    <unittype>Military</unittype>
+    <unittype>Unit</unittype>
+    <unittype>AbstractCavalry</unittype>
+    <flag>CollidesWithProjectiles</flag>
+    <flag>ApplyHandicapTraining</flag>
+    <flag>CorpseDecays</flag>
+    <flag>ShowGarrisonButton</flag>
+    <flag>DontRotateObstruction</flag>
+    <flag>ObscuredByUnits</flag>
+    <flag>ConstrainOrientation</flag>
+    <flag>OrientUnitWithGround</flag>
+    <flag>Tracked</flag>
+    <command page="10" column="1">Stop</command>
+    <command page="10" column="0">Garrison</command>
+    <command page="10" column="7">Delete</command>
+    <tactics>handCavalrySplash.tactics</tactics>
+    <protoaction>
+      <name>BuildingAttack</name>
+      <damage>17.000000</damage>
+      <damagetype>Siege</damagetype>
+      <rof>3.000000</rof>
+      <damagecap>24.000000</damagecap>
+    </protoaction>
+    <protoaction>
+      <name>DefendHandAttack</name>
+      <damage>19.000000</damage>
+      <damagetype>Hand</damagetype>
+      <rof>1.500000</rof>
+      <damagecap>38.000000</damagecap>
+      <damagebonus type="AbstractInfantry">1.500000</damagebonus>
+      <damagearea>1.000000</damagearea>
+      <damageflags>Enemy</damageflags>
+      <damagebonus type="AbstractHeavyInfantry">0.670000</damagebonus>
+    </protoaction>
+    <protoaction>
+      <name>GuardianAttack</name>
+      <damage>19.000000</damage>
+      <damagetype>Hand</damagetype>
+      <rof>1.500000</rof>
+    </protoaction>
+    <protoaction>
+      <name>MeleeHandAttack</name>
+      <damage>19.000000</damage>
+      <damagetype>Hand</damagetype>
+      <rof>1.500000</rof>
+      <damagecap>38.000000</damagecap>
+      <damagebonus type="AbstractInfantry">1.500000</damagebonus>
+      <damagearea>1.000000</damagearea>
+      <damageflags>Enemy</damageflags>
+      <damagebonus type="AbstractHeavyInfantry">0.670000</damagebonus>
+    </protoaction>
+    <protoaction>
+      <name>TrampleHandAttack</name>
+      <damage>17.000000</damage>
+      <damagetype>Hand</damagetype>
+      <rof>2.000000</rof>
+      <damagecap>68.000000</damagecap>
+      <damagebonus type="AbstractInfantry">1.500000</damagebonus>
+      <damagearea>2.000000</damagearea>
+      <damageflags>Enemy</damageflags>
+      <damagebonus type="AbstractHeavyInfantry">0.670000</damagebonus>
+    </protoaction>
+  </unit>
 <!-- BEGIN zzTEST Korean building benches (owner 2026-10-09; test protos, strip before release). Korean models
      straight from their animfiles (no civ / age logic): zzTESTKoreanTownCenter / Barracks / Stable, built by
      zzTESTKoreanBuilderWagon. zzTESTKoreanHouseAge0A/B/C (22020-22022, owner 2026-10-12 "you export and implement both into game"): the Discovery (age 0) straw Hanok

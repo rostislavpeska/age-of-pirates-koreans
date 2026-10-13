@@ -298,6 +298,121 @@
       </effect>
       <effect type="TechStatus" status="obtainable">zpGakgungPostIndustrial</effect>
       <effect type="TechStatus" status="obtainable">zpGakgungPostImperial</effect>
+      <!-- Geomsabok (zpKoreanLancer) replaces the Naginata Rider and rides the Yabusame horse.
+           Gungdo Cavalry (zpKoreanHorseArcher) replaces the Yabusame and rides the Naginata horse.
+           Pyeongon Cavalry (zpKoreanIronFlail) is an extra Stable unit: the Chinese rider on the Yabusame horse.
+           Own GR2s and animfiles, vanilla textures (tools/korean_cavalry.py). -->
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpKoreanLancer</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypNaginataRider</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="0">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="3">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="4">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="4">
+        <target type="ProtoUnit">ypAtakabune</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="3">
+        <target type="ProtoUnit">ypDaimyoKiyomasa</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="3">
+        <target type="ProtoUnit">ypDaimyoMasamune</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="3">
+        <target type="ProtoUnit">ypDaimyoMototada</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="3">
+        <target type="ProtoUnit">zpFortConvertable</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanLancer" page="0" column="3">
+        <target type="ProtoUnit">zpMilitaryCamp</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">YPDisciplinedNaginataRider</effect>
+      <effect type="TechStatus" status="obtainable">zpDisciplinedKoreanLancer</effect>
+      <effect type="CommandAdd" tech="zpDisciplinedKoreanLancer" page="1" column="0">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">YPHonoredNaginataRider</effect>
+      <effect type="TechStatus" status="obtainable">zpHonoredKoreanLancer</effect>
+      <effect type="CommandAdd" tech="zpHonoredKoreanLancer" page="1" column="0">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">YPExaltedNaginataRider</effect>
+      <effect type="TechStatus" status="obtainable">zpExaltedKoreanLancer</effect>
+      <effect type="CommandAdd" tech="zpExaltedKoreanLancer" page="1" column="0">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpKoreanHorseArcher</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypYabusame</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="1">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="4">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="5">
+        <target type="ProtoUnit">FortFrontier</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="5">
+        <target type="ProtoUnit">ypAtakabune</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="4">
+        <target type="ProtoUnit">ypDaimyoKiyomasa</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="4">
+        <target type="ProtoUnit">ypDaimyoMasamune</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="4">
+        <target type="ProtoUnit">ypDaimyoMototada</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="4">
+        <target type="ProtoUnit">zpFortConvertable</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHorseArcher" page="0" column="4">
+        <target type="ProtoUnit">zpMilitaryCamp</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">YPHonoredYabusame</effect>
+      <effect type="TechStatus" status="obtainable">zpHonoredKoreanHorseArcher</effect>
+      <effect type="CommandAdd" tech="zpHonoredKoreanHorseArcher" page="1" column="1">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">YPExaltedYabusame</effect>
+      <effect type="TechStatus" status="obtainable">zpExaltedKoreanHorseArcher</effect>
+      <effect type="CommandAdd" tech="zpExaltedKoreanHorseArcher" page="1" column="1">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpKoreanLancerPostIndustrial</effect>
+      <effect type="TechStatus" status="obtainable">zpKoreanLancerPostImperial</effect>
+      <effect type="TechStatus" status="obtainable">zpKoreanHorseArcherPostIndustrial</effect>
+      <effect type="TechStatus" status="obtainable">zpKoreanHorseArcherPostImperial</effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpKoreanIronFlail</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanIronFlail" page="0" column="2">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpHonoredKoreanIronFlail</effect>
+      <effect type="CommandAdd" tech="zpHonoredKoreanIronFlail" page="1" column="2">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpExaltedKoreanIronFlail</effect>
+      <effect type="CommandAdd" tech="zpExaltedKoreanIronFlail" page="1" column="2">
+        <target type="ProtoUnit">ypStableJapanese</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpKoreanIronFlailPostIndustrial</effect>
+      <effect type="TechStatus" status="obtainable">zpKoreanIronFlailPostImperial</effect>
     </effects>
   </tech>
   <!-- zpKoreanEconomy: Koreans hunt (Asian villager), so their market offers the hunting pair (Hunting Eagles, Professional Hunters) instead of the Japanese berry pair - same slot (page 1, column 0) and costs; debt B9 -->
@@ -876,6 +991,262 @@
     </prereqs>
     <effects>
       <effect type="TechStatus" status="active">zpExaltedGakgung</effect>
+    </effects>
+  </tech>
+  <tech name="zpDisciplinedKoreanLancer" type="Normal">
+    <dbid>60028</dbid>
+    <displaynameid>600099</displaynameid>
+    <cost resourcetype="Wood">200.0000</cost>
+    <cost resourcetype="Gold">100.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\disciplined_cavalry.png</icon>
+    <rollovertextid>600102</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Fortressize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.20" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanLancer</target>
+      </effect>
+      <effect type="Data" amount="1.20" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanLancer</target>
+      </effect>
+      <effect type="SetName" proto="zpKoreanLancer" culture="none" newname="600099" />
+      <effect type="Data" amount="0.00" subtype="UpdateVisual" unittype="zpKoreanLancer" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpHonoredKoreanLancer" type="Normal">
+    <dbid>60029</dbid>
+    <displaynameid>600100</displaynameid>
+    <cost resourcetype="Wood">600.0000</cost>
+    <cost resourcetype="Gold">600.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\honored_cavalry.png</icon>
+    <rollovertextid>600102</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">zpDisciplinedKoreanLancer</techstatus>
+      <techstatus status="Active">Industrialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="SetName" proto="zpKoreanLancer" culture="none" newname="600100" />
+      <effect type="Data" amount="1.30" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanLancer</target>
+      </effect>
+      <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanLancer</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="UpdateVisual" unittype="zpKoreanLancer" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpExaltedKoreanLancer" type="Normal">
+    <dbid>60030</dbid>
+    <displaynameid>600101</displaynameid>
+    <cost resourcetype="Wood">1500.0000</cost>
+    <cost resourcetype="Gold">1500.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\exalted_cavalry.png</icon>
+    <rollovertextid>600103</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Imperialize</techstatus>
+      <techstatus status="Active">zpHonoredKoreanLancer</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="SetName" proto="zpKoreanLancer" culture="none" newname="600101" />
+      <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanLancer</target>
+      </effect>
+      <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanLancer</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpHonoredKoreanHorseArcher" type="Normal">
+    <dbid>60033</dbid>
+    <displaynameid>600108</displaynameid>
+    <cost resourcetype="Wood">600.0000</cost>
+    <cost resourcetype="Gold">600.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\honored_cavalry.png</icon>
+    <rollovertextid>600110</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Industrialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="SetName" proto="zpKoreanHorseArcher" culture="none" newname="600108" />
+      <effect type="Data" amount="1.30" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanHorseArcher</target>
+      </effect>
+      <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanHorseArcher</target>
+      </effect>
+      <effect type="Data" amount="0.00" subtype="UpdateVisual" unittype="zpKoreanHorseArcher" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpExaltedKoreanHorseArcher" type="Normal">
+    <dbid>60034</dbid>
+    <displaynameid>600109</displaynameid>
+    <cost resourcetype="Wood">1500.0000</cost>
+    <cost resourcetype="Gold">1500.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\exalted_cavalry.png</icon>
+    <rollovertextid>600111</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">zpHonoredKoreanHorseArcher</techstatus>
+      <techstatus status="Active">Imperialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="SetName" proto="zpKoreanHorseArcher" culture="none" newname="600109" />
+      <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanHorseArcher</target>
+      </effect>
+      <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanHorseArcher</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpKoreanLancerPostIndustrial" type="Normal">
+    <dbid>60031</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostIndustrialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpDisciplinedKoreanLancer</effect>
+      <effect type="TechStatus" status="active">zpHonoredKoreanLancer</effect>
+    </effects>
+  </tech>
+  <tech name="zpKoreanLancerPostImperial" type="Normal">
+    <dbid>60032</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostImperialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpExaltedKoreanLancer</effect>
+    </effects>
+  </tech>
+  <tech name="zpKoreanHorseArcherPostIndustrial" type="Normal">
+    <dbid>60035</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostIndustrialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpHonoredKoreanHorseArcher</effect>
+    </effects>
+  </tech>
+  <tech name="zpKoreanHorseArcherPostImperial" type="Normal">
+    <dbid>60036</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostImperialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpExaltedKoreanHorseArcher</effect>
+    </effects>
+  </tech>
+  <tech name="zpHonoredKoreanIronFlail" type="Normal">
+    <dbid>60037</dbid>
+    <displaynameid>600116</displaynameid>
+    <cost resourcetype="Wood">350.0000</cost>
+    <cost resourcetype="Gold">350.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\honored_ironflail.png</icon>
+    <rollovertextid>600118</rollovertextid>
+    <flag>YPGridShiftRowRightOne</flag>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Industrialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.30" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanIronFlail</target>
+      </effect>
+      <effect type="Data" amount="1.30" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanIronFlail</target>
+      </effect>
+      <effect type="SetName" proto="zpKoreanIronFlail" culture="none" newname="600116" />
+    </effects>
+  </tech>
+  <tech name="zpExaltedKoreanIronFlail" type="Normal">
+    <dbid>60038</dbid>
+    <displaynameid>600117</displaynameid>
+    <cost resourcetype="Wood">750.0000</cost>
+    <cost resourcetype="Gold">750.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\asians\exalted_ironflail.png</icon>
+    <rollovertextid>600119</rollovertextid>
+    <flag>YPGridShiftRowRightOne</flag>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">zpHonoredKoreanIronFlail</techstatus>
+      <techstatus status="Active">Imperialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanIronFlail</target>
+      </effect>
+      <effect type="SetName" proto="zpKoreanIronFlail" culture="none" newname="600117" />
+      <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanIronFlail</target>
+      </effect>
+    </effects>
+  </tech>
+  <tech name="zpKoreanIronFlailPostIndustrial" type="Normal">
+    <dbid>60039</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostIndustrialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpHonoredKoreanIronFlail</effect>
+    </effects>
+  </tech>
+  <tech name="zpKoreanIronFlailPostImperial" type="Normal">
+    <dbid>60040</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <prereqs>
+      <techstatus status="Active">ypPostImperialJapanese</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="TechStatus" status="active">zpExaltedKoreanIronFlail</effect>
     </effects>
   </tech>
 </techtreemods>

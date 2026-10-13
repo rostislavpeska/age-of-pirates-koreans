@@ -47,7 +47,13 @@ def test_techs_activate_japan_and_the_visual_marker():
                                                   'zpHonoredJochong', 'zpExaltedJochong', 'zpJochongPostIndustrial', 'zpJochongMeiji',
                                                   'zpDisciplinedJangchang', 'zpHonoredJangchang', 'zpExaltedJangchang',
                                                   'zpJochongPostImperial', 'zpDisciplinedGakgung', 'zpHonoredGakgung',
-                                                  'zpExaltedGakgung', 'zpGakgungPostIndustrial', 'zpGakgungPostImperial']
+                                                  'zpExaltedGakgung', 'zpGakgungPostIndustrial', 'zpGakgungPostImperial',
+                                                  'zpDisciplinedKoreanLancer', 'zpHonoredKoreanLancer', 'zpExaltedKoreanLancer',
+                                                  'zpHonoredKoreanHorseArcher', 'zpExaltedKoreanHorseArcher',
+                                                  'zpKoreanLancerPostIndustrial', 'zpKoreanLancerPostImperial',
+                                                  'zpKoreanHorseArcherPostIndustrial', 'zpKoreanHorseArcherPostImperial',
+                                                  'zpHonoredKoreanIronFlail', 'zpExaltedKoreanIronFlail',
+                                                  'zpKoreanIronFlailPostIndustrial', 'zpKoreanIronFlailPostImperial']
     active = [e.text for e in techs[1].iter('effect') if e.get('type') == 'TechStatus' and e.get('status') == 'active']
     assert active == ['YPAge0Japanese', 'zpKoreanVisuals', 'zpKoreanBuildings', 'zpKoreanUnits', 'zpKoreanEconomy']
     assert all(60000 <= int(t.findtext('dbid')) < 61000 for t in techs)
@@ -55,7 +61,8 @@ def test_techs_activate_japan_and_the_visual_marker():
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(95)]          # 600093-600094: Industrial Castle bench
+    assert ids == [str(600000 + i) for i in range(120)]         # 600095-600119: Geomsabok, Gungdo Cavalry, Pyeongon Cavalry
+                                                                # 600093-600094: Industrial Castle bench
                                                                 # 600077-600078: zzTEST Dock
                                                                 # 600079-600080: zzTEST Consulate
                                                                 # 600081-600082: zzTEST Monastery
@@ -203,7 +210,8 @@ def test_korean_monks_replace_the_japanese_monks():
     units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
     # zzTEST* = the 3D test benches in their own marked block (owner 2026-10-09, strip before release)
     assert {n for n in units if not n.startswith('zzTEST')} == {'zpHouseKorean', 'zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong',
-                                                               'zpJochong', 'zpJangchang', 'zpGakgung'}
+                                                               'zpJochong', 'zpJangchang', 'zpGakgung',
+                                                               'zpKoreanLancer', 'zpKoreanHorseArcher', 'zpKoreanIronFlail'}
     civ = xml(K / 'data/civmods.xml').find('civ')
     assert [u.text for u in civ.findall('startingunit')][:2] == ['zpMonkKorean', 'zpMonkKorean2']
     assert 'ypMonkJapanese' not in (K / 'data/civmods.xml').read_text(encoding='utf-8')
@@ -228,6 +236,17 @@ def test_korean_monks_replace_the_japanese_monks():
         assert (K / 'art' / u.findtext('animfile').replace(BS, '/')).is_file()
         snds = xml(K / 'sound' / ('%s_snds.xml' % name.lower()))
         assert snds.find('protounit').get('name') == name
+        # AoE2 monk on select and move. Attack, claim, knockout and revival are the new lines.
+        # Build reuses the move lines. Spawn and revival share the revived lines.
+        assert {s.get('name') for s in snds.iter('soundset')} >= {
+            'zpKoreanMonk_Select', 'zpKoreanMonk_Acknowledge', 'zpKoreanMonk_Attack',
+            'zpKoreanMonk_Claim', 'zpKoreanMonk_KnockOut', 'zpKoreanMonk_Revived'}
+        ack = next(s for s in snds.iter('soundtype') if s.get('name') == 'Acknowledge')
+        assert {c.get('name') for c in ack.iter('choice')} == {'default', 'enemy', 'build'}
+        enemy = next(c for c in ack.iter('choice') if c.get('name') == 'enemy')
+        assert enemy.find('soundset').get('name') == 'zpKoreanMonk_Attack'
+        assert {s.get('name') for s in snds.iter('soundtype')} >= {
+            'Claim', 'KnockOut', 'KnockOutRevived', 'Creation'}
     techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
     eff = list(techs['zpKoreanUnits'].iter('effect'))
     tc = [(e.get('proto'), e.get('page'), e.get('column')) for e in eff
@@ -300,7 +319,8 @@ def test_monk_portraits_and_icons_carry_the_player_colour():
     it (owner's test 2026-10-09: stored black showed a near-black sash), as the vanilla monk sashes."""
     from PIL import Image
     units = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}
-    for name in ('zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong', 'zpJochong', 'zpJangchang', 'zpGakgung'):   # coats
+    for name in ('zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong', 'zpJochong', 'zpJangchang', 'zpGakgung',
+                 'zpKoreanLancer', 'zpKoreanHorseArcher'):   # coats
         u = units[name]
         for field, size in (('portraiticon', 512), ('icon', 128)):
             im = Image.open(K / 'data/wpfg' / u.findtext(field).replace(BS, '/')).convert('RGBA')
@@ -437,7 +457,7 @@ def test_korean_monastery_replaces_the_japanese_monk_techs():
     techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
     eff = list(techs['zpKoreanUnits'].iter('effect'))
     removed = [(e.text or '').strip() for e in eff if e.get('status') == 'unobtainable'
-               and not any(u in (e.text or '') for u in ('Ashigaru', 'Yumi', 'Samurai'))]   # infantry: own tests
+               and not any(u in (e.text or '') for u in ('Ashigaru', 'Yumi', 'Samurai', 'Naginata', 'Yabusame'))]
     assert removed == ['ypMonasteryJapaneseHealing', 'ypMonasteryJapaneseCombat', 'ypMonasteryKillingBlowUpgrade',
                        'ypMonasteryRangedSplash']
     slots = [(e.get('tech'), e.get('column')) for e in eff
@@ -446,7 +466,8 @@ def test_korean_monastery_replaces_the_japanese_monk_techs():
                      ('zpMonasterySeungbyeong', '4')]
     armed = [(e.text or '').strip() for e in eff if e.get('status') == 'obtainable'
              and not (e.text or '').strip().startswith('zpSeungbyeong')      # the age-up techs: their own test
-             and not any(u in (e.text or '') for u in ('Jochong', 'Jangchang', 'Gakgung'))]   # infantry: own tests
+             and not any(u in (e.text or '') for u in ('Jochong', 'Jangchang', 'Gakgung',
+                                                            'KoreanLancer', 'KoreanHorseArcher', 'IronFlail'))]
     assert armed == [s[0] for s in slots]
     for name, _ in slots:
         t = techs[name]
@@ -870,3 +891,130 @@ def test_materials_keep_their_source_materialdef():
     mats = sorted((K / 'art').rglob('*.material'))
     found = [m for p in mats for part in ms.check_file(str(p), str(K), data) for m in part]
     assert len(mats) > 20 and found == []
+
+
+# Geomsabok and Gungdo Cavalry replace the Japanese cavalry. Pyeongon Cavalry is an extra Stable unit:
+# the Chinese rider on the Yabusame horse. Textures stay the vanilla archive paths for a later retexture.
+CAVALRY = {
+    'zpKoreanLancer': ('ypNaginataRider', '22023', 'Geomsabok', 'korean_lancer',
+                       {'YPDisciplinedNaginataRider': 'zpDisciplinedKoreanLancer',
+                        'YPHonoredNaginataRider': 'zpHonoredKoreanLancer',
+                        'YPExaltedNaginataRider': 'zpExaltedKoreanLancer'}),
+    'zpKoreanHorseArcher': ('ypYabusame', '22024', 'Gungdo Cavalry', 'korean_horse_archer',
+                            {'YPHonoredYabusame': 'zpHonoredKoreanHorseArcher',
+                             'YPExaltedYabusame': 'zpExaltedKoreanHorseArcher'}),
+}
+IRON_FLAIL = {
+    'zpKoreanIronFlail': ('ypIronFlail', '22025', 'Pyeongon Cavalry', 'korean_iron_flail',
+                          {'YPHonoredIronFlail': 'zpHonoredKoreanIronFlail',
+                           'YPExaltedIronFlail': 'zpExaltedKoreanIronFlail'}),
+}
+
+
+@pytest.mark.parametrize('unit', sorted({**CAVALRY, **IRON_FLAIL}))
+def test_cavalry_is_its_vanilla_unit_with_its_own_files(unit):
+    """The Korean cavalry copies its vanilla unit field for field, then points at its own animfile. The horse model
+    paths are the other unit's horse, cloned under this unit. Every texture path is still a vanilla archive path."""
+    import korean_cavalry as kc
+    van_name, uid, name, folder, _ups = {**CAVALRY, **IRON_FLAIL}[unit]
+    van = next(u for u in ET.fromstring(_vanilla('data/protoy.xml.xmb')).findall('unit') if u.get('name') == van_name)
+    ours = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}[unit]
+    assert [_canon(c) for c in ours if c.tag not in OWN_FIELDS] == [_canon(c) for c in van if c.tag not in OWN_FIELDS]
+    assert ours.get('id') == ours.findtext('dbid') == uid
+    assert ours.findtext('animfile') == BS.join(['units', folder, folder + '_horse.xml'])
+    strings = dict(re.findall(r'_locid="(\d+)">([^<]*)<', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8')))
+    assert strings[ours.findtext('displaynameid')] == name
+    snds = xml(K / 'sound' / ('%s_snds.xml' % unit.lower()))
+    assert snds.find('protounit').get('name') == unit
+    assert {s.get('name') for s in snds.iter('soundset')} >= {'Korean_Soldier_Select', 'Korean_Soldier_Attack'}
+    spec = kc.UNITS[folder]
+    for kind in ('horse', 'rider'):
+        text = (K / 'art/units' / folder / ('%s_%s.xml' % (folder, kind))).read_text(encoding='utf-8')
+        assert 'asians\\' not in text and 'asians/' not in text
+        assert 'animation_library' in text
+    horse = (K / 'art/units' / folder / ('%s_horse.xml' % folder)).read_text(encoding='utf-8')
+    for dest in spec['horse']:
+        assert dest in horse, dest
+    blobs = kc.gr2_bytes()
+    for dest, src_dir, src in kc._models(spec):
+        own = (K / 'art/units' / folder / (dest + '.gr2')).read_bytes()
+        assert own == blobs[src.lower() + '.gr2'], dest
+        mat = (K / 'art/units' / folder / (dest + '.material')).read_text(encoding='utf-8')
+        assert '<materialdef name="' in mat and 'asians' in mat and folder not in mat, dest
+
+
+@needs_aop
+@pytest.mark.parametrize('unit', sorted(CAVALRY))
+def test_cavalry_replaces_its_vanilla_unit_and_keeps_its_upgrades(unit):
+    """Trained wherever the vanilla unit is trained (campaign ypSPC* aside), and that unit switched off for Korea.
+    Its upgrades match the vanilla ones with the proto renamed, on the Stable."""
+    van_name, _uid, _name, _folder, mapping = CAVALRY[unit]
+    full = dict(mapping, **{van_name: unit})
+    van_units = ET.fromstring(_vanilla('data/protoy.xml.xmb')).findall('unit') + xml(AOP / 'data/protomods.xml').findall('unit')
+    techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    van = {t.get('name'): t for t in ET.fromstring(_vanilla('data/techtreey.xml.xmb')).findall('tech')}
+    eff = list(techs['zpKoreanUnits'].iter('effect'))
+    adds = {(e.findtext('target'), e.get('page'), e.get('column')) for e in eff
+            if e.get('type') == 'CommandAdd' and e.get('proto') == unit}
+    want = set()
+    for u in van_units:
+        if not u.get('name', '').startswith('ypSPC'):
+            want |= {(u.get('name'), t.get('page'), t.get('column')) for t in u.findall('train') if t.text == van_name}
+    assert want and adds == want, unit
+    enable = {e.findtext('target'): e.get('amount') for e in eff if e.get('subtype') == 'Enable'}
+    assert enable[unit] == '1.00' and enable[van_name] == '0.00'
+    ren = lambda s: full.get(s, s)
+    same = lambda t: sorted((e.get('type'), e.get('subtype'), e.get('amount'), e.get('relativity'), e.get('allactions'),
+                             e.get('action'), ren(e.findtext('target') or e.get('proto') or e.get('unittype') or ''))
+                            for e in t.iter('effect'))
+    status = {(e.text or '').strip(): e.get('status') for e in eff if e.get('type') == 'TechStatus'}
+    column = [e.get('column') for e in eff if e.get('proto') == unit][0]
+    for vanilla_tech, own in mapping.items():
+        assert same(techs[own]) == same(van[vanilla_tech]), own
+        assert status[own] == 'obtainable' and status[vanilla_tech] == 'unobtainable'
+        assert (own, '1', column, 'ypStableJapanese') in [
+            (e.get('tech'), e.get('page'), e.get('column'), e.findtext('target')) for e in eff]
+    shadows = {}
+    for name, tt in techs.items():
+        pre = [p.text for p in tt.iter('techstatus')]
+        if 'Shadow' in [f.text for f in tt.findall('flag')] and len(pre) == 1:
+            shadows.setdefault(pre[0], []).append((name, [(e.text or '').strip() for e in tt.iter('effect')]))
+    granting = 0
+    for vname, vt in van.items():
+        granted = [x for x in mapping if x in {(e.text or '').strip() for e in vt.iter('effect') if e.get('status') == 'active'}]
+        if not granted or vname in mapping:
+            continue
+        granting += 1
+        want_grants = [mapping[x] for x in granted]
+        hits = [n for n, e in shadows.get(vname, []) if e == want_grants]
+        assert len(hits) == 1 and status[hits[0]] == 'obtainable', (unit, vname, want_grants)
+    assert granting >= 2, unit
+
+
+def test_iron_flail_is_an_extra_stable_unit():
+    """The Chinese Iron Flail is not a unit Korea replaces. It is trained from the Korean Stable in the free
+    column, and China keeps its own Iron Flail and its upgrades."""
+    unit, van_name, _uid, _name, _folder, mapping = (
+        'zpKoreanIronFlail',) + IRON_FLAIL['zpKoreanIronFlail']
+    techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    van = {t.get('name'): t for t in ET.fromstring(_vanilla('data/techtreey.xml.xmb')).findall('tech')}
+    eff = list(techs['zpKoreanUnits'].iter('effect'))
+    enable = {e.findtext('target'): e.get('amount') for e in eff if e.get('subtype') == 'Enable'}
+    assert enable[unit] == '1.00' and van_name not in enable
+    adds = [(e.get('page'), e.get('column'), e.findtext('target')) for e in eff
+            if e.get('type') == 'CommandAdd' and e.get('proto') == unit]
+    assert adds == [('0', '2', 'ypStableJapanese')]
+    ren = lambda s: dict(mapping, **{van_name: unit}).get(s, s)
+    same = lambda t: sorted((e.get('type'), e.get('subtype'), e.get('amount'), e.get('relativity'), e.get('allactions'),
+                             e.get('action'), ren(e.findtext('target') or e.get('proto') or e.get('unittype') or ''))
+                            for e in t.iter('effect'))
+    status = {(e.text or '').strip(): e.get('status') for e in eff if e.get('type') == 'TechStatus'}
+    for vanilla_tech, own in mapping.items():
+        assert same(techs[own]) == same(van[vanilla_tech]), own
+        assert status[own] == 'obtainable' and vanilla_tech not in status
+        assert (own, '1', '2', 'ypStableJapanese') in [
+            (e.get('tech'), e.get('page'), e.get('column'), e.findtext('target')) for e in eff]
+    assert [p.text for p in techs['zpKoreanIronFlailPostIndustrial'].iter('techstatus')] == ['ypPostIndustrialJapanese']
+    assert [p.text for p in techs['zpKoreanIronFlailPostImperial'].iter('techstatus')] == ['ypPostImperialJapanese']
+    assert status['zpKoreanIronFlailPostIndustrial'] == 'obtainable'
+    assert status['zpKoreanIronFlailPostImperial'] == 'obtainable'
