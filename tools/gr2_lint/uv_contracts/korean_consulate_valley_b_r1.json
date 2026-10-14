@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "Owner approved B close valley tiles14Oct2026",
+  "author_payload_sha256": "d013faf65b6ccc25e2db3dc160c9dfacc825c3f40ed044dd96768656d4a5d405",
+  "provenance": "Original accepted runtime source plus approved review geometry and deterministic fracture/UV mapping; expected values are not derived from candidate GR2.",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 14007,
+        "position_f32_sha256": "4e1c27714feb866d320c664398a4241bd774b2f64eae58426f37a7e45f6688e6",
+        "raw_uv_f16_sha256": "05c813a93139f5e96802db494b45fb0a6fecfbd9b1aaa87d46a770258a2c0059"
+      },
+      "matc": {
+        "corners": 13125,
+        "position_f32_sha256": "3ddd78a4e4021a29b950fef895ae5e24800edfa6d35869b44a9c8e3d0ed10900",
+        "raw_uv_f16_sha256": "24f2e0986dcde25a4599f70496ccba713c7867b9bd3451d6fef58435a8c449a7"
+      },
+      "matd": {
+        "corners": 22416,
+        "position_f32_sha256": "6c16c691053b94a810031c562e503eb76736074b44c1b322d40ee55e1bfd4eab",
+        "raw_uv_f16_sha256": "7c3d618a5cff1d6b841dca5195483ec7ca32cd41a3dfbdd73f5a08840c5f6cdb"
+      }
+    },
+    "damaged": {
+      "matc": {
+        "corners": 16905,
+        "position_f32_sha256": "03b810b8e7c7785ddaf6321814f3add5a2b71361fd1b2da42af3c2f20ebf9a95",
+        "raw_uv_f16_sha256": "1aadfa499b7b968e11a96333bd7a778d97975a50f5838b2d07150d617eef0e4d"
+      },
+      "mata": {
+        "corners": 25830,
+        "position_f32_sha256": "b7061cec6260a4ee79166e17fbaccb66a5abb2915dd544341fe1eff225231151",
+        "raw_uv_f16_sha256": "b504bb1ed4a3be8088ea71b7f57f07443183cbb171879bdb9a848a0bf92d029b"
+      },
+      "matz": {
+        "corners": 7590,
+        "position_f32_sha256": "958009ebc500e66651b8551bd9e088188deb925ffc51b66d109685a006d51786",
+        "raw_uv_f16_sha256": "661db62458ad56421c5cbf379bf2801460e7e11dde6d8125d40480becc4bdaaa"
+      },
+      "matd": {
+        "corners": 22416,
+        "position_f32_sha256": "39e7294daf590e92fafabc336603dbced155708607bb9fc8731e91e2d1be3095",
+        "raw_uv_f16_sha256": "1c6937566d742c58cd016292b5d33580c21e9835a6468f57ce4b9d7994ad3610"
+      }
+    }
+  }
+}
