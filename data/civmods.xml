@@ -451,6 +451,54 @@
       </unitcounts>
     </multipleblocktrain>
     <multipleblocktrain>
+      <building>ypConsulate</building>
+      <multipleblockunit>zpConsulateArmyChinese1</multipleblockunit>
+      <units>
+        <unit>ypChuKoNu</unit>
+      </units>
+      <units>
+        <unit>ypSteppeRider</unit>
+      </units>
+      <unitcounts>
+        <count>6</count>
+      </unitcounts>
+      <unitcounts>
+        <count>2</count>
+      </unitcounts>
+    </multipleblocktrain>
+    <multipleblocktrain>
+      <building>ypConsulate</building>
+      <multipleblockunit>zpConsulateArmyChinese2</multipleblockunit>
+      <units>
+        <unit>MercManchu</unit>
+      </units>
+      <units>
+        <unit>ypHandMortar</unit>
+      </units>
+      <unitcounts>
+        <count>3</count>
+      </unitcounts>
+      <unitcounts>
+        <count>6</count>
+      </unitcounts>
+    </multipleblocktrain>
+    <multipleblocktrain>
+      <building>ypConsulate</building>
+      <multipleblockunit>zpConsulateArmyChinese3</multipleblockunit>
+      <units>
+        <unit>ypMercIronTroop</unit>
+      </units>
+      <units>
+        <unit>ypChangdao</unit>
+      </units>
+      <unitcounts>
+        <count>6</count>
+      </unitcounts>
+      <unitcounts>
+        <count>6</count>
+      </unitcounts>
+    </multipleblocktrain>
+    <multipleblocktrain>
       <building>TownCenter</building>
       <multipleblockunit>deFedBisonBatch</multipleblockunit>
       <units>
