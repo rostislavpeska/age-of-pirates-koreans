@@ -1,0 +1,26 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="sky_basic" />
+    <parameters>
+      <texture name="Texture" override="homecity\korean\korean_background\textures\korean_bg_matA_basecolor" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matb">
+    <materialdef name="sky_basic" />
+    <parameters>
+      <texture name="Texture" override="homecity\korean\korean_background\textures\korean_bg_matB_basecolor" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matc">
+    <materialdef name="sky_basic" />
+    <parameters>
+      <texture name="Texture" override="homecity\korean\korean_background\textures\korean_bg_matC_basecolor" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matd">
+    <materialdef name="sky_basic" />
+    <parameters>
+      <texture name="Texture" override="homecity\korean\korean_background\textures\korean_bg_matD_basecolor" />
+    </parameters>
+  </submaterial>
+</material>

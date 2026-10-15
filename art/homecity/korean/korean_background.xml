@@ -1,0 +1,11 @@
+<animfile>
+  <component>background
+    <notshadowcaster />
+    <assetreference type="GrannyModel">
+      <file>homecity\korean\korean_background\korean_background</file>
+    </assetreference>
+  </component>
+  <anim>Idle
+    <component>background</component>
+  </anim>
+</animfile>

@@ -5,7 +5,7 @@
   <gatherpointunit>HomeCityGatherFlag</gatherpointunit>
   <visual>korean\korean_homecity.xml</visual>
   <watervisual>china\china_homecity_water.xml</watervisual>
-  <backgroundvisual>aztec\aztec_background.xml</backgroundvisual>
+  <backgroundvisual>korean\korean_background.xml</backgroundvisual>
   <pathdata>china\pathable_area_object.gr2</pathdata>
   <camera>aztec\aztec_homecity_cathedral_camera.cam</camera>
   <widescreencamera>aztec\aztec_homecity_cathedral_camera.cam</widescreencamera>
