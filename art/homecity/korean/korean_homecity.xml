@@ -1,0 +1,387 @@
+<animfile>
+  <definebone>bone_firework01</definebone>
+  <definebone>bone_firework02</definebone>
+  <definebone>bone_firework03</definebone>
+  <definebone>bone_firework04</definebone>
+  <definebone>bone_firework05</definebone>
+  <definebone>bone_firework06</definebone>
+  <definebone>bone_vendor01</definebone>
+  <definebone>bone_vendor02</definebone>
+  <definebone>bone_vendor03</definebone>
+  <definebone>bone_vendor04</definebone>
+  <definebone>bone_vendor05</definebone>
+  <definebone>bone_vendor06</definebone>
+  <definebone>bone_vendor07</definebone>
+  <definebone>bone_vendor08</definebone>
+  <definebone>bone_main</definebone>
+  <definebone>bone_pathnode_01</definebone>
+  <definebone>bone_pathnode_02</definebone>
+  <definebone>bone_pathnode_03</definebone>
+  <definebone>bone_pathnode_04</definebone>
+  <definebone>bone_pathnode_05</definebone>
+  <definebone>bone_pathnode_06</definebone>
+  <definebone>bone_pathnode_07</definebone>
+  <definebone>bone_pathnode_08</definebone>
+  <definebone>bone_pathnode_09</definebone>
+  <definebone>bone_pathnode_10</definebone>
+  <definebone>bone_pathnode_11</definebone>
+  <definebone>bone_pathnode_12</definebone>
+  <definebone>bone_pathnode_13</definebone>
+  <definebone>bone_pathnode_14</definebone>
+  <definebone>bone_pathnode_15</definebone>
+  <definebone>bone_pathnode_16</definebone>
+  <definebone>bone_pathnode_17</definebone>
+  <definebone>bone_pathnode_18</definebone>
+  <definebone>bone_pathnode_19</definebone>
+  <definebone>bone_pathnode_20</definebone>
+  <definebone>bone_pathnode_21</definebone>
+  <definebone>bone_pathnode_22</definebone>
+  <definebone>bone_pathnode_23</definebone>
+  <definebone>bone_pathnode_24</definebone>
+  <definebone>bone_pathnode_25</definebone>
+  <definebone>bone_pathnode_26</definebone>
+  <definebone>bone_pathnode_27</definebone>
+  <definebone>bone_shadowclip</definebone>
+  <definebone>bone_academy_doorway</definebone>
+  <definebone>bone_plant_doorway</definebone>
+  <definebone>bone_cathedral_doorway</definebone>
+  <definebone>bone_estate_doorway</definebone>
+  <definebone>bone_dock_doorway</definebone>
+  <definebone>bone_generic_07</definebone>
+  <definebone>bone_generic_01</definebone>
+  <definebone>bone_generic_02</definebone>
+  <definebone>bone_generic_03</definebone>
+  <definebone>bone_generic_04</definebone>
+  <definebone>bone_generic_05</definebone>
+  <definebone>bone_generic_06</definebone>
+  <definebone>bone_cathedral_side_doorway</definebone>
+  <definebone>bone_plant_side_doorway</definebone>
+  <definebone>bone_small_church_doorway</definebone>
+  <definebone>bone_pathnode_28</definebone>
+  <definebone>bone_pathnode_29</definebone>
+  <definebone>bone_FX01</definebone>
+  <definebone>bone_FX02</definebone>
+  <definebone>bone_FX03</definebone>
+  <definebone>bone_FX04</definebone>
+  <definebone>bone_FX05</definebone>
+  <definebone>bone_FX06</definebone>
+  <definebone>bone_fishing01</definebone>
+  <definebone>bone_shipment_start</definebone>
+  <definebone>bone_shipment_end</definebone>
+  <definebone>bone_pathnode_30</definebone>
+  <definebone>bone_pathnode_31</definebone>
+  <definebone>bone_statue</definebone>
+  <definebone>bone_kingstatue</definebone>
+  <definebone>bone_dregs01</definebone>
+  <definebone>bone_dregs02</definebone>
+  <definebone>bone_dregs03</definebone>
+  <definebone>bone_dregs04</definebone>
+  <definebone>bone_dregs05</definebone>
+  <definebone>bone_dregs06</definebone>
+  <definebone>bone_fishing02</definebone>
+  <definebone>bone_fishing03</definebone>
+  <definebone>bone_falconet</definebone>
+  <definebone>bone_fountain_FX01</definebone>
+  <definebone>bone_fountain_FX02</definebone>
+  <definebone>bone_fountain_FX03</definebone>
+  <definebone>bone_fountain_FX04</definebone>
+  <definebone>bone_fountain_FX05</definebone>
+  <definebone>bone_fountain_FX06</definebone>
+  <definebone>bone_attach</definebone>
+  <definebone>bone_circlebuilding</definebone>
+  <definebone>bone_court</definebone>
+  <definebone>bone_tallbuilding</definebone>
+  <definebone>bone_waterbuilding</definebone>
+  <definebone>bone_boatbuilding</definebone>
+  <definebone>bone_flagredtall</definebone>
+  <definebone>bone_flagredtall01</definebone>
+  <definebone>bone_flagredtall02</definebone>
+  <definebone>bone_flagredtall03</definebone>
+  <definebone>bone_flagredtall04</definebone>
+  <definebone>bone_flagredtall05</definebone>
+  <definebone>bone_flagredtall06</definebone>
+  <definebone>bone_flagredtall07</definebone>
+  <definebone>bone_flagwhitetall</definebone>
+  <definebone>bone_flagwhitetall01</definebone>
+  <definebone>bone_flagwhitetall02</definebone>
+  <definebone>bone_flagwhitetall03</definebone>
+  <definebone>TREEMAIN</definebone>
+  <definebone>bone_leaves</definebone>
+  <definebone>bone_leaves01</definebone>
+  <definebone>bone_leaves02</definebone>
+  <definebone>bone_leaves03</definebone>
+  <definebone>bone_leaves04</definebone>
+  <definebone>bone_leaves05</definebone>
+  <definebone>bone_leaves06</definebone>
+  <definebone>bone_leaves07</definebone>
+  <definebone>bone_leaves08</definebone>
+  <definebone>bone_leaves09</definebone>
+  <definebone>bone_leaves10</definebone>
+  <definebone>bone_leaves11</definebone>
+  <definebone>bone_leaves12</definebone>
+  <definebone>bone_leaves13</definebone>
+  <definebone>bone_leaves14</definebone>
+  <definebone>bone_fx</definebone>
+  <definebone>bone_explorer_special</definebone>
+  <attachment>bridgesandstuff
+    <component>bridgesandstuff
+      <assetreference type="GrannyModel">
+        <file>homecity\china\bridgesandstuff\bridgesandstuff</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>bridgesandstuff</component>
+    </anim>
+  </attachment>
+  <attachment>fillerbuilding_AB
+    <component>fillerbuilding_AB
+      <assetreference type="GrannyModel">
+        <file>homecity\china\fillerbuildings\fillerbuildings_ab</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>fillerbuilding_AB</component>
+    </anim>
+  </attachment>
+  <attachment>fillerbuilding_CDE
+    <component>fillerbuilding_CDE
+      <assetreference type="GrannyModel">
+        <file>homecity\china\fillerbuildings\fillerbuildings_cde</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>fillerbuilding_CDE</component>
+    </anim>
+  </attachment>
+  <attachment>fillerbuilding_FGH
+    <component>fillerbuilding_FGH
+      <assetreference type="GrannyModel">
+        <file>homecity\china\fillerbuildings\fillerbuildings_fgh</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>fillerbuilding_FGH</component>
+    </anim>
+  </attachment>
+  <attachment>fillerbuilding_IJK
+    <component>fillerbuilding_IJK
+      <assetreference type="GrannyModel">
+        <file>homecity\china\fillerbuildings\fillerbuildings_ijk</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>fillerbuilding_IJK</component>
+    </anim>
+  </attachment>
+  <attachment>fillerbuilding_LM
+    <component>fillerbuilding_LM
+      <assetreference type="GrannyModel">
+        <file>homecity\china\fillerbuildings\fillerbuildings_lm</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>fillerbuilding_LM</component>
+    </anim>
+  </attachment>
+  <attachment>hills
+    <component>hills</component>
+    <anim>Idle
+      <component>hills</component>
+    </anim>
+    <include>homecity\china\hills\hills.xml</include>
+  </attachment>
+  <attachment>walls01
+    <component>walls01
+      <assetreference type="GrannyModel">
+        <file>homecity\china\walls\walls01</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>walls01</component>
+    </anim>
+  </attachment>
+  <attachment>walls02
+    <component>walls02
+      <assetreference type="GrannyModel">
+        <file>homecity\china\walls\walls02</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>walls02</component>
+    </anim>
+  </attachment>
+  <attachment>rocks01
+    <component>rocks01
+      <assetreference type="CompositeModel">
+        <file>homecity\china\rocks01\rocks01</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>rocks01</component>
+    </anim>
+  </attachment>
+  <attachment>fencewalls01
+    <component>fencewalls01
+      <assetreference type="GrannyModel">
+        <file>homecity\china\fencewalls\fencewalls01</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>fencewalls01</component>
+    </anim>
+  </attachment>
+  <attachment>fencewalls02
+    <component>fencewalls02
+      <assetreference type="GrannyModel">
+        <file>homecity\china\fencewalls\fencewalls02</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>fencewalls02</component>
+    </anim>
+  </attachment>
+  <attachment>trees01
+    <component>trees01
+      <assetreference type="CompositeModel">
+        <file>homecity\china\trees01\trees01</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>trees01</component>
+    </anim>
+  </attachment>
+  <attachment>bridgeroof01
+    <component>bridgeroof01
+      <assetreference type="GrannyModel">
+        <file>homecity\china\bridgeroof01\bridgeroof01</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>bridgeroof01</component>
+    </anim>
+  </attachment>
+  <attachment>lanterns
+    <component>lanterns
+      <assetreference type="GrannyModel">
+        <file>homecity\china\lanterns\lanterns</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>lanterns</component>
+    </anim>
+  </attachment>
+  <attachment>grass
+    <component>grass
+      <assetreference type="CompositeModel">
+        <file>homecity\china\grass\grass</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>grass</component>
+    </anim>
+  </attachment>
+  <attachment>docks01
+    <component>docks01
+      <assetreference type="GrannyModel">
+        <file>homecity\china\docks01\docks01</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <assetreference type="GrannyAnim">
+        <file>homecity\china\docks01\docks01_anim</file>
+      </assetreference>
+      <component>docks01</component>
+    </anim>
+  </attachment>
+  <attachment>china_boats
+    <component>china_boats
+      <assetreference type="GrannyModel">
+        <file>homecity\china\china_boats\china_boats</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <assetreference type="GrannyAnim">
+        <file>homecity\china\china_boats\china_boats_anim</file>
+      </assetreference>
+      <component>china_boats</component>
+    </anim>
+  </attachment>
+  <attachment>tree
+    <include>terrain\tree_japanese_maple.xml</include>
+  </attachment>
+  <attachment>falling_leaves
+    <component>falling_leaves
+      <notshadowcaster />
+      <assetreference type="ParticleSystem">
+        <file>homecity\japan\particle_leaves.particle</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <component>falling_leaves</component>
+    </anim>
+  </attachment>
+  <component>ground
+    <assetreference type="GrannyModel">
+      <file>homecity\china\china_hc_ground</file>
+    </assetreference>
+    <attach a="bridgesandstuff" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="fillerbuilding_AB" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="fillerbuilding_CDE" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="fillerbuilding_FGH" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="fillerbuilding_IJK" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="fillerbuilding_LM" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="hills" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="walls01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="walls02" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="rocks01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="fencewalls01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="fencewalls02" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="trees01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="bridgeroof01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="lanterns" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="grass" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="docks01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="china_boats" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_01" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_02" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_03" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_04" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_05" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_06" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_07" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_08" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_09" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_11" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_12" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_13" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_14" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_15" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_16" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_17" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_18" syncanims="0" />
+    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_19" syncanims="0" />
+
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_01" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_02" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_03" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_04" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_05" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_06" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_07" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_08" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_09" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_11" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_12" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_13" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_14" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_15" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_16" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_17" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_18" syncanims="0" />
+    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_19" syncanims="0" />
+  </component>
+  <anim>Idle
+    <component>ground</component>
+  </anim>
+</animfile>

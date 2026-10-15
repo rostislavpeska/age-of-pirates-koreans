@@ -3,20 +3,20 @@
   <name>$$600002$$</name>
   <heroname>$$600003$$</heroname>
   <gatherpointunit>HomeCityGatherFlag</gatherpointunit>
-  <visual>japan\japan_homecity.xml</visual>
-  <watervisual>japan\japan_homecity_water.xml</watervisual>
-  <backgroundvisual>japan\japan_background.xml</backgroundvisual>
-  <pathdata>japan\pathable_area_object.gr2</pathdata>
-  <camera>japan\japan_homecity_camera.cam</camera>
-  <widescreencamera>japan\japan_homecity_widescreencamera.cam</widescreencamera>
+  <visual>korean\korean_homecity.xml</visual>
+  <watervisual>china\china_homecity_water.xml</watervisual>
+  <backgroundvisual>aztec\aztec_background.xml</backgroundvisual>
+  <pathdata>china\pathable_area_object.gr2</pathdata>
+  <camera>china\china_homecity_camera.cam</camera>
+  <widescreencamera>china\china_homecity_widescreencamera.cam</widescreencamera>
   <transportroundtriptime>1</transportroundtriptime>
   <transportactivationtime>0</transportactivationtime>
   <level>1</level>
   <skillpoints>9</skillpoints>
   <lightset>Japan</lightset>
-  <watertype>Japan_HC</watertype>
+  <watertype>China_HC</watertype>
   <numpropunlocksearned>0</numpropunlocksearned>
-  <ambientsounds>homecity\japaneseambientsounds.xml</ambientsounds>
+  <ambientsounds>homecity\chineseambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
   <heroprotounits>
     <protounit>zpMonkKorean</protounit>
@@ -1441,8 +1441,8 @@
     <name>Estate</name>
     <uix>150</uix>
     <uiy>200</uiy>
-    <camera>japan\japan_homecity_estate_camera.cam</camera>
-    <widescreencamera>japan\japan_homecity_estate_widescreencamera.cam</widescreencamera>
+    <camera>china\china_homecity_estate_camera.cam</camera>
+    <widescreencamera>china\china_homecity_estate_camera.cam</widescreencamera>
     <unlocklevel>0</unlocklevel>
     <portrait>homecity\buildings_west\estate_icon</portrait>
     <displaynamestringid>24968</displaynamestringid>
@@ -1462,8 +1462,8 @@
     </visual>
     <uix>250</uix>
     <uiy>375</uiy>
-    <camera>japan\japan_homecity_market_camera.cam</camera>
-    <widescreencamera>japan\japan_homecity_market_widescreencamera.cam</widescreencamera>
+    <camera>china\china_homecity_market_camera.cam</camera>
+    <widescreencamera>china\china_homecity_market_widescreencamera.cam</widescreencamera>
     <unlocklevel>0</unlocklevel>
     <portrait>homecity\buildings_west\market_icon</portrait>
     <displaynamestringid>63356</displaynamestringid>
@@ -1530,8 +1530,8 @@
     </visual>
     <uix>460</uix>
     <uiy>125</uiy>
-    <camera>japan\japan_homecity_academy_camera.cam</camera>
-    <widescreencamera>japan\japan_homecity_academy_widescreencamera.cam</widescreencamera>
+    <camera>china\china_homecity_academy_camera.cam</camera>
+    <widescreencamera>china\china_homecity_academy_widescreencamera.cam</widescreencamera>
     <unlocklevel>0</unlocklevel>
     <portrait>homecity\buildings_west\academy_icon</portrait>
     <displaynamestringid>63357</displaynamestringid>
@@ -1630,8 +1630,8 @@
     </visual>
     <uix>80</uix>
     <uiy>475</uiy>
-    <camera>japan\japan_homecity_cathedral_camera.cam</camera>
-    <widescreencamera>japan\japan_homecity_cathedral_widescreencamera.cam</widescreencamera>
+    <camera>china\china_homecity_cathedral_camera.cam</camera>
+    <widescreencamera>china\china_homecity_cathedral_widescreencamera.cam</widescreencamera>
     <unlocklevel>0</unlocklevel>
     <portrait>homecity\buildings_west\cathedral_icon</portrait>
     <displaynamestringid>63358</displaynamestringid>
@@ -1720,8 +1720,8 @@
     </visual>
     <uix>450</uix>
     <uiy>275</uiy>
-    <camera>japan\japan_homecity_manufacturing_plant_camera.cam</camera>
-    <widescreencamera>japan\japan_homecity_plant_widescreencamera.cam</widescreencamera>
+    <camera>china\china_homecity_manufacturing_plant_camera.cam</camera>
+    <widescreencamera>china\china_homecity_plant_widescreencamera.cam</widescreencamera>
     <unlocklevel>0</unlocklevel>
     <portrait>homecity\buildings_west\manufacturing_plant_icon</portrait>
     <displaynamestringid>63359</displaynamestringid>
@@ -1793,8 +1793,8 @@
     </visual>
     <uix>200</uix>
     <uiy>250</uiy>
-    <camera>japan\japan_homecity_dock_camera.cam</camera>
-    <widescreencamera>japan\japan_homecity_dock_widescreencamera.cam</widescreencamera>
+    <camera>china\china_homecity_dock_camera.cam</camera>
+    <widescreencamera>china\china_homecity_dock_widescreencamera.cam</widescreencamera>
     <unlocklevel>0</unlocklevel>
     <portrait>homecity\buildings_west\dock_icon</portrait>
     <displaynamestringid>63360</displaynamestringid>
@@ -1868,8 +1868,8 @@
   </building>
   <building>
     <name>Customization</name>
-    <camera>japan\japan_homecity_camera.cam</camera>
-    <widescreencamera>japan\japan_homecity_widescreencamera.cam</widescreencamera>
+    <camera>china\china_homecity_camera.cam</camera>
+    <widescreencamera>china\china_homecity_widescreencamera.cam</widescreencamera>
     <unlocklevel>0</unlocklevel>
     <portrait>homecity\buildings_west\dock_icon</portrait>
     <displaynamestringid>24966</displaynamestringid>
