@@ -7,8 +7,8 @@
   <watervisual>china\china_homecity_water.xml</watervisual>
   <backgroundvisual>aztec\aztec_background.xml</backgroundvisual>
   <pathdata>china\pathable_area_object.gr2</pathdata>
-  <camera>china\china_homecity_camera.cam</camera>
-  <widescreencamera>china\china_homecity_widescreencamera.cam</widescreencamera>
+  <camera>aztec\aztec_homecity_cathedral_camera.cam</camera>
+  <widescreencamera>aztec\aztec_homecity_cathedral_camera.cam</widescreencamera>
   <transportroundtriptime>1</transportroundtriptime>
   <transportactivationtime>0</transportactivationtime>
   <level>1</level>
