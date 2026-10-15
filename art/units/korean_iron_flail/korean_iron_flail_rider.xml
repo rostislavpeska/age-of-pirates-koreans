@@ -44,7 +44,7 @@
     </decal>
   </component>
   <anim>Walk<assetreference type="GrannyAnim">
-      <file>units\korean_iron_flail\korean_iron_flail_rider_walk00</file>
+      <file>units\asians\chinese\iron_flail\iron_flail_rider_walk00</file>
       <tag type="FootstepLeft" footprinttype="Horse">1.00</tag>
       <tag type="FootstepRight" footprinttype="Horse">0.70</tag>
     </assetreference>

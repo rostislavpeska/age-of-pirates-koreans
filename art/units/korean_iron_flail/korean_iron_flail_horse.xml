@@ -45,7 +45,7 @@
     <attach a="RiderAttachment" frombone="hotspot" tobone="ATTACHPOINT" syncanims="1" />
   </component>
   <anim>Walk<assetreference type="GrannyAnim">
-      <file>units\korean_iron_flail\korean_iron_flail_horse_0</file>
+      <file>units\asians\chinese\iron_flail\iron_flail_horse_walk00</file>
       <tag type="FootstepLeft" footprinttype="Horse" footprintbone="HS BONE HOOF FRNT LT">1.00</tag>
       <tag type="FootstepLeft" footprinttype="Horse" footprintbone="HS BONE HOOF BACK LT">0.83</tag>
       <tag type="FootstepRight" footprinttype="Horse" footprintbone="HS BONE HOOF FRNT RT">0.70</tag>
