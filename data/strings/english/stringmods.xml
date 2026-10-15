@@ -5,7 +5,7 @@
            export copies the compiled table to every language folder (stringsync rule for a table without
            REWRITES). Ascending ids. ===== -->
       <string _locid="600000">Koreans</string>
-      <string _locid="600001">&lt;color=1.0, 1.0, 0.0&gt;Civilization bonus:&lt;/color&gt;\nVillagers can hunt and herd livestock.\n&lt;color=1.0, 1.0, 0.0&gt;Unique units:&lt;/color&gt;\nAshigaru Musketeer, Atakebune, Daimyo, Flaming Arrow, Fune, Sohei Archer, Morutaru, Geomsabok, Tekkousen, Samurai, Gungdo Cavalry, Pyeongon Cavalry and Yumi Archer.\n&lt;color=1.0, 1.0, 0.0&gt;Unique buildings:&lt;/color&gt;\nHanok (Korean House), Korean Town Center, Barracks and Stable. Hanoks shelter up to 3 villagers or infantry and, from the Colonial Age, shoot while occupied. Cherry Orchard is a resource for food. Dojo generates armies automatically.\n&lt;color=1.0, 1.0, 0.0&gt;Wonders:&lt;/color&gt;\nGolden Pavilion, Great Buddha, The Shogunate, Torii Gates and Toshogu Shrine\n\nThe Joseon dynasty ruled Korea from Hanseong for five centuries and proclaimed the Korean Empire in 1897.</string>
+      <string _locid="600001">&lt;color=1.0, 1.0, 0.0&gt;Civilization bonus:&lt;/color&gt;\nVillagers can hunt and herd livestock.\n&lt;color=1.0, 1.0, 0.0&gt;Unique units:&lt;/color&gt;\nAshigaru Musketeer, Atakebune, Daimyo, Flaming Arrow, Fune, Sohei Archer, Morutaru, Geomsabok, Tekkousen, Samurai, Gungdo Cavalry, Pyeongon Cavalry, Hongyipao and Yumi Archer.\n&lt;color=1.0, 1.0, 0.0&gt;Unique buildings:&lt;/color&gt;\nHanok (Korean House), Korean Town Center, Barracks and Stable. Hanoks shelter up to 3 villagers or infantry and, from the Colonial Age, shoot while occupied. Cherry Orchard is a resource for food. Dojo generates armies automatically.\n&lt;color=1.0, 1.0, 0.0&gt;Wonders:&lt;/color&gt;\nGolden Pavilion, Great Buddha, The Shogunate, Torii Gates and Toshogu Shrine\n\nThe Joseon dynasty ruled Korea from Hanseong for five centuries and proclaimed the Korean Empire in 1897.</string>
       <string _locid="600002">Hanseong</string>
       <string _locid="600003">Samyeong Daesa</string>
       <string _locid="600004">Empress Myeongseong</string>
@@ -124,6 +124,18 @@
       <string _locid="600117">Exalted Pyeongon Cavalry</string>
       <string _locid="600118">Pyeongon Cavalry attack and hitpoints increased.</string>
       <string _locid="600119">Exalted upgrade for Pyeongon Cavalry.</string>
+      <string _locid="600120">Hongyipao</string>
+      <string _locid="600121">ART Hongyipao</string>
+      <string _locid="600122">Super-heavy artillery. Moves and fires slowly, but does tremendous damage against infantry or buildings.</string>
+      <string _locid="600123">Super-heavy artillery.</string>
+      <string _locid="600124">Exalted Hongyipao</string>
+      <string _locid="600125">Exalted upgrade for Hongyipao.</string>
+      <string _locid="600126">Japanese Allies</string>
+      <string _locid="600127">ZP Consulate Japanese Allies</string>
+      <string _locid="600128">Bonus: +7% Land Military and Villager Damage\n\nTrains: Yamabushi, Shinobi, Ninja, Ronin\n\nShipments: Military enhancements, Osaka Ronin</string>
+      <string _locid="600129">Osaka Ronin</string>
+      <string _locid="600130">ZP Consulate Osaka Ronin</string>
+      <string _locid="600131">Ships Hatamoto Samurai and Ninjutsu-Zukai.</string>
     </language>
   </stringtable>
 </stringmods>

@@ -57,7 +57,7 @@ The other techs are the identity. Portugal ships boats. France ships crates. Rus
 | Dutch | +0.80 coin a second | 150, Colonial: church wagon | 450, Colonial: bank wagon | 300, Fortress: arsenal wagon. 900, Industrial: livestock-pen wagon | 2300: the Dutch brigade |
 | Britain | land units and villagers have +7% hit points | 250, Colonial, repeats: 2 surgeons | 300, Colonial, repeats: 4 spies | 450, Fortress, repeats: 5 petards | 2300: 16 rangers, 5 falconets |
 | Ottomans | — | 200, Colonial: 6 azaps | 300, Colonial: 4 villagers | 850, Industrial: 2 great bombards | 2300: the Ottoman brigade |
-| Japan | land military and villagers have +7% damage | 100, Colonial: a rickshaw | 300, Colonial: train 10 at a time | 400, Colonial: the castle can spawn a samurai | none. Meiji, Industrial, 4000, skips to Imperial |
+| Japan | land military and villagers have +7% damage | 100, Colonial: a rickshaw | 300, Colonial: train 10 at a time | 400, Colonial: the castle can spawn a samurai | 1600, Industrial: Osaka Ronin, 4 Hatamoto Samurai and 3 Ninjutsu-Zukai |
 
 Britain is the ally whose early techs are small squads. Portugal, France and Russia are not. Their soldiers are the armies and the Imperial brigade. The three techs before that are boats, crates, buildings, or a rule.
 
@@ -76,6 +76,8 @@ No new units, no new costs.
 Techs, all one-shot, paid in export: blockhouse wagon 250, fort wagon 600 (Fortress), factory wagon 800 (Industrial), brigade 2300 (Imperial: 25 counter-jaegers and 3 culverins). The AoP clone also makes villagers train in 90% of the time and renames the frontier and fortified castle. Leave that clone as it is.
 
 ## United States — the Civil War commandery, not only the embassy
+
+Owner correction, 14 October 2026: the live consulate is a temporary unit row. It trains three export proxies and no techs. Regular costs 105 export, US Cavalry 160, Gatling Gun 350. `zpKoreans` spawns the real unit from each proxy. The Gatling proxy is only on this consulate. The embassy keeps the gold units and the gold shipment techs. Tech clones that turn each other off wait for a balance pass. The tables below are that later design.
 
 The American Embassy (`zpAmericanEmbassy`) has the five shipment techs. The Civil War commandery (`zpSPCCivilWarCommandery`, placed by `randmaps/zpcivilwar.xs`) has those five and the improvement techs the embassy does not. Fishing boats, a wood discount, and faster home-city cards are not on either building.
 
@@ -190,9 +192,11 @@ The button enables Yamabushi (140 HP, 65 export, 1 pop), Shinobi (150 HP, 80 exp
 | Military Rickshaw | Colonial | 100 | One Japanese building wagon. |
 | Master Training | Colonial | 300 | Sets the player's batch-train limit to 10. A buff, and it is the whole player, not just the consulate. |
 | Koujou | Colonial | 400 | Adds `SpawnSamurai` to `ypCastle`. Korea uses that castle, so the castle gains a samurai spawn. |
-| Meiji Restoration | Industrial | 4000 | Sets the age to Imperial and makes the five Japanese wonders unobtainable. Korea still ages with those wonders, so this skips the Industrial age-up and removes it. There is no 2300 brigade. |
+| Osaka Ronin | Industrial | 1600 | Ships 4 Hatamoto Samurai and 3 Ninjutsu-Zukai. One use. Needs a land gather point and the population. |
 
-Ship all four, including Meiji. The test on Burma is to research Meiji in Industrial and see the age skip. If that skip is wrong, the follow-up is to drop Meiji and keep the four units and the other three techs. The unit names stay Japanese. That is the ally.
+2026-10-14: Meiji is stripped from both Japanese Allies cards. The age skip and the wonder lock are wrong for Korea. Rickshaw, Master Training and Koujou stay. The fourth tech is Osaka Ronin (`zpConsulateOsakaRonin`, in this mod). Japan Isolation and the Khmer clone still offer Meiji.
+
+Ship Rickshaw, Master Training, Koujou and Osaka Ronin. The test on Burma is to research Osaka Ronin in the Industrial Age and receive 4 Hatamoto Samurai and 3 Ninjutsu-Zukai. The unit names stay Japanese. That is the ally.
 
 The German clone's food discounts on Chu Ko Nu, Qiang and the other Chinese units are China's German ally. They are not part of this set.
 
@@ -203,13 +207,13 @@ The German clone's food discounts on Chu Ko Nu, Qiang and the other Chinese unit
 | Passive | villagers train in 90% of the time | warships +3 range | gather +5% | land military and villagers +7% damage |
 | Colonial army | 400: 4 Cossacks | 400: 6 Regulars | 400: 6 Chu Ko Nu, 2 Steppe Riders | Yamabushi and Shinobi |
 | Fortress army | 800: 6 Cossacks, 1 culverin | 800: 3 US Cavalry, 1 Gatling | 800: 3 Manchu, 6 Hand Mortars | Ninja and Ronin |
-| Industrial army | 1600: 9 Kalmucks, 3 culverins | 1600: 4 US Cavalry, 4 Regulars, 2 Gatlings | 1600: 6 Iron Troops, 6 Changdao | — |
-| Techs, four | blockhouse, fort, factory, Imperial brigade | Company, ironclads at the dock, a factory wagon, American Brigade | rice paddy wagon, castle wagon, one Flying Crow, a battery of three | rickshaw, batch of 10, samurai spawn, Meiji. No Imperial tech. |
+| Industrial army | 1600: 9 Kalmucks, 3 culverins | 1600: 4 US Cavalry, 4 Regulars, 2 Gatlings | 1600: 6 Iron Troops, 6 Changdao | 1600: Osaka Ronin, 4 Hatamoto Samurai and 3 Ninjutsu-Zukai |
+| Techs, four | blockhouse, fort, factory, Imperial brigade | Company, ironclads at the dock, a factory wagon, American Brigade | rice paddy wagon, castle wagon, one Flying Crow, a battery of three | rickshaw, batch of 10, samurai spawn, Osaka Ronin |
 
 Russia uses the buttons that already exist. Japan is the new Allies pair above. United States and China are new buttons in both layers, with these shipments as `YPConsulateImprovement` techs (the Imperial row flagged `ypConsulateImprovementImperial`).
 
 ## Test, once it is built
 
-Burma, Korean player. The four flags appear: Russia, United States, China, Japan. Dutch, Portuguese and Spanish do not. A standard map shows the same four from the Age 0 shadow. Russia still has its wagons. Each new ally shows four techs. The United States shows Company, ironclads, a factory wagon, and the American Brigade. China shows a rice paddy wagon, a castle wagon, one Flying Crow, and an Imperial battery of three Flying Crows. Meiji, if researched, is the age skip above.
+Burma, Korean player. The four flags appear: Russia, United States, China, Japan. Dutch, Portuguese and Spanish do not. A standard map shows the same four from the Age 0 shadow. Russia still has its wagons. Japan shows Rickshaw, Master Training and Koujou, and does not show Meiji.
 
 `python .claude/skills/map-politician-triggers/scripts/politiciancheck.py` on the Burma script. Map scripts stay LF. New AoP techs get an `.xml.xmb` twin. Runtime XML stays CRLF.

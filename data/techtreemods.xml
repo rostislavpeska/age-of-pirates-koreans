@@ -39,6 +39,7 @@
       <effect type="TechStatus" status="active">zpKoreanBuildings</effect>
       <effect type="TechStatus" status="active">zpKoreanUnits</effect>
       <effect type="TechStatus" status="active">zpKoreanEconomy</effect>
+      <effect type="TechStatus" status="active">zpKoreanConsulateAllies</effect>
     </effects>
   </tech>
   <!-- zpKoreanBuildings: the Korean building set on top of the Japanese one, activated after
@@ -413,6 +414,16 @@
       </effect>
       <effect type="TechStatus" status="obtainable">zpKoreanIronFlailPostIndustrial</effect>
       <effect type="TechStatus" status="obtainable">zpKoreanIronFlailPostImperial</effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">zpKoreanHongyipao</target>
+      </effect>
+      <effect type="CommandAdd" proto="zpKoreanHongyipao" page="0" column="2">
+        <target type="ProtoUnit">ypCastle</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpExaltedKoreanHongyipao</effect>
+      <effect type="CommandAdd" tech="zpExaltedKoreanHongyipao" page="1" column="2">
+        <target type="ProtoUnit">ypCastle</target>
+      </effect>
     </effects>
   </tech>
   <!-- zpKoreanEconomy: Koreans hunt (Asian villager), so their market offers the hunting pair (Hunting Eagles, Professional Hunters) instead of the Japanese berry pair - same slot (page 1, column 0) and costs; debt B9 -->
@@ -1247,6 +1258,170 @@
     </prereqs>
     <effects>
       <effect type="TechStatus" status="active">zpExaltedKoreanIronFlail</effect>
+    </effects>
+  </tech>
+  <tech name="zpExaltedKoreanHongyipao" type="Normal">
+    <dbid>60041</dbid>
+    <displaynameid>600124</displaynameid>
+    <cost resourcetype="Wood">1500.0000</cost>
+    <cost resourcetype="Gold">1500.0000</cost>
+    <researchpoints>30.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\imperial_artillery\imperial_artillery.png</icon>
+    <rollovertextid>600125</rollovertextid>
+    <flag>UpgradeTech</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <prereqs>
+      <techstatus status="Active">Imperialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="1.50" subtype="Hitpoints" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanHongyipao</target>
+      </effect>
+      <effect type="Data" amount="1.50" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">zpKoreanHongyipao</target>
+      </effect>
+      <effect type="SetName" proto="zpKoreanHongyipao" culture="none" newname="600124" />
+    </effects>
+  </tech>
+<tech name="zpBigConsulateJapaneseAllies" type="Normal">
+    <dbid>60042</dbid>
+    <displaynameid>600126</displaynameid>
+    <editornameid>600127</editornameid>
+    <rollovertextid>600128</rollovertextid>
+    <cost resourcetype="Trade">100.0000</cost>
+    <researchpoints>1.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\eso\flag_japanese_icon.png</icon>
+    <sequestertech>zpBigSequesterJapaneseAllies</sequestertech>
+    <flag>CountsTowardEconomicScore</flag>
+    <flag>NativeDance</flag>
+    <flag>YPConsulateTech</flag>
+    <flag>YPInfiniteTech</flag>
+    <flag>YPSequesterTech</flag>
+    <flag>DoNotQueue</flag>
+    <effects>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypConsulateShinobi</target>
+      </effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypConsulateNinja</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">ypConsulateJapaneseMasterTraining</effect>
+      <effect type="TechStatus" status="obtainable">ypConsulateJapaneseMilitaryRickshaw</effect>
+      <effect type="TechStatus" status="obtainable">ypConsulateJapaneseKoujou</effect>
+      <effect type="TechStatus" status="obtainable">zpConsulateOsakaRonin</effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypConsulateRonin</target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">zpBigSequesterJapaneseAllies</effect>
+      <effect type="TechStatus" status="active">ypBigTradeTaxEnable</effect>
+      <effect type="Data" amount="1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypConsulateYamabushi</target>
+      </effect>
+      <effect type="Data" amount="1.07" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">LogicalTypeLandMilitary</target>
+      </effect>
+      <effect type="Data" amount="1.07" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" amount="1.07" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">LogicalTypeAffectedByVillagerUpgrades</target>
+      </effect>
+      <effect civ="Japanese" type="Data" amount="0.00" subtype="SetCivRelation" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect type="TechStatus" status="obtainable">ypConsulateRelationsJapanese</effect>
+      <effect type="TechStatus" status="unobtainable">zpPickConsulateTechAvailable</effect>
+    </effects>
+  </tech>
+<tech name="zpBigSequesterJapaneseAllies" type="Normal">
+    <dbid>60043</dbid>
+    <displaynameid>68633</displaynameid>
+    <researchpoints>45.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\ingame\politicians\consulate_endrelations.png</icon>
+    <icontexturecoords>.001953125 .001953125 .7890625 .6015625</icontexturecoords>
+    <rollovertextid>68632</rollovertextid>
+    <flag>NativeDance</flag>
+    <flag>YPInfiniteTech</flag>
+    <flag>YPSequesterTech</flag>
+    <effects>
+      <effect type="Data" amount="-1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypConsulateShinobi</target>
+      </effect>
+      <effect type="Data" amount="-1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypConsulateNinja</target>
+      </effect>
+      <effect type="Data" amount="-1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypConsulateRonin</target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">ypConsulateJapaneseMasterTraining</effect>
+      <effect type="TechStatus" status="unobtainable">ypConsulateJapaneseMilitaryRickshaw</effect>
+      <effect type="TechStatus" status="unobtainable">ypConsulateJapaneseMeijiRestoration</effect>
+      <effect type="TechStatus" status="obtainable">ypPickConsulateTech</effect>
+      <effect type="TechStatus" status="unobtainable">ypConsulateJapaneseKoujou</effect>
+      <effect type="TechStatus" status="unobtainable">zpConsulateOsakaRonin</effect>
+      <effect type="Data" amount="-1.00" subtype="Enable" relativity="Absolute">
+        <target type="ProtoUnit">ypConsulateYamabushi</target>
+      </effect>
+      <effect type="TechStatus" status="active">ypBigTradeTaxRemove</effect>
+      <effect civ="none" type="Data" amount="0.00" subtype="SetCivRelation" relativity="Absolute">
+        <target type="Player">
+        </target>
+      </effect>
+      <effect type="TechStatus" status="unobtainable">ypConsulateRelationsJapanese</effect>
+      <effect type="Data" amount="0.93" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">LogicalTypeLandMilitary</target>
+      </effect>
+      <effect type="Data" amount="0.93" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">AbstractVillager</target>
+      </effect>
+      <effect type="Data" amount="0.93" subtype="Damage" allactions="1" relativity="BasePercent">
+        <target type="ProtoUnit">LogicalTypeAffectedByVillagerUpgrades</target>
+      </effect>
+      <effect type="TechStatus" status="active">zpPickConsulateTechAvailable</effect>
+    </effects>
+  </tech>
+<tech name="zpKoreanConsulateAllies" type="Normal">
+    <dbid>60044</dbid>
+    <researchpoints>0.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <flag>Shadow</flag>
+    <effects>
+      <effect type="TechStatus" status="unobtainable">ypBigConsulateDutch</effect>
+      <effect type="TechStatus" status="unobtainable">ypBigConsulatePortuguese</effect>
+      <effect type="TechStatus" status="unobtainable">ypBigConsulateSpanish</effect>
+      <effect type="TechStatus" status="unobtainable">ypBigConsulateJapanese</effect>
+      <effect type="TechStatus" status="obtainable">ypBigConsulateRussians</effect>
+      <effect type="TechStatus" status="obtainable">zpBigConsulateJapaneseAllies</effect>
+    </effects>
+  </tech>
+  <tech name="zpConsulateOsakaRonin" type="Normal">
+    <dbid>60045</dbid>
+    <displaynameid>600129</displaynameid>
+    <editornameid>600130</editornameid>
+    <cost resourcetype="Trade">1600.0000</cost>
+    <researchpoints>60.0000</researchpoints>
+    <status>UNOBTAINABLE</status>
+    <icon>resources\images\icons\techs\osaka_ronin.png</icon>
+    <rollovertextid>600131</rollovertextid>
+    <flag>CheckLandHCGatherPoint</flag>
+    <flag>CountsTowardMilitaryScore</flag>
+    <flag>YPNeverObtainableAfterUse</flag>
+    <flag>YPCheckPopCap</flag>
+    <flag>YPConsulateImprovement</flag>
+    <prereqs>
+      <techstatus status="Active">Industrialize</techstatus>
+    </prereqs>
+    <effects>
+      <effect type="Data" amount="4.00" subtype="FreeHomeCityUnit" unittype="ypConsulateRonin" relativity="Absolute">
+        <target type="Player" />
+      </effect>
+      <effect type="Data" amount="3.00" subtype="FreeHomeCityUnit" unittype="ypConsulateNinja" relativity="Absolute">
+        <target type="Player" />
+      </effect>
     </effects>
   </tech>
 </techtreemods>

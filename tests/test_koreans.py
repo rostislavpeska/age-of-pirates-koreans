@@ -53,15 +53,17 @@ def test_techs_activate_japan_and_the_visual_marker():
                                                   'zpKoreanLancerPostIndustrial', 'zpKoreanLancerPostImperial',
                                                   'zpKoreanHorseArcherPostIndustrial', 'zpKoreanHorseArcherPostImperial',
                                                   'zpHonoredKoreanIronFlail', 'zpExaltedKoreanIronFlail',
-                                                  'zpKoreanIronFlailPostIndustrial', 'zpKoreanIronFlailPostImperial']
+                                                  'zpKoreanIronFlailPostIndustrial', 'zpKoreanIronFlailPostImperial',
+                                                  'zpExaltedKoreanHongyipao']
     active = [e.text for e in techs[1].iter('effect') if e.get('type') == 'TechStatus' and e.get('status') == 'active']
-    assert active == ['YPAge0Japanese', 'zpKoreanVisuals', 'zpKoreanBuildings', 'zpKoreanUnits', 'zpKoreanEconomy']
+    assert active == ['YPAge0Japanese', 'zpKoreanVisuals', 'zpKoreanBuildings', 'zpKoreanUnits', 'zpKoreanEconomy', 'zpKoreanConsulateAllies']
     assert all(60000 <= int(t.findtext('dbid')) < 61000 for t in techs)
 
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(120)]         # 600095-600119: Geomsabok, Gungdo Cavalry, Pyeongon Cavalry
+    assert ids == [str(600000 + i) for i in range(126)]         # 600120-600125: Hongyipao
+                                                                # 600095-600119: Geomsabok, Gungdo Cavalry, Pyeongon Cavalry
                                                                 # 600093-600094: Industrial Castle bench
                                                                 # 600077-600078: zzTEST Dock
                                                                 # 600079-600080: zzTEST Consulate
@@ -211,7 +213,8 @@ def test_korean_monks_replace_the_japanese_monks():
     # zzTEST* = the 3D test benches in their own marked block (owner 2026-10-09, strip before release)
     assert {n for n in units if not n.startswith('zzTEST')} == {'zpHouseKorean', 'zpMonkKorean', 'zpMonkKorean2', 'zpSeungbyeong',
                                                                'zpJochong', 'zpJangchang', 'zpGakgung',
-                                                               'zpKoreanLancer', 'zpKoreanHorseArcher', 'zpKoreanIronFlail'}
+                                                               'zpKoreanLancer', 'zpKoreanHorseArcher', 'zpKoreanIronFlail',
+                                                               'zpKoreanHongyipao'}
     civ = xml(K / 'data/civmods.xml').find('civ')
     assert [u.text for u in civ.findall('startingunit')][:2] == ['zpMonkKorean', 'zpMonkKorean2']
     assert 'ypMonkJapanese' not in (K / 'data/civmods.xml').read_text(encoding='utf-8')
@@ -467,7 +470,7 @@ def test_korean_monastery_replaces_the_japanese_monk_techs():
     armed = [(e.text or '').strip() for e in eff if e.get('status') == 'obtainable'
              and not (e.text or '').strip().startswith('zpSeungbyeong')      # the age-up techs: their own test
              and not any(u in (e.text or '') for u in ('Jochong', 'Jangchang', 'Gakgung',
-                                                            'KoreanLancer', 'KoreanHorseArcher', 'IronFlail'))]
+                                                            'KoreanLancer', 'KoreanHorseArcher', 'IronFlail', 'Hongyipao'))]
     assert armed == [s[0] for s in slots]
     for name, _ in slots:
         t = techs[name]
@@ -1018,3 +1021,47 @@ def test_iron_flail_is_an_extra_stable_unit():
     assert [p.text for p in techs['zpKoreanIronFlailPostImperial'].iter('techstatus')] == ['ypPostImperialJapanese']
     assert status['zpKoreanIronFlailPostIndustrial'] == 'obtainable'
     assert status['zpKoreanIronFlailPostImperial'] == 'obtainable'
+
+
+def test_hongyipao_is_the_industrial_castle_cannon():
+    """The Great Bombard's population and stats, trained from the Castle. The native bombard's animation and icon.
+    Chongtong and the Hwacha are not records: they need their own models."""
+    van = next(u for u in ET.fromstring(_vanilla('data/protoy.xml.xmb')).findall('unit') if u.get('name') == 'GreatBombard')
+    ours = {u.get('name'): u for u in xml(K / 'data/protomods.xml').findall('unit')}['zpKoreanHongyipao']
+    assert [_canon(c) for c in ours if c.tag not in OWN_FIELDS] == [_canon(c) for c in van if c.tag not in OWN_FIELDS]
+    assert ours.get('id') == ours.findtext('dbid') == '22026'
+    assert float(ours.findtext('populationcount')) == 7
+    assert int(float(ours.findtext('allowedage'))) == 3
+    assert ours.find('buildlimit') is None
+    assert 'AbstractNativeWarrior' not in [(t.text or '').strip() for t in ours.findall('unittype')]
+    assert ours.findtext('animfile') == BS.join(['units', 'revolution', 'cetbang', 'korean_bombard.xml'])
+    assert ours.findtext('icon') == BS.join(['resources', 'art', 'units', 'natives', 'korean_bombard_icon.png'])
+    assert ours.findtext('portraiticon') == BS.join(['resources', 'art', 'units', 'natives', 'korean_bombard_portrait.png'])
+    strings = dict(re.findall(r'_locid="(\d+)">([^<]*)<', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8')))
+    assert strings[ours.findtext('displaynameid')] == 'Hongyipao'
+    assert 'Factory' not in strings[ours.findtext('rollovertextid')] and 'Home City' not in strings[ours.findtext('rollovertextid')]
+    snds = xml(K / 'sound/zpkoreanhongyipao_snds.xml')
+    assert snds.find('protounit').get('name') == 'zpKoreanHongyipao'
+    assert {s.get('name') for s in snds.iter('soundset')} >= {'Korean_Soldier_Select', 'Korean_Soldier_Attack'}
+    techs = {t.get('name'): t for t in xml(K / 'data/techtreemods.xml').findall('tech')}
+    van_techs = {t.get('name'): t for t in ET.fromstring(_vanilla('data/techtreey.xml.xmb')).findall('tech')}
+    eff = list(techs['zpKoreanUnits'].iter('effect'))
+    enable = {e.findtext('target'): e.get('amount') for e in eff if e.get('subtype') == 'Enable'}
+    assert enable['zpKoreanHongyipao'] == '1.00' and 'GreatBombard' not in enable
+    adds = [(e.get('page'), e.get('column'), e.findtext('target')) for e in eff
+            if e.get('type') == 'CommandAdd' and e.get('proto') == 'zpKoreanHongyipao']
+    assert adds == [('0', '2', 'ypCastle')]
+    ren = lambda s: {'GreatBombard': 'zpKoreanHongyipao'}.get(s, s)
+    same = lambda t: sorted((e.get('type'), e.get('subtype'), e.get('amount'), e.get('relativity'), e.get('allactions'),
+                             e.get('action'), ren(e.findtext('target') or e.get('proto') or e.get('unittype') or ''))
+                            for e in t.iter('effect'))
+    own = techs['zpExaltedKoreanHongyipao']
+    assert same(own) == same(van_techs['ImperialBombard'])
+    assert [(c.get('resourcetype'), (c.text or '').strip()) for c in own.findall('cost')] == [
+        (c.get('resourcetype'), (c.text or '').strip()) for c in van_techs['ImperialBombard'].findall('cost')]
+    assert [p.text for p in own.iter('techstatus')] == ['Imperialize']
+    status = {(e.text or '').strip(): e.get('status') for e in eff if e.get('type') == 'TechStatus'}
+    assert status['zpExaltedKoreanHongyipao'] == 'obtainable' and 'ImperialBombard' not in status
+    assert ('zpExaltedKoreanHongyipao', '1', '2', 'ypCastle') in [
+        (e.get('tech'), e.get('page'), e.get('column'), e.findtext('target')) for e in eff]
+    assert not any('Hongyipao' in n and 'Shadow' in [f.text for f in t.findall('flag')] for n, t in techs.items())

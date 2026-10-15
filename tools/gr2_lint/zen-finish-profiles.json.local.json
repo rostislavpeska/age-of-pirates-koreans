@@ -1,0 +1,3500 @@
+{
+  "_doc": "gr2_lint profiles of the Koreans add-on's own building models (AoP scripts/havok/gr2_lint.py --profiles tools/gr2_lint/profiles.json --profile <name> art/buildings/<folder>/). It extends AoP's profile file: the owner's texture classes and the DLL tool route come from there and are never redefined here. Relative paths resolve from this repository.",
+  "extends": "gr2_lint_profiles.json",
+  "tools": {
+    "owner_messages": "tools/gr2_lint/owner_authorization.json",
+    "_owner_messages_doc": "the owner's verbatim answers this add-on's profiles cite (confirmed_by, waivers)"
+  },
+  "profiles": {
+    "korean_house_a": {
+      "model": "korean_house_a",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok"
+      ],
+      "_doc": "Korean House A (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_01(_damaged). Intact + damaged + HKT + materials + animfile. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls). r14d: progressive destruction - stage bodies carry 14-20 % of the surface (vanilla 12-18 %; r14c 2.7-6.6 %).",
+      "files": {
+        "intact": "korean_house_a.gr2",
+        "damaged": "korean_house_a_damaged.gr2",
+        "hkt": "korean_house_a_damaged.hkt",
+        "intact_material": "korean_house_a.material",
+        "damaged_material": "korean_house_a_damaged.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_a"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_props_owner_evidence.json",
+              "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+              "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Shrine_Age201",
+        "japan_shrine_age2_01",
+        "japan_shrine_age2_01_M0",
+        "BONE_GARRISONFLAG"
+      ],
+      "physical_mounts": [
+        {
+          "bone": "BONE_GARRISONFLAG",
+          "position": [
+            0.0,
+            4.995,
+            0.0
+          ],
+          "body": "roof_wood_shatterhide_ondeath_0_6",
+          "bottom_y": 4.7,
+          "top_y": 6.095,
+          "_doc": "the small garrison mast, pole +15 % and BONE_GARRISONFLAG at the flag cloth's lower edge (owner 2026-10-09, game test): flag spans bone .. bone + 1.05 m, 5 cm under the tip; damaged: the reserved donor body holds the pole and collar only"
+        }
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_a_r16e.json",
+        "sha256": "6462db8bb010354eaf83c19a4ea07d0850c9c81b92e2eaa26ad9af31747d3caa"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_a_con": {
+      "model": "korean_house_a",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok"
+      ],
+      "_doc": "Korean House A construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone. r14b: every new member face keeps a positive UV winding (AoP uv_integrity W); the r14 members were mirrored. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls).",
+      "files": {
+        "intact": "korean_house_a_con.gr2",
+        "intact_material": "korean_house_a_con.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_a"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_props_owner_evidence.json",
+              "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+              "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Shrine_Age201",
+        "japan_shrine_age2_01_con_stage3",
+        "japan_shrine_age2_01_con_stage3_M0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_a_con_r16d.json",
+        "sha256": "5a258ac9e492638875a16cd995706b2d26251ad61ad1514411eb8f8faf372f03"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_b": {
+      "model": "korean_house_b",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok"
+      ],
+      "_doc": "Korean House B (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_02(_damaged). Intact + damaged + HKT + materials + animfile. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls). r14d: progressive destruction - stage bodies carry 14-20 % of the surface (vanilla 12-18 %; r14c 2.7-6.6 %).",
+      "files": {
+        "intact": "korean_house_b.gr2",
+        "damaged": "korean_house_b_damaged.gr2",
+        "hkt": "korean_house_b_damaged.hkt",
+        "intact_material": "korean_house_b.material",
+        "damaged_material": "korean_house_b_damaged.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_b"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_props_owner_evidence.json",
+              "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+              "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Shrine_Age",
+        "japan_shrine_age2_02_M0",
+        "japan_shrine_age2_02_M1",
+        "japan_shrine_age2_02",
+        "BONE_GARRISONFLAG"
+      ],
+      "physical_mounts": [
+        {
+          "bone": "BONE_GARRISONFLAG",
+          "position": [
+            -0.2,
+            5.275,
+            0.0
+          ],
+          "body": "roof_stone_solid_ondeath_2",
+          "bottom_y": 4.98,
+          "top_y": 6.375,
+          "_doc": "the small garrison mast, pole +15 % and BONE_GARRISONFLAG at the flag cloth's lower edge (owner 2026-10-09, game test): flag spans bone .. bone + 1.05 m, 5 cm under the tip; damaged: the reserved donor body holds the pole and collar only"
+        }
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_b_r16e.json",
+        "sha256": "efa80b5d1edd619abe44debc4346270679659974b0cfa38182a67c0708caade5"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_b_con": {
+      "model": "korean_house_b",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok"
+      ],
+      "_doc": "Korean House B construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone. r14b: every new member face keeps a positive UV winding (AoP uv_integrity W); the r14 members were mirrored. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls).",
+      "files": {
+        "intact": "korean_house_b_con.gr2",
+        "intact_material": "korean_house_b_con.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_b"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_props_owner_evidence.json",
+              "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+              "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Shrine_Age",
+        "japan_shrine_age2_02_con_stage3",
+        "japan_shrine_age2_02_con_stage3_M0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_b_con_r16d.json",
+        "sha256": "18dce2441f4cea7e43f2a3325d1913ae5139b0c8b4e06fd85fef2613b64c2915"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_c": {
+      "model": "korean_house_c",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok"
+      ],
+      "_doc": "Korean House C (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_03(_damaged). Intact + damaged + HKT + materials + animfile. Owner 2026-10-09 (owner_authorization.json owner-house-c-receiver-uv-2026-10-09): the export scales the Roof.Main.Receiver matc strip by 3% (authored 54.19 t/u, 53.53 after float16 UVs); its contract is built from the adjusted payloads. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls). r14d: progressive destruction - stage bodies carry 14-20 % of the surface (vanilla 12-18 %; r14c 2.7-6.6 %).",
+      "files": {
+        "intact": "korean_house_c.gr2",
+        "damaged": "korean_house_c_damaged.gr2",
+        "hkt": "korean_house_c_damaged.hkt",
+        "intact_material": "korean_house_c.material",
+        "damaged_material": "korean_house_c_damaged.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_c"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_props_owner_evidence.json",
+              "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+              "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Object03",
+        "japan_shrine_age2_03",
+        "japan_shrine_age2_03_MT0",
+        "BONE_GARRISONFLAG"
+      ],
+      "physical_mounts": [
+        {
+          "bone": "BONE_GARRISONFLAG",
+          "position": [
+            0.0,
+            5.275,
+            -0.37
+          ],
+          "body": "roof_stone_solid_ondeath_18",
+          "bottom_y": 4.98,
+          "top_y": 6.375,
+          "_doc": "the small garrison mast, pole +15 % and BONE_GARRISONFLAG at the flag cloth's lower edge (owner 2026-10-09, game test): flag spans bone .. bone + 1.05 m, 5 cm under the tip; damaged: the reserved donor body holds the pole and collar only"
+        }
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_c_r16e.json",
+        "sha256": "2ef4b22e0dea49a75853254abc000c482336c5362da7e1fea82b30281beaa703"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_c_con": {
+      "model": "korean_house_c",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok"
+      ],
+      "_doc": "Korean House C construction p66 (the only authored stage; p0/p33 are vanilla): linted as the intact stage of this file. No flag, mast or pottery: the bone set has no flag bone. r14b: every new member face keeps a positive UV winding (AoP uv_integrity W); the r14 members were mirrored. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls).",
+      "files": {
+        "intact": "korean_house_c_con.gr2",
+        "intact_material": "korean_house_c_con.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_c"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_shared_owner_evidence.json",
+              "sha256": "0f5c100b70ac210d95bf699bd2e4602ae70aa7367958a043a0158423bdb5bc55",
+              "owner_quote": "- Owned textures across **all three together**: one WALLS 2048\u00b2 set and one ROOFS 2048\u00b2 set. Reuse the exact Korean shared matc r65 1024\u00b2 and existing TC pottery page. No additional construction, hidden-face or per-variant texture pages. Refer to shared runtime resources once; never copy vanilla assets into the mod."
+            },
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ]
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_props_owner_evidence.json",
+              "sha256": "bff50bd426fd64391fabf51b427d4177df4ee483d9538e40384fd91f0317ed69",
+              "owner_quote": "and also use the Korean props and add them to the Colonial age houses -any props - pots, barrels etc... possibly also the lanterns from the Market or Monastery models"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes) for the props standing at the Colonial houses (r16-colonial: material mate; damaged: on the static base body), shared by the Dock, Consulate, Monastery and Rice Paddy"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Object03",
+        "japan_shrine_age2_03_con_stage3",
+        "japan_shrine_age2_03_con_stage3_M0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_c_con_r16d.json",
+        "sha256": "04c9b4b48d6e2cf8fa1d8a5973914a4048dea54edeb752ef2871173503f1e439"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_castle": {
+      "ao_shared_uv_max_m2": 0.8,
+      "ao_shared_uv_owner": {
+        "quote": "Castkle - no visible bugs",
+        "at": "2026-10-12"
+      },
+      "model": "korean_castle",
+      "names": [
+        "Castle",
+        "Korean Castle"
+      ],
+      "_doc": "Korean castle (Colonial castle stage1, premium textures M7), castle states r1: intact + damaged + HKT on the vanilla Japanese castle age 2 donor graph (japanese_castle_age2(_damag)); garrison flag on the ridge pole (donor bone moved, scale 0.8), BONE_HITPOINTBAR, bone_launchpoint01-06 at the gun ports (owner: \"set up all attack bones\").",
+      "files": {
+        "intact": "korean_castle.gr2",
+        "damaged": "korean_castle_damaged.gr2",
+        "hkt": "korean_castle_damaged.hkt",
+        "intact_material": "korean_castle.material",
+        "damaged_material": "korean_castle_damaged.material",
+        "animfile": "korean_castle.xml"
+      },
+      "texture_budget": {
+        "class": "medium",
+        "confirmed_by": "owner-castle-medium-2026-10-10",
+        "models": [
+          "korean_castle"
+        ],
+        "_doc": "owner 2026-10-10: Castle = medium - the own R0 2048 (walls, pavilion, roof details) + R2 1024 (roof tiles) pages, one set for every stage; the shared r65 atlas (construction beams, destruction caps, hidden backing) is pinned, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/castle_shared_owner_evidence.json",
+              "sha256": "f46abeeb3f4955842cb53a87fdfb103e5eb0c6f45e13c7991a7ff21564a42cfd",
+              "owner_quote": "after you're done, pull all changes from all repos - age of pirates korean buildings blender and the korean mod, then implement the model to the game incl.. destruction and construction. For construction - just the stone part will be built, the rest will be beams using the generic atlas - check town center"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "Object02",
+        "japanese_castle_age2",
+        "bone_garrisonflag",
+        "BONE_HITPOINTBAR",
+        "bone_launchpoint01",
+        "bone_launchpoint02",
+        "bone_launchpoint03",
+        "bone_launchpoint04",
+        "bone_launchpoint05",
+        "bone_launchpoint06",
+        "bone_banner_l",
+        "bone_banner_r"
+      ],
+      "physical_mounts": [
+        {
+          "bone": "bone_garrisonflag",
+          "position": [
+            0.0,
+            11.5717,
+            0.0
+          ],
+          "body": "flagpolegarrison_wood_solid_p2b_ondeath_01",
+          "bottom_y": 11.16,
+          "top_y": 12.82,
+          "_doc": "the garrison pole on the ridge; flag cloth (0.8 x 1.5 m) from the bone up, 5 cm under the tip; damaged: the donor's own garrison-pole body holds the pole only"
+        }
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_castle_r1.json",
+        "sha256": "bb3bd529b331684b3999371efbcbd68aa26cc2da3454a89c312cb003f5b62290"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_castle_con": {
+      "model": "korean_castle",
+      "names": [
+        "Castle",
+        "Korean Castle"
+      ],
+      "_doc": "Korean castle last construction stage (p66): the masonry built, the pavilion as fresh beams on its real geometry on r65",
+      "files": {
+        "intact": "korean_castle_con.gr2",
+        "intact_material": "korean_castle_con.material",
+        "animfile": "korean_castle.xml"
+      },
+      "texture_budget": {
+        "class": "medium",
+        "confirmed_by": "owner-castle-medium-2026-10-10",
+        "models": [
+          "korean_castle"
+        ],
+        "_doc": "owner 2026-10-10: Castle = medium - the own R0 2048 (walls, pavilion, roof details) + R2 1024 (roof tiles) pages, one set for every stage; the shared r65 atlas (construction beams, destruction caps, hidden backing) is pinned, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/castle_shared_owner_evidence.json",
+              "sha256": "f46abeeb3f4955842cb53a87fdfb103e5eb0c6f45e13c7991a7ff21564a42cfd",
+              "owner_quote": "after you're done, pull all changes from all repos - age of pirates korean buildings blender and the korean mod, then implement the model to the game incl.. destruction and construction. For construction - just the stone part will be built, the rest will be beams using the generic atlas - check town center"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "Object02",
+        "japanese_castle_age2_construction",
+        "japanese_castle_age2_construction_M0",
+        "BONE_HITPOINTBAR"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_castle_con_r1.json",
+        "sha256": "25ce01782a18bf19880aabf7d1d1ac92d31a1874b78d300f61a6590aea46d8d6"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      },
+      "ao_shared_uv_accepted_pages": [
+        {
+          "file": "korean_castle_mata_Masks.ddt",
+          "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+          "max_m2": 0.8,
+          "owner_quote": "Castkle - no visible bugs",
+          "date": "2026-10-12",
+          "source_acceptance": "Same unchanged AO channel and same Colonial castle own page accepted by owner on 2026-10-12 (b7f542c). Existing Industrial construction profile already carries this page-specific acceptance. Restores missing coverage for the Colonial construction state; does not accept any new AO or other pages. 14 October finish changes Masks.G only; independent decoded R/B/A equality holds at every mip. Existing AO acceptance and max_m2 remain unchanged."
+        }
+      ]
+    },
+    "korean_dock": {
+      "model": "korean_dock",
+      "names": [
+        "Dock",
+        "Korean Dock"
+      ],
+      "_doc": "Korean Dock (Discovery Age, korean-market-dock r5, AI-painted pages): intact + damaged + HKT on the vanilla Japanese dock age 1 donor graph (japan_dock_age1(_damaged)); bone_flag_civ and BONE_GARRISONFLAG on the Dock mast (donor heights), BONE_HITPOINTBAR over the hall roof; props on the shared Korean props page (matd).",
+      "files": {
+        "intact": "korean_dock.gr2",
+        "damaged": "korean_dock_damaged.gr2",
+        "hkt": "korean_dock_damaged.hkt",
+        "intact_material": "korean_dock.material",
+        "damaged_material": "korean_dock_damaged.material",
+        "animfile": "korean_dock.xml"
+      },
+      "texture_budget": {
+        "class": "large",
+        "confirmed_by": "owner-dock-large-confirm-2026-10-11",
+        "models": [
+          "korean_dock"
+        ],
+        "_doc": "owner 2026-10-10/11: Dock = large - the own Dock page 2048 (walls, roofs, crane, player colour) + the platform page 2048 (piles, deck, quay, ladders, bollards), one set for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/dock_shared_owner_evidence.json",
+              "sha256": "3cc89709a878996a6b684ee85a94d64f591aee885d5fd257a8e1f71a938c1d3d",
+              "owner_quote": "Large: 2 x 2048 (Recommended)"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/dock_shared_owner_evidence.json",
+              "sha256": "3cc89709a878996a6b684ee85a94d64f591aee885d5fd257a8e1f71a938c1d3d",
+              "owner_quote": "Large: 2 x 2048 (Recommended)"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6, owner \"Props aproved\"), shared by the Market, Dock, Consulate and Monastery"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "bone_flag_civ",
+        "BONE_HITPOINTBAR",
+        "Japan_Dock_Age01",
+        "BONE_GARRISONFLAG",
+        "japan_dock_age1_M1",
+        "japan_dock_age1_M0",
+        "japan_dock_age1_M2",
+        "japan_dock_age1"
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_dock_postproduction_r1.json",
+        "sha256": "63f966e7a329bc697065df24324db8b784c6097d3091262cc18f2e83b49070e4"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_dock_con": {
+      "model": "korean_dock",
+      "names": [
+        "Dock",
+        "Korean Dock"
+      ],
+      "_doc": "Korean Dock last construction stage (p66): the platform (piles, deck, quay) and the buildings' timber frame; the vanilla dock_stage2 scaffold is attached by the animfile",
+      "files": {
+        "intact": "korean_dock_con.gr2",
+        "intact_material": "korean_dock_con.material",
+        "animfile": "korean_dock.xml"
+      },
+      "texture_budget": {
+        "class": "large",
+        "confirmed_by": "owner-dock-large-confirm-2026-10-11",
+        "models": [
+          "korean_dock"
+        ],
+        "_doc": "owner 2026-10-10/11: Dock = large - the own Dock page 2048 (walls, roofs, crane, player colour) + the platform page 2048 (piles, deck, quay, ladders, bollards), one set for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/dock_shared_owner_evidence.json",
+              "sha256": "3cc89709a878996a6b684ee85a94d64f591aee885d5fd257a8e1f71a938c1d3d",
+              "owner_quote": "Large: 2 x 2048 (Recommended)"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/dock_shared_owner_evidence.json",
+              "sha256": "3cc89709a878996a6b684ee85a94d64f591aee885d5fd257a8e1f71a938c1d3d",
+              "owner_quote": "Large: 2 x 2048 (Recommended)"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6, owner \"Props aproved\"), shared by the Market, Dock, Consulate and Monastery"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Japan_Dock_Age01",
+        "japan_dock_age1_con_stage3",
+        "japan_dock_age1_con_stage3_M0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_dock_con_postproduction_r1.json",
+        "sha256": "4567b91caf496837b5f20d50ba9cde1ef4ab6ef366e956a0f42993b077a14e25"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_consulate": {
+      "model": "korean_consulate",
+      "names": [
+        "Consulate",
+        "Korean Consulate"
+      ],
+      "_doc": "Korean Consulate (Discovery Age, korean-civic-pair export r1, UV c4r9c, pages final_r7): intact + damaged + HKT on the vanilla Japanese consulate age 1 donor graph (japan_consulate_age1(_damaged)); bone_flag_civ on the Consulate mast at the donor's own height below the tip, BONE_HITPOINTBAR over the roof; props on the shared Korean props page (matd).",
+      "files": {
+        "intact": "korean_consulate.gr2",
+        "damaged": "korean_consulate_damaged.gr2",
+        "hkt": "korean_consulate_damaged.hkt",
+        "intact_material": "korean_consulate.material",
+        "damaged_material": "korean_consulate_damaged.material",
+        "animfile": "korean_consulate.xml"
+      },
+      "texture_budget": {
+        "class": "small",
+        "confirmed_by": "owner-civic-small-confirm-2026-10-11",
+        "models": [
+          "korean_consulate"
+        ],
+        "_doc": "owner 2026-10-11: texture class small = one own 2048 page (CONSULATE_2048: walls, roofs, player colour) for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted. Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\".",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/consulate_shared_owner_evidence.json",
+              "sha256": "9c7e097f9bf1c0588d283c10bdea8da250b2e7a0f236759426dd403c8e12f89a",
+              "owner_quote": "Small: 1x2048 each (Recommended)"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/consulate_shared_owner_evidence.json",
+              "sha256": "9c7e097f9bf1c0588d283c10bdea8da250b2e7a0f236759426dd403c8e12f89a",
+              "owner_quote": "Small: 1x2048 each (Recommended)"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate and Monastery"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "bone_flag_civ",
+        "BONE_HITPOINTBAR",
+        "japan_consulate_age2",
+        "japan_consulate_age1_M0",
+        "japan_consulate_age1_M1",
+        "japan_consulate_age1"
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_consulate_r2.json",
+        "sha256": "d70d6b7e42182b776f36b3679e61c93b1714cfb170fd9bd4ee772a29324aa285"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_consulate_con": {
+      "model": "korean_consulate",
+      "names": [
+        "Consulate",
+        "Korean Consulate"
+      ],
+      "_doc": "Korean Consulate last construction stage (p66): walls standing without roof under a fresh-timber roof frame on r65 (no windows, doors, gates, rails, flag or props); written on the intact donor with bone_flag_civ renamed bone_con_none (the vanilla con_stage3 donors have an unproven first-mesh vertex layout); the vanilla asi_4x4_stage2 scaffold is attached by the animfile",
+      "files": {
+        "intact": "korean_consulate_con.gr2",
+        "intact_material": "korean_consulate_con.material",
+        "animfile": "korean_consulate.xml"
+      },
+      "texture_budget": {
+        "class": "small",
+        "confirmed_by": "owner-civic-small-confirm-2026-10-11",
+        "models": [
+          "korean_consulate"
+        ],
+        "_doc": "owner 2026-10-11: texture class small = one own 2048 page (CONSULATE_2048: walls, roofs, player colour) for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted. Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\".",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/consulate_shared_owner_evidence.json",
+              "sha256": "9c7e097f9bf1c0588d283c10bdea8da250b2e7a0f236759426dd403c8e12f89a",
+              "owner_quote": "Small: 1x2048 each (Recommended)"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/consulate_shared_owner_evidence.json",
+              "sha256": "9c7e097f9bf1c0588d283c10bdea8da250b2e7a0f236759426dd403c8e12f89a",
+              "owner_quote": "Small: 1x2048 each (Recommended)"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate and Monastery"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "bone_con_none",
+        "BONE_HITPOINTBAR",
+        "japan_consulate_age2",
+        "japan_consulate_age1_M0",
+        "japan_consulate_age1_M1",
+        "japan_consulate_age1"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_consulate_con_r1.json",
+        "sha256": "2332ad7b4d772a809733b7668e228e143ad5bc5e18e2cb7a2cf8cdfe551a8c05"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_monastery": {
+      "model": "korean_monastery",
+      "names": [
+        "Monastery",
+        "Korean Monastery"
+      ],
+      "_doc": "Korean Monastery (Discovery Age, korean-civic-pair export r1, UV c4r9e incl. the lantern cap fixes, pages final_r7): intact + damaged + HKT on the vanilla Japanese monastery age 1 donor graph (japan_monastery_age1(_damaged)); bone_flag_civ on the finial mast at the donor's own distance below the spire tip, BONE_HITPOINTBAR over the crown roof at the donor clearance and beside the spire as the donor; four lanterns in the building model; props on the shared Korean props page (matd).",
+      "files": {
+        "intact": "korean_monastery.gr2",
+        "damaged": "korean_monastery_damaged.gr2",
+        "hkt": "korean_monastery_damaged.hkt",
+        "intact_material": "korean_monastery.material",
+        "damaged_material": "korean_monastery_damaged.material",
+        "animfile": "korean_monastery.xml"
+      },
+      "texture_budget": {
+        "class": "small",
+        "confirmed_by": "owner-civic-small-confirm-2026-10-11",
+        "models": [
+          "korean_monastery"
+        ],
+        "_doc": "owner 2026-10-11: texture class small = one own 2048 page (MONASTERY_2048: walls, roofs, lanterns, player colour) for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted. Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\". Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\".",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/monastery_shared_owner_evidence.json",
+              "sha256": "b3d324448089961fbe563df1aeae6da7fac03367cba425cc7e6a63dbbfc27911",
+              "owner_quote": "Small: 1x2048 each (Recommended)"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/monastery_shared_owner_evidence.json",
+              "sha256": "b3d324448089961fbe563df1aeae6da7fac03367cba425cc7e6a63dbbfc27911",
+              "owner_quote": "Small: 1x2048 each (Recommended)"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate and Monastery"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "China_MN_age01",
+        "bone_flag_civ",
+        "BONE_HITPOINTBAR",
+        "japan_monastery_age1",
+        "japan_monastery_age1_MT0"
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_monastery_r1.json",
+        "sha256": "25d43ac300f203fa214eadec42cc53ef527461ad97edbd910f5b0156cef83848"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_monastery_con": {
+      "model": "korean_monastery",
+      "names": [
+        "Monastery",
+        "Korean Monastery"
+      ],
+      "_doc": "Korean Monastery last construction stage (p66): plinth, stair and the finished tier 1 walls/posts (rough openings) under a fresh-timber frame on r65 (tier 1/2 skirt roof frames, attic posts, gallery floor frames, tiers 2/3 as their final beam shape, the crown gable roof frame; no windows, doors, rails, roofs, finial, lanterns or props; no ladder); written on the vanilla japan_monastery_age1_con_stage3 donor (no flag bone); the vanilla asi_3x3_stage2 scaffold is attached by the animfile",
+      "files": {
+        "intact": "korean_monastery_con.gr2",
+        "intact_material": "korean_monastery_con.material",
+        "animfile": "korean_monastery.xml"
+      },
+      "texture_budget": {
+        "class": "small",
+        "confirmed_by": "owner-civic-small-confirm-2026-10-11",
+        "models": [
+          "korean_monastery"
+        ],
+        "_doc": "owner 2026-10-11: texture class small = one own 2048 page (MONASTERY_2048: walls, roofs, lanterns, player colour) for every stage; the shared r65 atlas and the shared Korean props page are pinned, not counted. Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\". Owner 2026-10-11: \"Yes: Consulate = small, Monastery = small\".",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/monastery_shared_owner_evidence.json",
+              "sha256": "b3d324448089961fbe563df1aeae6da7fac03367cba425cc7e6a63dbbfc27911",
+              "owner_quote": "Small: 1x2048 each (Recommended)"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/monastery_shared_owner_evidence.json",
+              "sha256": "b3d324448089961fbe563df1aeae6da7fac03367cba425cc7e6a63dbbfc27911",
+              "owner_quote": "Small: 1x2048 each (Recommended)"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate and Monastery"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "China_MN_age01",
+        "BONE_HITPOINTBAR",
+        "japan_monastery_age1_con_stage3",
+        "japan_monastery_age1_con_stage3_M0",
+        "japan_monastery_age1_con_stage3_M1"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_monastery_con_r1.json",
+        "sha256": "4369b86870c093c3f821f993443e274c387847d67eee34d558544f3c53b904ec"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_rice_paddy": {
+      "model": "korean_rice_paddy",
+      "names": [
+        "Rice Paddy",
+        "Rice paddy",
+        "Korean Rice Paddy"
+      ],
+      "_doc": "Korean Rice Paddy shelter (Discovery Age, korean-rice-paddy r6 export r1, own page RICEPADDY_1024): intact + damaged + HKT on the vanilla Japanese rice paddy age 1 donor graph (japan_ricepaddy_age1(_damaged)); bone_flag_civ on the mast through the roof apex at the donor distance below the tip, BONE_HITPOINTBAR over the roof at the donor clearance; the field is the vanilla paddy attachment (animfile), never in these GR2s; props on the shared Korean props page (matd).",
+      "files": {
+        "intact": "korean_rice_paddy.gr2",
+        "damaged": "korean_rice_paddy_damaged.gr2",
+        "hkt": "korean_rice_paddy_damaged.hkt",
+        "intact_material": "korean_rice_paddy.material",
+        "damaged_material": "korean_rice_paddy_damaged.material",
+        "animfile": "korean_rice_paddy.xml"
+      },
+      "texture_budget": {
+        "class": "small",
+        "confirmed_by": "owner-ricepaddy-market-classes-2026-10-12",
+        "models": [
+          "korean_rice_paddy"
+        ],
+        "_doc": "Rice Paddy: one own 1024 page (RICEPADDY_1024: roof field, eave end tiles with alpha cutout, hip caps, timber with edge wear, plaster panel, player colour) for every stage, under the small ceiling 1x2048; the shared r65 atlas and the shared Korean props page are pinned, not counted.",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/ricepaddy_r65_owner_evidence.json",
+              "sha256": "852aec2919742b14f75e04d9e1b5d4e56b75b2abc2d04be6739f2c6c1ec1b902",
+              "owner_quote": "for field. you create only the shelter. rest is generic and should be reused"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/ricepaddy_props_owner_evidence.json",
+              "sha256": "7afb0db0c755a1ce1953f468856a6b4c76a9b0218b29b573bccc676b068f65d7",
+              "owner_quote": "Use some props from the generic props"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate, Monastery and Rice Paddy"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "bone_flag_civ",
+        "BONE_HITPOINTBAR",
+        "japan_rice_paddy_age01_simple",
+        "bone_corn01",
+        "bone_corn02",
+        "bone_corn03",
+        "bone_corn04",
+        "bone_corn05",
+        "bone_corn06",
+        "bone_corn07",
+        "bone_corn08",
+        "bone_corn09",
+        "bone_corn10",
+        "japan_ricepaddy_age1",
+        "japan_ricepaddy_age1_matb"
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_rice_paddy_receiver_r2.json",
+        "sha256": "7f36cf61d524ff257c9261c15bfbe97bb42894c0f75189b9d61d681708da121e"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_rice_paddy_con": {
+      "model": "korean_rice_paddy",
+      "names": [
+        "Rice Paddy",
+        "Rice paddy",
+        "Korean Rice Paddy"
+      ],
+      "_doc": "Korean Rice Paddy last construction stage (p66): footings, posts, floor, ladder, back panel and plate ring of the final shelter under a fresh-timber roof frame on r65 (king post, four hip rafters, jack rafters); no roof, mast or props; written on the vanilla japan_ricepaddy_age1_con_stage3 donor (no flag bone); the animfile attaches the vanilla asi_2x2_stage2 scaffold and the vanilla paddy_con field",
+      "files": {
+        "intact": "korean_rice_paddy_con.gr2",
+        "intact_material": "korean_rice_paddy_con.material",
+        "animfile": "korean_rice_paddy.xml"
+      },
+      "texture_budget": {
+        "class": "small",
+        "confirmed_by": "owner-ricepaddy-market-classes-2026-10-12",
+        "models": [
+          "korean_rice_paddy"
+        ],
+        "_doc": "Rice Paddy: one own 1024 page (RICEPADDY_1024: roof field, eave end tiles with alpha cutout, hip caps, timber with edge wear, plaster panel, player colour) for every stage, under the small ceiling 1x2048; the shared r65 atlas and the shared Korean props page are pinned, not counted.",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/ricepaddy_r65_owner_evidence.json",
+              "sha256": "852aec2919742b14f75e04d9e1b5d4e56b75b2abc2d04be6739f2c6c1ec1b902",
+              "owner_quote": "for field. you create only the shelter. rest is generic and should be reused"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/ricepaddy_props_owner_evidence.json",
+              "sha256": "7afb0db0c755a1ce1953f468856a6b4c76a9b0218b29b573bccc676b068f65d7",
+              "owner_quote": "Use some props from the generic props"
+            },
+            "_doc": "the Korean props page (library korean-props props-r6.1 = the accepted r6 page bytes), shared by the Market, Dock, Consulate, Monastery and Rice Paddy"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "japan_rice_paddy_age01_simple_construction",
+        "japan_ricepaddy_age1_con_stage3",
+        "japan_ricepaddy_age1_con_stage3_MT0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_rice_paddy_con_r1.json",
+        "sha256": "86a47dbeca4bcb718bb908abedd64ea23285957a19dcbb97d68b6d0d8d9e2d21"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_market": {
+      "model": "korean_market",
+      "names": [
+        "Market",
+        "Korean Market"
+      ],
+      "_doc": "Korean Market (Discovery Age, korean-market-dock UV r7c + texture r7c step 10 + corners, AI-painted pages): intact + damaged + HKT on the vanilla Japanese market age 2 donor graph (japan_market_age2 / japanese_market_age2_damaged); bone_flag_civ on the Tower flagpole, BONE_HITPOINTBAR over the hall roof (no garrison flag, as the vanilla market); props on the shared Korean props page r6.2 (matd).",
+      "files": {
+        "intact": "korean_market.gr2",
+        "damaged": "korean_market_damaged.gr2",
+        "hkt": "korean_market_damaged.hkt",
+        "intact_material": "korean_market.material",
+        "damaged_material": "korean_market_damaged.material",
+        "animfile": "korean_market.xml"
+      },
+      "texture_budget": {
+        "class": "medium",
+        "confirmed_by": "owner-ricepaddy-market-classes-2026-10-12",
+        "models": [
+          "korean_market"
+        ],
+        "_doc": "Market: one own 2048 page (P0: walls, roofs, structure, masonry, Hangul signboard, player colour; opaque) + one own 1024 page (P5: the alpha cutout surfaces - stall thatch, railing wind-holes, eave scallops - player colour) for every stage; the shared r65 atlas and the shared Korean props page r6.2 are pinned, not counted.",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/market_shared_owner_evidence.json",
+              "sha256": "b08a12c46c4869ceb2c2a00b1fa155d2d84c5ab37b1b9f1ceb6a7a8c36b82933",
+              "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6.2"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_BaseColor.ddt",
+                "sha256": "db92d6f3fd321745618108f305ab047d795ced0a5453108e0cd6bc04b7c2ffe1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Normals.ddt",
+                "sha256": "89df41eb1b6640fa054588dbd2e60b2ab9c3b676c5c987f1836e4de5d765c014",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Masks.ddt",
+                "sha256": "c4cc66ba7e9cf39adcb64a71b97774ae6f940208de7c9d302524a693452be3e0",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/market_shared_owner_evidence.json",
+              "sha256": "b08a12c46c4869ceb2c2a00b1fa155d2d84c5ab37b1b9f1ceb6a7a8c36b82933",
+              "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate"
+            },
+            "_doc": "the Korean props page r6.2 (props r6.1 + the Balcha cart deck repainted, owner \"fix these artifacts on the Props UV map\")"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "japan_market_age02",
+        "BONE_HITPOINTBAR",
+        "bone_flag_civ",
+        "japan_market_age2_M0",
+        "japan_market_age2_M1",
+        "japan_market_age2_M2",
+        "japan_market_age2"
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_market_gr2canon_r1.json",
+        "sha256": "cef55b44ff307e44478edf206a6d5f9a17d2ae73fd41c14c62e697d16d3468d9"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_market_con": {
+      "model": "korean_market",
+      "names": [
+        "Market",
+        "Korean Market"
+      ],
+      "_doc": "Korean Market last construction stage (p66) r2 (market_construction.py, the checklist port of the shipped Dock recipe; owner \"construction now TOP!\"): foundations, stairs, plinths; the Tower standing without its roof; the Hall's finished ground storey; the entry bay, gallery deck and stall frames kept; the Hall's upper storey as its fresh-timber beam frame; fresh-timber roof frames under the real roofs (hall paljak, entry gable, tower and pavilion pyramids, tower skirt on ledgers) on the shared r65 atlas; the vanilla asi_4x4_stage2 scaffold is attached by the animfile",
+      "files": {
+        "intact": "korean_market_con.gr2",
+        "intact_material": "korean_market_con.material",
+        "animfile": "korean_market.xml"
+      },
+      "texture_budget": {
+        "class": "medium",
+        "confirmed_by": "owner-ricepaddy-market-classes-2026-10-12",
+        "models": [
+          "korean_market"
+        ],
+        "_doc": "Market: one own 2048 page (P0: walls, roofs, structure, masonry, Hangul signboard, player colour; opaque) + one own 1024 page (P5: the alpha cutout surfaces - stall thatch, railing wind-holes, eave scallops - player colour) for every stage; the shared r65 atlas and the shared Korean props page r6.2 are pinned, not counted.",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean shared matc r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/market_shared_owner_evidence.json",
+              "sha256": "b08a12c46c4869ceb2c2a00b1fa155d2d84c5ab37b1b9f1ceb6a7a8c36b82933",
+              "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6.2"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_BaseColor.ddt",
+                "sha256": "db92d6f3fd321745618108f305ab047d795ced0a5453108e0cd6bc04b7c2ffe1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Normals.ddt",
+                "sha256": "89df41eb1b6640fa054588dbd2e60b2ab9c3b676c5c987f1836e4de5d765c014",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_2_Masks.ddt",
+                "sha256": "c4cc66ba7e9cf39adcb64a71b97774ae6f940208de7c9d302524a693452be3e0",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/market_shared_owner_evidence.json",
+              "sha256": "b08a12c46c4869ceb2c2a00b1fa155d2d84c5ab37b1b9f1ceb6a7a8c36b82933",
+              "owner_quote": "And market needs one extra for props - you can generate more Korean props than you use for other possinble assets (1024 too) - can possibly share with Consulate"
+            },
+            "_doc": "the Korean props page r6.2 (props r6.1 + the Balcha cart deck repainted, owner \"fix these artifacts on the Props UV map\")"
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "japan_market_age02_construction",
+        "BONE_HITPOINTBAR",
+        "japan_market_age2_con_stage3",
+        "japan_market_age2_con_stage3_M0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_market_con_r2.json",
+        "sha256": "1e582498f7d124a72d51d38eddc44d1c04f7621535c429481f812cc886e760b8"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      }
+    },
+    "korean_house_a_age0": {
+      "model": "korean_house_a_age0",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok",
+        "Discovery House",
+        "straw Hanok"
+      ],
+      "_doc": "Korean House A, Discovery (age 0) straw Hanok (owner 2026-10-11 \"Make them canonical\", \"you export and implement both into game\"): the r16d house x0.9, straw slopes / eave tops / gable rolls on the vanilla japan_shrine_age1_01 mata page (runtime reference), S skin pages (walls 2048 + Details, roofs 2048 cutout), props on the shared props page (matf). Recipes: C:/work/korean-house-skins/recipes (age0_model.py, age0_payload.py, age0_damaged_payload.py, export_age0*.py)",
+      "files": {
+        "intact": "korean_house_a_age0.gr2",
+        "damaged": "korean_house_a_age0_damaged.gr2",
+        "hkt": "korean_house_a_age0_damaged.hkt",
+        "intact_material": "korean_house_a_age0.material",
+        "damaged_material": "korean_house_a_age0_damaged.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_a_age0"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Shrine_Age201",
+        "japan_shrine_age2_01",
+        "japan_shrine_age2_01_M0",
+        "BONE_GARRISONFLAG"
+      ],
+      "physical_mounts": [
+        {
+          "bone": "BONE_GARRISONFLAG",
+          "position": [
+            0.0,
+            4.4955,
+            0.0
+          ],
+          "body": "roof_wood_shatterhide_ondeath_0_6",
+          "bottom_y": 4.23,
+          "top_y": 5.4855,
+          "_doc": "the garrison mast of the Colonial house x0.9 (the whole house is 10 % smaller); flag bone scale 0.63"
+        }
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_a_age0_r2.json",
+        "sha256": "1d12a49ed656c07e4de7b70de5c967f4284d2f00ee52465434f201e92c0f729c"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_a_age0_con": {
+      "model": "korean_house_a_age0",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok",
+        "Discovery House",
+        "straw Hanok"
+      ],
+      "_doc": "Korean House A Discovery (age 0) construction p66: the r16d construction (no windows/doors) x0.9 on the S walls page",
+      "files": {
+        "intact": "korean_house_a_age0_con.gr2",
+        "intact_material": "korean_house_a_age0_con.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_a_age0"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Shrine_Age201",
+        "japan_shrine_age2_01_con_stage3",
+        "japan_shrine_age2_01_con_stage3_M0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_a_age0_con_r1.json",
+        "sha256": "93f9641cb47c02b116a8ea41d4354eb8e881b87742c0dc8504f42eeb57d553f0"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_b_age0": {
+      "model": "korean_house_b_age0",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok",
+        "Discovery House",
+        "straw Hanok"
+      ],
+      "_doc": "Korean House B, Discovery (age 0) straw Hanok (owner 2026-10-11 \"Make them canonical\", \"you export and implement both into game\"): the r16d house x0.9, straw slopes / eave tops / gable rolls on the vanilla japan_shrine_age1_01 mata page (runtime reference), S skin pages (walls 2048 + Details, roofs 2048 cutout), props on the shared props page (matf). Recipes: C:/work/korean-house-skins/recipes (age0_model.py, age0_payload.py, age0_damaged_payload.py, export_age0*.py)",
+      "files": {
+        "intact": "korean_house_b_age0.gr2",
+        "damaged": "korean_house_b_age0_damaged.gr2",
+        "hkt": "korean_house_b_age0_damaged.hkt",
+        "intact_material": "korean_house_b_age0.material",
+        "damaged_material": "korean_house_b_age0_damaged.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_b_age0"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Shrine_Age",
+        "japan_shrine_age2_02_M0",
+        "japan_shrine_age2_02_M1",
+        "japan_shrine_age2_02",
+        "BONE_GARRISONFLAG"
+      ],
+      "physical_mounts": [
+        {
+          "bone": "BONE_GARRISONFLAG",
+          "position": [
+            -0.18,
+            4.7475,
+            0.0
+          ],
+          "body": "roof_stone_solid_ondeath_2",
+          "bottom_y": 4.482,
+          "top_y": 5.7375,
+          "_doc": "the garrison mast of the Colonial house x0.9 (the whole house is 10 % smaller); flag bone scale 0.63"
+        }
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_b_age0_r2.json",
+        "sha256": "1a4f6e4dc94dbe57bd51112f1df38578224c156b3380c76f1c45064d80991def"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_b_age0_con": {
+      "model": "korean_house_b_age0",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok",
+        "Discovery House",
+        "straw Hanok"
+      ],
+      "_doc": "Korean House B Discovery (age 0) construction p66: the r16d construction (no windows/doors) x0.9 on the S walls page",
+      "files": {
+        "intact": "korean_house_b_age0_con.gr2",
+        "intact_material": "korean_house_b_age0_con.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_b_age0"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Shrine_Age",
+        "japan_shrine_age2_02_con_stage3",
+        "japan_shrine_age2_02_con_stage3_M0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_b_age0_con_r1.json",
+        "sha256": "e305d6ec7884edf4aaa8d28f8fb1add476463c3462f3e01cba2a57d600f3513f"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_c_age0": {
+      "model": "korean_house_c_age0",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok",
+        "Discovery House",
+        "straw Hanok"
+      ],
+      "_doc": "Korean House C, Discovery (age 0) straw Hanok (owner 2026-10-11 \"Make them canonical\", \"you export and implement both into game\"): the r16d house x0.9, straw slopes / eave tops / gable rolls on the vanilla japan_shrine_age1_01 mata page (runtime reference), S skin pages (walls 2048 + Details, roofs 2048 cutout), props on the shared props page (matf). Recipes: C:/work/korean-house-skins/recipes (age0_model.py, age0_payload.py, age0_damaged_payload.py, export_age0*.py)",
+      "files": {
+        "intact": "korean_house_c_age0.gr2",
+        "damaged": "korean_house_c_age0_damaged.gr2",
+        "hkt": "korean_house_c_age0_damaged.hkt",
+        "intact_material": "korean_house_c_age0.material",
+        "damaged_material": "korean_house_c_age0_damaged.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_c_age0"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Object03",
+        "japan_shrine_age2_03",
+        "japan_shrine_age2_03_MT0",
+        "BONE_GARRISONFLAG"
+      ],
+      "physical_mounts": [
+        {
+          "bone": "BONE_GARRISONFLAG",
+          "position": [
+            0.0,
+            4.7475,
+            -0.333
+          ],
+          "body": "roof_stone_solid_ondeath_18",
+          "bottom_y": 4.482,
+          "top_y": 5.7375,
+          "_doc": "the garrison mast of the Colonial house x0.9 (the whole house is 10 % smaller); flag bone scale 0.63"
+        }
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_c_age0_r2.json",
+        "sha256": "cd9870bfb34daecb65ced3143bb191b6abf96d45af5113b16ac9e8a5686a5a89"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_house_c_age0_con": {
+      "model": "korean_house_c_age0",
+      "names": [
+        "House",
+        "Korean House",
+        "House A/B/C",
+        "Hanok",
+        "Discovery House",
+        "straw Hanok"
+      ],
+      "_doc": "Korean House C Discovery (age 0) construction p66: the r16d construction (no windows/doors) x0.9 on the S walls page",
+      "files": {
+        "intact": "korean_house_c_age0_con.gr2",
+        "intact_material": "korean_house_c_age0_con.material",
+        "animfile": "korean_house.xml"
+      },
+      "texture_budget": {
+        "class": "4x2048",
+        "confirmed_by": "owner-house-4x2048-2026-10-12",
+        "models": [
+          "korean_house_c_age0"
+        ],
+        "_doc": "owner 2026-10-12 (tools/gr2_lint/owner_authorization.json owner-house-4x2048-2026-10-12): House A/B/C = 4x2048 - the Colonial WALLS 2048 + ROOFS 2048 and the Discovery straw Hanok WALLS 2048 + ROOFS 2048, one set each for all three variants and every stage (earlier: large, owner-house-large-2026-10-09); the shared r65 atlas, TC pottery page and props page are pinned shared dependencies, not counted",
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean TC shared matC"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean TC pots"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+                "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+                "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+                "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared props r6"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+                "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+                "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+                "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/house_age0_owner_evidence.json",
+              "sha256": "153ad5356499180ef1122a5dbc715a23a2e4adcec9d2c1ee236f95799b702fbc",
+              "owner_quote": "you export and implement both into game"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "BONE_HITPOINTBAR",
+        "Object03",
+        "japan_shrine_age2_03_con_stage3",
+        "japan_shrine_age2_03_con_stage3_M0"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_house_c_age0_con_r1.json",
+        "sha256": "22391b4e54ddb05fd97a5a7930e70bb643f468d98d5698c959fa8a928deff36d"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC profile rule; vanilla 0.70-0.95). r14c measures 0.996-1.000; the inside-out r14b install measured 0.004 (black roofs in game, 2026-10-09)"
+      }
+    },
+    "korean_castle_industrial": {
+      "model": "korean_castle_industrial",
+      "names": [
+        "Castle",
+        "Industrial castle"
+      ],
+      "_doc": "Industrial castle canonical r14, full states: exact intact, new connected p66 frame, donor-bound fracture. No new geometry or texture tuning to the approved intact.",
+      "files": {
+        "intact": "korean_castle_industrial.gr2",
+        "intact_material": "korean_castle_industrial.material",
+        "damaged": "korean_castle_industrial_damaged.gr2",
+        "hkt": "korean_castle_industrial_damaged.hkt",
+        "damaged_material": "korean_castle_industrial_damaged.material",
+        "animfile": "korean_castle_industrial.xml"
+      },
+      "texture_budget": {
+        "class": "medium",
+        "confirmed_by": "owner-castle-medium-2026-10-10",
+        "models": [
+          "korean_castle_industrial"
+        ],
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean generic atlas r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/industrial_korean_generic_atlas_r65_owner.json",
+              "sha256": "24c55e148daa0ca0073c7686ce598c6af2cc4da62f226536c5ec6845ec343a2b",
+              "owner_quote": "This atlas has several tiles with severat materials. The invisivble inner faces should use these. NOT special separate textures which eats space amnd THEREFORE EATS MONEY FROM MY CREDIT CARD!!!!!"
+            }
+          },
+          {
+            "source_names": [
+              "Colonial castle basement"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor.ddt",
+                "sha256": "f6a1c5ba1bdc677190840d606b57dfb5e219cba68cc2fdd387384a82342152bc",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_castle/textures/korean_castle_mata_Normals.ddt",
+                "sha256": "2ce01a94c4f2143243e66ba97a5a2839abb4d325db0b1680316412afcfbdcfd8",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_castle/textures/korean_castle_mata_Masks.ddt",
+                "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/industrial_colonial_castle_basement_owner.json",
+              "sha256": "1927464fbc0d3a0f37b1bf5a125b668b63f794191ae7509eb47ead5ae487ecf4",
+              "owner_quote": "and also we already have the basement texture . shared with colonial castle, so add it"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared guardian512"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_BaseColor.ddt",
+                "sha256": "2a66e13ffe247caa3205a836d7ecc6b0522c43d5ff3af7ab8c52741b75c14d3c",
+                "width": 512,
+                "height": 512
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Normals.ddt",
+                "sha256": "d3f43749dc4d02a70d694786af42bb5ae77f9aa66d2a57f088ca18e89920d274",
+                "width": 512,
+                "height": 512
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Masks.ddt",
+                "sha256": "2986ad3585f141a620276cac5d9aeb292dabc08595a31758690b23e4d3494721",
+                "width": 512,
+                "height": 512
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/industrial_korean_shared_guardian512_owner.json",
+              "sha256": "9b79f1bccc7688ebcda5d171200dc9fc00222bb3dc861f8bb7f55481e97d33c7",
+              "owner_quote": "and the jade figures - maybe define some standardized ones on 256 or 512 map so we can use them everywhere - rather 512 amnd possibly more types. I see at leat two here"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "Object02",
+        "japanese_castle_age2",
+        "bone_garrisonflag",
+        "BONE_HITPOINTBAR",
+        "bone_launchpoint01",
+        "bone_launchpoint02",
+        "bone_launchpoint03",
+        "bone_launchpoint04",
+        "bone_launchpoint05",
+        "bone_launchpoint06",
+        "bone_banner_l",
+        "bone_banner_r"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r1.json",
+        "sha256": "77d4f54b8646c92a8b0f21e105235d6e78c127faa95b6406644d5db704fe7424"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      },
+      "ao_shared_uv_accepted_pages": [
+        {
+          "file": "korean_castle_mata_Masks.ddt",
+          "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+          "max_m2": 0.8,
+          "owner_quote": "Castkle - no visible bugs",
+          "date": "2026-10-12",
+          "source_acceptance": "Existing korean_castle profile ao_shared_uv_owner; owner explicitly requested the unchanged shared Colonial basement on Industrial. Industrial uses exactly the same pinned Masks bytes. Its own pages retain the default 0.5 m2 limit. 14 October finish changes Masks.G only; independent decoded R/B/A equality holds at every mip. Existing AO acceptance and max_m2 remain unchanged."
+        }
+      ],
+      "rest_contract": {
+        "bounds_tolerance_m": 0.002,
+        "ground_supports": []
+      },
+      "physical_mounts": [
+        {
+          "bone": "bone_garrisonflag",
+          "position": [
+            0,
+            15.137509689331,
+            0
+          ],
+          "body": "flagpolegarrison_wood_solid_p2b_ondeath_01",
+          "bottom_y": 14.777509689331,
+          "top_y": 16.237509689331,
+          "radius_m": 0.09
+        }
+      ]
+    },
+    "korean_castle_industrial_con": {
+      "model": "korean_castle_industrial",
+      "names": [
+        "Castle",
+        "Industrial castle construction"
+      ],
+      "_doc": "Construction does not bake new AO; original shared/retained maps unchanged; full static and contact gates required.",
+      "files": {
+        "intact": "korean_castle_industrial_con.gr2",
+        "intact_material": "korean_castle_industrial_con.material"
+      },
+      "texture_budget": {
+        "class": "medium",
+        "confirmed_by": "owner-castle-medium-2026-10-10",
+        "models": [
+          "korean_castle_industrial"
+        ],
+        "shared_mod_dependencies": [
+          {
+            "source_names": [
+              "Korean generic atlas r65"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_BaseColor.ddt",
+                "sha256": "ab986a62a37bb7f21cc01ba12d1cc3f6b9e766330475aa6a5fbe85a20c7d719d",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Normals.ddt",
+                "sha256": "2f91e0bb857f25ab01552d5b5409182ea495a29405a234fe85d58a6dbecd353a",
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_matc_r65_Masks.ddt",
+                "sha256": "9ae32260b70ad94db7285a5ee0c8f6e85c387734b831fdb547f9f31bf0f4927f",
+                "width": 1024,
+                "height": 1024
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/industrial_korean_generic_atlas_r65_owner.json",
+              "sha256": "24c55e148daa0ca0073c7686ce598c6af2cc4da62f226536c5ec6845ec343a2b",
+              "owner_quote": "This atlas has several tiles with severat materials. The invisivble inner faces should use these. NOT special separate textures which eats space amnd THEREFORE EATS MONEY FROM MY CREDIT CARD!!!!!"
+            }
+          },
+          {
+            "source_names": [
+              "Colonial castle basement"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor.ddt",
+                "sha256": "f6a1c5ba1bdc677190840d606b57dfb5e219cba68cc2fdd387384a82342152bc",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_castle/textures/korean_castle_mata_Normals.ddt",
+                "sha256": "2ce01a94c4f2143243e66ba97a5a2839abb4d325db0b1680316412afcfbdcfd8",
+                "width": 2048,
+                "height": 2048
+              },
+              {
+                "path": "buildings/korean_castle/textures/korean_castle_mata_Masks.ddt",
+                "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+                "width": 2048,
+                "height": 2048
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/industrial_colonial_castle_basement_owner.json",
+              "sha256": "1927464fbc0d3a0f37b1bf5a125b668b63f794191ae7509eb47ead5ae487ecf4",
+              "owner_quote": "and also we already have the basement texture . shared with colonial castle, so add it"
+            }
+          },
+          {
+            "source_names": [
+              "Korean shared guardian512"
+            ],
+            "files": [
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_BaseColor.ddt",
+                "sha256": "2a66e13ffe247caa3205a836d7ecc6b0522c43d5ff3af7ab8c52741b75c14d3c",
+                "width": 512,
+                "height": 512
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Normals.ddt",
+                "sha256": "d3f43749dc4d02a70d694786af42bb5ae77f9aa66d2a57f088ca18e89920d274",
+                "width": 512,
+                "height": 512
+              },
+              {
+                "path": "buildings/korean_shared/textures/korean_shared_guardians_r14_Masks.ddt",
+                "sha256": "2986ad3585f141a620276cac5d9aeb292dabc08595a31758690b23e4d3494721",
+                "width": 512,
+                "height": 512
+              }
+            ],
+            "authorization": {
+              "kind": "recorded_owner_chat",
+              "path": "tools/gr2_lint/industrial_korean_shared_guardian512_owner.json",
+              "sha256": "9b79f1bccc7688ebcda5d171200dc9fc00222bb3dc861f8bb7f55481e97d33c7",
+              "owner_quote": "and the jade figures - maybe define some standardized ones on 256 or 512 map so we can use them everywhere - rather 512 amnd possibly more types. I see at leat two here"
+            }
+          }
+        ]
+      },
+      "waivers": [],
+      "limits": {
+        "max_vertices": 65535,
+        "max_index": 65535
+      },
+      "intact_bones": [
+        "BONE_MAIN",
+        "Object02",
+        "japanese_castle_age2_construction",
+        "japanese_castle_age2_construction_M0",
+        "BONE_HITPOINTBAR"
+      ],
+      "uv_contract": {
+        "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_con_r1.json",
+        "sha256": "489a0253dbc825f6af2512572fccb792d6af8abc64562c35b671316b765f5bb1"
+      },
+      "handedness": {
+        "expect_sign": 1,
+        "min_fraction": 0.6,
+        "name_board": null,
+        "_doc": "area share of UV charts with handedness +1 (the TC/House rule)"
+      },
+      "ao_shared_uv_accepted_pages": [
+        {
+          "file": "korean_castle_mata_Masks.ddt",
+          "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+          "max_m2": 0.8,
+          "owner_quote": "Castkle - no visible bugs",
+          "date": "2026-10-12",
+          "source_acceptance": "Existing korean_castle profile ao_shared_uv_owner; owner explicitly requested the unchanged shared Colonial basement on Industrial. Industrial uses exactly the same pinned Masks bytes. Its own pages retain the default 0.5 m2 limit. 14 October finish changes Masks.G only; independent decoded R/B/A equality holds at every mip. Existing AO acceptance and max_m2 remain unchanged."
+        }
+      ]
+    }
+  }
+}

@@ -454,48 +454,65 @@
       <building>ypConsulate</building>
       <multipleblockunit>zpConsulateArmyChinese1</multipleblockunit>
       <units>
-        <unit>ypChuKoNu</unit>
-      </units>
-      <units>
-        <unit>ypSteppeRider</unit>
+        <unit>zpConsulateChuKoNu</unit>
       </units>
       <unitcounts>
-        <count>6</count>
-      </unitcounts>
-      <unitcounts>
-        <count>2</count>
+        <count>5</count>
       </unitcounts>
     </multipleblocktrain>
     <multipleblocktrain>
       <building>ypConsulate</building>
       <multipleblockunit>zpConsulateArmyChinese2</multipleblockunit>
       <units>
-        <unit>MercManchu</unit>
-      </units>
-      <units>
-        <unit>ypHandMortar</unit>
+        <unit>zpConsulateChuKoNu</unit>
+        <unit>zpConsulateIronFlail</unit>
       </units>
       <unitcounts>
         <count>3</count>
-      </unitcounts>
-      <unitcounts>
-        <count>6</count>
+        <count>2</count>
       </unitcounts>
     </multipleblocktrain>
     <multipleblocktrain>
       <building>ypConsulate</building>
       <multipleblockunit>zpConsulateArmyChinese3</multipleblockunit>
       <units>
-        <unit>ypMercIronTroop</unit>
-      </units>
-      <units>
-        <unit>ypChangdao</unit>
+        <unit>zpConsulateIronFlail</unit>
+        <unit>zpConsulateFlameThrower</unit>
       </units>
       <unitcounts>
-        <count>6</count>
+        <count>2</count>
+        <count>1</count>
       </unitcounts>
+    </multipleblocktrain>
+
+    <multipleblocktrain>
+      <building>ypConsulate</building>
+      <multipleblockunit>zpNatConRegularProxy</multipleblockunit>
+      <units>
+        <unit>zpNatConRegular</unit>
+      </units>
       <unitcounts>
-        <count>6</count>
+        <count>1</count>
+      </unitcounts>
+    </multipleblocktrain>
+    <multipleblocktrain>
+      <building>ypConsulate</building>
+      <multipleblockunit>zpNatConUSCavalryProxy</multipleblockunit>
+      <units>
+        <unit>zpNatConUSCavalry</unit>
+      </units>
+      <unitcounts>
+        <count>1</count>
+      </unitcounts>
+    </multipleblocktrain>
+    <multipleblocktrain>
+      <building>ypConsulate</building>
+      <multipleblockunit>zpNatConGatlingGunProxy</multipleblockunit>
+      <units>
+        <unit>zpNatConGatlingGun</unit>
+      </units>
+      <unitcounts>
+        <count>1</count>
       </unitcounts>
     </multipleblocktrain>
     <multipleblocktrain>
