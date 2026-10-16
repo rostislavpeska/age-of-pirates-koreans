@@ -13,9 +13,9 @@
   <transportactivationtime>0</transportactivationtime>
   <level>1</level>
   <skillpoints>9</skillpoints>
-  <lightset>Japan</lightset>
+  <lightset>Tenochtitlan</lightset>
   <watertype>China_HC</watertype>
-  <numpropunlocksearned>0</numpropunlocksearned>
+  <numpropunlocksearned>50</numpropunlocksearned>
   <ambientsounds>homecity\chineseambientsounds.xml</ambientsounds>
   <xsai>generic_city</xsai>
   <heroprotounits>
@@ -2137,15 +2137,14 @@
     <prop>Japanese_Fortress_Variation1</prop>
     <prop active="1">Japanese_Treasury_Variation0</prop>
     <prop>Japanese_Treasury_Variation1</prop>
-    <prop active="1">Japanese_LightSunset</prop>
-    <prop>Japanese_LightMistyMorning</prop>
-    <prop>Japanese_LightSetNight</prop>
-    <prop>Japanese_LightSetSnow</prop>
     <prop>Japanese_Kite_Festival</prop>
     <prop>Japanese_Boats</prop>
     <prop>Japanese_SnowMonkey</prop>
     <prop>Japanese_Paper_Balloon_Festival_Part1</prop>
     <prop>Japanese_Paper_Balloon_Festival_Water_Part2</prop>
     <prop>Japanese_Paper_Balloon_Festival_Sky_Part2</prop>
+    <prop active="1">Korean_Light_Daylight</prop>
+    <prop>Japanese_LightMistyMorning</prop>
+    <prop>Korean_Light_BlueMountains</prop>
   </obtainableprops>
 </homecity>

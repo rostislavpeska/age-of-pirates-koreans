@@ -2956,5 +2956,74 @@
       <damagebonus type="AbstractLightInfantry">1.300000</damagebonus>
     </protoaction>
   </unit>
+  <unit id="22027" name="zzTESTKoreanHomecityModel">
+    <dbid>22027</dbid>
+    <displaynameid>600002</displaynameid>
+    <maxvelocity>0.0000</maxvelocity>
+    <movementtype>air</movementtype>
+    <animfile>homecity\korean\korean_homecity_bench.xml</animfile>
+    <icon>resources\art\buildings\asian_civs\trade_market\japan\japanese_market_icon_64.png</icon>
+    <initialhitpoints>50000.0000</initialhitpoints>
+    <maxhitpoints>50000.0000</maxhitpoints>
+    <los>150.0000</los>
+    <unittype>EmbellishmentClass</unittype>
+    <unittype>Unattackable</unittype>
+    <flag>NoHPBar</flag>
+    <flag>DoNotShowOnMiniMap</flag>
+    <flag>DoNotCreateUnitGroupAutomatically</flag>
+    <flag>NonCollideable</flag>
+    <flag>NonAutoFormedUnit</flag>
+    <flag>Immoveable</flag>
+    <flag>Invulnerable</flag>
+    <flag>VisibleUnderFogIfGaia</flag>
+    <flag>StartEnabled</flag>
+    <flag>RMCanRotate</flag>
+  </unit>
+  <unit id="22028" name="zzTESTKoreanHomecityBackdrop">
+    <dbid>22028</dbid>
+    <displaynameid>600002</displaynameid>
+    <maxvelocity>0.0000</maxvelocity>
+    <movementtype>air</movementtype>
+    <animfile>homecity\korean\korean_background.xml</animfile>
+    <icon>resources\art\buildings\asian_civs\trade_market\japan\japanese_market_icon_64.png</icon>
+    <initialhitpoints>50000.0000</initialhitpoints>
+    <maxhitpoints>50000.0000</maxhitpoints>
+    <los>150.0000</los>
+    <unittype>EmbellishmentClass</unittype>
+    <unittype>Unattackable</unittype>
+    <flag>NoHPBar</flag>
+    <flag>DoNotShowOnMiniMap</flag>
+    <flag>DoNotCreateUnitGroupAutomatically</flag>
+    <flag>NonCollideable</flag>
+    <flag>NonAutoFormedUnit</flag>
+    <flag>Immoveable</flag>
+    <flag>Invulnerable</flag>
+    <flag>VisibleUnderFogIfGaia</flag>
+    <flag>StartEnabled</flag>
+    <flag>RMCanRotate</flag>
+  </unit>
+  <unit id="22029" name="zzTESTKoreanHomecityWater">
+    <dbid>22029</dbid>
+    <displaynameid>600002</displaynameid>
+    <maxvelocity>0.0000</maxvelocity>
+    <movementtype>air</movementtype>
+    <animfile>homecity\china\china_homecity_water.xml</animfile>
+    <icon>resources\art\buildings\asian_civs\trade_market\japan\japanese_market_icon_64.png</icon>
+    <initialhitpoints>50000.0000</initialhitpoints>
+    <maxhitpoints>50000.0000</maxhitpoints>
+    <los>150.0000</los>
+    <unittype>EmbellishmentClass</unittype>
+    <unittype>Unattackable</unittype>
+    <flag>NoHPBar</flag>
+    <flag>DoNotShowOnMiniMap</flag>
+    <flag>DoNotCreateUnitGroupAutomatically</flag>
+    <flag>NonCollideable</flag>
+    <flag>NonAutoFormedUnit</flag>
+    <flag>Immoveable</flag>
+    <flag>Invulnerable</flag>
+    <flag>VisibleUnderFogIfGaia</flag>
+    <flag>StartEnabled</flag>
+    <flag>RMCanRotate</flag>
+  </unit>
 <!-- END zzTEST Korean building benches -->
 </protomods>

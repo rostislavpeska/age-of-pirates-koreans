@@ -1,0 +1,21 @@
+<animfile>
+  <attachment>nlight
+    <component>emitter
+      <assetreference type="popcornFx">
+        <file>homecity\china_hc_night_lights.pkfx</file>
+      </assetreference>
+    </component>
+    <anim>None
+      <component>emitter</component>
+    </anim>
+  </attachment>
+  <component>nightFx
+    <assetreference type="GrannyModel">
+      <file>homecity\china\china_hc_fx_dummy</file>
+    </assetreference>
+    <attach a="nlight" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="1" />
+  </component>
+  <anim>Idle
+    <component>nightFx</component>
+  </anim>
+</animfile>

@@ -1,9 +1,38 @@
 <animfile>
   <component>background
     <notshadowcaster />
-    <assetreference type="GrannyModel">
-      <file>homecity\korean\korean_background\korean_background</file>
-    </assetreference>
+    <logic type="Variation">
+      <variationid0>
+        <assetreference type="GrannyModel">
+          <file>homecity\korean\korean_background\korean_background</file>
+          <materialvariant index="0" />
+        </assetreference>
+      </variationid0>
+      <variationid1>
+        <assetreference type="GrannyModel">
+          <file>homecity\korean\korean_background\korean_background</file>
+          <materialvariant index="0" />
+        </assetreference>
+      </variationid1>
+      <variationid2>
+        <assetreference type="GrannyModel">
+          <file>homecity\korean\korean_background\korean_background</file>
+          <materialvariant index="2" />
+        </assetreference>
+      </variationid2>
+      <variationid3>
+        <assetreference type="GrannyModel">
+          <file>homecity\korean\korean_background\korean_background</file>
+          <materialvariant index="1" />
+        </assetreference>
+      </variationid3>
+      <variationid4>
+        <assetreference type="GrannyModel">
+          <file>homecity\korean\korean_background\korean_background</file>
+          <materialvariant index="0" />
+        </assetreference>
+      </variationid4>
+    </logic>
   </component>
   <anim>Idle
     <component>background</component>
