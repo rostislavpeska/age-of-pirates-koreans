@@ -1325,6 +1325,7 @@
   </prop>
   <prop>
     <name>Japanese_Boats</name>
+    <civ>Japanese</civ>
     <type>Object</type>
     <displayname>Japanese fishing boats</displayname>
     <displaynamestringid>49502</displaynamestringid>
