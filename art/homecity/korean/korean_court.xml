@@ -44,25 +44,25 @@
       <variation0>
         <assetreference type="GrannyModel">
           <file>homecity\japan\court\court</file>
-          <materialvariant index="0" />
+          <materialvariant index="1" />
         </assetreference>
       </variation0>
       <variation1>
         <assetreference type="GrannyModel">
           <file>homecity\japan\court\court</file>
-          <materialvariant index="1" />
+          <materialvariant index="0" />
         </assetreference>
       </variation1>
       <variation2>
         <assetreference type="GrannyModel">
           <file>homecity\japan\court\court</file>
-          <materialvariant index="2" />
+          <materialvariant index="3" />
         </assetreference>
       </variation2>
       <variation3>
         <assetreference type="GrannyModel">
           <file>homecity\japan\court\court</file>
-          <materialvariant index="3" />
+          <materialvariant index="2" />
         </assetreference>
       </variation3>
     </logic>

@@ -1218,7 +1218,8 @@
   </prop>
   <prop>
     <name>Japanese_Court_Variation0</name>
-    <type>ReplaceVisual</type>
+    
+    <civ>Japanese</civ><type>ReplaceVisual</type>
     <displayname>Imperial Court (original)</displayname>
     <displaynamestringid>49488</displaynamestringid>
     <description>The original version of the Imperial Court.</description>
@@ -1232,7 +1233,8 @@
   </prop>
   <prop>
     <name>Japanese_Court_Variation1</name>
-    <type>ReplaceVisual</type>
+    
+    <civ>Japanese</civ><type>ReplaceVisual</type>
     <displayname>Imperial Court (Imperial gold)</displayname>
     <displaynamestringid>49490</displaynamestringid>
     <description>The imperial gold version of the Imperial Court.1</description>
@@ -1276,7 +1278,8 @@
   </prop>
   <prop>
     <name>Japanese_Treasury_Variation0</name>
-    <type>ReplaceVisual</type>
+    
+    <civ>Japanese</civ><type>ReplaceVisual</type>
     <displayname>Emperor's Treasury (original)</displayname>
     <displaynamestringid>49496</displaynamestringid>
     <description>The original version of the Emperor's Treasury.</description>
@@ -1290,7 +1293,8 @@
   </prop>
   <prop>
     <name>Japanese_Treasury_Variation1</name>
-    <type>ReplaceVisual</type>
+    
+    <civ>Japanese</civ><type>ReplaceVisual</type>
     <displayname>Emperor's Treasury (white and oak)</displayname>
     <displaynamestringid>49498</displaynamestringid>
     <description>The white and oak version of the Emperor's Treasury.</description>
@@ -1305,7 +1309,8 @@
   </prop>
   <prop>
     <name>Japanese_Kite_Festival</name>
-    <type>Object</type>
+    
+    <civ>Japanese</civ><type>Object</type>
     <displayname>Kite Festival</displayname>
     <displaynamestringid>49500</displaynamestringid>
     <description>The citizens of Japan celebrating the Hamamatsu Kite Festival.</description>
@@ -1335,7 +1340,8 @@
   </prop>
   <prop>
     <name>Japanese_SnowMonkey</name>
-    <type>Unit</type>
+    
+    <civ>Japanese</civ><type>Unit</type>
     <displayname>Snow Monkey</displayname>
     <displaynamestringid>49504</displaynamestringid>
     <description>Snow monkeys running loose in the city.</description>
@@ -1348,7 +1354,8 @@
   </prop>
   <prop>
     <name>Japanese_Paper_Balloon_Festival_Part1</name>
-    <type>Object</type>
+    
+    <civ>Japanese</civ><type>Object</type>
     <displayname>Kamihinokinai Paper Balloon Festival - Lanterns</displayname>
     <displaynamestringid>49506</displaynamestringid>
     <description>Lantern decorations from building to building for the Kamihinokinai Paper Balloon Festival.</description>
@@ -1368,7 +1375,8 @@
   </prop>
   <prop>
     <name>Japanese_Paper_Balloon_Festival_Water_Part2</name>
-    <type>Object</type>
+    
+    <civ>Japanese</civ><type>Object</type>
     <displayname>Kamihinokinai Paper Balloon Festival - Water Lanterns</displayname>
     <displaynamestringid>49512</displaynamestringid>
     <description>Water lanterns floating by the harbor for the Kamihinokinai Paper Balloon Festival.</description>
@@ -1389,7 +1397,8 @@
   </prop>
   <prop>
     <name>Japanese_Paper_Balloon_Festival_Sky_Part2</name>
-    <type>Object</type>
+    
+    <civ>Japanese</civ><type>Object</type>
     <position>
       <bone>bone_centered</bone>
     </position>
@@ -1400,6 +1409,90 @@
     <prop>Japanese_Paper_Balloon_Festival_Water_Part2</prop>
     <prop>Japanese_Paper_Balloon_Festival_Part1</prop>
   </inclusiveprops>
+  <prop>
+    <name>Korean_Court_Variation0</name>
+    <civ>zpKoreans</civ>
+    <type>ReplaceVisual</type>
+    <displayname>Imperial Court (Imperial gold)</displayname>
+    <displaynamestringid>49490</displaynamestringid>
+    <description>The imperial gold version of the Imperial Court.</description>
+    <descriptionstringid>49491</descriptionstringid>
+    <position>
+      <building>Imperial Court</building>
+    </position>
+    <variationid>0</variationid>
+    <variationoffset name="snow">2</variationoffset>
+    <icon>homecity\home_city_props\icons\japan_imperial_court2</icon>
+  </prop>
+  <prop>
+    <name>Korean_Court_Variation1</name>
+    <civ>zpKoreans</civ>
+    <type>ReplaceVisual</type>
+    <displayname>Imperial Court (Classic)</displayname>
+    <displaynamestringid>49488</displaynamestringid>
+    <description>The classic version of the Imperial Court.</description>
+    <descriptionstringid>49489</descriptionstringid>
+    <position>
+      <building>Imperial Court</building>
+    </position>
+    <variationid>1</variationid>
+    <variationoffset name="snow">2</variationoffset>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\japan_imperial_court1</icon>
+  </prop>
+  <prop>
+    <name>Korean_Treasury_Variation0</name>
+    <civ>zpKoreans</civ>
+    <type>ReplaceVisual</type>
+    <displayname>Emperor's Treasury (white and oak)</displayname>
+    <displaynamestringid>49498</displaynamestringid>
+    <description>The white and oak version of the Emperor's Treasury.</description>
+    <descriptionstringid>49499</descriptionstringid>
+    <position>
+      <building>Emperor's Treasury</building>
+    </position>
+    <variationid>0</variationid>
+    <variationoffset name="snow">2</variationoffset>
+    <icon>homecity\home_city_props\icons\japan_treasury2</icon>
+  </prop>
+  <prop>
+    <name>Korean_Treasury_Variation1</name>
+    <civ>zpKoreans</civ>
+    <type>ReplaceVisual</type>
+    <displayname>Emperor's Treasury (Classic)</displayname>
+    <displaynamestringid>49496</displaynamestringid>
+    <description>The classic version of the Emperor's Treasury.</description>
+    <descriptionstringid>49497</descriptionstringid>
+    <position>
+      <building>Emperor's Treasury</building>
+    </position>
+    <variationid>1</variationid>
+    <variationoffset name="snow">2</variationoffset>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\japan_treasury1</icon>
+  </prop>
+  <prop>
+    <name>Korean_Lanterns</name>
+    <civ>zpKoreans</civ>
+    <type>Object</type>
+    <displayname>Lanterns</displayname>
+    <displaynamestringid>49112</displaynamestringid>
+    <description>Festive lanterns glowing under the crimson moon.</description>
+    <descriptionstringid>49113</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Imperial Court</building>
+      <bone>bone_fx</bone>
+    </position>
+    <visual>homecity\home_city_props\prop_china_lanterns.xml</visual>
+    <prereq>Korean_Light_BlueMountains</prereq>
+    <buttonaction>Toggle</buttonaction>
+    <activateprops>
+      <prop>Korean_Light_BlueMountains</prop>
+    </activateprops>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\chinese_lanterns</icon>
+  </prop>
   <prop>
     <name>Korean_Light_Daylight</name>
     <type>LightSet</type>
@@ -1414,7 +1507,7 @@
     <variationid>0</variationid>
     <lightset>Tenochtitlan</lightset>
     <deactivateprops>
-      <prop>Japanese_Paper_Balloon_Festival_Part1</prop>
+      <prop>Korean_Lanterns</prop>
     </deactivateprops>
     <icon>homecity\home_city_props\icons\korean_lightset_day</icon>
   </prop>
@@ -1432,7 +1525,7 @@
     <variationid>3</variationid>
     <lightset>tenochtitlan_sunrise</lightset>
     <deactivateprops>
-      <prop>Japanese_Paper_Balloon_Festival_Part1</prop>
+      <prop>Korean_Lanterns</prop>
     </deactivateprops>
     <icon>homecity\home_city_props\icons\korean_lightset_sunset</icon>
   </prop>
@@ -1450,9 +1543,6 @@
     <variationid>2</variationid>
     <lightset>tenochtitlan_thunderstorm</lightset>
     <visual>homecity\korean\korean_night_lights.xml</visual>
-    <deactivateprops>
-      <prop>Japanese_Paper_Balloon_Festival_Part1</prop>
-    </deactivateprops>
     <icon>homecity\home_city_props\icons\korean_lightset_bloodmoon</icon>
   </prop>
   <exclusiveprops>
@@ -1562,5 +1652,13 @@
   <exclusiveprops>
     <prop>Japanese_Treasury_Variation0</prop>
     <prop>Japanese_Treasury_Variation1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Korean_Court_Variation0</prop>
+    <prop>Korean_Court_Variation1</prop>
+  </exclusiveprops>
+  <exclusiveprops>
+    <prop>Korean_Treasury_Variation0</prop>
+    <prop>Korean_Treasury_Variation1</prop>
   </exclusiveprops>
 </homecityprops>

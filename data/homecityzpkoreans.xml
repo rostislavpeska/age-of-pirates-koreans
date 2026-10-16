@@ -1625,7 +1625,7 @@
   <building>
     <name>Imperial Court</name>
     <visual>
-      <file>japan\circlebuilding.xml</file>
+      <file>korean\korean_circlebuilding.xml</file>
       <bone>bone_circlebuilding</bone>
     </visual>
     <uix>80</uix>
@@ -2131,18 +2131,14 @@
     <prop>Japanese_Customs_Variation1</prop>
     <prop active="1">Japanese_Merchant_Variation0</prop>
     <prop>Japanese_Merchant_Variation1</prop>
-    <prop active="1">Japanese_Court_Variation0</prop>
-    <prop>Japanese_Court_Variation1</prop>
+    <prop active="1">Korean_Court_Variation0</prop>
+    <prop>Korean_Court_Variation1</prop>
     <prop active="1">Japanese_Fortress_Variation0</prop>
     <prop>Japanese_Fortress_Variation1</prop>
-    <prop active="1">Japanese_Treasury_Variation0</prop>
-    <prop>Japanese_Treasury_Variation1</prop>
-    <prop>Japanese_Kite_Festival</prop>
+    <prop active="1">Korean_Treasury_Variation0</prop>
+    <prop>Korean_Treasury_Variation1</prop>
     <prop>Japanese_Boats</prop>
-    <prop>Japanese_SnowMonkey</prop>
-    <prop>Japanese_Paper_Balloon_Festival_Part1</prop>
-    <prop>Japanese_Paper_Balloon_Festival_Water_Part2</prop>
-    <prop>Japanese_Paper_Balloon_Festival_Sky_Part2</prop>
+    <prop>Korean_Lanterns</prop>
     <prop active="1">Korean_Light_Daylight</prop>
     <prop>Japanese_LightMistyMorning</prop>
     <prop>Korean_Light_BlueMountains</prop>
