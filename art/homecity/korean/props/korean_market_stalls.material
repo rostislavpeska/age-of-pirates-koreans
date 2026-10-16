@@ -1,0 +1,10 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Basecolor" />
+      <texture name="Normals" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Normals" />
+      <texture name="Masks" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Masks" />
+    </parameters>
+  </submaterial>
+</material>
