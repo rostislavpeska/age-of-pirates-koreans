@@ -1,0 +1,52 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="blended_colors" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\spanish\spanish_ground\textures\spanish_ground_matb_basecolor" />
+      <texture name="Normals" override="homecity\spanish\spanish_ground\textures\spanish_ground_matb_normals" />
+      <texture name="Masks" override="homecity\spanish\spanish_ground\textures\spanish_ground_matb_masks" />
+      <texture name="BaseColorB" override="homecity\china\china_hc_ground\textures\china_hc_ground_mata_x_basecolor" />
+      <texture name="NormalsB" override="homecity\china\china_hc_ground\textures\china_hc_ground_mata_x_normals" />
+      <texture name="MasksB" override="homecity\china\china_hc_ground\textures\china_hc_ground_mata_x_masks" />
+      <texture name="BaseColorA" override="homecity\sioux\distant_ground\textures\distant_ground_mata_basecolor" />
+      <texture name="NormalsA" override="homecity\sioux\distant_ground\textures\distant_ground_mata_normals" />
+      <texture name="MasksA" override="homecity\sioux\distant_ground\textures\distant_ground_mata_masks" />
+      <float name="TextureScaleB" override="20.0000" />
+      <float name="TextureScaleA" override="20.0000" />
+      <float name="TextureScale" override="20.0000" />
+      <texture name="BaseColorC" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_basecolor" />
+      <float name="TextureScaleC" override="20.0000" />
+      <texture name="NormalsC" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_normals" />
+      <texture name="MasksC" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matb">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\china_hc_ground\textures\china_hc_ground_matb_basecolor" />
+      <texture name="Normals" override="homecity\china\china_hc_ground\textures\china_hc_ground_matb_normals" />
+      <texture name="Masks" override="homecity\china\china_hc_ground\textures\china_hc_ground_matb_masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matc">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\aztec\aztec_ground\textures\aztec_ground_mate_basecolor" />
+      <texture name="Normals" override="homecity\aztec\aztec_ground\textures\aztec_ground_mate_normals" />
+      <texture name="Masks" override="homecity\aztec\aztec_ground\textures\aztec_ground_mate_masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matd">
+    <materialdef name="blended_colors" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_basecolor" />
+      <texture name="Normals" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_normals" />
+      <texture name="Masks" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_masks" />
+      <texture name="BaseColorB" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_x_basecolor" />
+      <texture name="NormalsB" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_x_normals" />
+      <texture name="MasksB" override="homecity\china\china_hc_ground\textures\china_hc_ground_matd_x_masks" />
+      <float name="TextureScale" override="20.0000" />
+      <float name="TextureScaleB" override="20.0000" />
+    </parameters>
+  </submaterial>
+</material>

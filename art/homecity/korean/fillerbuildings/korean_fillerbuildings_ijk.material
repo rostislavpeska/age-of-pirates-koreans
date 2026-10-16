@@ -1,0 +1,48 @@
+<material>
+  <submaterial name="matb">
+    <materialdef name="default_emissive_advanced" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\fillerbuildings\textures\fillerbuildings_fgh_mata_basecolor" />
+      <texture name="Normals" override="homecity\china\fillerbuildings\textures\fillerbuildings_fgh_mata_normals" />
+      <texture name="Masks" override="homecity\china\fillerbuildings\textures\fillerbuildings_fgh_mata_masks" />
+      <texture name="Emissive" override="homecity\china\fillerbuildings\textures\fillerbuildings_fgh_mata_emissive" />
+      <vector4 name="EmissiveColor" override="0.569, 0.333, 0.098, 1.000" />
+      <float name="EmissiveIntensity" override="2.7500" />
+    </parameters>
+  </submaterial>
+  <submaterial name="mata">
+    <materialdef name="default_emissive_advanced" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\fillerbuildings\textures\fillerbuildings_ab_mata_basecolor" />
+      <texture name="Normals" override="homecity\china\fillerbuildings\textures\fillerbuildings_ab_mata_normals" />
+      <texture name="Masks" override="homecity\china\fillerbuildings\textures\fillerbuildings_ab_mata_masks" />
+      <texture name="Emissive" override="homecity\china\fillerbuildings\textures\fillerbuildings_ab_mata_emissive" />
+      <vector4 name="EmissiveColor" override="0.569, 0.333, 0.098, 1.000" />
+      <float name="EmissiveIntensity" override="2.7500" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matc">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\fillerbuildings\textures\fillerbuildings_lm_mata_basecolor" />
+      <texture name="Normals" override="homecity\china\fillerbuildings\textures\fillerbuildings_lm_mata_normals" />
+      <texture name="Masks" override="homecity\china\fillerbuildings\textures\fillerbuildings_lm_mata_masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matd">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\fillerbuildings\textures\fillerbuildings_fgh_mata_basecolor" />
+      <texture name="Normals" override="homecity\china\fillerbuildings\textures\fillerbuildings_fgh_mata_normals" />
+      <texture name="Masks" override="homecity\china\fillerbuildings\textures\fillerbuildings_fgh_mata_masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="mate">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\fillerbuildings\textures\fillerbuildings_ab_mata_basecolor" />
+      <texture name="Normals" override="homecity\china\fillerbuildings\textures\fillerbuildings_ab_mata_normals" />
+      <texture name="Masks" override="homecity\china\fillerbuildings\textures\fillerbuildings_ab_mata_masks" />
+    </parameters>
+  </submaterial>
+</material>

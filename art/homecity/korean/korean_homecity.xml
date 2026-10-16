@@ -166,7 +166,7 @@
   <attachment>fillerbuilding_IJK
     <component>fillerbuilding_IJK
       <assetreference type="GrannyModel">
-        <file>homecity\china\fillerbuildings\fillerbuildings_ijk</file>
+        <file>homecity\korean\fillerbuildings\korean_fillerbuildings_ijk</file>
       </assetreference>
     </component>
     <anim>Idle
@@ -322,7 +322,7 @@
   </attachment>
   <component>ground
     <assetreference type="GrannyModel">
-      <file>homecity\china\china_hc_ground</file>
+      <file>homecity\korean\korean_hc_ground</file>
     </assetreference>
     <attach a="bridgesandstuff" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="fillerbuilding_AB" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />

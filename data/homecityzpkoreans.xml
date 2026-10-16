@@ -1718,10 +1718,10 @@
       <file>japan\waterbuilding.xml</file>
       <bone>bone_waterbuilding</bone>
     </visual>
-    <uix>450</uix>
-    <uiy>275</uiy>
-    <camera>china\china_homecity_manufacturing_plant_camera.cam</camera>
-    <widescreencamera>china\china_homecity_plant_widescreencamera.cam</widescreencamera>
+    <uix>290</uix>
+    <uiy>300</uiy>
+    <camera>korean\korean_homecity_manufacturing_plant_camera.cam</camera>
+    <widescreencamera>korean\korean_homecity_plant_widescreencamera.cam</widescreencamera>
     <unlocklevel>0</unlocklevel>
     <portrait>homecity\buildings_west\manufacturing_plant_icon</portrait>
     <displaynamestringid>63359</displaynamestringid>
