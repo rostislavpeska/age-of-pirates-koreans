@@ -1,0 +1,75 @@
+<animfile>
+  <definebone>bone_banner</definebone>
+  <definebone>bone_banner01</definebone>
+  <definebone>bone_banner02</definebone>
+  <attachment>Pirate_flag<component>flag<assetreference type="ClothFlag">
+        <flag>
+          <blending>alphatest_nocolor</blending>
+          <texture>objects\flags\zpkoreans</texture>
+          <width>2.00</width>
+          <height>1.30</height>
+        </flag>
+      </assetreference>
+    </component>
+    <anim>Idle<component>flag</component>
+    </anim>
+  </attachment>
+  <attachment>Pirata_flag2<component>flag<assetreference type="ClothFlag">
+        <flag>
+          <blending>alphatest_nocolor</blending>
+          <texture>objects\flags\zpkoreans</texture>
+          <width>2.00</width>
+          <height>1.30</height>
+        </flag>
+      </assetreference>
+    </component>
+    <anim>
+      <component>flag</component>
+    </anim>
+  </attachment>
+  <attachment>Pirata_flag3<component>flag<assetreference type="ClothFlag">
+        <flag>
+          <blending>alphatest_nocolor</blending>
+          <texture>objects\flags\zpkoreans</texture>
+          <width>2.00</width>
+          <height>1.30</height>
+        </flag>
+      </assetreference>
+    </component>
+    <anim>
+      <component>flag</component>
+    </anim>
+  </attachment>
+  <component>court<logic type="Variation">
+      <variation0>
+        <assetreference type="GrannyModel">
+          <file>homecity\japan\court\court</file>
+          <materialvariant index="0" />
+        </assetreference>
+      </variation0>
+      <variation1>
+        <assetreference type="GrannyModel">
+          <file>homecity\japan\court\court</file>
+          <materialvariant index="1" />
+        </assetreference>
+      </variation1>
+      <variation2>
+        <assetreference type="GrannyModel">
+          <file>homecity\japan\court\court</file>
+          <materialvariant index="2" />
+        </assetreference>
+      </variation2>
+      <variation3>
+        <assetreference type="GrannyModel">
+          <file>homecity\japan\court\court</file>
+          <materialvariant index="3" />
+        </assetreference>
+      </variation3>
+    </logic>
+  </component>
+  <anim>Idle<component>court</component>
+    <attach a="Pirate_flag" frombone="ATTACHPOINT" tobone="bone_banner" syncanims="0" />
+    <attach a="Pirata_flag2" frombone="ATTACHPOINT" tobone="bone_banner01" syncanims="0" />
+    <attach a="Pirata_flag3" frombone="ATTACHPOINT" tobone="bone_banner02" syncanims="0" />
+  </anim>
+</animfile>

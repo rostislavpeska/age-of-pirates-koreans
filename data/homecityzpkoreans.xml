@@ -1457,7 +1457,7 @@
   <building>
     <name>Emperor's Treasury</name>
     <visual>
-      <file>japan\court.xml</file>
+      <file>korean\korean_court.xml</file>
       <bone>bone_court</bone>
     </visual>
     <uix>250</uix>

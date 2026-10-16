@@ -1,0 +1,42 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_mata_BaseColor" />
+      <texture name="Normals" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_mata_Normals" />
+      <texture name="Masks" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_mata_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matb">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Basecolor" />
+      <texture name="Normals" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Normals" />
+      <texture name="Masks" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matc">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Basecolor" />
+      <texture name="Normals" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Normals" />
+      <texture name="Masks" override="homecity\china\bridgesandstuff\textures\bridgeandstuff_matb_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matd">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\iroquois\props\fish_rack\textures\fish_rack_mata_BaseColor" />
+      <texture name="Normals" override="homecity\iroquois\props\fish_rack\textures\fish_rack_mata_Normals" />
+      <texture name="Masks" override="homecity\iroquois\props\fish_rack\textures\fish_rack_mata_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="mate">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\home_city_props\props_additional\food_containers\Atlas\prop_food_containers_Basecolor" />
+      <texture name="Normals" override="homecity\home_city_props\props_additional\food_containers\Atlas\prop_food_containers_Normals" />
+      <texture name="Masks" override="homecity\home_city_props\props_additional\food_containers\Atlas\prop_food_containers_Masks" />
+    </parameters>
+  </submaterial>
+</material>

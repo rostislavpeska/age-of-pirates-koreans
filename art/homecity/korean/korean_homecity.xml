@@ -126,7 +126,7 @@
   <attachment>bridgesandstuff
     <component>bridgesandstuff
       <assetreference type="GrannyModel">
-        <file>homecity\china\bridgesandstuff\bridgesandstuff</file>
+        <file>homecity\korean\bridgesandstuff\korean_bridgesandstuff</file>
       </assetreference>
     </component>
     <anim>Idle
@@ -141,16 +141,6 @@
     </component>
     <anim>Idle
       <component>fillerbuilding_AB</component>
-    </anim>
-  </attachment>
-  <attachment>market_stalls
-    <component>market_stalls
-      <assetreference type="GrannyModel">
-        <file>homecity\korean\props\korean_market_stalls</file>
-      </assetreference>
-    </component>
-    <anim>Idle
-      <component>market_stalls</component>
     </anim>
   </attachment>
   <attachment>fillerbuilding_CDE
@@ -335,7 +325,6 @@
       <file>homecity\korean\korean_hc_ground</file>
     </assetreference>
     <attach a="bridgesandstuff" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
-    <attach a="market_stalls" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="fillerbuilding_AB" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="fillerbuilding_CDE" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="fillerbuilding_FGH" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
