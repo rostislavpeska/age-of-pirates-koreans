@@ -17,8 +17,5 @@
   </component>
   <anim>Idle
     <component>lantern_upgrade</component>
-    <assetreference type="GrannyAnim">
-      <file>homecity\china\lantern_upgrade\lantern_upgrade_anim</file>
-    </assetreference>
   </anim>
 </animfile>
