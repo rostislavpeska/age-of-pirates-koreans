@@ -6,7 +6,7 @@
       <texture name="Normals" override="homecity\korean\lanterns\textures\korean_lanterns_mata_normals" />
       <texture name="Masks" override="homecity\korean\lanterns\textures\korean_lanterns_mata_masks" />
       <texture name="Emissive" override="homecity\korean\lanterns\textures\korean_lanterns_mata_emissive" />
-      <float name="EmissiveIntensity" override="2.5000" />
+      <float name="EmissiveIntensity" override="2.0000" />
       <vector4 name="EmissiveColor" override="1.000, 1.000, 1.000, 1.000" />
     </parameters>
     <parameters variant="1">
@@ -14,7 +14,7 @@
       <texture name="Normals" override="homecity\korean\lanterns\textures\korean_lanterns_mata_normals" />
       <texture name="Masks" override="homecity\korean\lanterns\textures\korean_lanterns_mata_masks" />
       <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\emissiveoff" />
-      <float name="EmissiveIntensity" override="2.5000" />
+      <float name="EmissiveIntensity" override="2.0000" />
       <vector4 name="EmissiveColor" override="1.000, 1.000, 1.000, 1.000" />
     </parameters>
   </submaterial>
