@@ -480,7 +480,7 @@
   {
    "id": "korean_monastery_mata",
    "status": "current",
-   "record": "korean-civic-pair-claude export_r1 (Monastery page MONASTERY_2048, tex_r1/final_r7, UV c4r9e) + 2026-10-14 AoE Buildings roof-rollout retained-civic-release-r2 install (release/INSTALL.json; retained-terminal module roofs; commit eb88a7e) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e)",
+   "record": "korean-civic-pair-claude export_r1 (Monastery page MONASTERY_2048, tex_r1/final_r7, UV c4r9e) + 2026-10-14 AoE Buildings roof-rollout retained-civic-release-r2 install (release/INSTALL.json; retained-terminal module roofs; commit eb88a7e) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e) + 2026-10-18 Colonial density texture-only re-run, owner candidate B (korean-colonial-roof-specimens-r1 monastery/final-r2: module-transfer-r5 on the installed UVs + seam-r1/alpha-r5; BaseColor, Normals, Masks via ddt_encode.py, one Zen gain)",
    "page": [
     2048,
     2048
@@ -489,15 +489,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_monastery/textures/korean_monastery_mata_BaseColor",
-     "sha256": "e8022911a3292c3db559e827198f1fb65a54d5fd5c8d541284eb895a0822cf86"
+     "sha256": "a64c47f9efe4ecb6e0c02f012057b105173b4fa752353e1b9251f7204402e704"
     },
     "Normals": {
      "path": "buildings/korean_monastery/textures/korean_monastery_mata_Normals",
-     "sha256": "94d775c64dd9e82a7a550e97ea03b1f1354fb4df89f3c918d41e2645f85adc34"
+     "sha256": "f0792a5d1d728f78882ee44316cb765486313acac68697d6c7c7720745e538a0"
     },
     "Masks": {
      "path": "buildings/korean_monastery/textures/korean_monastery_mata_Masks",
-     "sha256": "a673afa3b5c2e265ab2fae15c783c86ff7a7e1a265992156eb60e0ff5081b222"
+     "sha256": "06404b0620c8d371ef7a321661313e39c1b36ce2442ecfe34c992d5756e95fbd"
     },
     "Details": {
      "path": "buildings/korean_monastery/textures/korean_monastery_mata_Details",
