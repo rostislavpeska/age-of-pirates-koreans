@@ -30,6 +30,8 @@ AoP's file drifts from the Korean source; `python tools/korean_visuals.py --writ
   sound/*wagon*_snds.xml, sound/ypfishingboatasian_snds.xml
                                    AoP's copy if any, else vanilla, with a zpKoreans choice after every Japanese
                                    one: the Japanese voices as their Korean twins (tools/korean_sounds.py)
+  data/homecityprotounits.xml      vanilla plus the Korean home city explorer (tools/korean_homecity_units.py); the
+                                   engine merges no homecityprotounits mods file, so the add-on ships the whole file
   art/units/korean_monk/*.xml, data/tactics/zpmonkkorean.tactics
                                    the Korean monk's animfiles and tactics (tools/korean_monk.py)
   art/units/korean_jochong/*.xml|.material, art/units/korean_jangchang/*.xml|.material,
@@ -59,6 +61,7 @@ import korean_sounds  # noqa: E402
 import korean_monk  # noqa: E402
 import korean_infantry  # noqa: E402
 import korean_cavalry  # noqa: E402
+import korean_homecity_units  # noqa: E402
 
 AOP = korean_visuals.AOP
 sys.path.insert(0, os.path.join(AOP, '.claude', 'skills', 'aoe3de-bar-archives', 'scripts'))
@@ -111,10 +114,10 @@ def build():
                 if f.endswith(RUNTIME_XML):
                     p = os.path.join(d, f)
                     out[rel(p)] = crlf(open(p, 'rb').read())
+    out.update(korean_homecity_units.build())
     data_dir = os.path.join(REPO, 'data')
-    for f in sorted(os.listdir(data_dir)):
-        if f.endswith('.xml'):
-            out['data/%s.xmb' % f] = compile_xmb(f, out['data/' + f])
+    for f in sorted({p[len('data/'):] for p in out if p.startswith('data/') and p.count('/') == 1 and p.endswith('.xml')}):
+        out['data/%s.xmb' % f] = compile_xmb(f, out['data/' + f])
     for f in sorted(os.listdir(os.path.join(data_dir, 'abilities'))):
         if f.endswith('.xml'):
             out['data/abilities/%s.xmb' % f] = compile_xmb(f, out['data/abilities/' + f])

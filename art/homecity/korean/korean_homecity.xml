@@ -339,7 +339,6 @@
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_04" syncanims="0" />
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_05" syncanims="0" />
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_06" syncanims="0" />
-    <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_07" syncanims="0" />
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_08" syncanims="0" />
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_09" syncanims="0" />
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_11" syncanims="0" />
@@ -357,7 +356,6 @@
     <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_04" syncanims="0" />
     <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_05" syncanims="0" />
     <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_06" syncanims="0" />
-    <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_07" syncanims="0" />
     <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_08" syncanims="0" />
     <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_09" syncanims="0" />
     <attach a="falling_leaves" frombone="ATTACHPOINT" tobone="bone_pathnode_11" syncanims="0" />
