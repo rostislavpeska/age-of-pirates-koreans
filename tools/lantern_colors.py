@@ -30,10 +30,19 @@ MATERIAL = REPO / 'art' / 'homecity' / 'korean' / 'lanterns' / 'korean_lantern_u
 SOURCE = '792417b'                                   # the Cheongsachorong textures as first deployed
 SILK = (0, 138, 425, 505)                            # x0, y0, x1, y1 (exclusive) of the silk panel in the 512 atlas
                                                      # (measured: saturated rows 138-504, columns 0-424; tan border below)
-DYE_RED = np.array([150, 40, 30], float)             # safflower-dyed silk, aged
-DYE_BLUE = np.array([36, 60, 94], float)             # indigo silk (cheongsa)
-GLOW_RED = np.array([1.00, 0.46, 0.20])              # candle through red silk
-GLOW_BLUE = np.array([0.20, 0.22, 0.28])             # little light through indigo
+DYE_RED = np.array([165, 38, 28], float)             # safflower-dyed silk
+DYE_BLUE = np.array([38, 82, 120], float)            # indigo silk (cheongsa), a touch toward cyan
+GLOW_RED = np.array([1.00, 0.41, 0.17])              # candle through red silk
+GLOW_BLUE = np.array([0.17, 0.38, 0.62])             # candle through indigo, slightly cyan, ~60% of the red's brightness
+                                                     # (0.20, 0.22, 0.28 vanished in game; 0.24, 0.44, 0.86 was too much;
+                                                     # 0.17, 0.36, 0.50 with silk 150,40,30 / 40,78,102 "slightly
+                                                     # overcorrected ... a little more colourful", owner 2026-10-17)
+SEAM = (0.35, 0.65)                                  # red/blue weight smoothstep: a short seam, no mauve band
+# a warm-white band at the seam (owner 2026-10-17: "some warm white stripe between red and blue"): red and blue never
+# touch, so the bloom cannot mix them into pink
+STRIPE_HALF, STRIPE_FEATHER = 7, 2                   # rows of the 512 atlas: 14 solid + 2 x 2 feathered
+STRIPE_SILK = np.array([214, 196, 160], float)       # undyed silk
+GLOW_STRIPE = np.array([0.92, 0.80, 0.58])           # candle through undyed silk
 EMISSIVE = 2.0
 
 
@@ -51,13 +60,19 @@ def grade(base, emis):
     x0, y0, x1, y1 = SILK
     b, e = base.copy(), emis.copy()
     pb, pe = base[y0:y1, x0:x1], emis[y0:y1, x0:x1]
-    w = np.clip((pb[..., 0] - pb[..., 2]) / (pb[..., 0] + pb[..., 2] + 1e-6) * 0.5 + 0.5, 0, 1)[..., None]   # 1 = red
+    raw = np.clip((pb[..., 0] - pb[..., 2]) / (pb[..., 0] + pb[..., 2] + 1e-6) * 0.5 + 0.5, 0, 1)    # 1 = red
+    t = np.clip((raw - SEAM[0]) / (SEAM[1] - SEAM[0]), 0, 1); w = (t * t * (3 - 2 * t))[..., None]
+    ys = int(np.median(np.argmax(raw >= 0.5, axis=0)))                       # the seam row (blue above, red below)
+    rows = np.abs(np.arange(pb.shape[0]) - ys)[:, None, None].astype(float)
+    s = np.clip(1 - (rows - STRIPE_HALF) / STRIPE_FEATHER, 0, 1)              # 1 in the band, feathered edges
     L = lum(pb)[..., None]
     med_r, med_b = np.median(L[w[..., 0] > 0.8]), np.median(L[w[..., 0] < 0.2])
     shade = L / (w * med_r + (1 - w) * med_b)
-    b[y0:y1, x0:x1] = np.clip((w * DYE_RED + (1 - w) * DYE_BLUE) * shade, 0, 255)
+    dye = (1 - s) * (w * DYE_RED + (1 - w) * DYE_BLUE) + s * STRIPE_SILK
+    b[y0:y1, x0:x1] = np.clip(dye * shade, 0, 255)
     peak = lum(pe).max()
-    e[y0:y1, x0:x1] = np.clip(lum(pe)[..., None] / peak * 255 * (w * GLOW_RED + (1 - w) * GLOW_BLUE), 0, 255)
+    glow = (1 - s) * (w * GLOW_RED + (1 - w) * GLOW_BLUE) + s * GLOW_STRIPE
+    e[y0:y1, x0:x1] = np.clip(lum(pe)[..., None] / peak * 255 * glow, 0, 255)
     return b.round().astype(np.uint8), e.round().astype(np.uint8)
 
 
