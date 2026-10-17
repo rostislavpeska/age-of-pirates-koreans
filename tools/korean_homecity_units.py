@@ -1,5 +1,5 @@
 """data/homecityprotounits.xml: the home city's own unit list (citizens, performers, the explorer) = vanilla plus the
-Korean explorer and the Korean copies of five Chinese customization units (PERFORMERS). The engine shows a civ's explorer from the entry with its <civilization> and <explorer />: a <visual>
+Korean explorer. The engine shows a civ's explorer from the entry with its <civilization> and <explorer />: a <visual>
 animfile standing at <bone> with a <script>; the entry name is no proto (vanilla ExplorerDEHetmanPolish - Poland's
 mounted Hetman - is not in protoy.xml). Without an entry the Korean home city had no explorer (owner 2026-10-17:
 "Korean explorer is missing"). Not an additive *mods.xml file, so the add-on ships the whole file (tools/build.py);
@@ -31,24 +31,12 @@ ENTRY = r'''  <protounit>
 '''
 
 
-# Chinese home city customizations the Koreans get verbatim (owner 2026-10-17: "include some Chinese compatible HC
-# customizations verbatim ... no overengineering. If we're not able to adopt verbatim, then strip"). Their units carry
-# <culturegroup>Chinese</culturegroup> and the Koreans are Japanese culture, so each Korean unit is the vanilla entry
-# with only its name (= the Korean prop's name, data/asianhomecityprops.xml) and <civilization>zpKoreans</civilization>
-# changed; the props copy the vanilla prop records (same building, strings, icon). Juggler, not Torchy: juggling and
-# plate spinning (beona) were the Joseon namsadang troupes' street acts.
-PERFORMERS = {'ChineseJuggler': 'Korean_Juggler', 'ChinesePeasantVendor': 'Korean_PeasantVendor',
-              'ChineseThug': 'Korean_Thug', 'ChinesePeasantFisherman': 'Korean_PeasantFisherman',
-              'ChineseOx': 'Korean_Ox'}
-
-
-def korean_unit(text, name, korean):
-    """the vanilla <protounit> block named `name`, renamed and bound to the Korean civ"""
-    i = text.index(f'    <name>{name}</name>\n'); s = text.rindex('  <protounit>\n', 0, i)
-    e = text.index('  </protounit>\n', i) + len('  </protounit>\n'); block = text[s:e]
-    assert block.count('<culturegroup>Chinese</culturegroup>') == 1, f'{name}: not a Chinese culture-group unit'
-    return block.replace(f'<name>{name}</name>', f'<name>{korean}</name>').replace(
-        '<culturegroup>Chinese</culturegroup>', '<civilization>zpKoreans</civilization>')
+# Stripped 2026-10-17 (owner: "I don't see the units anyway... So probably strip them completely - Juggler / Ox /
+# Fisherman / Thug / merchant Cart ... only keep the lighting and lanterns"): Korean copies of the Chinese Juggler,
+# Vendor Cart, Thug, Fisherman and Ox (vanilla entries re-bound from <culturegroup>Chinese</culturegroup> to
+# <civilization>zpKoreans</civilization>, props copied verbatim, later with <buttonaction>toggle</buttonaction>) were
+# active in the save but never showed in the Korean home city. Evidence: AoP skill aoe3de-new-civ, Blendify journal
+# 2026-10-17-claude-opus-5.5-hc-lanterns-14/15/16. Do not re-add them without a new, game-tested route.
 
 
 def build():
@@ -58,5 +46,4 @@ def build():
     text = korean_visuals.vanilla_text(VANILLA)
     assert '<homecityprotounits>' in text and 'zpKoreans' not in text, 'unexpected vanilla homecityprotounits.xml'
     end = text.rindex('</homecityprotounits>')
-    add = ENTRY + ''.join(korean_unit(text, n, k) for n, k in PERFORMERS.items())
-    return {PATH: (text[:end] + add + text[end:]).replace('\n', '\r\n').encode('utf-8')}
+    return {PATH: (text[:end] + ENTRY + text[end:]).replace('\n', '\r\n').encode('utf-8')}
