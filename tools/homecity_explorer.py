@@ -10,9 +10,12 @@ from the customs house place the explorer on a horse". Audit: Blendify journal 2
 
  1. the street tree on SPOT (bone_pathnode_07: the tree directly left of the Customs House, bone_boatbuilding, in the
     home-city camera) leaves korean_homecity.xml (its tree and falling_leaves attachments);
- 2. bone_explorer_special moves onto SPOT's position and keeps its vanilla yaw (-24.1 deg): gr2_bones "move", every
-    other bone and byte unchanged. Its vanilla China spot sits by the gate 0.7 m under the Korean walkway;
- 3. proof: only that bone moved, onto SPOT (< 1e-4); no orphan fixups; the game's Granny DLL reads the ground.
+ 2. bone_explorer_special moves onto SPOT's position + BACK and keeps its vanilla yaw (-24.1 deg): gr2_bones "move",
+    every other bone and byte unchanged. Its vanilla China spot sits by the gate 0.7 m under the Korean walkway. BACK =
+    2.5 m away from the railing: on SPOT itself the Cheongsachorong stall-lantern string (Korean_Lanterns, a prop at the
+    Emperor's Treasury's bone_fx) hung 0.4-2.3 m in front of him at rider height, so hovering him showed "Emperor's
+    Treasury" (owner 2026-10-17) - the home city names the building whose geometry is under the cursor;
+ 3. proof: only that bone moved, onto SPOT + BACK (< 1e-4); no orphan fixups; the game's Granny DLL reads the ground.
 A re-run is a no-op (byte-identical files). To move the explorer elsewhere, change SPOT (a ground bone) and rerun.
 """
 import argparse, json, re, shutil, sys, tempfile
@@ -31,6 +34,7 @@ GROUND = REPO / 'art' / 'homecity' / 'korean' / 'korean_hc_ground.gr2'
 ANIMFILE = REPO / 'art' / 'homecity' / 'korean' / 'korean_homecity.xml'
 EXPLORER = 'bone_explorer_special'
 SPOT = 'bone_pathnode_07'
+BACK = np.array([0.0, 0.0, -6.35])     # GR2 frame: 2.5 m Blender +Y (away from the railing and the home-city camera)
 TREE_LINE = re.compile(rb'[ \t]*<attach a="(?:tree|falling_leaves)" frombone="ATTACHPOINT" tobone="' + SPOT.encode()
                        + rb'" syncanims="0" />\r\n')
 
@@ -45,7 +49,7 @@ def main(argv=None):
     ap.add_argument('--deploy', action='store_true', help=f'write {GROUND.name} and {ANIMFILE.name}')
     a = ap.parse_args(argv)
     work = Path(tempfile.mkdtemp(prefix='kexplorer_'))
-    W = worlds(GROUND); t = W[SPOT][3, :3] - W[EXPLORER][3, :3]
+    W = worlds(GROUND); target = W[SPOT][3, :3] + BACK; t = target - W[EXPLORER][3, :3]
     ground = work / GROUND.name
     if np.abs(t).max() > 1e-6:
         gr2_bones.edit(GROUND, {'move': [{'bones': [EXPLORER], 'translate': t.tolist()}]}, ground)
@@ -53,7 +57,7 @@ def main(argv=None):
         shutil.copyfile(GROUND, ground)
     N = worlds(ground)
     assert list(N) == list(W), 'bone list changed'
-    err = float(np.abs(N[EXPLORER][3, :3] - W[SPOT][3, :3]).max())
+    err = float(np.abs(N[EXPLORER][3, :3] - target).max())
     assert err < 1e-4 and np.allclose(N[EXPLORER][:3, :3], W[EXPLORER][:3, :3], atol=1e-6), f'explorer off SPOT by {err}'
     drift = max(float(np.abs(N[n] - W[n]).max()) for n in W if n != EXPLORER)
     assert drift < 1e-6, f'another ground bone moved ({drift:.2e})'
