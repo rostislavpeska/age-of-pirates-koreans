@@ -68,14 +68,17 @@ ARCHER_HORSE = {
     'korean_horse_archer_horse_2': 'naginata_horse_2',
 }
 # The flail is skinned into the rider GR2. Horse ages are the light Yabusame horse: Colonial uses horse 0,
-# Honored uses horse 2. The posed walk mesh has no Yabusame equivalent, so that slot is horse 0 too.
+# Honored uses horse 2. iron_flail_horse_walk00 / iron_flail_rider_walk00 are the Walk ANIMATIONS, not posed meshes:
+# they stay the vanilla archive paths (FLAIL_ANIMS; d631c26 2026-10-15 fixed the horse walk, which had pointed at the
+# static horse_0 mesh).
 FLAIL_BODY = {
     'korean_iron_flail_rider_0': 'iron_rider_0',
     'korean_iron_flail_rider_0_lp': 'iron_rider_0_lp',
     'korean_iron_flail_rider_2': 'iron_rider_2',
     'korean_iron_flail_rider_2_lp': 'iron_rider_2_lp',
-    'korean_iron_flail_rider_walk00': 'iron_flail_rider_walk00',
 }
+FLAIL_ANIMS = ('units\\asians\\chinese\\iron_flail\\iron_flail_horse_walk00',
+               'units\\asians\\chinese\\iron_flail\\iron_flail_rider_walk00')
 FLAIL_HORSE = {
     'korean_iron_flail_horse_0': 'yabusameHorse_0',
     'korean_iron_flail_horse_1': 'yabusameHorse_2',
@@ -194,8 +197,6 @@ UNITS = {
              'units\\korean_iron_flail\\korean_iron_flail_whip.xml'),
             ('units\\asians\\chinese\\iron_flail\\iron_flail_rider.xml',
              'units\\korean_iron_flail\\korean_iron_flail_rider.xml'),
-            ('units\\asians\\chinese\\iron_flail\\iron_flail_rider_walk00',
-             'units\\korean_iron_flail\\korean_iron_flail_rider_walk00'),
             ('units\\asians\\chinese\\iron_flail\\iron_rider_2_lp',
              'units\\korean_iron_flail\\korean_iron_flail_rider_2_lp'),
             ('units\\asians\\chinese\\iron_flail\\iron_rider_0_lp',
@@ -204,8 +205,6 @@ UNITS = {
              'units\\korean_iron_flail\\korean_iron_flail_rider_2'),
             ('units\\asians\\chinese\\iron_flail\\iron_rider_0',
              'units\\korean_iron_flail\\korean_iron_flail_rider_0'),
-            ('units\\asians\\chinese\\iron_flail\\iron_flail_horse_walk00',
-             'units\\korean_iron_flail\\korean_iron_flail_horse_0'),
             ('units\\asians\\chinese\\iron_flail\\iron_flail_horse_1',
              'units\\korean_iron_flail\\korean_iron_flail_horse_1'),
             ('units\\asians\\chinese\\iron_flail\\iron_flail_horse_0',
@@ -217,8 +216,7 @@ UNITS = {
         # copy still uses the vanilla oprichnik whip meshes (archive paths, not clones).
         extras=(('Art/units/asians/chinese/iron_flail/iron_flail_whip.xml.XMB',
                  'art/units/korean_iron_flail/korean_iron_flail_whip.xml'),),
-        # The posed walk mesh has no material of its own; it draws with the Colonial rider's.
-        material_alias={'iron_flail_rider_walk00': 'iron_rider_0'},
+        vanilla_anims=FLAIL_ANIMS,
     ),
 }
 
@@ -304,11 +302,13 @@ def _rewrite(unit):
     for old, new in unit['replace']:
         assert sum(text.count(old) for text in texts.values()) >= 1, old
         texts = {kind: text.replace(old, new) for kind, text in texts.items()}
+    for path in unit.get('vanilla_anims', ()):
+        assert sum(text.count('<file>%s</file>' % path) for text in texts.values()) == 1, path
     for kind in texts:
         for old, new in unit['techs']:
             texts[kind], n = re.subn(r'(</?)%s>' % old, r'\1%s>' % new, texts[kind])
             assert n == 2, (unit['proto'], kind, old, n)
-        assert 'asians\\' not in texts[kind] and 'steppe_rider' not in texts[kind], (unit['proto'], kind)
+        assert 'asians\\' not in own_paths(unit, texts[kind]) and 'steppe_rider' not in texts[kind], (unit['proto'], kind)
         assert set(re.findall(r'<file>(animation_library[^<]*)</file>', texts[kind])) == anims[kind]
     if unit['lp_pairs']:
         # The Naginata horse lists the same mesh for normal and low poly. The Yabusame horse has a real low poly,
@@ -318,6 +318,14 @@ def _rewrite(unit):
             r'\1\2_lp\3', texts['horse'])
         assert n == 3, n
     return texts
+
+
+def own_paths(unit, text):
+    """The animfile without the vanilla animations it keeps by archive path; each must be a GrannyAnim reference."""
+    for path in unit.get('vanilla_anims', ()):
+        text, n = re.subn(r'(<assetreference type="GrannyAnim">\s*)<file>%s</file>' % re.escape(path), r'\1', text)
+        assert n <= 1, path
+    return text
 
 
 def _models(unit):

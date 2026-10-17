@@ -54,7 +54,10 @@ def test_techs_activate_japan_and_the_visual_marker():
                                                   'zpKoreanHorseArcherPostIndustrial', 'zpKoreanHorseArcherPostImperial',
                                                   'zpHonoredKoreanIronFlail', 'zpExaltedKoreanIronFlail',
                                                   'zpKoreanIronFlailPostIndustrial', 'zpKoreanIronFlailPostImperial',
-                                                  'zpExaltedKoreanHongyipao']
+                                                  'zpExaltedKoreanHongyipao',
+                                                  # consulate Japanese Allies (593d3f7, 2026-10-15)
+                                                  'zpBigConsulateJapaneseAllies', 'zpBigSequesterJapaneseAllies',
+                                                  'zpKoreanConsulateAllies', 'zpConsulateOsakaRonin']
     active = [e.text for e in techs[1].iter('effect') if e.get('type') == 'TechStatus' and e.get('status') == 'active']
     assert active == ['YPAge0Japanese', 'zpKoreanVisuals', 'zpKoreanBuildings', 'zpKoreanUnits', 'zpKoreanEconomy', 'zpKoreanConsulateAllies']
     assert all(60000 <= int(t.findtext('dbid')) < 61000 for t in techs)
@@ -62,7 +65,8 @@ def test_techs_activate_japan_and_the_visual_marker():
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(126)]         # 600120-600125: Hongyipao
+    assert ids == [str(600000 + i) for i in range(132)]         # 600126-600131: consulate Japanese Allies, Osaka Ronin
+                                                                # 600120-600125: Hongyipao
                                                                 # 600095-600119: Geomsabok, Gungdo Cavalry, Pyeongon Cavalry
                                                                 # 600093-600094: Industrial Castle bench
                                                                 # 600077-600078: zzTEST Dock
@@ -932,8 +936,8 @@ def test_cavalry_is_its_vanilla_unit_with_its_own_files(unit):
     assert {s.get('name') for s in snds.iter('soundset')} >= {'Korean_Soldier_Select', 'Korean_Soldier_Attack'}
     spec = kc.UNITS[folder]
     for kind in ('horse', 'rider'):
-        text = (K / 'art/units' / folder / ('%s_%s.xml' % (folder, kind))).read_text(encoding='utf-8')
-        assert 'asians\\' not in text and 'asians/' not in text
+        text = kc.own_paths(spec, (K / 'art/units' / folder / ('%s_%s.xml' % (folder, kind))).read_text(encoding='utf-8'))
+        assert 'asians\\' not in text and 'asians/' not in text     # vanilla Walk clips kept by path: spec vanilla_anims
         assert 'animation_library' in text
     horse = (K / 'art/units' / folder / ('%s_horse.xml' % folder)).read_text(encoding='utf-8')
     for dest in spec['horse']:

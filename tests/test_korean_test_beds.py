@@ -19,6 +19,15 @@ PROTO = ET.fromstring((K / "data" / "protomods.xml").read_text(encoding="utf-8")
 BENCHES = {u.get("name"): u for u in PROTO.iter("unit") if (u.get("name") or "").startswith("zzTEST")}
 WAGON = BENCHES.pop("zzTESTKoreanBuilderWagon")
 HOUSE_BENCHES = ("zzTESTKoreanHouseA", "zzTESTKoreanHouseB", "zzTESTKoreanHouseC")    # zpHouseKorean: one per variant
+# Home City viewers (5c4892c, 2026-10-16): editor-placed embellishments that show the Home City model, its backdrop and
+# the vanilla China water. They are not buildings (no build points), so they are not on the builder wagon; the water
+# loads a vanilla archive animfile.
+def _is_viewer(u):
+    return ((u.findtext("animfile") or "").lower().startswith("homecity\\")
+            and "EmbellishmentClass" in {t.text for t in u.findall("unittype")})
+
+
+VIEWERS = {n: BENCHES.pop(n) for n in [n for n, u in BENCHES.items() if _is_viewer(u)]}
 
 
 def norm(path):
@@ -42,6 +51,15 @@ def test_every_test_bed_resolves_and_is_buildable():
         text = anim.read_text(encoding="utf-8", errors="replace")
         for ref in set(re.findall(r"<file>((?:buildings\\korean_|zbench_)[^<]+)</file>", text)):
             assert (ART / (norm(ref) + ".gr2")).is_file(), f"{name}: {ref}.gr2 missing"
+
+
+def test_home_city_viewers_resolve():
+    assert {"zzTESTKoreanHomecityModel", "zzTESTKoreanHomecityBackdrop"} <= set(VIEWERS)
+    for name, u in VIEWERS.items():
+        anim = u.findtext("animfile")
+        assert u.findtext("dbid") == u.get("id"), name
+        if "\\korean\\" in anim.lower():                       # Korean files ship here; vanilla ones are archive paths
+            assert (ART / norm(anim)).is_file(), f"{name}: animfile {anim} missing"
 
 
 def test_dock_bench_places_like_a_dock():
