@@ -1,0 +1,5 @@
+#!/bin/sh
+# Koreans add-on pre-commit (INC-400): a commit that installs a registered texture DDT re-pins it in
+# tools/texture_sets.json. Only the staged DDTs and pins are checked, so drift elsewhere never blocks a commit.
+# Enable once per clone (all worktrees share it):  git config core.hooksPath tools/hooks
+exec python "$(git rev-parse --show-toplevel)/tools/texture_registry.py" check --staged
