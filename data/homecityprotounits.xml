@@ -2653,7 +2653,6 @@
     <visual>units\korean_monk\korean_monk_horse.xml</visual>
     <bone>bone_explorer_special</bone>
     <script>explorer</script>
-    <selectable />
     <explorer />
     <camera>china\china_homecity_dock_camera.cam</camera>
     <widescreencamera>china\china_homecity_dock_widescreencamera.cam</widescreencamera>

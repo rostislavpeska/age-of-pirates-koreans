@@ -7,8 +7,10 @@ built on AoP's copy would be needed if AoP ever ships one (then it must host the
 Audit: Blendify journal 2026-10-17-claude-opus-5.5-26.
 
 The Korean monk rides his horse (units/korean_monk/korean_monk_horse.xml, zpMonkKorean's animfile) at the ground bone
-bone_explorer_special, which tools/homecity_explorer.py puts left of the Customs House; clicking him frames that corner
-with the Customs House's camera.
+bone_explorer_special, which tools/homecity_explorer.py puts left of the Customs House. He is NOT <selectable />: a
+click opens the engine's explorer skin panel, whose skins come from no data a mod can extend (journal
+2026-10-17-claude-opus-5.5-36/-37), so for the Koreans it hid the home city UI with no zoom (owner 2026-10-17). His
+hover text is the Unit prop of the same name in data/asianhomecityprops.xml.
 """
 import os
 
@@ -22,7 +24,6 @@ ENTRY = r'''  <protounit>
     <visual>units\korean_monk\korean_monk_horse.xml</visual>
     <bone>bone_explorer_special</bone>
     <script>explorer</script>
-    <selectable />
     <explorer />
     <camera>china\china_homecity_dock_camera.cam</camera>
     <widescreencamera>china\china_homecity_dock_widescreencamera.cam</widescreencamera>

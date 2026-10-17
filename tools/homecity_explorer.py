@@ -12,9 +12,9 @@ from the customs house place the explorer on a horse". Audit: Blendify journal 2
     home-city camera) leaves korean_homecity.xml (its tree and falling_leaves attachments);
  2. bone_explorer_special moves onto SPOT's position + BACK and keeps its vanilla yaw (-24.1 deg): gr2_bones "move",
     every other bone and byte unchanged. Its vanilla China spot sits by the gate 0.7 m under the Korean walkway. BACK =
-    2.5 m away from the railing: on SPOT itself the Cheongsachorong stall-lantern string (Korean_Lanterns, a prop at the
-    Emperor's Treasury's bone_fx) hung 0.4-2.3 m in front of him at rider height, so hovering him showed "Emperor's
-    Treasury" (owner 2026-10-17) - the home city names the building whose geometry is under the cursor;
+    2.5 m away from the railing, clear of the Cheongsachorong stall-lantern string that hangs 0.4-2.3 m in front of
+    SPOT at rider height. (Moved there because hovering him showed "Emperor's Treasury"; that turned out to be the
+    last building hovered - a stale tooltip, see tools/korean_homecity_units.py - so the lanterns were not the cause.)
  3. proof: only that bone moved, onto SPOT + BACK (< 1e-4); no orphan fixups; the game's Granny DLL reads the ground.
 A re-run is a no-op (byte-identical files). To move the explorer elsewhere, change SPOT (a ground bone) and rerun.
 """

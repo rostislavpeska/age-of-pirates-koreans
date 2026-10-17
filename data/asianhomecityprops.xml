@@ -1624,6 +1624,12 @@
     </position>
     <icon>homecity\home_city_props\icons\chinese_ox</icon>
   </prop>
+  <prop>
+    <name>ExplorerZPKorean</name>
+    <type>Unit</type>
+    <description>Samyeong Daesa, the Seungjang - warrior monk and explorer of Korea.</description>
+    <descriptionstringid />
+  </prop>
   <exclusiveprops>
     <prop>ChineseLightSetMorning</prop>
     <prop>ChineseLightSetDay</prop>
