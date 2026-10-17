@@ -448,7 +448,7 @@
   {
    "id": "korean_consulate_mata",
    "status": "current",
-   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_VF: stone-tile coping, stone piers + caps, masonry v3 castle tone, pronounced stone relief r8c; UV c4r9f) + roof valley KR-ROOF-VALLEY-01 r8e (on the junction: valley line = the diagonal course-step faces, LOW-world frame gate) + member de-repeat D11 (mast, wood ridges, facade-2 lintel) + gable medallion pair clear of the king post (occlusion-gated) + 17 Oct 2026 UV c4r9g (owner rule: faces 245/263/299/317 re-pointed to owners 260/278/314/332) with the reusable roof module at the approved Colonial density (pitch .3785), Masks AO/roughness, edge dust, Zen normals, wall weathering and coping/corner bevel (consulate-uvfix-export-r1) + 17 Oct 2026 roof ends (seam-r1/final-r6: r6-pitch eave cut-out alpha on every lip, Main W fronts from the Main E END, seam continuity on 13 junctions; owner-accepted, consulate-final-export-r1)",
+   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_VF: stone-tile coping, stone piers + caps, masonry v3 castle tone, pronounced stone relief r8c; UV c4r9f) + roof valley KR-ROOF-VALLEY-01 r8e (on the junction: valley line = the diagonal course-step faces, LOW-world frame gate) + member de-repeat D11 (mast, wood ridges, facade-2 lintel) + gable medallion pair clear of the king post (occlusion-gated) + 17 Oct 2026 UV c4r9g (owner rule: faces 245/263/299/317 re-pointed to owners 260/278/314/332) with the reusable roof module at the approved Colonial density (pitch .3785), Masks AO/roughness, edge dust, Zen normals, wall weathering and coping/corner bevel (consulate-uvfix-export-r1) + 17 Oct 2026 roof ends (seam-r1/final-r6: r6-pitch eave cut-out alpha on every lip, Main W fronts from the Main E END, seam continuity on 13 junctions; owner-accepted, consulate-final-export-r1) + 18 Oct 2026 eave-strip UV fix c4r9i (Main.Eave.1.0:4/:5, -1.0:3 own outer-underside UVs) with seam-r1 final-r6/candidate-r2 cut continuation; intact, damaged and Havok re-exported (consulate-reexport-r1)",
    "page": [
     2048,
     2048
@@ -457,15 +457,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_BaseColor",
-     "sha256": "028035a920b420f279e6368e0e79263536937a6afb27904a76c189e3f11f2ca7"
+     "sha256": "1c7cc209bb87ebbf83619fb2df792d7eeb32bb1722f7a129f3460f72cacdf20b"
     },
     "Normals": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Normals",
-     "sha256": "9551467c13037f8564efdc0e420c5fa6260b34d9ebf3ae56829859eb46557fc6"
+     "sha256": "6344b3ae54619411b97e5f022c616ebcf7f51506f824eb1a382f7fe6c05e94c1"
     },
     "Masks": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Masks",
-     "sha256": "a6837820e46f9a2ff63a191e4233f1f8b2ba7d4b7534a12c142c8dbbcbdd5c86"
+     "sha256": "581f6f677daf0fb9aad64856ab4a1ee13ea0cfba8c2f12c8d15d5ded30e56cd3"
     },
     "Details": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Details",
