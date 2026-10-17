@@ -1554,6 +1554,76 @@
     <cost>2</cost>
     <icon>homecity\home_city_props\icons\korean_night_lanterns</icon>
   </prop>
+  <prop>
+    <name>Korean_Juggler</name>
+    <civ>zpKoreans</civ>
+    <type>PerformerUnit</type>
+    <displayname>Juggler</displayname>
+    <displaynamestringid>37571</displaynamestringid>
+    <description>A juggling performer.</description>
+    <descriptionstringid>37572</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Emperor's Treasury</building>
+    </position>
+    <icon>homecity\home_city_props\icons\chinese_juggler</icon>
+  </prop>
+  <prop>
+    <name>Korean_PeasantVendor</name>
+    <civ>zpKoreans</civ>
+    <type>PerformerUnit</type>
+    <displayname>Vendor Cart</displayname>
+    <displaynamestringid>42472</displaynamestringid>
+    <description>A store on wheels hawking goods of all kinds.</description>
+    <descriptionstringid>42473</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Fortress</building>
+    </position>
+    <icon>homecity\home_city_props\icons\chinese_dumpling_cart</icon>
+  </prop>
+  <prop>
+    <name>Korean_Thug</name>
+    <civ>zpKoreans</civ>
+    <type>Unit</type>
+    <displayname>Thug</displayname>
+    <displaynamestringid>42514</displaynamestringid>
+    <description>A brutish and unpleasant fellow.</description>
+    <descriptionstringid>42515</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Imperial Court</building>
+    </position>
+    <icon>homecity\home_city_props\icons\chinese_thug</icon>
+  </prop>
+  <prop>
+    <name>Korean_PeasantFisherman</name>
+    <civ>zpKoreans</civ>
+    <type>Unit</type>
+    <displayname>Fisherman</displayname>
+    <displaynamestringid>42512</displaynamestringid>
+    <description>A man who would rather be fishing.</description>
+    <descriptionstringid>42513</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Customs House</building>
+    </position>
+    <icon>homecity\home_city_props\icons\chinese_fisherman</icon>
+  </prop>
+  <prop>
+    <name>Korean_Ox</name>
+    <civ>zpKoreans</civ>
+    <type>Unit</type>
+    <displayname>Ox</displayname>
+    <displaynamestringid>49052</displaynamestringid>
+    <description>A wandering Ox.</description>
+    <descriptionstringid>49053</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <building>Customs House</building>
+    </position>
+    <icon>homecity\home_city_props\icons\chinese_ox</icon>
+  </prop>
   <exclusiveprops>
     <prop>ChineseLightSetMorning</prop>
     <prop>ChineseLightSetDay</prop>

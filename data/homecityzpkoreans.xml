@@ -2142,5 +2142,10 @@
     <prop>Japanese_LightMistyMorning</prop>
     <prop>Korean_Light_BlueMountains</prop>
     <prop>Korean_Night_Lanterns</prop>
+    <prop>Korean_Juggler</prop>
+    <prop>Korean_PeasantVendor</prop>
+    <prop>Korean_Thug</prop>
+    <prop>Korean_PeasantFisherman</prop>
+    <prop>Korean_Ox</prop>
   </obtainableprops>
 </homecity>
