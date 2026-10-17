@@ -1482,10 +1482,10 @@
     <descriptionstringid>49113</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
-      <building>Imperial Court</building>
       <bone>bone_fx</bone>
+      <building>Emperor's Treasury</building>
     </position>
-    <visual>homecity\home_city_props\prop_china_lanterns.xml</visual>
+    <visual>homecity\korean\lanterns\korean_lanterns.xml</visual>
     <prereq>Korean_Light_BlueMountains</prereq>
     <buttonaction>Toggle</buttonaction>
     <activateprops>

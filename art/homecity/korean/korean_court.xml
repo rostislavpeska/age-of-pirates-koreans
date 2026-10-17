@@ -2,6 +2,7 @@
   <definebone>bone_banner</definebone>
   <definebone>bone_banner01</definebone>
   <definebone>bone_banner02</definebone>
+  <definebone>bone_fx</definebone>
   <attachment>Pirate_flag<component>flag<assetreference type="ClothFlag">
         <flag>
           <blending>alphatest_nocolor</blending>
@@ -43,25 +44,25 @@
   <component>court<logic type="Variation">
       <variation0>
         <assetreference type="GrannyModel">
-          <file>homecity\japan\court\court</file>
+          <file>homecity\korean\court\korean_court</file>
           <materialvariant index="1" />
         </assetreference>
       </variation0>
       <variation1>
         <assetreference type="GrannyModel">
-          <file>homecity\japan\court\court</file>
+          <file>homecity\korean\court\korean_court</file>
           <materialvariant index="0" />
         </assetreference>
       </variation1>
       <variation2>
         <assetreference type="GrannyModel">
-          <file>homecity\japan\court\court</file>
+          <file>homecity\korean\court\korean_court</file>
           <materialvariant index="3" />
         </assetreference>
       </variation2>
       <variation3>
         <assetreference type="GrannyModel">
-          <file>homecity\japan\court\court</file>
+          <file>homecity\korean\court\korean_court</file>
           <materialvariant index="2" />
         </assetreference>
       </variation3>

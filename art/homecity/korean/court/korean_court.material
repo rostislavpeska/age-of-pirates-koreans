@@ -1,0 +1,75 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default_emissive_advanced" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\japan\court\textures\court_mata_BaseColor" />
+      <texture name="Normals" override="homecity\japan\court\textures\court_mata_Normals" />
+      <texture name="Masks" override="homecity\japan\court\textures\court_mata_Masks" />
+      <texture name="Emissive" override="homecity\japan\court\textures\court_mata_Emissive" />
+    </parameters>
+    <parameters variant="1">
+      <texture name="BaseColor" override="homecity\japan\court\textures\court_mata_01_BaseColor" />
+      <texture name="Normals" override="homecity\japan\court\textures\court_mata_01_Normals" />
+      <texture name="Masks" override="homecity\japan\court\textures\court_mata_01_Masks" />
+      <texture name="Emissive" override="homecity\japan\court\textures\court_mata_01_Emissive" />
+    </parameters>
+    <parameters variant="2">
+      <texture name="BaseColor" override="homecity\japan\court\textures\court_snow_mata_BaseColor" />
+      <texture name="Normals" override="homecity\japan\court\textures\court_snow_mata_Normals" />
+      <texture name="Masks" override="homecity\japan\court\textures\court_snow_mata_Masks" />
+      <texture name="Emissive" override="homecity\japan\court\textures\court_snow_mata_Emissive" />
+    </parameters>
+    <parameters variant="3">
+      <texture name="BaseColor" override="homecity\japan\court\textures\court_snow_mata_01_BaseColor" />
+      <texture name="Normals" override="homecity\japan\court\textures\court_snow_mata_01_Normals" />
+      <texture name="Masks" override="homecity\japan\court\textures\court_snow_mata_01_Masks" />
+      <texture name="Emissive" override="homecity\japan\court\textures\court_snow_mata_01_Emissive" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matb">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\widebuilding\textures\widebuilding_matA_BaseColor" />
+      <texture name="Normals" override="homecity\china\widebuilding\textures\widebuilding_matA_Normals" />
+      <texture name="Masks" override="homecity\china\widebuilding\textures\widebuilding_matA_Masks" />
+    </parameters>
+    <parameters variant="1">
+      <texture name="BaseColor" override="homecity\china\widebuilding\textures\widebuilding_matA_BaseColor" />
+      <texture name="Normals" override="homecity\china\widebuilding\textures\widebuilding_matA_Normals" />
+      <texture name="Masks" override="homecity\china\widebuilding\textures\widebuilding_matA_Masks" />
+    </parameters>
+    <parameters variant="2">
+      <texture name="BaseColor" override="homecity\china\widebuilding\textures\widebuilding_matA_BaseColor" />
+      <texture name="Normals" override="homecity\china\widebuilding\textures\widebuilding_matA_Normals" />
+      <texture name="Masks" override="homecity\china\widebuilding\textures\widebuilding_matA_Masks" />
+    </parameters>
+    <parameters variant="3">
+      <texture name="BaseColor" override="homecity\china\widebuilding\textures\widebuilding_matA_BaseColor" />
+      <texture name="Normals" override="homecity\china\widebuilding\textures\widebuilding_matA_Normals" />
+      <texture name="Masks" override="homecity\china\widebuilding\textures\widebuilding_matA_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matc">
+    <materialdef name="default_doublesided_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\japan\court\textures\court_mata_BaseColor" />
+      <texture name="Normals" override="homecity\japan\court\textures\court_mata_Normals" />
+      <texture name="Masks" override="homecity\japan\court\textures\court_mata_Masks" />
+    </parameters>
+    <parameters variant="1">
+      <texture name="BaseColor" override="homecity\japan\court\textures\court_mata_01_BaseColor" />
+      <texture name="Normals" override="homecity\japan\court\textures\court_mata_01_Normals" />
+      <texture name="Masks" override="homecity\japan\court\textures\court_mata_01_Masks" />
+    </parameters>
+    <parameters variant="2">
+      <texture name="BaseColor" override="homecity\japan\court\textures\court_snow_mata_BaseColor" />
+      <texture name="Normals" override="homecity\japan\court\textures\court_snow_mata_Normals" />
+      <texture name="Masks" override="homecity\japan\court\textures\court_snow_mata_Masks" />
+    </parameters>
+    <parameters variant="3">
+      <texture name="BaseColor" override="homecity\japan\court\textures\court_snow_mata_01_BaseColor" />
+      <texture name="Normals" override="homecity\japan\court\textures\court_snow_mata_01_Normals" />
+      <texture name="Masks" override="homecity\japan\court\textures\court_snow_mata_01_Masks" />
+    </parameters>
+  </submaterial>
+</material>

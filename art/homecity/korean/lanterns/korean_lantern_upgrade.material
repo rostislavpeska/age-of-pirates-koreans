@@ -1,0 +1,87 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default_emissive_advanced" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_round_lambert1_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_round_lambert1_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_round_lambert1_masks" />
+      <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\lantern_round_lambert1_emissive" />
+      <float name="EmissiveIntensity" override="2.1200" />
+    </parameters>
+    <parameters variant="1">
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_round_lambert1_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_round_lambert1_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_round_lambert1_masks" />
+      <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\emissiveoff" />
+      <float name="EmissiveIntensity" override="2.1200" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matb">
+    <materialdef name="default_emissive_advanced" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_cylinder_cylinder_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_cylinder_cylinder_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_cylinder_cylinder_masks" />
+      <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\lantern_cylinder_cylinder_emissive" />
+      <float name="EmissiveIntensity" override="1.3000" />
+    </parameters>
+    <parameters variant="1">
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_cylinder_cylinder_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_cylinder_cylinder_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_cylinder_cylinder_masks" />
+      <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\emissiveoff" />
+      <float name="EmissiveIntensity" override="1.3000" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matd">
+    <materialdef name="default_emissive_advanced" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_diamond_diamond_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_diamond_diamond_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_diamond_diamond_masks" />
+      <texture name="Details" override="black" />
+      <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\lantern_diamond_diamond_emissive" />
+      <float name="EmissiveIntensity" override="2.5700" />
+      <vector4 name="EmissiveColor" override="0.718, 0.550, 0.357, 1.000" />
+    </parameters>
+    <parameters variant="1">
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_diamond_diamond_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_diamond_diamond_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_diamond_diamond_masks" />
+      <texture name="Details" override="black" />
+      <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\emissiveoff" />
+      <float name="EmissiveIntensity" override="2.5700" />
+      <vector4 name="EmissiveColor" override="0.718, 0.550, 0.357, 1.000" />
+    </parameters>
+  </submaterial>
+  <submaterial name="mate">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_rope_supports_rope_supports_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_rope_supports_rope_supports_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_rope_supports_rope_supports_masks" />
+    </parameters>
+    <parameters variant="1">
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_rope_supports_rope_supports_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_rope_supports_rope_supports_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_rope_supports_rope_supports_masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matf">
+    <materialdef name="default_emissive_advanced" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_box_box_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_box_box_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_box_box_masks" />
+      <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\lantern_box_box_emissive" />
+      <float name="EmissiveIntensity" override="1.1600" />
+    </parameters>
+    <parameters variant="1">
+      <texture name="BaseColor" override="homecity\china\lantern_upgrade\textures\lantern_box_box_basecolor" />
+      <texture name="Normals" override="homecity\china\lantern_upgrade\textures\lantern_box_box_normals" />
+      <texture name="Masks" override="homecity\china\lantern_upgrade\textures\lantern_box_box_masks" />
+      <texture name="Emissive" override="homecity\china\lantern_upgrade\textures\emissiveoff" />
+      <float name="EmissiveIntensity" override="1.1600" />
+    </parameters>
+  </submaterial>
+</material>
