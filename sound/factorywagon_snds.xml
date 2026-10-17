@@ -103,8 +103,16 @@
           </techlogic>
         </choice>
         <choice name="zpKoreans">
-          <soundset name="RussianSettlerMaleSelect">
-          </soundset>
+          <techlogic>
+            <choice name="none">
+              <soundset name="RussianSettlerMaleSelect">
+              </soundset>
+            </choice>
+            <choice name="ypJapaneseMeijiVisualsShadow">
+              <soundset name="zpKoreanVillagerM_Select">
+              </soundset>
+            </choice>
+          </techlogic>
         </choice>
         <choice name="Chinese">
           <soundset name="RussianSettlerMaleSelect">
@@ -274,8 +282,16 @@
           </techlogic>
         </choice>
         <choice name="zpKoreans">
-          <soundset name="RussianSettlerMaleAcknowledge">
-          </soundset>
+          <techlogic>
+            <choice name="none">
+              <soundset name="RussianSettlerMaleAcknowledge">
+              </soundset>
+            </choice>
+            <choice name="ypJapaneseMeijiVisualsShadow">
+              <soundset name="zpKoreanVillagerM_Acknowledge">
+              </soundset>
+            </choice>
+          </techlogic>
         </choice>
         <choice name="Chinese">
           <soundset name="RussianSettlerMaleAcknowledge">
