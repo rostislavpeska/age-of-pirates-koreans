@@ -1,0 +1,34 @@
+<material>
+  <submaterial name="mata">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china\docks01\textures\docks01_matA_BaseColor" />
+      <texture name="Normals" override="homecity\china\docks01\textures\docks01_matA_Normals" />
+      <texture name="Masks" override="homecity\china\docks01\textures\docks01_matA_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matb">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\japan\gardensstuff\textures\gardensstuff_rocks_mata_BaseColor" />
+      <texture name="Normals" override="homecity\japan\gardensstuff\textures\gardensstuff_rocks_mata_Normals" />
+      <texture name="Masks" override="homecity\japan\gardensstuff\textures\gardensstuff_rocks_mata_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matd">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\china_spc_ship\deck\textures\deck_matA_BaseColor" />
+      <texture name="Normals" override="homecity\china_spc_ship\deck\textures\deck_matA_Normals" />
+      <texture name="Masks" override="homecity\china_spc_ship\deck\textures\deck_matA_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matc">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="homecity\japan\boats01\textures\boats01_MatA_BaseColor" />
+      <texture name="Normals" override="homecity\japan\boats01\textures\boats01_MatA_Normals" />
+      <texture name="Masks" override="homecity\japan\boats01\textures\boats01_MatA_Masks" />
+    </parameters>
+  </submaterial>
+</material>

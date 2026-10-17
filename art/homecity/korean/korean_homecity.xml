@@ -210,16 +210,6 @@
       <component>walls02</component>
     </anim>
   </attachment>
-  <attachment>rocks01
-    <component>rocks01
-      <assetreference type="CompositeModel">
-        <file>homecity\china\rocks01\rocks01</file>
-      </assetreference>
-    </component>
-    <anim>Idle
-      <component>rocks01</component>
-    </anim>
-  </attachment>
   <attachment>fencewalls01
     <component>fencewalls01
       <assetreference type="GrannyModel">
@@ -283,27 +273,14 @@
   <attachment>docks01
     <component>docks01
       <assetreference type="GrannyModel">
-        <file>homecity\china\docks01\docks01</file>
+        <file>homecity\korean\docks01\korean_docks01</file>
       </assetreference>
     </component>
     <anim>Idle
       <assetreference type="GrannyAnim">
-        <file>homecity\china\docks01\docks01_anim</file>
+        <file>homecity\korean\docks01\korean_docks01_anim</file>
       </assetreference>
       <component>docks01</component>
-    </anim>
-  </attachment>
-  <attachment>china_boats
-    <component>china_boats
-      <assetreference type="GrannyModel">
-        <file>homecity\china\china_boats\china_boats</file>
-      </assetreference>
-    </component>
-    <anim>Idle
-      <assetreference type="GrannyAnim">
-        <file>homecity\china\china_boats\china_boats_anim</file>
-      </assetreference>
-      <component>china_boats</component>
     </anim>
   </attachment>
   <attachment>tree
@@ -333,7 +310,6 @@
     <attach a="hills" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="walls01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="walls02" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
-    <attach a="rocks01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="fencewalls01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="fencewalls02" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="trees01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
@@ -341,7 +317,6 @@
     <attach a="lanterns" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="grass" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="docks01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
-    <attach a="china_boats" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
 
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_01" syncanims="0" />
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_02" syncanims="0" />
