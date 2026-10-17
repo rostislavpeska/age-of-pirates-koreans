@@ -1476,23 +1476,19 @@
     <name>Korean_Lanterns</name>
     <civ>zpKoreans</civ>
     <type>Object</type>
-    <displayname>Lanterns</displayname>
-    <displaynamestringid>49112</displaynamestringid>
-    <description>Festive lanterns glowing under the crimson moon.</description>
-    <descriptionstringid>49113</descriptionstringid>
+    <displayname>Cheongsachorong</displayname>
+    <displaynamestringid>600134</displaynamestringid>
+    <description>Joseon silk lanterns, red above and blue below for yang and yin, lit for weddings and festive nights.</description>
+    <descriptionstringid>600135</descriptionstringid>
     <levelprereq>0</levelprereq>
     <position>
       <bone>bone_fx</bone>
       <building>Emperor's Treasury</building>
     </position>
     <visual>homecity\korean\lanterns\korean_lanterns.xml</visual>
-    <prereq>Korean_Light_BlueMountains</prereq>
     <buttonaction>Toggle</buttonaction>
-    <activateprops>
-      <prop>Korean_Light_BlueMountains</prop>
-    </activateprops>
     <cost>2</cost>
-    <icon>homecity\home_city_props\icons\chinese_lanterns</icon>
+    <icon>homecity\home_city_props\icons\korean_street_lanterns</icon>
   </prop>
   <prop>
     <name>Korean_Light_Daylight</name>
@@ -1507,9 +1503,6 @@
     </position>
     <variationid>0</variationid>
     <lightset>Tenochtitlan</lightset>
-    <deactivateprops>
-      <prop>Korean_Lanterns</prop>
-    </deactivateprops>
     <icon>homecity\home_city_props\icons\korean_lightset_day</icon>
   </prop>
   <prop>
@@ -1525,9 +1518,6 @@
     </position>
     <variationid>3</variationid>
     <lightset>tenochtitlan_sunrise</lightset>
-    <deactivateprops>
-      <prop>Korean_Lanterns</prop>
-    </deactivateprops>
     <icon>homecity\home_city_props\icons\korean_lightset_sunset</icon>
   </prop>
   <prop>
@@ -1545,6 +1535,24 @@
     <lightset>tenochtitlan_thunderstorm</lightset>
     <visual>homecity\korean\korean_night_lights.xml</visual>
     <icon>homecity\home_city_props\icons\korean_lightset_bloodmoon</icon>
+  </prop>
+  <prop>
+    <name>Korean_Night_Lanterns</name>
+    <civ>zpKoreans</civ>
+    <type>Object</type>
+    <displayname>Building Lanterns</displayname>
+    <displaynamestringid>600132</displaynamestringid>
+    <description>Paper lanterns glowing under the eaves of the city's great halls.</description>
+    <descriptionstringid>600133</descriptionstringid>
+    <levelprereq>0</levelprereq>
+    <position>
+      <bone>bone_fx</bone>
+      <building>Emperor's Treasury</building>
+    </position>
+    <visual>homecity\korean\korean_night_lanterns.xml</visual>
+    <buttonaction>Toggle</buttonaction>
+    <cost>2</cost>
+    <icon>homecity\home_city_props\icons\korean_night_lanterns</icon>
   </prop>
   <exclusiveprops>
     <prop>ChineseLightSetMorning</prop>

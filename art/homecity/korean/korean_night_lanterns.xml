@@ -1,0 +1,300 @@
+<animfile>
+  <definebone>fire_51</definebone>
+  <definebone>fire_52</definebone>
+  <definebone>fire_53</definebone>
+  <definebone>fire_104</definebone>
+  <definebone>fire_105</definebone>
+  <definebone>fire_106</definebone>
+  <definebone>fire_107</definebone>
+  <definebone>fire_108</definebone>
+  <definebone>fire_109</definebone>
+  <definebone>fire_110</definebone>
+  <definebone>fire_111</definebone>
+  <definebone>fire_112</definebone>
+  <definebone>fire_113</definebone>
+  <definebone>fire_114</definebone>
+  <definebone>fire_115</definebone>
+  <definebone>fire_116</definebone>
+  <definebone>fire_117</definebone>
+  <definebone>fire_118</definebone>
+  <definebone>fire_119</definebone>
+  <definebone>fire_120</definebone>
+  <definebone>fire_121</definebone>
+  <definebone>fire_122</definebone>
+  <definebone>fire_123</definebone>
+  <definebone>fire_124</definebone>
+  <definebone>fire_125</definebone>
+  <definebone>fire_126</definebone>
+  <definebone>fire_127</definebone>
+  <definebone>fire_128</definebone>
+  <definebone>fire_129</definebone>
+  <definebone>fire_130</definebone>
+  <definebone>fire_131</definebone>
+  <definebone>fire_132</definebone>
+  <definebone>fire_133</definebone>
+  <definebone>fire_134</definebone>
+  <definebone>fire_135</definebone>
+  <definebone>fire_136</definebone>
+  <definebone>fire_137</definebone>
+  <definebone>fire_138</definebone>
+  <definebone>fire_139</definebone>
+  <definebone>fire_140</definebone>
+  <definebone>fire_150</definebone>
+  <definebone>fire_151</definebone>
+  <definebone>fire_152</definebone>
+  <definebone>fire_153</definebone>
+  <definebone>fire_154</definebone>
+  <definebone>fire_155</definebone>
+  <definebone>fire_156</definebone>
+  <definebone>fire_157</definebone>
+  <definebone>fire_158</definebone>
+  <definebone>fire_159</definebone>
+  <definebone>fire_160</definebone>
+  <definebone>fire_161</definebone>
+  <definebone>fire_162</definebone>
+  <definebone>fire_163</definebone>
+  <definebone>fire_164</definebone>
+  <definebone>fire_165</definebone>
+  <definebone>fire_166</definebone>
+  <definebone>fire_167</definebone>
+  <definebone>fire_168</definebone>
+  <definebone>fire_169</definebone>
+  <definebone>fire_170</definebone>
+  <definebone>fire_171</definebone>
+  <definebone>fire_172</definebone>
+  <definebone>fire_173</definebone>
+  <definebone>fire_174</definebone>
+  <definebone>fire_175</definebone>
+  <definebone>fire_176</definebone>
+  <definebone>fire_177</definebone>
+  <definebone>fire_178</definebone>
+  <definebone>fire_179</definebone>
+  <definebone>fire_180</definebone>
+  <definebone>fire_181</definebone>
+  <definebone>fire_182</definebone>
+  <definebone>fire_183</definebone>
+  <definebone>fire_184</definebone>
+  <definebone>fire_185</definebone>
+  <definebone>fire_186</definebone>
+  <definebone>fire_187</definebone>
+  <definebone>fire_188</definebone>
+  <definebone>fire_189</definebone>
+  <definebone>fire_190</definebone>
+  <definebone>fire_191</definebone>
+  <definebone>fire_192</definebone>
+  <definebone>fire_193</definebone>
+  <definebone>fire_194</definebone>
+  <definebone>fire_195</definebone>
+  <definebone>fire_196</definebone>
+  <definebone>fire_197</definebone>
+  <definebone>fire_198</definebone>
+  <definebone>fire_199</definebone>
+  <definebone>fire_201</definebone>
+  <definebone>fire_202</definebone>
+  <definebone>fire_203</definebone>
+  <definebone>fire_204</definebone>
+  <definebone>fire_205</definebone>
+  <definebone>fire_206</definebone>
+  <definebone>fire_207</definebone>
+  <definebone>fire_208</definebone>
+  <definebone>fire_209</definebone>
+  <definebone>fire_210</definebone>
+  <definebone>fire_211</definebone>
+  <definebone>fire_212</definebone>
+  <definebone>fire_213</definebone>
+  <definebone>fire_214</definebone>
+  <definebone>fire_215</definebone>
+  <definebone>fire_216</definebone>
+  <definebone>fire_217</definebone>
+  <definebone>fire_218</definebone>
+  <definebone>fire_219</definebone>
+  <definebone>fire_220</definebone>
+  <definebone>fire_221</definebone>
+  <definebone>fire_222</definebone>
+  <definebone>fire_223</definebone>
+  <definebone>fire_224</definebone>
+  <definebone>fire_225</definebone>
+  <definebone>fire_226</definebone>
+  <definebone>fire_227</definebone>
+  <definebone>fire_228</definebone>
+  <definebone>fire_229</definebone>
+  <definebone>fire_230</definebone>
+  <definebone>fire_231</definebone>
+  <definebone>fire_232</definebone>
+  <definebone>fire_233</definebone>
+  <definebone>fire_234</definebone>
+  <definebone>fire_235</definebone>
+  <definebone>fire_236</definebone>
+  <definebone>fire_237</definebone>
+  <definebone>fire_238</definebone>
+  <definebone>fire_239</definebone>
+  <definebone>fire_240</definebone>
+  <definebone>fire_241</definebone>
+  <definebone>fire_242</definebone>
+  <definebone>fire_243</definebone>
+  <definebone>fire_244</definebone>
+  <definebone>fire_251</definebone>
+  <attachment>fire
+    <component>emiter
+      <assetreference type="popcornfx">
+        <file>homecity\small_light.pkfx</file>
+      </assetreference>
+    </component>
+    <anim>idle
+      <component>emiter</component>
+    </anim>
+  </attachment>
+  <attachment>fire1
+    <component>emiter
+      <assetreference type="popcornfx">
+        <file>homecity\hc_single_flicker_light.pkfx</file>
+      </assetreference>
+    </component>
+    <anim>idle
+      <component>emiter</component>
+    </anim>
+  </attachment>
+  <component>korean_night_lanterns
+    <assetreference type="GrannyModel">
+      <file>homecity\korean\night_lanterns\korean_night_lanterns</file>
+    </assetreference>
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_51" syncanims="0" />
+    <attach a="fire1" frombone="ATTACHPOINT" tobone="fire_52" syncanims="0" />
+    <attach a="fire1" frombone="ATTACHPOINT" tobone="fire_53" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_104" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_105" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_106" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_107" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_108" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_109" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_110" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_111" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_112" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_113" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_114" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_115" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_116" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_117" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_118" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_119" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_120" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_121" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_122" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_123" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_124" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_125" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_126" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_127" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_128" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_129" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_130" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_131" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_132" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_133" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_134" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_135" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_136" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_137" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_138" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_139" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_140" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_150" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_151" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_152" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_153" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_154" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_155" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_156" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_157" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_158" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_159" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_160" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_161" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_162" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_163" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_164" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_165" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_166" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_167" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_168" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_169" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_170" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_171" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_172" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_173" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_174" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_175" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_176" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_177" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_178" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_179" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_180" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_181" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_182" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_183" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_184" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_185" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_186" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_187" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_188" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_189" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_190" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_191" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_192" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_193" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_194" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_195" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_196" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_197" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_198" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_199" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_201" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_202" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_203" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_204" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_205" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_206" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_207" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_208" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_209" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_210" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_211" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_212" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_213" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_214" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_215" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_216" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_217" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_218" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_219" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_220" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_221" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_222" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_223" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_224" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_225" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_226" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_227" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_228" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_229" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_230" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_231" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_232" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_233" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_234" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_235" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_236" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_237" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_238" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_239" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_240" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_241" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_242" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_243" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_244" syncanims="0" />
+    <attach a="fire" frombone="ATTACHPOINT" tobone="fire_251" syncanims="0" />
+  </component>
+  <anim>Idle
+    <component>korean_night_lanterns</component>
+  </anim>
+</animfile>

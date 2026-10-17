@@ -1,0 +1,55 @@
+{
+  "request": {
+    "operation": "generate",
+    "provider": "gemini",
+    "prompt": "Paint a new Age of Empires III home-city cosmetic icon in exactly the style of the reference images (the official Chinese New Year lantern and Japanese paper lantern cosmetic icons): ONE hanging lantern, centred, filling most of the square, on the same plain warm dark-brown background with a soft dark vignette. Subject: a small Japanese-style cylindrical paper lantern (chochin) of ivory-cream paper with thin horizontal bamboo ribs, a dark lacquered wooden rim at the top and at the bottom, a short dark cord and a small hook at the top; the paper glows warm golden-yellow from a candle inside, as at night. Clean hand-painted video-game asset render, soft warm key light from the upper left, simplified forms, crisp readable silhouette at 64 pixels. This is a stylised game illustration, NOT a photograph and NOT photorealistic: no lens effects, no depth of field, no photographic noise. No text, no letters, no symbols, no border, no frame.",
+    "aspect_ratio": "1:1",
+    "image_size": "1K"
+  },
+  "operation": "generate",
+  "inputs": [
+    "C:\\work\\hcl\\icons\\refs\\chinese_lanterns_512.png",
+    "C:\\work\\hcl\\icons\\refs\\Japan_hanging_lanterns-kamihinokinai1_512.png"
+  ],
+  "inputs_sha256": [
+    "0effa602f6b2fe1cadc616d20e31ef53b5099105d6f0f51ef60205e251271157",
+    "a6601c7961d4a15321c7a7b9ab1761b9fa753e524d5208fd6e4e54aaecbcb6f1"
+  ],
+  "mask": null,
+  "mask_sha256": null,
+  "references": [
+    "C:\\work\\hcl\\icons\\refs\\chinese_lanterns_512.png",
+    "C:\\work\\hcl\\icons\\refs\\Japan_hanging_lanterns-kamihinokinai1_512.png"
+  ],
+  "provider": "gemini",
+  "model": "gemini-3.1-flash-image-preview",
+  "usage": {
+    "promptTokenCount": 720,
+    "candidatesTokenCount": 1420,
+    "totalTokenCount": 2140,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 204
+      },
+      {
+        "modality": "IMAGE",
+        "tokenCount": 516
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "serviceTier": "standard"
+  },
+  "estimate_usd": null,
+  "request_sha256": "2ca9b4e22a687c136e71b7b6d26672b75a2016dfabfd99543e1aefc7c84e6db7",
+  "revised_prompts": [],
+  "files": [
+    "C:\\work\\hcl\\icons\\korean_night_lanterns_painted_1.jpg"
+  ],
+  "time": "2026-10-17T17:15:36"
+}

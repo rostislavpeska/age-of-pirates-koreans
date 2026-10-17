@@ -65,7 +65,8 @@ def test_techs_activate_japan_and_the_visual_marker():
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(132)]         # 600126-600131: consulate Japanese Allies, Osaka Ronin
+    assert ids == [str(600000 + i) for i in range(136)]         # 600132-600135: HC lantern cosmetics (Building Lanterns, Cheongsachorong)
+                                                                # 600126-600131: consulate Japanese Allies, Osaka Ronin
                                                                 # 600120-600125: Hongyipao
                                                                 # 600095-600119: Geomsabok, Gungdo Cavalry, Pyeongon Cavalry
                                                                 # 600093-600094: Industrial Castle bench

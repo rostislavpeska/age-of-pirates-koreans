@@ -1,0 +1,21 @@
+{
+ "icon": "korean_night_lanterns",
+ "prop": "Korean_Night_Lanterns",
+ "date": "2026-10-17",
+ "route": "AoP image-harness, Gemini (gemini route with style refs), 1 paid call",
+ "harness_record": "korean_night_lanterns_harness.json",
+ "style_refs": [
+  "vanilla wpfg chinese_lanterns.png",
+  "vanilla wpfg Japan_hanging_lanterns-kamihinokinai1.png (both upscaled to 512)"
+ ],
+ "source_sha256": "f59aaa170f873e14e8a83b0144833cfcb18afc06391ea3b7850d214816646f06",
+ "recipe": "center square, 128x128 LANCZOS; ddt_dxt1.py --size 128",
+ "runner": "C:/work/hcl/scripts/gen_lantern_icons.py",
+ "outputs": {
+  "art/homecity/home_city_props/icons/korean_night_lanterns.png": "ed32f9e06a19e53f6ce99c2ce0efc37d050ccca85457b3d54f7ffc8fc6c42739",
+  "art/homecity/home_city_props/icons/korean_night_lanterns.ddt": "e6d655374382b9ea72b0a3974a1eb28d0765de2b2d0a63d4eb8ed36617ffceca",
+  "data/wpfg/resources/art/homecity/home_city_props/icons/korean_night_lanterns.png": "ed32f9e06a19e53f6ce99c2ce0efc37d050ccca85457b3d54f7ffc8fc6c42739"
+ },
+ "owner_request": "generate an image with the lantern on it, same style as the Chinese new year lanterns; another one for the street Korean lantern in the red blue design (2026-10-17)",
+ "supersedes": "the same-day screenshot crop of the owner in-game picture (placeholder)"
+}

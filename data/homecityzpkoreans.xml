@@ -2141,5 +2141,6 @@
     <prop active="1">Korean_Light_Daylight</prop>
     <prop>Japanese_LightMistyMorning</prop>
     <prop>Korean_Light_BlueMountains</prop>
+    <prop>Korean_Night_Lanterns</prop>
   </obtainableprops>
 </homecity>
