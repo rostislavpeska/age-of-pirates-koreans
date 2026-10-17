@@ -1493,9 +1493,9 @@
   <prop>
     <name>Korean_Light_Daylight</name>
     <type>LightSet</type>
-    <displayname>Korea Daylight</displayname>
+    <displayname>Wars of Liberty</displayname>
     <displaynamestringid />
-    <description>Korea Daylight lighting with serene morning atmosphere (Default).</description>
+    <description>Daylight over Korea, in memory of the Korea of the Wars of Liberty mod (Default).</description>
     <descriptionstringid />
     <levelprereq>0</levelprereq>
     <position>
