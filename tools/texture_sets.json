@@ -232,19 +232,20 @@
   {
    "id": "korean_tc_mata",
    "status": "current",
+   "record": "pages as moved from AoP with the registry on 2026-10-09 (commit 864c605) + 2026-10-14 AoE Buildings roof-rollout tc-dock-installed-consulate-review-r4 tc-install (tc-install/INSTALL.json; retained-terminal roof textures, owner texture-only exception; commit e67f7e6) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e)",
    "tangent": "negate_t_and_b",
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor",
-     "sha256": "9f444e4f8d1ddc798c2a9eb3f3f90e06882be1d29aecb8c41d5deb9a3890867a"
+     "sha256": "e89777a5a59dda869c64f7c4a51265325910363643acae72240cf25e3338c013"
     },
     "Normals": {
      "path": "buildings/korean_tc/textures/korean_tc_mata_Normals",
-     "sha256": "f3fdf917ca0cb1ebff167d31bfdba00a88c9f35c676af1ca316de72a4ed0a902"
+     "sha256": "eccb6f2250540fd6fdbbad52a1d0a61e57d5fbcb42d9ad6be30ab0a06cc4b8ea"
     },
     "Masks": {
      "path": "buildings/korean_tc/textures/korean_tc_mata_Masks",
-     "sha256": "49a3e7f235c67ee58cd008fc942957d573ddec87d8434ea0cfca1b29a1082799"
+     "sha256": "ed34ac68f4902ed407c3a72acd7fbc1b30cf8eb858df87982a381c50779eb84e"
     },
     "Details": {
      "path": "buildings/korean_tc/textures/korean_tc_mata_Details",
@@ -255,38 +256,40 @@
   {
    "id": "korean_tc_matb",
    "status": "current",
+   "record": "pages as moved from AoP with the registry on 2026-10-09 (commit 864c605) + 2026-10-14 AoE Buildings roof-rollout tc-dock-installed-consulate-review-r4 tc-install (tc-install/INSTALL.json; retained-terminal roof textures, owner texture-only exception; commit e67f7e6)",
    "tangent": "negate_t_and_b",
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_tc/textures/korean_tc_matb_BaseColor",
-     "sha256": "74f3ef0ade042e2646ef530583f75737c99e1688d295fec0a4cb4cb2d4ef157d"
+     "sha256": "7430962854a7698a7933897a7d899a053ec9ceeec4a91a7c60c322825862ff87"
     },
     "Normals": {
      "path": "buildings/korean_tc/textures/korean_tc_matb_Normals",
-     "sha256": "1da4b4b95302bf7fa5e36dc31e74148932c11fec87660bbdf3ef4172c9c58c64"
+     "sha256": "4f8d7f18ff4ee962f3cf2982c05133f096fab88abcfeba026e2395ebea8804d6"
     },
     "Masks": {
      "path": "buildings/korean_tc/textures/korean_tc_matb_Masks",
-     "sha256": "df802c65abcb880542898f17b88edc199edc7adaad0781d297d3fab7711ded73"
+     "sha256": "4809151ffddb1db856d43b3cb576ddb4d31616d2f07c83b200520bee75347598"
     }
    }
   },
   {
    "id": "korean_barracks_mata",
    "status": "current",
+   "record": "pages as moved from AoP with the registry on 2026-10-09 (commit 864c605) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e)",
    "tangent": "uv_derivative",
    "channels": {
     "BaseColor": {
      "path": "zbench_korean_military/barracks/textures/korean_barracks_mata_BaseColor",
-     "sha256": "388320c9db66ca7480b847f026fae0bac5fac15ef00f6675494cc1d969d33fa4"
+     "sha256": "32e585e37c0df5c6a77456324ee6a372fc5b95ac1bbeea9fd37859b996b219cd"
     },
     "Normals": {
      "path": "zbench_korean_military/barracks/textures/korean_barracks_mata_Normals",
-     "sha256": "2d10e4a7bfbc0ab4492faa8fcada11f1d54066d8f710a9a683c3ba4485e84635"
+     "sha256": "37c4eb58a647d5adc65b2f13dab9daf435b9df23260cd44dee0173a4e427bf44"
     },
     "Masks": {
      "path": "zbench_korean_military/barracks/textures/korean_barracks_mata_Masks",
-     "sha256": "eed66674209c929fcdaa51c8a4311825c7e9334074b06448fd8385805fe3e14f"
+     "sha256": "ae4ced3248b3cc111ebbaae2e0180438017ed88ba1ef6c8b232a04b0fe4cbdce"
     },
     "Details": {
      "path": "zbench_korean_military/barracks/textures/korean_barracks_mata_Details",
@@ -297,19 +300,20 @@
   {
    "id": "korean_stable_mata",
    "status": "current",
+   "record": "pages as moved from AoP with the registry on 2026-10-09 (commit 864c605) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e)",
    "tangent": "uv_derivative",
    "channels": {
     "BaseColor": {
      "path": "zbench_korean_military/stable/textures/korean_stable_mata_BaseColor",
-     "sha256": "c8508f9fe52182468d9d45c05702aaf1d75b3c1cf6645641074b7b54cac37314"
+     "sha256": "9cda00d50a38621bddcbff49e93928c31d71d6964a128ca04a9f941c75136806"
     },
     "Normals": {
      "path": "zbench_korean_military/stable/textures/korean_stable_mata_Normals",
-     "sha256": "b874de8557a51b442f79c7ccb22f1df896d21dd2e97501ad03a71b5c8312dcdb"
+     "sha256": "06aafd782c956d3ddd63dd6f9d63298e7e38497784a7b39ced153451c694a0f7"
     },
     "Masks": {
      "path": "zbench_korean_military/stable/textures/korean_stable_mata_Masks",
-     "sha256": "db6fe8882ad3da624b84a77e0899c3ef203f6d970551af65bb6a349e258a7634"
+     "sha256": "4d767e5b2d44dc0444d07ed4356d2ce461be53ad4c44459e475a44221169c245"
     },
     "Details": {
      "path": "zbench_korean_military/stable/textures/korean_stable_mata_Details",
@@ -320,7 +324,7 @@
   {
    "id": "korean_house_walls",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15d over texture-r14 WALLS: weathering, gable player-colour frieze + image-harness emblem in Details.R placed by game-camera visibility; Normals unchanged); r16-colonial Details: one player-colour stripe on the plaster walls, 2.60-2.78 m (owner \"only the stripe of player color should be enough\"); one page shared by House A/B/C, all stages; r16d BaseColor: the stripe's dark outline (the reviewed Colonial skin)",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15d over texture-r14 WALLS: weathering, gable player-colour frieze + image-harness emblem in Details.R placed by game-camera visibility; Normals unchanged); r16-colonial Details: one player-colour stripe on the plaster walls, 2.60-2.78 m (owner \"only the stripe of player color should be enough\"); one page shared by House A/B/C, all stages; r16d BaseColor: the stripe's dark outline (the reviewed Colonial skin) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e)",
    "page": [
     2048,
     2048
@@ -329,7 +333,7 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_walls_BaseColor",
-     "sha256": "132a62ed96afbba72b5f3b7a86a6919c93916f3da3d91bcd516757ae3ddab7eb"
+     "sha256": "56926a4920d8a7bd3c6007c07c08b1642f8e1605887cf969b39dc530349a2c11"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_walls_Normals",
@@ -348,7 +352,7 @@
   {
    "id": "korean_house_roofs",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15h over texture-r14 ROOFS: translucent moss, textured eave ends, TC-level roll contrast - widened/amplified roof-field normals, crests, course lines, matte roughness; porch-junction valley: narrow valley tiles matching both roofs (subtle, owner r15h), small lime plugs at the cut rolls); one page shared by House A/B/C, all stages",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15h over texture-r14 ROOFS: translucent moss, textured eave ends, TC-level roll contrast - widened/amplified roof-field normals, crests, course lines, matte roughness; porch-junction valley: narrow valley tiles matching both roofs (subtle, owner r15h), small lime plugs at the cut rolls); one page shared by House A/B/C, all stages + 2026-10-13 AoE Buildings roof-rollout rice-houses-recovery-r2 houses release (houses/source/INSTALL_QA.json; main roofs matched to military relief, cutout contours repaired, BaseColor; commit c611bba) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928)",
    "page": [
     2048,
     2048
@@ -357,15 +361,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_roofs_BaseColor",
-     "sha256": "c846aa7d1ce34e48b27b146d3322f3978a4fd07cedf72a459117e3a3e1cd55c9"
+     "sha256": "8fdd48972ccbf9b0f27be44521894714cc166a779a724855234bc23de429dea4"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Normals",
-     "sha256": "e9a9573576b3c59e8459be12ffdc5f8c4fe8e948b81e72ff2c4bc49e65beaece"
+     "sha256": "e1e20a7d7a4fa4b087078a8c515dbd5a2dad37090a314e75e970e937a47b85f5"
     },
     "Masks": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Masks",
-     "sha256": "8431091b0599c2311e78f7eaec673621d9d4d77d2edef493dc6959885e5e337e"
+     "sha256": "eeaba095d0323485de426a67bd1394ba718fb06cbaa53422f4c66bc14a375119"
     }
    }
   },
@@ -396,7 +400,7 @@
   {
    "id": "korean_dock_mata",
    "status": "current",
-   "record": "C:/work/korean-market-dock export r1 (Dock page R1, dock_r5 texture chain 2026-10-11)",
+   "record": "C:/work/korean-market-dock export r1 (Dock page R1, dock_r5 texture chain 2026-10-11) + 2026-10-14 AoE Buildings roof-rollout tc-dock-installed-consulate-review-r4 dock-install (dock-install/INSTALL.json; retained-terminal roof textures; commit e67f7e6)",
    "page": [
     2048,
     2048
@@ -405,15 +409,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_dock/textures/korean_dock_mata_BaseColor",
-     "sha256": "34dd143b158d8e0460e03c67cb8394dd72d2266e7775d5f7fb207ad3922b05a5"
+     "sha256": "d060c2461efa22ca7495d0833be60e6d01bf83a2a7b36cd1cdd04e56617925fa"
     },
     "Normals": {
      "path": "buildings/korean_dock/textures/korean_dock_mata_Normals",
-     "sha256": "79543dc73aa62f3a626edd1b5fb1f33a160aa9758ae3bcfa0b6e5e5e9a915208"
+     "sha256": "a0867692c8771dcf57be3e7337e49164361a2bdc1aeabb6e022138a5de217de2"
     },
     "Masks": {
      "path": "buildings/korean_dock/textures/korean_dock_mata_Masks",
-     "sha256": "59a64a9d2ff3a47649c71803268ce30a822060187c0156526c114e74ed3926c0"
+     "sha256": "b0a5e6e33a980e5f54f5b8d2998b044c3180df37b82a954d3a63188239ab705e"
     },
     "Details": {
      "path": "buildings/korean_dock/textures/korean_dock_mata_Details",
@@ -476,7 +480,7 @@
   {
    "id": "korean_monastery_mata",
    "status": "current",
-   "record": "korean-civic-pair-claude export_r1 (Monastery page MONASTERY_2048, tex_r1/final_r7, UV c4r9e)",
+   "record": "korean-civic-pair-claude export_r1 (Monastery page MONASTERY_2048, tex_r1/final_r7, UV c4r9e) + 2026-10-14 AoE Buildings roof-rollout retained-civic-release-r2 install (release/INSTALL.json; retained-terminal module roofs; commit eb88a7e) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e)",
    "page": [
     2048,
     2048
@@ -485,15 +489,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_monastery/textures/korean_monastery_mata_BaseColor",
-     "sha256": "d85807291db044a7a7c120c5d95a64dcb7c8bd428b8332cb50ce68761efb82b1"
+     "sha256": "e8022911a3292c3db559e827198f1fb65a54d5fd5c8d541284eb895a0822cf86"
     },
     "Normals": {
      "path": "buildings/korean_monastery/textures/korean_monastery_mata_Normals",
-     "sha256": "8d846a28ebf6a7c09e818c044ed7f527f26b780923ef172d0f1d3af94db7856f"
+     "sha256": "94d775c64dd9e82a7a550e97ea03b1f1354fb4df89f3c918d41e2645f85adc34"
     },
     "Masks": {
      "path": "buildings/korean_monastery/textures/korean_monastery_mata_Masks",
-     "sha256": "3f81d7061c78c190070e76ad6e7deef48d5a3e750336b5946b0a77e1a49f2c9a"
+     "sha256": "a673afa3b5c2e265ab2fae15c783c86ff7a7e1a265992156eb60e0ff5081b222"
     },
     "Details": {
      "path": "buildings/korean_monastery/textures/korean_monastery_mata_Details",
@@ -504,7 +508,7 @@
   {
    "id": "korean_rice_paddy_mata",
    "status": "current",
-   "record": "korean-rice-paddy r6 export r1 (own page RICEPADDY_1024 with alpha cutout, textures r6)",
+   "record": "korean-rice-paddy r6 export r1 (own page RICEPADDY_1024 with alpha cutout, textures r6) + 2026-10-13 AoE Buildings roof-rollout rice-houses-recovery-r2 rice-paddy release (rice-paddy/source/INSTALL_GEOMETRY_QA.json; eave receiver repaired and rebaked, BaseColor; commit cc1210e) + 2026-10-14 AoE Buildings roof-rollout rice-zen-finish-r2 install (INSTALL.json; Zen roof normal and roughness targets, Normals + Masks; commit 1db31c9)",
    "page": [
     1024,
     1024
@@ -513,15 +517,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_BaseColor",
-     "sha256": "805f3edb92eb3ab94091ae529247c9ffc0b6aa481e77dfd16e51496bfe6d1d63"
+     "sha256": "a75799363a1b2ddf402233515f17eea08a8e6bb9073d72ee50775d8130f24f59"
     },
     "Normals": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Normals",
-     "sha256": "31f5a856bf9f2dbea891beb799dcc3a1645667b8a5d309760c830a34c3029464"
+     "sha256": "b52b9874af07a9f02d7884fa55ed51e8164237949d22c326e7d0088d5bfa241f"
     },
     "Masks": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Masks",
-     "sha256": "e19ac068178a5c8b97410a7ea3aef849a3a7f639d3c5c8355c28dd1d524f5b24"
+     "sha256": "53f1876a596faa2cad4542b6f06790300a22c4817143339e961300c9c2f593ea"
     },
     "Details": {
      "path": "buildings/korean_rice_paddy/textures/korean_rice_paddy_mata_Details",
@@ -532,7 +536,7 @@
   {
    "id": "korean_market_mata",
    "status": "current",
-   "record": "C:/work/korean-market-dock export_market r1 (Market page P0, market_tex_r7 final after texture r7c step 10 + corners, 2026-10-11)",
+   "record": "C:/work/korean-market-dock export_market r1 (Market page P0, market_tex_r7 final after texture r7c step 10 + corners, 2026-10-11) + 2026-10-14 AoE Buildings roof-rollout retained-civic-release-r2 install (release/INSTALL.json; retained-terminal module roofs; commit eb88a7e)",
    "page": [
     2048,
     2048
@@ -541,15 +545,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_market/textures/korean_market_mata_BaseColor",
-     "sha256": "f1949ca1eafd7fd70f300d0e824406338857bcc7fbf668d5dcfcbabc2335159b"
+     "sha256": "46047c971b180ea7dc9db6b5548740e088f5188e6a4ddcd8ea0aed2f5b91d9f4"
     },
     "Normals": {
      "path": "buildings/korean_market/textures/korean_market_mata_Normals",
-     "sha256": "70eeb0506ffd9285ed25637945caf4e7b2109bd3fea5e38712f3bc60612cea8d"
+     "sha256": "92cb7760d5f9554d25f2a3c515f824c29188b021515cd7eac43277f95c360619"
     },
     "Masks": {
      "path": "buildings/korean_market/textures/korean_market_mata_Masks",
-     "sha256": "8b4c3adf8c01d69bb3876ddc2e05687a107cca68c99266f974fb7d4847d40e63"
+     "sha256": "5b0a3baac636c497ec0b6cfd38c2760d9883d0a09ca18fadef53274f9fb2e2ce"
     },
     "Details": {
      "path": "buildings/korean_market/textures/korean_market_mata_Details",
@@ -560,7 +564,7 @@
   {
    "id": "korean_market_matb",
    "status": "current",
-   "record": "C:/work/korean-market-dock export_market r1 (Market alpha page P5, market_tex_r7 final after texture r7c step 10 + corners, 2026-10-11)",
+   "record": "C:/work/korean-market-dock export_market r1 (Market alpha page P5, market_tex_r7 final after texture r7c step 10 + corners, 2026-10-11) + 2026-10-14 AoE Buildings roof-rollout retained-civic-release-r2 install (release/INSTALL.json; retained-terminal module roofs; commit eb88a7e)",
    "page": [
     1024,
     1024
@@ -569,15 +573,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_market/textures/korean_market_matb_BaseColor",
-     "sha256": "704f6b46d4bb5484230208baee7270d9fc4304d06f62eca6ca8f75a8b2a416d5"
+     "sha256": "bf88fe722206ff3a421814791c7b4ed4e6cc475241c994b6a417511a7d348f6b"
     },
     "Normals": {
      "path": "buildings/korean_market/textures/korean_market_matb_Normals",
-     "sha256": "465c0b7d60f3e4f75b8d273811d0d3d4a1abee55a2a37e805d786ab0f22ba192"
+     "sha256": "1fe74541fc18cb788be1b8a3cf2b4d4db5e6d7b600e4a3f365c1a465858d79d6"
     },
     "Masks": {
      "path": "buildings/korean_market/textures/korean_market_matb_Masks",
-     "sha256": "a61ccbe99e5b61949f4b933f96fc7e33ceec201fbfff103bfc17de7e05bea143"
+     "sha256": "1698d05905ee8bcabcc360371e7e8d9698c60c63a8e9319bdf4e79d2254ff544"
     },
     "Details": {
      "path": "buildings/korean_market/textures/korean_market_matb_Details",
@@ -664,7 +668,7 @@
   {
    "id": "korean_castle_industrial_mata",
    "status": "current",
-   "record": "korean-buildings-blender research/Industrial_Castle_21/runtime_r1/README.md; exact r14 source, runtime-r1 export",
+   "record": "korean-buildings-blender research/Industrial_Castle_21/runtime_r1/README.md; exact r14 source, runtime-r1 export + 2026-10-13 AoE Buildings roof-rollout armorpaint-runtime-r1 castle install (qa/castles/INSTALLED_INDUSTRIAL.json; roof effects, BaseColor + matb Masks; commit f13a989) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928)",
    "page": [
     2048,
     2048
@@ -673,15 +677,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_mata_BaseColor",
-     "sha256": "5e1c1f5cbb988a94cdbaa508ef7ca700d710452c95716e8eda9d8422923c376c"
+     "sha256": "b1afb635ba851c1b630fe346d90ef414caa5cbded9dfb6d21ff04d3bc6f2baef"
     },
     "Normals": {
      "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_mata_Normals",
-     "sha256": "f26188a4bc20120fe306682a3f0fd91e78681f27c5985b87160c3caf50843211"
+     "sha256": "cdb55d62027f4e17bf4e15ec0f693116c1410d4761454d172feffb629b38425c"
     },
     "Masks": {
      "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_mata_Masks",
-     "sha256": "8731b595d7f8972e9e0ce69d7a6b9689523ec3223b21e9c73f1b014fddb4282f"
+     "sha256": "93215ec0498ddad6b078588576be651030b3041af2bb27983d2ab5d1f206b016"
     },
     "Details": {
      "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_mata_Details",
@@ -692,7 +696,7 @@
   {
    "id": "korean_castle_industrial_matb",
    "status": "current",
-   "record": "korean-buildings-blender research/Industrial_Castle_21/runtime_r1/README.md; exact r14 source, runtime-r1 export",
+   "record": "korean-buildings-blender research/Industrial_Castle_21/runtime_r1/README.md; exact r14 source, runtime-r1 export + 2026-10-13 AoE Buildings roof-rollout armorpaint-runtime-r1 castle install (qa/castles/INSTALLED_INDUSTRIAL.json; roof effects, BaseColor + matb Masks; commit f13a989) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928)",
    "page": [
     1024,
     1024
@@ -701,15 +705,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_matb_BaseColor",
-     "sha256": "f6ca85e017b40b3c57f38ecd955d9c93af361ccf4d0e96430c271c97d5f89f65"
+     "sha256": "5b2f5f670d1c4ae3ca20937c3008ff1c9f61eaac210d4cede6eb5f63483f55ec"
     },
     "Normals": {
      "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_matb_Normals",
-     "sha256": "3d7400559d006fca033135c5b447b20c49b28618b52038a8cef5f5452b8e8323"
+     "sha256": "c63c4051b12cf74c7b8b942e22a97f6ccfb2df43e9bbf6bdcb372ca67aa05145"
     },
     "Masks": {
      "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_matb_Masks",
-     "sha256": "afd6599e1356e6ccd614c59414997a57a8f02106ca7f60d90d3ded476219fcfc"
+     "sha256": "f338461827fa32bde5f47a4fc7823634776a6a8df1d3c5c74ba4ef128aa22b95"
     },
     "Details": {
      "path": "buildings/korean_castle_industrial/textures/korean_castle_industrial_matb_Details",

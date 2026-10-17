@@ -9,6 +9,7 @@ patterns/korean/shared_atlas_r65.json.
 
     python -m pytest tests -q          (needs ../age-of-pirates or AOP_ROOT; skips without it)
 """
+import importlib.util
 import os
 import subprocess
 import sys
@@ -28,6 +29,9 @@ from gr2_lint import read_raw  # noqa: E402
 
 REGISTRY = K / "tools" / "texture_sets.json"
 REG = TS.load_registry(REGISTRY)
+_spec = importlib.util.spec_from_file_location("texture_registry", K / "tools" / "texture_registry.py")
+TR = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(TR)
 KOREAN_TEXTURE_DIRS = ("buildings/korean_tc/textures", "buildings/korean_shared/textures",
                        "zbench_korean_military/barracks/textures", "zbench_korean_military/stable/textures",
                        "buildings/korean_castle_industrial/textures")
@@ -48,13 +52,11 @@ def test_the_models_find_this_registry():
 
 
 def test_registry_current_sets_match_the_installed_files():
-    for s in REG["sets"]:
-        if s["status"] != "current":
-            continue
-        for ch, row in s["channels"].items():
-            p = ART / (row["path"] + ".ddt")
-            assert p.exists(), (s["id"], ch, p)
-            assert TS.sha256(p) == row["sha256"], f"{s['id']} {ch}: the registry pins another revision of {p.name}"
+    """every stale channel at once: stopping at the first set hid 37 channels in 13 more sets for four days (INC-400)"""
+    stale = TR.drift(TR.load(REGISTRY), ART)
+    assert not stale, "the registry pins another revision; re-pin with tools/texture_registry.py pin --record ...:\n" + \
+        "\n".join(f"{d['set']} {d['channel']}: pinned {d['pinned'][:12]}, installed {(d['installed'] or 'missing')[:12]}"
+                  for d in stale)
 
 
 def test_one_generic_atlas_copy_and_the_retired_pages_unbound():
