@@ -22,7 +22,16 @@ anim, vertices moved); every later build with a converter-made Idle misplaced th
     bone has the name): it drives nothing, so the right junk stays static at its Blender spot - no converter involved;
  6. proof: every Blender triangle of a moved mesh is one GR2 triangle (corners < 1e-3, reversed winding, UVs), M0 0
     triangles, left junk byte-identical to vanilla, gr2_bounds clean, anim == vanilla except that one name - else
-    nothing is deployed.
+    nothing is deployed;
+ 7. the HARBOUR junk is its own model on its own ground bone (owner: "add a new bone on a city layout so you can then
+    place the junk there ... then the junk can be animated separately"; "structure which will be transparent so you
+    don't get lost in dependencies"): ONE Blender object = ONE bone, and no Blender pivot matters. korean_harbour_junk
+    is vanilla docks01 with every other mesh emptied - the junk's mesh, skeleton, pivot and Idle (the vanilla anim, by
+    archive path) are byte-vanilla, so it rocks about its own pivot as in vanilla. bone_harbour_junk on
+    korean_hc_ground carries the ONE measured rigid move from the vanilla junk to the Blender junk (gr2_addbones; moved
+    there by gr2_bones on a re-run). To reposition the junk: move/rotate its object in Blender, save, rerun. Proof:
+    ground bone x model == the Blender junk (< 1e-3), junk byte-vanilla, other meshes empty, existing ground bones
+    unmoved, no orphan fixups. (Renaming the anim's BONE_MAIN track was refused: the string is the track group's name.)
 """
 import argparse, hashlib, json, os, shutil, subprocess, sys, tempfile
 from pathlib import Path
@@ -34,15 +43,29 @@ sys.path.insert(0, str(REPO / 'tools'))
 import korean_visuals  # noqa: E402  (AOP, BARTOOL)
 AOP = Path(korean_visuals.AOP); HAVOK = AOP / 'scripts' / 'havok'
 sys.path.insert(0, str(HAVOK))
-import gr2_bounds, gr2_droptris, gr2_lint, gr2_rotate_verts  # noqa: E402,E401
+import gr2_bones, gr2_bounds, gr2_droptris, gr2_lint, gr2_rotate_verts  # noqa: E402,E401
 from gr2_rest_anim import tracks_of  # noqa: E402
+sys.path.insert(0, str(AOP / 'scripts' / 'tools'))
+import local_env  # noqa: E402
+BLENDIFY = Path(os.environ.get('BLENDIFY_REPO') or local_env.value('BLENDIFY_REPO'))
+sys.path.insert(0, str(BLENDIFY / '.claude' / 'skills' / 'blender-complex-scene' / 'scripts'))
+import edit_match  # noqa: E402  (the generic measure/prove method: Blendify blender-complex-scene)
 
 OUT = REPO / 'art' / 'homecity' / 'korean' / 'docks01'
+GROUND = REPO / 'art' / 'homecity' / 'korean' / 'korean_hc_ground.gr2'
 VANILLA = ('homecity/china/docks01/docks01.gr2', 'homecity/china/docks01/docks01_anim.gr2')
-MOVED = ['docks01Shape', 'docks01_M1Shape', 'docks01_wokou_junkShape']
+MOVED = ['docks01Shape', 'docks01_M1Shape']
 KEPT_VANILLA = ['docks01_wokou_junk1Shape']                     # the left junk: the vanilla Idle places and rocks it
 DELETED = ['docks01_M0Shape']
-STATIC_TRACKS = {'bone_hc_wokou_junk': 'bone_hc_wokou_jun_'}    # the right junk's pivot: no anim (owner)
+STATIC_TRACKS = {'bone_hc_wokou_junk': 'bone_hc_wokou_jun_'}    # docks01 no longer draws that junk; track stays unbound
+# step 7 (owner 2026-10-17: "add a new bone on a city layout so you can then place the junk there ... then the junk can
+# be animated separately"): the harbour junk is its own model on its own ground bone. One Blender object = one bone:
+# the object's world transform IS bone_harbour_junk on korean_hc_ground, the model is the junk in the object's local
+# frame, its Idle is the vanilla docks01 anim (the junk rocks about its own vanilla pivot) with the root track unbound
+HARBOUR = 'docks01_wokou_junkShape'
+HARBOUR_BONE = 'bone_harbour_junk'
+HARBOUR_MODEL = 'korean_harbour_junk'                          # Idle: homecity\china\docks01\docks01_anim (vanilla path)
+MIRROR = np.array([[-1, 0, 0], [0, 0, 1], [0, -1, 0]], float)  # GR2 = 2.54 * MIRROR . Blender
 EPS = 1e-4
 
 BPY = r'''
@@ -73,7 +96,7 @@ def b2g(P):
 def blender_export(exe, blend, work):
     script, out = work / 'export_docks.py', work / 'blender_docks.npz'
     script.write_text(BPY, encoding='utf-8')
-    r = subprocess.run([exe, '-b', str(blend), '--python', str(script), '--', json.dumps(MOVED + KEPT_VANILLA + DELETED), str(out)],
+    r = subprocess.run([exe, '-b', str(blend), '--python', str(script), '--', json.dumps(MOVED + [HARBOUR] + KEPT_VANILLA + DELETED), str(out)],
                        capture_output=True, text=True, timeout=600)
     assert out.exists(), f'Blender export failed (rc {r.returncode}):\n{r.stdout[-1500:]}\n{r.stderr[-1500:]}'
     z = np.load(out); meta = json.loads(Path(str(out) + '.json').read_text())
@@ -89,77 +112,53 @@ def vanilla(work):
 
 
 def procrustes(A, B):
-    """B ~ A @ R.T + t (proper rotation)"""
-    ca, cb = A.mean(0), B.mean(0); U, _, Vt = np.linalg.svd((A - ca).T @ (B - cb))
-    D = np.diag([1, 1, np.sign(np.linalg.det(Vt.T @ U.T))]); R = Vt.T @ D @ U.T
-    return R, cb - R @ ca, float(np.linalg.norm(A @ R.T + cb - R @ ca - B, axis=1).max())
+    return edit_match.rigid_fit(A, B)
+
+
+def edited(name, bl):
+    """the Blender object in the GR2 frame for edit_match: world positions, triangles, corner UVs (u, 1 - v)"""
+    UV = np.column_stack([bl[name + '__uv'][:, 0], 1 - bl[name + '__uv'][:, 1]])
+    return dict(pos=b2g(bl[name + '__world']), tris=bl[name + '__tv'], corner_uv=UV[bl[name + '__tl']])
 
 
 def plan_mesh(name, bl, m):
-    """-> (drop tri ids, dup ops, transform op, facts) reproducing the Blender mesh from the vanilla one"""
-    W = b2g(bl[name + '__world']); BT = bl[name + '__tv']; vp, vt = m['pos'], m['tris']
-    if len(W) == m['nv']:
-        R, t, res = procrustes(vp, W)
-        assert res < EPS, f'{name}: same vertex count but no rigid fit (residual {res:.5f})'
-        op = {'translate': t.tolist(), 'meshes': {name: 'all'}}
-        if np.abs(R - np.eye(3)).max() > 1e-6:
-            op['matrix'] = R.tolist()
-        deg = float(np.degrees(np.arccos(np.clip((np.trace(R) - 1) / 2, -1, 1))))
-        return [], [], op, dict(kind='rigid fit', residual=res, degrees=round(deg, 4), translate=np.round(t, 5).tolist())
+    """-> (drop tri ids, dup ops, transform op, facts) reproducing the Blender mesh from the vanilla one (edit_match)"""
     M = bl[name + '__mw']
+    plan = edit_match.classify(dict(pos=m['pos'], tris=m['tris'], uv=m['uv']), edited(name, bl),
+                               translate=b2g(M[:3, 3])[0], eps=EPS)
+    if plan['kind'] == 'rigid':
+        op = {'translate': plan['translate'], 'meshes': {name: 'all'}}
+        if np.abs(np.array(plan['matrix']) - np.eye(3)).max() > 1e-6:
+            op['matrix'] = plan['matrix']
+        return [], [], op, dict(kind='rigid fit', residual=plan['residual'], degrees=round(plan['degrees'], 4),
+                                translate=np.round(plan['translate'], 5).tolist())
     assert np.abs(M[:3, :3] - np.eye(3)).max() < 1e-6, f'{name}: trimmed mesh with a rotated/scaled object'
-    t = b2g(M[:3, 3])[0]; G = W - t
-    dc, ti = cKDTree(vp[vt].mean(1)).query(G[BT].mean(1))
-    kept = set()
-    for k in np.where(dc < EPS)[0]:
-        if np.abs(np.sort(vp[vt[ti[k]]], 0) - np.sort(G[BT[k]], 0)).max() < EPS:
-            kept.add(int(ti[k]))
-    rest = [k for k in range(len(BT)) if not (dc[k] < EPS and int(ti[k]) in kept)]
-    dups = []
-    if rest:
-        UV = np.column_stack([bl[name + '__uv'][:, 0], 1 - bl[name + '__uv'][:, 1]]); TL = bl[name + '__tl']
-        kp, ku = cKDTree(vp), cKDTree(m['uv'])
-        corners = [(int(BT[k][c]), int(TL[k][c])) for k in rest for c in range(3)]
-        best = None
-        for j in ku.query_ball_point(UV[corners[0][1]], EPS):          # candidate offsets from the first corner's UV twins
-            off = G[corners[0][0]] - vp[j]; donors = []
-            for v, l in corners:
-                cand = [x for x in kp.query_ball_point(G[v] - off, EPS) if np.abs(m['uv'][x] - UV[l]).max() < EPS]
-                if not cand: break
-                donors.append(cand[0])
-            else:
-                best = (off, donors); break
-        assert best, f'{name}: {len(rest)} Blender triangles are neither vanilla nor a translated copy of vanilla ones'
-        off, donors = best; byset = {frozenset(t_.tolist()): i for i, t_ in enumerate(vt)}
-        src = [byset.get(frozenset(donors[3 * i:3 * i + 3])) for i in range(len(rest))]
-        assert None not in src, f'{name}: copied corners do not form vanilla triangles'
-        dups = [{'tris': src, 'translate': off.tolist()}]
-    drop = sorted(set(range(len(vt))) - kept)
-    return drop, dups, {'translate': t.tolist(), 'meshes': {name: 'all'}}, dict(
-        kind='object translation + drop/dup', translate=np.round(t, 5).tolist(), kept=len(kept), dropped=len(drop),
-        duplicated=len(rest), dup_offset=None if not dups else np.round(dups[0]['translate'], 5).tolist())
+    assert plan['unexplained'] == 0, f"{name}: {plan['unexplained']} Blender triangles are neither vanilla nor a translated copy"
+    dups = []                                                  # one op per offset (components sharing an offset merge)
+    for d in plan['dup']:
+        same = [x for x in dups if np.abs(np.subtract(x['translate'], d['translate'])).max() < EPS]
+        if same:
+            same[0]['tris'] += d['tris']
+        else:
+            dups.append(dict(tris=list(d['tris']), translate=d['translate']))
+    t = plan['translate']
+    return plan['dropped'], dups, {'translate': t, 'meshes': {name: 'all'}}, dict(
+        kind='object translation + drop/dup', translate=np.round(t, 5).tolist(), kept=len(plan['kept']),
+        dropped=len(plan['dropped']), duplicated=sum(len(d['tris']) for d in dups),
+        dup_offset=None if not dups else np.round(dups[0]['translate'], 5).tolist())
 
 
 def verify(path, van, bl, anim, van_anim):
     """moved meshes == Blender (corners, reversed winding, UVs); M0 empty; left junk == vanilla; boxes clean; anim ==
     vanilla except the renamed track(s)"""
     info = gr2_lint.read_raw(path); meshes = {m['name']: m for m in info['meshes']}; rep = {}
-    for name in MOVED:
-        m = meshes[name]; W = b2g(bl[name + '__world']); BT = bl[name + '__tv']; TL = bl[name + '__tl']
-        UV = np.column_stack([bl[name + '__uv'][:, 0], 1 - bl[name + '__uv'][:, 1]])
-        T = m['tris']; assert len(T) == len(BT), f'{name}: {len(T)} GR2 vs {len(BT)} Blender triangles'
-        _, gi = cKDTree(m['pos'][T].mean(1)).query(W[BT].mean(1)); assert len(set(gi.tolist())) == len(BT), f'{name}: not 1:1'
-        perr = uerr = 0.0; wind = 0
-        for k, g in enumerate(gi):
-            gt = T[g]; perm = [int(np.argmin(np.linalg.norm(m['pos'][gt] - W[v], axis=1))) for v in BT[k]]
-            assert sorted(perm) == [0, 1, 2], f'{name}: triangle {k} corners do not correspond'
-            perr = max(perr, float(np.abs(m['pos'][gt[perm]] - W[BT[k]]).max()))
-            uerr = max(uerr, float(np.abs(m['uv'][gt[perm]] - UV[TL[k]]).max()))
-            wind += (perm[1] - perm[0]) % 3 == 2                           # reversed cyclic order
-        rep[name] = dict(tris=len(T), max_corner_err=round(perr, 6), max_uv_err=round(uerr, 5), reversed=wind)
-        assert perr < 1e-3 and wind == len(BT) and uerr < 2e-3, (name, rep[name])
-    for name in DELETED:
-        assert len(meshes[name]['tris']) == 0, f'{name}: deleted in Blender but still drawn'
+    for name in MOVED:                                         # GR2 winding = reversed Blender loop order (det -1 map)
+        m = meshes[name]
+        r = edit_match.verify(edited(name, bl), dict(pos=m['pos'], tris=m['tris'], uv=m['uv']), reversed_winding=True)
+        rep[name] = dict(tris=r['tris'], max_corner_err=round(r['max_corner_err'], 6), max_uv_err=round(r['max_uv_err'], 5),
+                         reversed=r['winding_ok'])
+    for name in DELETED + [HARBOUR]:
+        assert len(meshes[name]['tris']) == 0, f'{name}: deleted in Blender / split out, but still drawn by docks01'
         rep[name] = dict(tris=0)
     vm = {m['name']: m for m in gr2_lint.read_raw(van)['meshes']}
     for name in KEPT_VANILLA:
@@ -173,6 +172,64 @@ def verify(path, van, bl, anim, van_anim):
     rep['anim_bytes_changed'] = int(sum(x != y for x, y in zip(va, vb)))
     rep['tracks_renamed'] = STATIC_TRACKS
     return rep
+
+
+def harbour(bl, van, work):
+    """step 7: -> (model, ground, facts). The model is vanilla docks01 with every mesh but the harbour junk emptied -
+    the junk's mesh, skeleton, pivot and (by archive path) Idle stay byte-vanilla, so it rocks about its own vanilla
+    pivot. The ground bone carries the one measured rigid move F (vanilla junk -> the Blender junk): where the object's
+    pivot sits in Blender does not matter."""
+    vm = {m['name']: m for m in gr2_lint.read_raw(van)['meshes']}
+    Rf, tf, res = procrustes(vm[HARBOUR]['pos'], b2g(bl[HARBOUR + '__world']))
+    assert res < EPS, f'{HARBOUR}: no rigid fit to vanilla (residual {res:.5f})'
+    Rog, tog = Rf, tf                                                          # the ground bone's world in GR2
+    Ro = MIRROR.T @ Rf @ MIRROR; to = MIRROR.T @ tf / 2.54                     # the same transform in Blender
+    Mo = np.eye(4); Mo[:3, :3] = Ro; Mo[:3, 3] = to
+    h3 = work / (HARBOUR_MODEL + '.gr2')
+    gr2_droptris.drop(van, {'meshes': {n: list(range(len(m['tris']))) for n, m in vm.items() if n != HARBOUR}}, h3)
+    ground = work / GROUND.name
+    shutil.copyfile(GROUND, ground)
+    names = [b['name'] for b in gr2_lint.read_raw(ground)['bones']]
+    if HARBOUR_BONE not in names:                                              # create it (gr2_addbones, GXO b-table)
+        F = Ro.T                                                               # GXO rows = transposed column rotation
+        table = work / 'harbour_bone.gxo'
+        table.write_text('b "root" 0 1 0 0 0 1 0 0 0 1 0 0 0\n' + f'b "{HARBOUR_BONE}" 1 '
+                         + ' '.join(f'{x:.9g}' for x in F.reshape(-1)) + ' ' + ' '.join(f'{x:.9g}' for x in Mo[:3, 3]) + '\n')
+        r = subprocess.run([sys.executable, str(HAVOK / 'gr2_addbones.py'), str(GROUND), str(table), str(ground), '--inplace',
+                            '--map', 'mirror', '--scale', '2.54', '--only', HARBOUR_BONE], capture_output=True, text=True,
+                           timeout=300, cwd=str(HAVOK))
+        assert r.returncode == 0, f'gr2_addbones failed: {r.stdout}{r.stderr}'
+    else:                                                                      # reposition it: move by target . current^-1
+        W = {b['name']: b['world'].T for b in gr2_lint.read_raw(ground)['bones']}[HARBOUR_BONE]
+        D = np.eye(4); D[:3, :3] = Rog; D[:3, 3] = tog; D = D @ np.linalg.inv(W)
+        if np.abs(D - np.eye(4)).max() > 1e-6:                                 # already there: leave the file byte-identical
+            gr2_bones.edit(GROUND, {'move': [{'bones': [HARBOUR_BONE], 'matrix': D[:3, :3].tolist(), 'translate': D[:3, 3].tolist()}]}, ground)
+    deg = float(np.degrees(np.arccos(np.clip((np.trace(Rf) - 1) / 2, -1, 1))))
+    return h3, ground, dict(bone_world_gr2=np.round(tog, 5).tolist(), bone_world_blender=np.round(to, 5).tolist(),
+                            fit_residual=res, fit_degrees=round(deg, 4))
+
+
+def verify_harbour(model, van, ground, bl):
+    """ground bone x model == the Blender junk; the junk byte-vanilla, other meshes empty; the ground keeps every other
+    bone; no orphan fixups"""
+    from gr2_fixups import orphan_fixups
+    gb = {b['name']: b['world'] for b in gr2_lint.read_raw(ground)['bones']}
+    W = gb[HARBOUR_BONE]                                                       # row-vector world
+    info = gr2_lint.read_raw(model); m = {x['name']: x for x in info['meshes']}[HARBOUR]
+    used = np.unique(m['tris']); P = (np.c_[m['pos'][used], np.ones(len(used))] @ W)[:, :3]
+    Wb = b2g(bl[HARBOUR + '__world']); d, _ = cKDTree(Wb).query(P); err = float(d.max())
+    assert err < 1e-3 and len(m['tris']) == len(bl[HARBOUR + '__tv']), f'harbour junk off the Blender spot by {err:.4f}'
+    assert all(len(x['tris']) == 0 for x in info['meshes'] if x['name'] != HARBOUR), 'other meshes still drawn'
+    v = {x['name']: x for x in gr2_lint.read_raw(van)['meshes']}[HARBOUR]
+    assert np.array_equal(m['pos'], v['pos']) and np.array_equal(m['tris'], v['tris']), 'the harbour junk must stay vanilla'
+    old = [b['name'] for b in gr2_lint.read_raw(GROUND)['bones']]; new = list(gb)
+    assert new[:len(old)] == old and set(new) - set(old) <= {HARBOUR_BONE}, 'ground bones changed beyond the new one'
+    ow = {b['name']: b['world'] for b in gr2_lint.read_raw(GROUND)['bones']}
+    drift = max(float(np.abs(ow[n] - gb[n]).max()) for n in old if n != HARBOUR_BONE)
+    assert drift < 1e-5, f'an existing ground bone moved ({drift:.2e})'
+    assert not orphan_fixups(str(ground))['orphans'] and not orphan_fixups(str(model))['orphans'], 'orphan pointer fixups'
+    return dict(max_vertex_err=round(err, 6), tris=len(m['tris']), bone_world_gr2=np.round(W[3, :3], 4).tolist(),
+                ground_bones=f'{len(old)} -> {len(new)}', existing_bone_drift=drift)
 
 
 def main(argv=None):
@@ -189,7 +246,7 @@ def main(argv=None):
     assert all(n + '__world' in bl for n in MOVED), f'missing objects: {[n for n in MOVED if n + "__world" not in bl]}'
     van, van_anim = vanilla(work)
     vm = {m['name']: m for m in gr2_lint.read_raw(van)['meshes']}
-    drop = {n: list(range(len(vm[n]['tris']))) for n in DELETED}; dup = {}; ops = []; facts = {}
+    drop = {n: list(range(len(vm[n]['tris']))) for n in DELETED + [HARBOUR]}; dup = {}; ops = []; facts = {}
     for n in MOVED:
         d_, u_, op, facts[n] = plan_mesh(n, bl, vm[n])
         if d_: drop[n] = d_
@@ -206,10 +263,15 @@ def main(argv=None):
                        text=True, timeout=300, cwd=str(HAVOK))
     assert r.returncode == 0 and anim.exists(), f'track rename failed: {r.stdout}{r.stderr}'
     rep = verify(model, van, bl, anim, van_anim)
+    h_model, ground, facts['harbour'] = harbour(bl, van, work)
+    rep['harbour'] = verify_harbour(h_model, van, ground, bl)
     print('PLAN', json.dumps(facts)); print('VERIFIED', json.dumps(rep))
     if a.deploy:
-        shutil.copyfile(model, OUT / model.name); shutil.copyfile(anim, OUT / anim.name)
-        print('DEPLOYED', OUT / model.name, OUT / anim.name)
+        for f in (model, anim, h_model):
+            shutil.copyfile(f, OUT / f.name)
+        shutil.copyfile(OUT / 'korean_docks01.material', OUT / (HARBOUR_MODEL + '.material'))   # same vanilla textures
+        shutil.copyfile(ground, GROUND)
+        print('DEPLOYED', [str(OUT / f.name) for f in (model, anim, h_model)], GROUND)
     print('WORK', work)
     return 0
 

@@ -88,6 +88,7 @@
   <definebone>bone_fountain_FX05</definebone>
   <definebone>bone_fountain_FX06</definebone>
   <definebone>bone_attach</definebone>
+  <definebone>bone_harbour_junk</definebone>
   <definebone>bone_circlebuilding</definebone>
   <definebone>bone_court</definebone>
   <definebone>bone_tallbuilding</definebone>
@@ -283,6 +284,19 @@
       <component>docks01</component>
     </anim>
   </attachment>
+  <attachment>harbour_junk
+    <component>harbour_junk
+      <assetreference type="GrannyModel">
+        <file>homecity\korean\docks01\korean_harbour_junk</file>
+      </assetreference>
+    </component>
+    <anim>Idle
+      <assetreference type="GrannyAnim">
+        <file>homecity\china\docks01\docks01_anim</file>
+      </assetreference>
+      <component>harbour_junk</component>
+    </anim>
+  </attachment>
   <attachment>tree
     <include>terrain\tree_japanese_maple.xml</include>
   </attachment>
@@ -317,6 +331,7 @@
     <attach a="lanterns" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="grass" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
     <attach a="docks01" frombone="ATTACHPOINT" tobone="ATTACHPOINT" syncanims="0" />
+    <attach a="harbour_junk" frombone="ATTACHPOINT" tobone="bone_harbour_junk" syncanims="0" />
 
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_01" syncanims="0" />
     <attach a="tree" frombone="ATTACHPOINT" tobone="bone_pathnode_02" syncanims="0" />
