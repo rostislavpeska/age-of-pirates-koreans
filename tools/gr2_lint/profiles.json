@@ -1449,8 +1449,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_consulate_valley_b_r1.json",
-    "sha256": "377467db858fa22c8ea179b168343803c3194133b1a0921aae3484d1b1972241"
+    "path": "tools/gr2_lint/uv_contracts/korean_consulate_valley_b_r2.json",
+    "sha256": "6f6830b76f2f916147c7144a9b3d85d19c16c1984b957402eaae6a68e2ed385d"
    },
    "handedness": {
     "expect_sign": 1,

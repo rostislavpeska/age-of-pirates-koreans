@@ -448,7 +448,7 @@
   {
    "id": "korean_consulate_mata",
    "status": "current",
-   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_VF: stone-tile coping, stone piers + caps, masonry v3 castle tone, pronounced stone relief r8c; UV c4r9f) + roof valley KR-ROOF-VALLEY-01 r8e (on the junction: valley line = the diagonal course-step faces, LOW-world frame gate) + member de-repeat D11 (mast, wood ridges, facade-2 lintel) + gable medallion pair clear of the king post (occlusion-gated)",
+   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_VF: stone-tile coping, stone piers + caps, masonry v3 castle tone, pronounced stone relief r8c; UV c4r9f) + roof valley KR-ROOF-VALLEY-01 r8e (on the junction: valley line = the diagonal course-step faces, LOW-world frame gate) + member de-repeat D11 (mast, wood ridges, facade-2 lintel) + gable medallion pair clear of the king post (occlusion-gated) + 17 Oct 2026 UV c4r9g (owner rule: faces 245/263/299/317 re-pointed to owners 260/278/314/332) with the reusable roof module at the approved Colonial density (pitch .3785), Masks AO/roughness, edge dust, Zen normals, wall weathering and coping/corner bevel (consulate-uvfix-export-r1) + 17 Oct 2026 roof ends (seam-r1/final-r6: r6-pitch eave cut-out alpha on every lip, Main W fronts from the Main E END, seam continuity on 13 junctions; owner-accepted, consulate-final-export-r1)",
    "page": [
     2048,
     2048
@@ -457,15 +457,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_BaseColor",
-     "sha256": "c57dd3c0041bd88a46315d675b65f859608bcb6d0435d217665a970fd09f10eb"
+     "sha256": "028035a920b420f279e6368e0e79263536937a6afb27904a76c189e3f11f2ca7"
     },
     "Normals": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Normals",
-     "sha256": "2be9a92954975b41ad32896f83822273e3f46aae411a77df294ea65963c3c00c"
+     "sha256": "9551467c13037f8564efdc0e420c5fa6260b34d9ebf3ae56829859eb46557fc6"
     },
     "Masks": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Masks",
-     "sha256": "f35db1766fd8bf0d3dc6a5f89b9a3daeda43dcd5a5db037ef062f20f33933d04"
+     "sha256": "a6837820e46f9a2ff63a191e4233f1f8b2ba7d4b7534a12c142c8dbbcbdd5c86"
     },
     "Details": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Details",
