@@ -16,7 +16,10 @@ This repository is the Koreans civilization add-on for Age of Pirates (AoP) and 
    for deletions, screen control announced, incidents reported). Read `../age-of-pirates/AGENTS.md`.
 4. **Workflow:** edit `art/ data/ game/ sound/` (soundset definitions in `tools/korean_soundsets.xml`), then
    `python tools/build.py`, `python -m pytest tests -q`, game test, commit. Never hand-edit the files
-   `tools/build.py` generates (listed at its top).
+   `tools/build.py` generates (listed at its top). An install that replaces a texture DDT registered in
+   `tools/texture_sets.json` re-pins it in the same commit (INC-400): `python tools/texture_registry.py pin --record
+   "<date> <package> (<what>; <commit>)" <ddt> ...`; `check` lists every stale channel, and `tools/hooks/pre-commit`
+   refuses the commit when enabled (`git config core.hooksPath tools/hooks`).
 5. **Text is English only**; the build copies it to every language. Only rewrites of original-game strings are
    translated.
 6. Ids: protos 22000-22999, tech dbids 60000-60999, strings 600000+. Open work and debts: [AUDIT.md](AUDIT.md).
