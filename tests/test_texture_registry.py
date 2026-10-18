@@ -194,6 +194,8 @@ def test_a_lint_report_counts_only_for_this_add_on_and_only_all_pass(mod, tmp_pa
     assert TR.lint_check(lint, mod / "art", FakeBoard())[0] is True
     lint.write_text(json.dumps({"files": {"intact": str(gr2)}, "results": rows + [{"check": "dll_read", "status": "SKIP"}]}))
     assert TR.lint_check(lint, mod / "art", FakeBoard())[0] is False
+    lint.write_text(json.dumps({"files": {"intact": "art/buildings/x/x.gr2"}, "results": rows}))   # run from the root
+    assert TR.lint_check(lint, mod / "art", FakeBoard())[0] is True
     lint.write_text(json.dumps({"files": {"intact": str(tmp_path / "elsewhere.gr2")}, "results": rows}))
     ok, why = TR.lint_check(lint, mod / "art", FakeBoard())
     assert ok is False and "outside" in why

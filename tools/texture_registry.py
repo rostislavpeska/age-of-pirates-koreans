@@ -171,10 +171,11 @@ def installed_rows(paths, registry, art_root):
     return [(row["path"], s["id"], ch, row["sha256"]) for s, ch, row in filter(None, hits)]
 
 
-def uncommitted(rels, art_root, repo=K):
-    """the installed files git does not hold at HEAD yet, and the HEAD commit"""
+def uncommitted(rels, art_root):
+    """the HEAD commit of the add-on that holds art_root, and the installed files it does not hold at HEAD yet"""
     try:
-        files = [str((Path(art_root) / (r + ".ddt")).resolve().relative_to(Path(repo).resolve())) for r in rels]
+        repo = Path(git(art_root, "rev-parse", "--show-toplevel").decode().strip())
+        files = [str((Path(art_root) / (r + ".ddt")).resolve().relative_to(repo.resolve())) for r in rels]
         head = git(repo, "rev-parse", "--short", "HEAD").decode().strip()
         dirty = git(repo, "status", "--porcelain", "--", *files).decode().splitlines() if files else []
     except (ValueError, subprocess.CalledProcessError):        # art outside this repository: nothing to compare
@@ -189,7 +190,7 @@ def lint_check(report, art_root, BD):
     except (OSError, ValueError, AttributeError) as e:
         return False, f"{report}: not a gr2_lint --json report ({type(e).__name__})"
     art = Path(art_root).resolve()
-    where = [Path(f) if Path(f).is_absolute() else K / f for f in files]
+    where = [Path(f) if Path(f).is_absolute() else art.parent / f for f in files]    # gr2_lint run from the add-on root
     if not files or not all(p.resolve().is_relative_to(art) for p in where):
         return False, f"{Path(report).name} linted files outside {art}: lint the installed model"
     ok, why = BD.receipt_verdict(report)
@@ -207,7 +208,8 @@ def report_install(issue, record, paths, changed, registry, art_root, lint_json=
             f"{len(new)} of them changed by this install. {state} "
             "Please play it at normal camera distance and say whether it looks right.")
     evidence = [f"{r}.ddt ({sid} {ch}) sha256 {sha[:12]}" + (" new" if r.lower() in new else "") for r, sid, ch, sha in rows]
-    evidence.append(f"registry: {Path(registry).resolve()} (record appended: {record.strip()})")
+    evidence.append(f"registry: {Path(registry).resolve()} ("
+                    + ("record appended" if new else "already pinned, nothing appended") + f": {record.strip()})")
     if head:
         evidence.append(f"add-on commit {head}" + (f"; not committed: {', '.join(dirty)}" if dirty else ""))
     checks = {"installed_from": (bool(rows), f"{len(rows)} file(s) pinned in {Path(registry).name}: {record.strip()}")}
