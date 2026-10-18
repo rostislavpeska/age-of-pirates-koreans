@@ -27,3 +27,9 @@ This repository is the Koreans civilization add-on for Age of Pirates (AoP) and 
    logic), copies the vanilla unit's values (placement, physics, flags), sits on `zzTESTKoreanBuilderWagon`, and has
    its two strings. `tests/test_korean_test_beds.py` fails when a building in `tools/korean_visuals.py` has no bench,
    or a bench points at a missing animfile or model.
+8. **Read the model's brief first** (owner 2026-10-18: "model must be refreshed from game", "Each model should have
+   agent brief informing about decisions and possible false positives during tests"):
+   - Briefs are in `docs/model-briefs/<model>.md`.
+   - Work from a port of the installed game files, not an older source file. Refresh it after every install.
+   - Treat the owner decisions quoted in the brief as settled.
+   - Report a gate reading listed under the brief's known false positives as `KNOWN`, not as a new defect.
