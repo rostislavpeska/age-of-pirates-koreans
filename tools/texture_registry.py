@@ -7,18 +7,27 @@ did not (41 channels in 15 sets), and tests/test_texture_sets.py reported only t
 
     python tools/texture_registry.py check                    # every current channel against art/; exit 1 on drift
     python tools/texture_registry.py check --staged           # pre-commit: staged DDTs against the staged registry
-    python tools/texture_registry.py pin --record "2026-10-17 <package> (<what>; <commit>)" art/.../x_Masks.ddt ...
+    python tools/texture_registry.py pin --record "2026-10-17 <package> (<what>; <commit>)" \
+        --issue rostislavpeska/korean-buildings-blender#8 [--lint-json LINT.json] art/.../x_Masks.ddt ...
 
 pin takes the sha256 from the installed bytes and appends " + <record>" once to each set it changed; a file already
 pinned is left alone. Unregistered files are an error unless --only-registered (then reported and skipped); a retired
 set is never re-pinned. --registry / --art point pin and check at a staged copy (stage/tools, stage/art).
+A pin into this add-on's own registry is an install into the game (blendify-2#13): it names the building's issue with
+--issue, and Blendify's board.py posts which version went in (the record and the pinned hashes) on the building's
+card and keeps or moves the card to "Game review" (its checks: this install record, and a gr2_lint --json of the
+installed model with every check PASS, --lint-json). Only the owner moves a card back or to Accepted. A re-pin that is
+not an install (registry drift) says why with --not-an-install; a staged copy needs neither. board.py is found in
+BLENDIFY_REPO, else through AoP's skill link. Exit 5: pinned, but the note was not posted (rerun the same command).
 Callers: korean-buildings-blender research/Colonial_Roof_Rollout_22/recipes/zen_finish_release.py and
 consulate_finish_delivery.py (install), consulate_valley_export.py (stage). Hook: tools/hooks/pre-commit.
-Journal 2026-10-17-claude-opus-5.5-42, task KTC-442.
+Journal 2026-10-17-claude-opus-5.5-42, task KTC-442; install note: journal 2026-10-18-claude-opus-5.5-133.
 """
 import argparse
 import hashlib
+import importlib.util
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -26,6 +35,7 @@ from pathlib import Path
 K = Path(__file__).resolve().parents[1]
 REGISTRY = K / "tools" / "texture_sets.json"
 REGISTRY_REL = "tools/texture_sets.json"
+BOARD = Path(".claude") / "skills" / "blender-architecture-texturing" / "scripts" / "board.py"
 
 
 def sha256(path):
@@ -142,6 +152,72 @@ def staged_findings(repo=K):
     return out
 
 
+def board_module():
+    """Blendify's board.py, the one helper that talks to GitHub (blendify-2#13): BLENDIFY_REPO, else AoP's skill link"""
+    root = os.environ.get("BLENDIFY_REPO")
+    path = Path(root) / BOARD if root else Path(os.environ.get("AOP_ROOT") or K.parent / "age-of-pirates") / BOARD
+    if not path.is_file():
+        raise FileNotFoundError(f"board helper not found at {path}: set BLENDIFY_REPO to a Blendify checkout")
+    spec = importlib.util.spec_from_file_location("blendify_board", path)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def installed_rows(paths, registry, art_root):
+    """(art-relative ref, set id, channel, pinned sha256) of each named file the registry holds"""
+    index = channels(load(registry))
+    hits = [index.get(ref(p, art_root).lower()) for p in paths]
+    return [(row["path"], s["id"], ch, row["sha256"]) for s, ch, row in filter(None, hits)]
+
+
+def uncommitted(rels, art_root, repo=K):
+    """the installed files git does not hold at HEAD yet, and the HEAD commit"""
+    try:
+        files = [str((Path(art_root) / (r + ".ddt")).resolve().relative_to(Path(repo).resolve())) for r in rels]
+        head = git(repo, "rev-parse", "--short", "HEAD").decode().strip()
+        dirty = git(repo, "status", "--porcelain", "--", *files).decode().splitlines() if files else []
+    except (ValueError, subprocess.CalledProcessError):        # art outside this repository: nothing to compare
+        return None, None
+    return head, [line[3:] for line in dirty]
+
+
+def lint_check(report, art_root, BD):
+    """(passed, why): gr2_lint --json of the installed model, every check PASS, and the linted files in this art/"""
+    try:
+        files = [f for f in (json.loads(Path(report).read_text(encoding="utf-8")).get("files") or {}).values() if f]
+    except (OSError, ValueError, AttributeError) as e:
+        return False, f"{report}: not a gr2_lint --json report ({type(e).__name__})"
+    art = Path(art_root).resolve()
+    where = [Path(f) if Path(f).is_absolute() else K / f for f in files]
+    if not files or not all(p.resolve().is_relative_to(art) for p in where):
+        return False, f"{Path(report).name} linted files outside {art}: lint the installed model"
+    ok, why = BD.receipt_verdict(report)
+    return ok, f"{why}; {report}"
+
+
+def report_install(issue, record, paths, changed, registry, art_root, lint_json=None, BD=None):
+    """the install note on the building's card: which version went in, card kept or moved to Game review"""
+    BD = BD or board_module()
+    rows = installed_rows(paths, registry, art_root)
+    head, dirty = uncommitted([r[0] for r in rows], art_root)
+    new = {d["path"].lower() for d in changed}
+    state = ("Not committed yet." if dirty else f"Committed in the add-on ({head}).") if head else ""
+    note = (f"Installed in the game: {record.strip()}. {len(rows)} texture file(s) are in the add-on now, "
+            f"{len(new)} of them changed by this install. {state} "
+            "Please play it at normal camera distance and say whether it looks right.")
+    evidence = [f"{r}.ddt ({sid} {ch}) sha256 {sha[:12]}" + (" new" if r.lower() in new else "") for r, sid, ch, sha in rows]
+    evidence.append(f"registry: {Path(registry).resolve()} (record appended: {record.strip()})")
+    if head:
+        evidence.append(f"add-on commit {head}" + (f"; not committed: {', '.join(dirty)}" if dirty else ""))
+    checks = {"installed_from": (bool(rows), f"{len(rows)} file(s) pinned in {Path(registry).name}: {record.strip()}")}
+    if lint_json:
+        checks["gr2_lint"] = lint_check(lint_json, art_root, BD)
+    res = BD.post(issue, note, "Installed in the game", evidence, "Game review", checks=checks)
+    BD.report(res)
+    return res
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -151,17 +227,25 @@ def main(argv=None):
     p.add_argument("paths", nargs="+", type=Path)
     p.add_argument("--record", required=True, help='"<date> <package> (<what>; <commit>)", appended to each set record')
     p.add_argument("--only-registered", action="store_true", help="skip (and list) DDTs no set registers")
+    p.add_argument("--issue", help="the building's issue, owner/repo#N: the install note goes on its card")
+    p.add_argument("--lint-json", type=Path, help="gr2_lint --json of the installed model (a Game review check)")
+    p.add_argument("--not-an-install", metavar="REASON", help="a re-pin of this registry that is not an install")
     for q in (c, p):
         q.add_argument("--registry", type=Path, default=REGISTRY)
         q.add_argument("--art", type=Path, default=K / "art")
     a = ap.parse_args(argv)
+    own = a.cmd == "pin" and a.registry.resolve() == REGISTRY.resolve()
+    if own and not (a.issue or a.not_an_install):
+        ap.error("a pin into this registry is an install: name the building's issue with --issue owner/repo#N "
+                 '(blendify-2#13), or say why it is not an install with --not-an-install "<reason>"')
     if a.cmd == "check" and a.staged:
         bad = staged_findings()
         for line in bad:
             print("STALE", line)
         if bad:
             print("re-pin the installed files in the same commit:\n"
-                  '  python tools/texture_registry.py pin --record "<date> <package> (<what>)" <ddt> ...')
+                  '  python tools/texture_registry.py pin --record "<date> <package> (<what>)" --issue <owner/repo#N> '
+                  '<ddt> ...')
         return 1 if bad else 0
     if a.cmd == "check":
         bad = drift(load(a.registry), a.art)
@@ -176,6 +260,14 @@ def main(argv=None):
     for r in skipped:
         print(f"UNREGISTERED {r} (skipped)")
     print(f"{len(changed)} channel(s) re-pinned in {a.registry}")
+    if not a.issue:
+        print(f"NO NOTE: {a.not_an_install or 'a staged copy, not the game'}")
+        return 0
+    try:
+        report_install(a.issue, a.record, a.paths, changed, a.registry, a.art, a.lint_json)
+    except Exception as e:                                       # board.BoardError, a missing helper, gh missing
+        print(f"PINNED, BUT THE INSTALL NOTE WAS NOT POSTED: {e}\n  rerun the same command (pinned files are left alone)")
+        return 5
     return 0
 
 
