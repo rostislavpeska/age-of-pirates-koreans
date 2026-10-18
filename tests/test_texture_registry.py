@@ -180,8 +180,8 @@ def test_the_install_note_names_the_version_and_asks_for_game_review(mod, monkey
     assert tr.main(["pin", "--record", "2026-10-18 pkg-r2 (roof)", "--issue", f"{REPO}#8", *files]) == 0
     (p,) = board.posts
     assert p["issue"] == f"{REPO}#8" and p["stage"] == "Game review" and p["checks"]["installed_from"][0] is True
-    assert "Installed in the game: 2026-10-18 pkg-r2 (roof). 2 texture file(s)" in p["note"]
-    assert "1 of them changed by this install" in p["note"] and "gr2_lint" not in p["checks"]
+    assert "Version now in the game: 2026-10-18 pkg-r2 (roof). 2 texture file(s)" in p["note"]
+    assert "(1 changed by this run)" in p["note"] and "gr2_lint" not in p["checks"]
     assert any(sha(b"colour r2")[:12] in e and e.endswith(" new") for e in p["evidence"])
     assert "NOTE POSTED" in capsys.readouterr().out
 
@@ -251,5 +251,5 @@ def test_the_install_reaches_the_building_card_through_blendify(mod, monkeypatch
     s = json.loads(state.read_text())
     (c,) = s["comments"]
     assert c["issue"] == 4 and "(task #8)" in c["body"] and "2026-10-18 pkg-r2" in c["body"]
-    assert "stays at **Game review**" in c["body"] and not s.get("edits")
+    assert "stays at **Game review** (it is already there)" in c["body"] and not s.get("edits")
     assert "STAGE KEPT Game review -> Game review" in capsys.readouterr().out

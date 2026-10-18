@@ -204,8 +204,8 @@ def report_install(issue, record, paths, changed, registry, art_root, lint_json=
     head, dirty = uncommitted([r[0] for r in rows], art_root)
     new = {d["path"].lower() for d in changed}
     state = ("Not committed yet." if dirty else f"Committed in the add-on ({head}).") if head else ""
-    note = (f"Installed in the game: {record.strip()}. {len(rows)} texture file(s) are in the add-on now, "
-            f"{len(new)} of them changed by this install. {state} "
+    note = (f"Version now in the game: {record.strip()}. {len(rows)} texture file(s) of it are in the add-on "
+            f"({len(new)} changed by this run). {state} "
             "Please play it at normal camera distance and say whether it looks right.")
     evidence = [f"{r}.ddt ({sid} {ch}) sha256 {sha[:12]}" + (" new" if r.lower() in new else "") for r, sid, ch, sha in rows]
     evidence.append(f"registry: {Path(registry).resolve()} ("
