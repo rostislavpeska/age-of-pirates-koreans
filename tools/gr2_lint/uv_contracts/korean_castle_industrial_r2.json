@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "castle-pair-r14: complete inverse display transform; frozen source corners + industrial lift r1 (owner 18 Oct 2026: \"Love the rift lift. use it for Industrial castle\"): eave-front tile-end strips (front + underside) rotated 20 deg outward about their top edge, in-place runtime edit; positions of the edited meshes only, UVs unchanged",
+  "author_blend_sha256": "a82e55f089246fb78360e5d4e702207dc1b75d10676a9f9f41a017d2cec57ba8",
+  "author_payload_sha256": "3bcf9f5574084aae14eb277084600ddb88d25b544c7b577c4c6259407915475e",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 48144,
+        "position_f32_sha256": "f1b47bde05a006ddc5f6bd9741b5b47163e33243ba331d07ec0c7982c67d9309",
+        "raw_uv_f16_sha256": "a6015da3542cb891fc8ea952d5e0a1ce9a3c408fb83fa5041ed677c75aaad223"
+      },
+      "matc": {
+        "corners": 3888,
+        "position_f32_sha256": "9c300c9e7a4959000d1f58b302b94b4910ccb233513480ae46722e46ae07b411",
+        "raw_uv_f16_sha256": "1861e23db0d8b1e1c10328c18a1f7011507b9409878b699d426a8e25517de256"
+      },
+      "matd": {
+        "corners": 6918,
+        "position_f32_sha256": "4cd6e14a7a98611b23eea8a70a9d283aad36757685523ebe20f77c8ce6643315",
+        "raw_uv_f16_sha256": "8ba18dfc7b269ac9879b1c9e569859f40acc65e68eb09e78c90266b1094df736"
+      },
+      "matb": {
+        "corners": 11028,
+        "position_f32_sha256": "c193372a365e27da30a48d2de7e4a77ebe638c79df8e888b9eb3fc27a3362dc3",
+        "raw_uv_f16_sha256": "cc5a3845d73027a922a1f997e6a86e804cd0e46a4393cc2be9c614803ed99914"
+      },
+      "mate": {
+        "corners": 2160,
+        "position_f32_sha256": "206bbf7573c96ccfc3b9e626cd6672528b859c54b9a4094a23085844aced09c3",
+        "raw_uv_f16_sha256": "11b7194e70e3819e707a36a53420a6dece69df4421eee051ce41436b633638f3"
+      }
+    },
+    "damaged": {
+      "mata": {
+        "corners": 62166,
+        "position_f32_sha256": "3c3df07bebef202a6634b1f721440e5d35ea894dba0bdc2b473bdeb7639c2ece",
+        "raw_uv_f16_sha256": "60bcfce0fc03e67171e4ccfcb50e0e6effca8ecf8366ac6170c516ca6bf19a5c"
+      },
+      "matc": {
+        "corners": 5793,
+        "position_f32_sha256": "a3ceb2f569c9a91122c0c2f789bdf37921d37b059b5748fcbde34df4f8fc8ebf",
+        "raw_uv_f16_sha256": "1734161c9a17f5ea1a778aed739533253ec077387cc676e1915b3c3346dfecdf"
+      },
+      "matz": {
+        "corners": 43899,
+        "position_f32_sha256": "08c0674aa036a4728b614a257b4b562f5cec97ae5ca9a718089ae3680608fe07",
+        "raw_uv_f16_sha256": "69bf528fd2a9594e82e4f206e7e711c2e11c371ba6fcf3e284e06c1380e288f6"
+      },
+      "matd": {
+        "corners": 13632,
+        "position_f32_sha256": "40561c7491270230bf13785a19cb441d7e614b114425a238249788642eec089f",
+        "raw_uv_f16_sha256": "63cf5e9a4929f945f3b5118f37f4eca082b4036b33fbe39b6c9fa79c6e2a8696"
+      },
+      "matb": {
+        "corners": 13200,
+        "position_f32_sha256": "3dd0b06883061bfa84b0b95c1f3265613146af52d6c378164a316ccf5346375f",
+        "raw_uv_f16_sha256": "af3f6f75c0410dc16c66d52b101e23a1ca09aceecaf257352a8095b54260e650"
+      },
+      "mate": {
+        "corners": 2232,
+        "position_f32_sha256": "b4c2756af620e6386ab3adc7d548c7c272300f8769ffaaa9e30b80c53df98393",
+        "raw_uv_f16_sha256": "e9f8da2b8e3cd03c14a5a220cffb275280aa51af2a9e5c014ee956f7b9aeee31"
+      }
+    }
+  },
+  "damaged_author_payload_sha256": "9a74953a532678311aabb9c3b7a2b00943b77c90fba5135a10be5e8ad825dc42",
+  "applied": {
+    "date": "2026-10-18",
+    "derived_from": "lifted runtime GR2s by a declared transform (C:/work/industrial-castle-density-r1/lift-r1/LIFT_QA.json, LIFT_VERIFY.json); the r1 author payload is unchanged",
+    "owner_quote": "Green, install to the game ans let's use the jade green roof as canonical color reference for Industrial age roofs",
+    "owner_quote_2": "simply use the new castle model (export havok destruction and _damaged model and the green texture ... So basuiically the green variant design from test bed as final version",
+    "installed": {
+      "intact": "ccc3509b898f",
+      "damaged": "0adab616c3a9",
+      "construction": "d9ebd4d753e2 (unchanged)",
+      "hkt": "7d74127530ef (unchanged)"
+    }
+  }
+}

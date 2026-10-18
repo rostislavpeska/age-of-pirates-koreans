@@ -2137,8 +2137,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_market_gr2canon_r1.json",
-    "sha256": "cef55b44ff307e44478edf206a6d5f9a17d2ae73fd41c14c62e697d16d3468d9"
+    "path": "tools/gr2_lint/uv_contracts/korean_market_gr2canon_r2.json",
+    "sha256": "b2df72e5e8e0d84766724c103c325e6758f0ef6e1d2c46af55b74972e57cfce5"
    },
    "handedness": {
     "expect_sign": 1,
@@ -3180,7 +3180,7 @@
     "Castle",
     "Industrial castle"
    ],
-   "_doc": "Industrial castle canonical r14, full states: exact intact, new connected p66 frame, donor-bound fracture. No new geometry or texture tuning to the approved intact.",
+   "_doc": "Industrial castle canonical r14, full states: exact intact, new connected p66 frame, donor-bound fracture. 18 Oct 2026 owner: eave-front strips lifted 20 deg outward (\"Love the rift lift\") and the green roof installed (\"Green, install to the game\"): contract r2 = r1 with the lifted strip positions; UVs unchanged. No other geometry change.",
    "files": {
     "intact": "korean_castle_industrial.gr2",
     "intact_material": "korean_castle_industrial.material",
@@ -3312,8 +3312,8 @@
     "bone_banner_r"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r1.json",
-    "sha256": "77d4f54b8646c92a8b0f21e105235d6e78c127faa95b6406644d5db704fe7424"
+    "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r2.json",
+    "sha256": "cfad046bda14e08f5a536ea342d9c12dff6171780de12d70d30463828c292f76"
    },
    "handedness": {
     "expect_sign": 1,
