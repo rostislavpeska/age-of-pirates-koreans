@@ -2861,8 +2861,8 @@
     <rate type="zzKoreanStablePhysics">0.16666667</rate>
   </protoaction>
 </unit>
-<unit id="22023" name="zzTESTKoreanCastleIndustrial">
-    <dbid>22023</dbid>
+<unit id="22034" name="zzTESTKoreanCastleIndustrial">
+    <dbid>22034</dbid>
     <displaynameid>600093</displaynameid>
     <editornameid>600094</editornameid>
     <obstructionradiusx>4.0000</obstructionradiusx>

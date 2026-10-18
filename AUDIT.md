@@ -8,7 +8,7 @@ everything still missing for a fully playable, fully Korean civilization, most i
 **Castle checkpoint, 12 October 2026:** the historical castle paragraph below
 describes the first installation. It is superseded by Colonial r15 textures and
 Industrial r16 runtime: the first upgrade is Colonial, the second Industrial.
-Industrial has all three states and a separate bench (22023); 38 intact/damaged
+Industrial has all three states and a separate bench (22034); 38 intact/damaged
 and 17 construction native checks pass, plus strict HKT pairing/containment,
 state alignment and attachments. Its 2048 + 1024 own pages reuse the existing
 generic atlas, Colonial basement and shared 512 guardian resource. Gable player

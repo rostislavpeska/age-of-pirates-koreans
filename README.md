@@ -20,7 +20,7 @@ Castle update (12 October 2026): the Colonial castle keeps the first researched
 upgrade (`ypFrontierCastle`); the Industrial castle now uses the second
 (`ypFortifiedCastle`). The Industrial set includes intact, construction and damaged
 models, donor-bound Havok, alpha reliefs and player-colour masks, including both
-top timber gables. Its editor bench is `zzTESTKoreanCastleIndustrial` (22023).
+top timber gables. Its editor bench is `zzTESTKoreanCastleIndustrial` (22034).
 Run `python tools/industrial_castle_qa.py --out <scratch-directory>` for the installed
 native-model, state-frame, collision-hull and attachment checks. These pass;
 destination-game rendering and destruction playback remain to be tested.
