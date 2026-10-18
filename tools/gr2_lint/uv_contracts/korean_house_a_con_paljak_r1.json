@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "House A paljak roof r1 construction (build_construction on the Step C r8 source + r16 window/door strip)",
+  "author_blend_sha256": "a2f7815d73a892caf643d662b1b4b7ff5218e5585b9f32c3d188ff1fc2957e69",
+  "author_payload_sha256": "caaee4cdf4fad2d06690a07cfcf3ed7db7f60f305898268b9bdd571ad592cd65",
+  "provenance": "House A House A paljak roof r1 construction (build_construction on the Step C r8 source + r16 window/door strip): payload House_A_con_stepc.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 810,
+        "position_f32_sha256": "ada99ea679142d38e77d3aa0f5dfaba0ce04484f93d2bd055296757d40397a03",
+        "raw_uv_f16_sha256": "2bc66819f03442a62663d06ea3cf3ec28b1b2e1e07c3c2bb97d6a2103c4a8fc8"
+      },
+      "matc": {
+        "corners": 5808,
+        "position_f32_sha256": "8c49a43c88cbcb1218c0c395c67740a29928e7b692cc55e4418144e700fd2343",
+        "raw_uv_f16_sha256": "acf8daa3517f2d396e8225de545dcf1f6b23286acbf4f8bc84b843a41f564a27"
+      }
+    },
+    "damaged": {}
+  }
+}

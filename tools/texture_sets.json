@@ -276,20 +276,20 @@
   {
    "id": "korean_barracks_mata",
    "status": "current",
-   "record": "pages as moved from AoP with the registry on 2026-10-09 (commit 864c605) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e)",
+   "record": "pages as moved from AoP with the registry on 2026-10-09 (commit 864c605) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e) + 2026-10-18 overnight colonial-density-overnight-r1 ON-1 (texture only on the installed UVs: roof fields at the house benchmark ~.35 m via the reusable module, module END on the eave fronts, eave cut-outs at the new pitch; BaseColor + Normals + Masks; owner reviewed the renders 18 Oct and asked to install for the game test)",
    "tangent": "uv_derivative",
    "channels": {
     "BaseColor": {
      "path": "zbench_korean_military/barracks/textures/korean_barracks_mata_BaseColor",
-     "sha256": "32e585e37c0df5c6a77456324ee6a372fc5b95ac1bbeea9fd37859b996b219cd"
+     "sha256": "c4c1826b3a81abf53e074b02a147089bf60ccb1bb8ae6b132fc779e9f3a6de20"
     },
     "Normals": {
      "path": "zbench_korean_military/barracks/textures/korean_barracks_mata_Normals",
-     "sha256": "37c4eb58a647d5adc65b2f13dab9daf435b9df23260cd44dee0173a4e427bf44"
+     "sha256": "e1bd2a1a6882133b7fad8836b11dc30df6602df87d441e4d0eeeba3935cad945"
     },
     "Masks": {
      "path": "zbench_korean_military/barracks/textures/korean_barracks_mata_Masks",
-     "sha256": "ae4ced3248b3cc111ebbaae2e0180438017ed88ba1ef6c8b232a04b0fe4cbdce"
+     "sha256": "7a4630911293330f929fab21f8f46868b1ecea2fe3cbffe7a27ab8cad4b1c4a4"
     },
     "Details": {
      "path": "zbench_korean_military/barracks/textures/korean_barracks_mata_Details",
@@ -300,20 +300,20 @@
   {
    "id": "korean_stable_mata",
    "status": "current",
-   "record": "pages as moved from AoP with the registry on 2026-10-09 (commit 864c605) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e)",
+   "record": "pages as moved from AoP with the registry on 2026-10-09 (commit 864c605) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928) + 2026-10-14 AoE Buildings roof-rollout consulate-plaster-installed-r1 install (INSTALL.json; warm Korean plaster toward the Dock tone, BaseColor; commit 7b6d30e) + 2026-10-18 overnight colonial-density-overnight-r1 ON-2 (texture only on the installed UVs: roof fields at the house benchmark ~.35 m via the reusable module, module END on the eave fronts, eave cut-outs at the new pitch; BaseColor + Normals + Masks; owner reviewed the renders 18 Oct and asked to install for the game test)",
    "tangent": "uv_derivative",
    "channels": {
     "BaseColor": {
      "path": "zbench_korean_military/stable/textures/korean_stable_mata_BaseColor",
-     "sha256": "9cda00d50a38621bddcbff49e93928c31d71d6964a128ca04a9f941c75136806"
+     "sha256": "b2f4c68fe383be6d55604971bd7f98a319411e5fd3565ebbe8b5ae3f55f96739"
     },
     "Normals": {
      "path": "zbench_korean_military/stable/textures/korean_stable_mata_Normals",
-     "sha256": "06aafd782c956d3ddd63dd6f9d63298e7e38497784a7b39ced153451c694a0f7"
+     "sha256": "a891a9815d26851efcbb852dfcae74dd106680150ac5c5c9f1e1f037e3f75101"
     },
     "Masks": {
      "path": "zbench_korean_military/stable/textures/korean_stable_mata_Masks",
-     "sha256": "4d767e5b2d44dc0444d07ed4356d2ce461be53ad4c44459e475a44221169c245"
+     "sha256": "7d2b2a7823c62834dbab501dc5ca3bcaad26f3297996fe8eca6a4d4576c66dc6"
     },
     "Details": {
      "path": "zbench_korean_military/stable/textures/korean_stable_mata_Details",
@@ -352,7 +352,7 @@
   {
    "id": "korean_house_roofs",
    "status": "current",
-   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15h over texture-r14 ROOFS: translucent moss, textured eave ends, TC-level roll contrast - widened/amplified roof-field normals, crests, course lines, matte roughness; porch-junction valley: narrow valley tiles matching both roofs (subtle, owner r15h), small lime plugs at the cut rolls); one page shared by House A/B/C, all stages + 2026-10-13 AoE Buildings roof-rollout rice-houses-recovery-r2 houses release (houses/source/INSTALL_QA.json; main roofs matched to military relief, cutout contours repaired, BaseColor; commit c611bba) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928)",
+   "record": "Korean repo research/Colonial_Expansion_17/house_states_r1 (texture-r15h over texture-r14 ROOFS: translucent moss, textured eave ends, TC-level roll contrast - widened/amplified roof-field normals, crests, course lines, matte roughness; porch-junction valley: narrow valley tiles matching both roofs (subtle, owner r15h), small lime plugs at the cut rolls); one page shared by House A/B/C, all stages + 2026-10-13 AoE Buildings roof-rollout rice-houses-recovery-r2 houses release (houses/source/INSTALL_QA.json; main roofs matched to military relief, cutout contours repaired, BaseColor; commit c611bba) + 2026-10-14 AoE Buildings roof-rollout zen-finish-seven-r1 install (evidence/INSTALL.json; Zen roof normals and roughness, Normals + Masks; commit a3ed928); 2026-10-18 House A paljak roof (Step C, owner \"It's good, install to game\"): House A charts written into its own freed texels + free space, block-patched with AoP ddt_patch.py (B/C texels byte-identical at mip 0, DDT_GATE_r2)",
    "page": [
     2048,
     2048
@@ -361,15 +361,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_house/textures/korean_house_roofs_BaseColor",
-     "sha256": "8fdd48972ccbf9b0f27be44521894714cc166a779a724855234bc23de429dea4"
+     "sha256": "47d4e7e5dac99cc5250ddaab44084f20ef39f34d89a353cc5c7ef41ab1da11c3"
     },
     "Normals": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Normals",
-     "sha256": "e1e20a7d7a4fa4b087078a8c515dbd5a2dad37090a314e75e970e937a47b85f5"
+     "sha256": "fd4758b3b9bb6ea9bdd3ce59f3ae0434f27bcbbfa2a57f98f14e7462b4bfa621"
     },
     "Masks": {
      "path": "buildings/korean_house/textures/korean_house_roofs_Masks",
-     "sha256": "eeaba095d0323485de426a67bd1394ba718fb06cbaa53422f4c66bc14a375119"
+     "sha256": "7006513b72d813e675fd46ce44d63413b03395c0dcd04636efad9c36ca600714"
     }
    }
   },
@@ -452,7 +452,7 @@
   {
    "id": "korean_consulate_mata",
    "status": "current",
-   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_VF: stone-tile coping, stone piers + caps, masonry v3 castle tone, pronounced stone relief r8c; UV c4r9f) + roof valley KR-ROOF-VALLEY-01 r8e (on the junction: valley line = the diagonal course-step faces, LOW-world frame gate) + member de-repeat D11 (mast, wood ridges, facade-2 lintel) + gable medallion pair clear of the king post (occlusion-gated) + 17 Oct 2026 UV c4r9g (owner rule: faces 245/263/299/317 re-pointed to owners 260/278/314/332) with the reusable roof module at the approved Colonial density (pitch .3785), Masks AO/roughness, edge dust, Zen normals, wall weathering and coping/corner bevel (consulate-uvfix-export-r1) + 17 Oct 2026 roof ends (seam-r1/final-r6: r6-pitch eave cut-out alpha on every lip, Main W fronts from the Main E END, seam continuity on 13 junctions; owner-accepted, consulate-final-export-r1) + 18 Oct 2026 eave-strip UV fix c4r9i (Main.Eave.1.0:4/:5, -1.0:3 own outer-underside UVs) with seam-r1 final-r6/candidate-r2 cut continuation; intact, damaged and Havok re-exported (consulate-reexport-r1)",
+   "record": "korean-civic-pair-claude export_r2 (Consulate page tex_r1/final_r8_VF: stone-tile coping, stone piers + caps, masonry v3 castle tone, pronounced stone relief r8c; UV c4r9f) + roof valley KR-ROOF-VALLEY-01 r8e (on the junction: valley line = the diagonal course-step faces, LOW-world frame gate) + member de-repeat D11 (mast, wood ridges, facade-2 lintel) + gable medallion pair clear of the king post (occlusion-gated) + 17 Oct 2026 UV c4r9g (owner rule: faces 245/263/299/317 re-pointed to owners 260/278/314/332) with the reusable roof module at the approved Colonial density (pitch .3785), Masks AO/roughness, edge dust, Zen normals, wall weathering and coping/corner bevel (consulate-uvfix-export-r1) + 17 Oct 2026 roof ends (seam-r1/final-r6: r6-pitch eave cut-out alpha on every lip, Main W fronts from the Main E END, seam continuity on 13 junctions; owner-accepted, consulate-final-export-r1) + 18 Oct 2026 eave-strip UV fix c4r9i (Main.Eave.1.0:4/:5, -1.0:3 own outer-underside UVs) with seam-r1 final-r6/candidate-r2 cut continuation; intact, damaged and Havok re-exported (consulate-reexport-r1) + 18 Oct 2026 roof at the house benchmark: reusable module pitch 3.028125/9 (.3365 m) on the installed c4r9i UVs, texture only; seam-r2 roof ends with the Main W END corner frames fixed (eave-r7b: same-surface loop frames, no along-strip normal drift); consulate-density-r7",
    "page": [
     2048,
     2048
@@ -461,15 +461,15 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_BaseColor",
-     "sha256": "1c7cc209bb87ebbf83619fb2df792d7eeb32bb1722f7a129f3460f72cacdf20b"
+     "sha256": "f486c9db5db3b1d32859f4addbf4fff1786624a857ae10e0fa815969910e8c24"
     },
     "Normals": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Normals",
-     "sha256": "6344b3ae54619411b97e5f022c616ebcf7f51506f824eb1a382f7fe6c05e94c1"
+     "sha256": "759d71ba3e727db31b2247f83bcf782000c04a553c966f5519fb2803ed772578"
     },
     "Masks": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Masks",
-     "sha256": "581f6f677daf0fb9aad64856ab4a1ee13ea0cfba8c2f12c8d15d5ded30e56cd3"
+     "sha256": "635eadb048bc95f795dbd780134a49636cc22110021f709c083e2ef3900ab097"
     },
     "Details": {
      "path": "buildings/korean_consulate/textures/korean_consulate_mata_Details",
@@ -662,6 +662,58 @@
     "Masks": {
      "path": "buildings/korean_house/textures/korean_house_age0_roofs_Masks",
      "sha256": "468f68d21b41e5c4a9bda65b1469190e302a49c8fd54532b88534a684ec0a96e"
+    }
+   }
+  },
+  {
+   "id": "korean_castle_mata",
+   "status": "current",
+   "record": "Colonial castle (no row existed before 18 Oct 2026): TC roof + caps C15 (70a5103), roll-stripe shading (e4d1bfc), corner eave discs (b4a2508), decorations (8fabe8f), ArmorPaint roof effects (f13a989), Zen normals (a3ed928) + 2026-10-18 castle-density-r1 (texture only on the installed UVs; owner: \"Looks clean install and start the castle\", \"The castle eave looks right now\"): roof fields at the house benchmark, 23 rolls at .3441 m instead of 21 at .3785 m, reusable module with edge dust and Zen once; block-patched into the installed DDTs; every texel the Industrial castle reads (submaterial matd, shared on purpose) unchanged at mip 0",
+   "page": [
+    2048,
+    2048
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor",
+     "sha256": "10899ce261241ff18c12bf1e8b4eb17628a47691c4f090901eb39773440939da"
+    },
+    "Normals": {
+     "path": "buildings/korean_castle/textures/korean_castle_mata_Normals",
+     "sha256": "ca8ed0fd34fd45533efb38394d05271521b04dad51b8731ce9800749a4632a54"
+    },
+    "Masks": {
+     "path": "buildings/korean_castle/textures/korean_castle_mata_Masks",
+     "sha256": "a9ac5424b077a9a715f7764cbe41c0ecf086edd77dcc903271fccd1ad1110924"
+    },
+    "Details": {
+     "path": "buildings/korean_castle/textures/korean_castle_mata_Details",
+     "sha256": "8db242370c201f99bdee688c6749115fba6c47317f68d39ae1adba98732ceb2e"
+    }
+   }
+  },
+  {
+   "id": "korean_castle_matb",
+   "status": "current",
+   "record": "Colonial castle (no row existed before 18 Oct 2026): TC roof + caps C15 (70a5103), roll-stripe shading (e4d1bfc), corner eave discs (b4a2508), decorations (8fabe8f), ArmorPaint roof effects (f13a989), Zen normals (a3ed928) + 2026-10-18 castle-density-r1 (texture only on the installed UVs; owner: \"Looks clean install and start the castle\", \"The castle eave looks right now\"): eave tile-end strip respaced to the new rows (installed disc-to-row relation kept, E/W shared corner averaged); block-patched (final r2: gutter fault of r1 fixed, damaged-fragment edge texels written); texels outside the strip and its readers byte-identical",
+   "page": [
+    1024,
+    1024
+   ],
+   "tangent": "uv_derivative",
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_castle/textures/korean_castle_matb_BaseColor",
+     "sha256": "9a2ceac7fc21d8b9df0d0b51674af14725526f0226b4a45905c899a15e50a506"
+    },
+    "Normals": {
+     "path": "buildings/korean_castle/textures/korean_castle_matb_Normals",
+     "sha256": "ce46367d3e57bbe53a7114b8c9b9d4b1175dd20e067066b734bd5e4db3a9ea7b"
+    },
+    "Masks": {
+     "path": "buildings/korean_castle/textures/korean_castle_matb_Masks",
+     "sha256": "25a953774215ad916b888833a08b8cc243a932b8ed11e18652f20ba2144c3a24"
     }
    }
   },

@@ -14,7 +14,7 @@
     "House A/B/C",
     "Hanok"
    ],
-   "_doc": "Korean House A (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_01(_damaged). Intact + damaged + HKT + materials + animfile. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls). r14d: progressive destruction - stage bodies carry 14-20 % of the surface (vanilla 12-18 %; r14c 2.7-6.6 %).",
+   "_doc": "Korean House A (Colonial on), texture-r14 source; donor graph: vanilla japan_shrine_age2_01(_damaged). Intact + damaged + HKT + materials + animfile. r14c: faces written with the engine winding (the export frame is a mirror; r14b shipped inside out - black roofs, dark walls). r14d: progressive destruction - stage bodies carry 14-20 % of the surface (vanilla 12-18 %; r14c 2.7-6.6 %). | paljak roof (House A Step C 2026-10-18, owner \"It's good, install to game\"): hip-and-gable roof on the r14 walls, closed receiver (1 cm clay underside) and gables, props r6.1 messy layout; shares the roofs page with B/C (their texels unchanged)",
    "files": {
     "intact": "korean_house_a.gr2",
     "damaged": "korean_house_a_damaged.gr2",
@@ -145,13 +145,13 @@
      "bone": "BONE_GARRISONFLAG",
      "position": [
       0.0,
-      4.995,
+      5.074,
       0.0
      ],
      "body": "roof_wood_shatterhide_ondeath_0_6",
-     "bottom_y": 4.7,
-     "top_y": 6.095,
-     "_doc": "the small garrison mast, pole +15 % and BONE_GARRISONFLAG at the flag cloth's lower edge (owner 2026-10-09, game test): flag spans bone .. bone + 1.05 m, 5 cm under the tip; damaged: the reserved donor body holds the pole and collar only"
+     "bottom_y": 4.779,
+     "top_y": 6.174,
+     "_doc": "the small garrison mast, pole +15 % and BONE_GARRISONFLAG at the flag cloth's lower edge (owner 2026-10-09, game test): flag spans bone .. bone + 1.05 m, 5 cm under the tip; damaged: the reserved donor body holds the pole and collar only | paljak roof (House A Step C, 2026-10-18): mast + collar re-seated +0.079 m on the new timber ridge (top 4.819); pole 4.794-6.174 (x1.15 rule), collar bottom 4.779, bone = tip - 1.05 - 0.05"
     }
    ],
    "rest_contract": {
@@ -159,8 +159,8 @@
     "ground_supports": []
    },
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_a_r16e.json",
-    "sha256": "6462db8bb010354eaf83c19a4ea07d0850c9c81b92e2eaa26ad9af31747d3caa"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_a_paljak_r1.json",
+    "sha256": "f6016388bc69d9e5f947b13106f4cce91e2dbc63a4201012388aac5565f24107"
    },
    "handedness": {
     "expect_sign": 1,
@@ -300,8 +300,8 @@
     "japan_shrine_age2_01_con_stage3_M0"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_house_a_con_r16d.json",
-    "sha256": "5a258ac9e492638875a16cd995706b2d26251ad61ad1514411eb8f8faf372f03"
+    "path": "tools/gr2_lint/uv_contracts/korean_house_a_con_paljak_r1.json",
+    "sha256": "907142c15f6fa3761482884c94ac4db539c1f82d2fa95c155eee25a39e353113"
    },
    "handedness": {
     "expect_sign": 1,
@@ -1107,11 +1107,11 @@
    "ao_shared_uv_accepted_pages": [
     {
      "file": "korean_castle_mata_Masks.ddt",
-     "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+     "sha256": "a9ac5424b077a9a715f7764cbe41c0ecf086edd77dcc903271fccd1ad1110924",
      "max_m2": 0.8,
-     "owner_quote": "Castkle - no visible bugs",
-     "date": "2026-10-12",
-     "source_acceptance": "Same unchanged AO channel and same Colonial castle own page accepted by owner on 2026-10-12 (b7f542c). Existing Industrial construction profile already carries this page-specific acceptance. Restores missing coverage for the Colonial construction state; does not accept any new AO or other pages. 14 October finish changes Masks.G only; independent decoded R/B/A equality holds at every mip. Existing AO acceptance and max_m2 remain unchanged."
+     "owner_quote": "The castle eave looks right now. Finish the game files and install the castle for my game test",
+     "date": "2026-10-18",
+     "source_acceptance": "18 Oct 2026 castle-density-r1: the owner reviewed the denser castle roof in Blender (all channels) and asked to install it (\"Looks clean install and start the castle\", \"The castle eave looks right now\"); Masks re-made on the roof fields (true AO, Zen roughness), every texel the Industrial castle reads unchanged at mip 0. Earlier record: Same unchanged AO channel and same Colonial castle own page accepted by owner on 2026-10-12 (b7f542c). Existing Industrial construction profile already carries this page-specific acceptance. Restores missing coverage for the Colonial construction state; does not accept any new AO or other pages. 14 October finish changes Masks.G only; independent decoded R/B/A equality holds at every mip. Existing AO acceptance and max_m2 remain unchanged."
     }
    ]
   },
@@ -3234,19 +3234,19 @@
       "files": [
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor.ddt",
-        "sha256": "f6a1c5ba1bdc677190840d606b57dfb5e219cba68cc2fdd387384a82342152bc",
+        "sha256": "10899ce261241ff18c12bf1e8b4eb17628a47691c4f090901eb39773440939da",
         "width": 2048,
         "height": 2048
        },
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_Normals.ddt",
-        "sha256": "2ce01a94c4f2143243e66ba97a5a2839abb4d325db0b1680316412afcfbdcfd8",
+        "sha256": "ca8ed0fd34fd45533efb38394d05271521b04dad51b8731ce9800749a4632a54",
         "width": 2048,
         "height": 2048
        },
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_Masks.ddt",
-        "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+        "sha256": "a9ac5424b077a9a715f7764cbe41c0ecf086edd77dcc903271fccd1ad1110924",
         "width": 2048,
         "height": 2048
        }
@@ -3324,9 +3324,9 @@
    "ao_shared_uv_accepted_pages": [
     {
      "file": "korean_castle_mata_Masks.ddt",
-     "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+     "sha256": "a9ac5424b077a9a715f7764cbe41c0ecf086edd77dcc903271fccd1ad1110924",
      "max_m2": 0.8,
-     "owner_quote": "Castkle - no visible bugs",
+     "owner_quote": "The castle eave looks right now. Finish the game files and install the castle for my game test",
      "date": "2026-10-12",
      "source_acceptance": "Existing korean_castle profile ao_shared_uv_owner; owner explicitly requested the unchanged shared Colonial basement on Industrial. Industrial uses exactly the same pinned Masks bytes. Its own pages retain the default 0.5 m2 limit. 14 October finish changes Masks.G only; independent decoded R/B/A equality holds at every mip. Existing AO acceptance and max_m2 remain unchanged."
     }
@@ -3406,19 +3406,19 @@
       "files": [
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_BaseColor.ddt",
-        "sha256": "f6a1c5ba1bdc677190840d606b57dfb5e219cba68cc2fdd387384a82342152bc",
+        "sha256": "10899ce261241ff18c12bf1e8b4eb17628a47691c4f090901eb39773440939da",
         "width": 2048,
         "height": 2048
        },
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_Normals.ddt",
-        "sha256": "2ce01a94c4f2143243e66ba97a5a2839abb4d325db0b1680316412afcfbdcfd8",
+        "sha256": "ca8ed0fd34fd45533efb38394d05271521b04dad51b8731ce9800749a4632a54",
         "width": 2048,
         "height": 2048
        },
        {
         "path": "buildings/korean_castle/textures/korean_castle_mata_Masks.ddt",
-        "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+        "sha256": "a9ac5424b077a9a715f7764cbe41c0ecf086edd77dcc903271fccd1ad1110924",
         "width": 2048,
         "height": 2048
        }
@@ -3488,9 +3488,9 @@
    "ao_shared_uv_accepted_pages": [
     {
      "file": "korean_castle_mata_Masks.ddt",
-     "sha256": "a275509ae8b348dcadcd6120fa4c4b6bfc28b2012cc9a75c43f5bc1846e0c3e2",
+     "sha256": "a9ac5424b077a9a715f7764cbe41c0ecf086edd77dcc903271fccd1ad1110924",
      "max_m2": 0.8,
-     "owner_quote": "Castkle - no visible bugs",
+     "owner_quote": "The castle eave looks right now. Finish the game files and install the castle for my game test",
      "date": "2026-10-12",
      "source_acceptance": "Existing korean_castle profile ao_shared_uv_owner; owner explicitly requested the unchanged shared Colonial basement on Industrial. Industrial uses exactly the same pinned Masks bytes. Its own pages retain the default 0.5 m2 limit. 14 October finish changes Masks.G only; independent decoded R/B/A equality holds at every mip. Existing AO acceptance and max_m2 remain unchanged."
     }

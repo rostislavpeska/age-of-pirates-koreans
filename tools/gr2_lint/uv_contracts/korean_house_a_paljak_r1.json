@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "convention": "raw_gr2=(author_u,1-author_v)",
+  "author_checkpoint": "House A paljak roof r1 (Step C r8: closed receiver + gables, props r6.1 messy layout, destruction caps)",
+  "author_blend_sha256": "469c062e8540c5ef18329137c547680a321d642c28204c0d4481c5e19aeb416f",
+  "author_payload_sha256": "b64bcac0aa141434e57f4cf4398ba524d8aad215c41c39504b11514cfc0c23ec",
+  "author_damaged_payload_sha256": "775f1fb2ed29fe015a5a0829bf7d9f5d48eca7913c4683f74f928b03f8c47563",
+  "provenance": "House A House A paljak roof r1 (Step C r8: closed receiver + gables, props r6.1 messy layout, destruction caps): payload House_A_payload_mast.json + House_A_damaged_payload_mast_props_caps.json; derived from author payloads, not from the GR2",
+  "expected": {
+    "intact": {
+      "mata": {
+        "corners": 2586,
+        "position_f32_sha256": "f0ea5a4d8e76c349634a40d436716f448744fc6e3669d07e166c718ad4d74ab5",
+        "raw_uv_f16_sha256": "ae04e374b93b03d0167bc6a155494ce9078c38cfed446f4ac5c4641339fe3fcc"
+      },
+      "matc": {
+        "corners": 12912,
+        "position_f32_sha256": "1af056c6c71ed7e9371357aa4cf8198b70b5663421ef5b8e74cdf1fce236d6f6",
+        "raw_uv_f16_sha256": "fa74204563dce6b1821dc31a375c99dd8b9dac81266cfebc58009b920b37219e"
+      },
+      "matb": {
+        "corners": 17382,
+        "position_f32_sha256": "e92dc4db91d29ecf7edc70a06f025caae18ae21fa9668acae1a77cec2cde18b6",
+        "raw_uv_f16_sha256": "d273efad9bb2abc632052837cb6c16025b5618add450f92fa50af2ed9430704e"
+      },
+      "matd": {
+        "corners": 1422,
+        "position_f32_sha256": "9d22f70cb7a4267d047aea3a674f415bb07c36efa590de0aaa227a4f91eb2f95",
+        "raw_uv_f16_sha256": "0912341bb279e318282141a2c75f7835a1153e2162d3354941e8bb83608a9eca"
+      },
+      "mate": {
+        "corners": 6168,
+        "position_f32_sha256": "8c65028cd35334819110a57e294d27ff3edc7a6ae35b88f90ef0357106e0147d",
+        "raw_uv_f16_sha256": "560fb830cbe7f190417563ccfc127dc8a4a12b64575f7792d948e7c34a88c908"
+      }
+    },
+    "damaged": {
+      "mata": {
+        "corners": 3465,
+        "position_f32_sha256": "52bb5eebfab9f550279fe8dd1eb43eab3fa995349bb494a8f58e6fa99316d137",
+        "raw_uv_f16_sha256": "59f7fceefb248e0bc16c1162c5a4f67e996ac9fdc9d332b7a4773d9b02aa6d56"
+      },
+      "matc": {
+        "corners": 15450,
+        "position_f32_sha256": "dae81d041c2c6d82b8b6a54d48fbf835c9a33068faba759403272f47d81f107f",
+        "raw_uv_f16_sha256": "1e17ebf7d1a33a2dba6fb4039bbe131f09873b0d6e74024687db4013aa6fe086"
+      },
+      "matz": {
+        "corners": 4662,
+        "position_f32_sha256": "257a0ab04358fafe130edbb2f9093ce7e9fff2e0018e020c72fbccb566e6cfe5",
+        "raw_uv_f16_sha256": "cb3270eb2af4cec2eeb577190b93c5ec82c1d4f05cf64aef61a86466b3e359b9"
+      },
+      "matb": {
+        "corners": 19227,
+        "position_f32_sha256": "0bcdda3cc8cb77b7dffe63c2f394cdd191b6521dd8530904e8968a4807d6dd1a",
+        "raw_uv_f16_sha256": "e1ab157d93420dbb598f2e61c953654718b80433fa7e9477b3b1af8da9775b12"
+      },
+      "matd": {
+        "corners": 1422,
+        "position_f32_sha256": "d7867cee05da133689dc69914fc44b2cc5579b686465269816b65a7dbec5233c",
+        "raw_uv_f16_sha256": "edc00c9731b7cb789c8bafe2dde0545c20eff4aa739835213f20d3da14f76851"
+      },
+      "mate": {
+        "corners": 6168,
+        "position_f32_sha256": "8c65028cd35334819110a57e294d27ff3edc7a6ae35b88f90ef0357106e0147d",
+        "raw_uv_f16_sha256": "560fb830cbe7f190417563ccfc127dc8a4a12b64575f7792d948e7c34a88c908"
+      }
+    }
+  }
+}
