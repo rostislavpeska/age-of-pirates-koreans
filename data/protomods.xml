@@ -1450,7 +1450,7 @@
      each, the shipped GR2s through art/zbench_korean_house (no age logic: the editor shows the Korean model) -
      the zpHouseKorean values, to test construction, garrison flag and destruction. zzTESTKoreanCastle (22011, 2026-10-10): the Korean
      castle through its own BuildingCompletion-only animfile (buildings\korean_castle\korean_castle.xml), ypCastle values. zzTESTKoreanDock (22015, 2026-10-11): the Korean
-     Dock through its own animfile (buildings\korean_dock\korean_dock.xml), YPDockAsian values, placed on water like a dock. zzTESTKoreanConsulate (22016, 2026-10-11): the Korean Consulate through its own animfile (buildings\korean_consulate\korean_consulate.xml), vanilla ypConsulate values. zzTESTKoreanMonastery (22017, 2026-10-11): the Korean Monastery through its own animfile (buildings\korean_monastery\korean_monastery.xml), vanilla ypMonastery values. zzTESTKoreanRicePaddy (22018, 2026-10-11): the Korean Rice Paddy shelter through its own animfile (buildings\korean_rice_paddy\korean_rice_paddy.xml) on the vanilla field attachment, vanilla ypRicePaddy values (gatherable). zzTESTKoreanMarket (22019, 2026-10-11): the Korean Market through its own animfile (buildings\korean_market\korean_market.xml), vanilla ypTradeMarketAsian values (no techs or trade commands). Moved from AoP (21207, 30160, 30162, 30164); vanilla string ids. -->
+     Dock through its own animfile (buildings\korean_dock\korean_dock.xml), YPDockAsian values, placed on water like a dock. zzTESTKoreanConsulate (22016, 2026-10-11): the Korean Consulate through its own animfile (buildings\korean_consulate\korean_consulate.xml), vanilla ypConsulate values. zzTESTKoreanMonastery (22017, 2026-10-11): the Korean Monastery through its own animfile (buildings\korean_monastery\korean_monastery.xml), vanilla ypMonastery values. zzTESTKoreanRicePaddy (22018, 2026-10-11): the Korean Rice Paddy shelter through its own animfile (buildings\korean_rice_paddy\korean_rice_paddy.xml) on the vanilla field attachment, vanilla ypRicePaddy values (gatherable). zzTESTKoreanMarket (22019, 2026-10-11): the Korean Market through its own animfile (buildings\korean_market\korean_market.xml), vanilla ypTradeMarketAsian values (no techs or trade commands) plus BuildingRubble5x5 rubble, which the vanilla market lacks (the ypSPCAztecMarket size, 2026-10-18). Moved from AoP (21207, 30160, 30162, 30164); vanilla string ids. -->
 <unit id="22003" name="zzTESTKoreanTownCenter">
     <dbid>22003</dbid>
     <displaynameid>600038</displaynameid>
@@ -2448,6 +2448,8 @@
     <maxvelocity>0.0000</maxvelocity>
     <movementtype>land</movementtype>
     <animfile>buildings\korean_market\korean_market.xml</animfile>
+    <deadreplacement>BuildingRubble5x5</deadreplacement>
+    <deadreplacementlifespan>15</deadreplacementlifespan>
     <impacttype>Wood</impacttype>
     <physicsinfo>house</physicsinfo>
     <placementfile>buildinglarge.xml</placementfile>
