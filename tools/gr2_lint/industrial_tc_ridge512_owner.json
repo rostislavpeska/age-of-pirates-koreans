@@ -1,0 +1,17 @@
+{
+ "authority": "owner",
+ "kind": "recorded_owner_chat",
+ "purpose": "texture_budget_ceiling",
+ "models": [
+  "korean_tc_industrial_preview"
+ ],
+ "source_citation": "Codex chat 01a15101-8dcc-7fc0-b449-cc3721f5ee65; request_user_input_async call_5e59f60fa8ca4b9e923b232d086ff68d answer",
+ "question": "May I use one additional 512×512 ridge texture page for this model? The comparison is ready above; I need this decision because it changes your previously fixed page budget. I’ll continue the independent checks meanwhile.",
+ "owner_quote": "Use the extra 512² page",
+ "ceiling": [
+  2048,
+  1024,
+  512
+ ],
+ "basis": "Existing Industrial TC MatA2048 and MatB1024 budget retained; owner authorized one additional ridge512 page. Shared sign, props and guardians accounted separately. No density waiver."
+}

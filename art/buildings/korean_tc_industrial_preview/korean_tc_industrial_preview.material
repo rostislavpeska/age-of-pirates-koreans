@@ -1,0 +1,62 @@
+<material>
+  <submaterial name="mate">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_tc\textures\korean_tc_mata_BaseColor" />
+      <texture name="Normals" override="buildings\korean_tc\textures\korean_tc_mata_Normals" />
+      <texture name="Masks" override="buildings\korean_tc\textures\korean_tc_mata_Masks" />
+      <texture name="Details" override="buildings\korean_tc\textures\korean_tc_mata_Details" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matf">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\korean_shared_props_r6_BaseColor" />
+      <texture name="Masks" override="buildings\korean_shared\textures\korean_shared_props_r6_Masks" />
+      <texture name="Normals" override="buildings\korean_shared\textures\korean_shared_props_r6_Normals" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matg">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m02_BaseColor" />
+      <texture name="Normals" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m02_Normals" />
+      <texture name="Masks" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m02_Masks" />
+      <texture name="Details" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m02_Details" />
+    </parameters>
+  </submaterial>
+  <submaterial name="math">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m03_BaseColor" />
+      <texture name="Normals" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m03_Normals" />
+      <texture name="Masks" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m03_Masks" />
+      <texture name="Details" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m03_Details" />
+    </parameters>
+  </submaterial>
+  <submaterial name="mati">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m05_BaseColor" />
+      <texture name="Normals" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m05_Normals" />
+      <texture name="Masks" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m05_Masks" />
+      <texture name="Details" override="buildings\korean_tc_industrial_preview\textures\korean_tc_industrial_preview_m05_Details" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matj">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\jade_guardians_r43_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matk">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\jade_guardians_r43_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
+    </parameters>
+  </submaterial>
+</material>

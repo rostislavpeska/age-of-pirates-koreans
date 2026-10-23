@@ -3180,7 +3180,7 @@
     "Castle",
     "Industrial castle"
    ],
-   "_doc": "Industrial castle canonical r14, full states: exact intact, new connected p66 frame, donor-bound fracture. 18 Oct 2026 owner: eave-front strips lifted 20 deg outward (\"Love the rift lift\") and the green roof installed (\"Green, install to the game\"): contract r2 = r1 with the lifted strip positions; UVs unchanged. No other geometry change.",
+   "_doc": "Industrial castle canonical r14, full states: exact intact, new connected p66 frame, donor-bound fracture. 18 Oct 2026 owner: eave-front strips lifted 20 deg outward (\"Love the rift lift\") and the green roof installed (\"Green, install to the game\"): contract r2 = r1 with the lifted strip positions; UVs unchanged. No other geometry change. 23 Oct 2026: R43 alpha-card jade guardians (4 dragons, 8 lions) replace the r14 guardians in intact and damaged; damaged GR2/HKT regenerated for the guardian bodies only, body buffers byte-exact (TC_Export_R46/castle, Castle_Install_R53).",
    "files": {
     "intact": "korean_castle_industrial.gr2",
     "intact_material": "korean_castle_industrial.material",
@@ -3288,6 +3288,37 @@
        "sha256": "9b79f1bccc7688ebcda5d171200dc9fc00222bb3dc861f8bb7f55481e97d33c7",
        "owner_quote": "and the jade figures - maybe define some standardized ones on 256 or 512 map so we can use them everywhere - rather 512 amnd possibly more types. I see at leat two here"
       }
+     },
+     {
+      "source_names": [
+       "Jade guardians r43 shared with Industrial TC"
+      ],
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/jade_guardians_r43_BaseColor.ddt",
+        "sha256": "89725ada2d4bd30bb406b7672971f910c30bcb921ea01ad51eccc38bc1c2e11b",
+        "width": 512,
+        "height": 512
+       },
+       {
+        "path": "buildings/korean_shared/textures/jade_guardians_r43_Normals.ddt",
+        "sha256": "76555988afd6916b271709285ee5dfe883207ea5adb221693c481fda1a85060c",
+        "width": 512,
+        "height": 512
+       },
+       {
+        "path": "buildings/korean_shared/textures/jade_guardians_r43_Masks.ddt",
+        "sha256": "ff1cb145842fa2301ec085c431c303084bad0333c1242bcfd56971a61ad52fac",
+        "width": 512,
+        "height": 512
+       }
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_castle_jade_guardians_owner.json",
+       "sha256": "226074f39a0337e48020b00ee408ece8491ab2f70c7250c388afea30cdc68505",
+       "owner_quote": "and use Industrial castle with same textures as we have in Blender"
+      }
      }
     ]
    },
@@ -3312,8 +3343,8 @@
     "bone_banner_r"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r2.json",
-    "sha256": "cfad046bda14e08f5a536ea342d9c12dff6171780de12d70d30463828c292f76"
+    "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r4.json",
+    "sha256": "1e3d92b4df748aa8fdee611e90d19737b79a59c5cccb81292a90941ff3e3b928"
    },
    "handedness": {
     "expect_sign": 1,
@@ -3495,6 +3526,199 @@
      "source_acceptance": "Existing korean_castle profile ao_shared_uv_owner; owner explicitly requested the unchanged shared Colonial basement on Industrial. Industrial uses exactly the same pinned Masks bytes. Its own pages retain the default 0.5 m2 limit. 14 October finish changes Masks.G only; independent decoded R/B/A equality holds at every mip. Existing AO acceptance and max_m2 remain unchanged."
     }
    ]
+  },
+  "korean_tc_industrial_preview": {
+   "model": "korean_tc_industrial_preview",
+   "names": [
+    "Industrial Town Center",
+    "Industrial TC"
+   ],
+   "files": {
+    "intact": "korean_tc_industrial_preview.gr2",
+    "intact_material": "korean_tc_industrial_preview.material",
+    "animfile": "korean_tc_industrial_preview.xml",
+    "damaged": "korean_tc_industrial_preview_damaged.gr2",
+    "hkt": "korean_tc_industrial_preview_damaged.hkt",
+    "damaged_material": "korean_tc_industrial_preview_damaged.material"
+   },
+   "texture_budget": {
+    "models": [
+     "korean_tc_industrial_preview"
+    ],
+    "ceiling": [
+     2048,
+     1024,
+     512
+    ],
+    "ceiling_authorization": {
+     "kind": "recorded_owner_chat",
+     "path": "tools/gr2_lint/industrial_tc_ridge512_owner.json",
+     "sha256": "ba6d66cd9c4d8873c55714404e851b0d2a5d5f34dfce2df79c4f2a82d7a168d6",
+     "owner_quote": "Use the extra 512² page"
+    },
+    "shared_mod_dependencies": [
+     {
+      "source_names": [
+       "Colonial TC sign"
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_tc_shared_0_owner.json",
+       "sha256": "9b983c5715dd79826105409f97ec1318800d339c78e71b09c24622e133e71f27",
+       "owner_quote": "so dragons and masonry, then the red beams fix and possibly tripplecheck iif we can add motre effects. Report  properly. start an overnight session. By the morning I want a final model + a castkle with the new dragons and lions\n\nBoth ready to export into game and safely saved as latest Blender versions of both buildings"
+      },
+      "files": [
+       {
+        "path": "buildings/korean_tc/textures/korean_tc_mata_BaseColor.ddt",
+        "sha256": "853ae63d2a4b3b5b2d3b48e0c09ccc082a3725bd01d9c48b5078eaf58375ec97",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_tc/textures/korean_tc_mata_Normals.ddt",
+        "sha256": "799f015dd7d1bcf93200413eb1bd38310d2e0ee2f7844deff9d9a4ff7c71c993",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_tc/textures/korean_tc_mata_Masks.ddt",
+        "sha256": "bfc37f731c65d273feb0baf384aff1fa6f14822b3c6962d86575ca7fed6c3884",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_tc/textures/korean_tc_mata_Details.ddt",
+        "sha256": "fe7959082d185615ed15c011f0b6db00734bb77e836d9aafbee716a65e282c93",
+        "width": 2048,
+        "height": 2048
+       }
+      ]
+     },
+     {
+      "source_names": [
+       "Jade guardians shared with Industrial Castle"
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_tc_shared_1_owner.json",
+       "sha256": "c5ed5c98312081ad3f06b45e5974bd6778c0e8f6ae8fc3777dd37a5efa619b23",
+       "owner_quote": "and use Industrial castle with same textures as we have in Blender"
+      },
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/jade_guardians_r43_BaseColor.ddt",
+        "sha256": "89725ada2d4bd30bb406b7672971f910c30bcb921ea01ad51eccc38bc1c2e11b",
+        "width": 512,
+        "height": 512
+       },
+       {
+        "path": "buildings/korean_shared/textures/jade_guardians_r43_Normals.ddt",
+        "sha256": "76555988afd6916b271709285ee5dfe883207ea5adb221693c481fda1a85060c",
+        "width": 512,
+        "height": 512
+       },
+       {
+        "path": "buildings/korean_shared/textures/jade_guardians_r43_Masks.ddt",
+        "sha256": "ff1cb145842fa2301ec085c431c303084bad0333c1242bcfd56971a61ad52fac",
+        "width": 512,
+        "height": 512
+       }
+      ]
+     },
+     {
+      "source_names": [
+       "Korean shared props r6"
+      ],
+      "authorization": {
+       "kind": "recorded_owner_chat",
+       "path": "tools/gr2_lint/industrial_tc_shared_2_owner.json",
+       "sha256": "ce61e9206ab73c2a23428adc7c2a0a07c51a686f082be82d5d470ca4ddcd590c",
+       "owner_quote": "The town center sign needed to come higher - check my Figma and I still mis more props on the intact model"
+      },
+      "files": [
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_BaseColor.ddt",
+        "sha256": "e8181969cead06946b75b7d50b7e517aa0ad9cb4cb437775942c7901cf7c3ff1",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Masks.ddt",
+        "sha256": "72caa1398004710c3e2e6154ad67dc19d630fe7156ab87e4de892e9ee3b785f7",
+        "width": 2048,
+        "height": 2048
+       },
+       {
+        "path": "buildings/korean_shared/textures/korean_shared_props_r6_Normals.ddt",
+        "sha256": "f925b5a82a9af024bb765ff22324673210789b3ae1608998116e5cf1acd055e7",
+        "width": 2048,
+        "height": 2048
+       }
+      ]
+     }
+    ]
+   },
+   "limits": {
+    "max_vertices": 65535,
+    "max_index": 65535,
+    "_doc": "damaged meshes are drawn with 16-bit indices (2026-09-29: one 102,527-vertex mesh wrapped into building-high sheets)"
+   },
+   "attach": {
+    "bones": [
+     "bone_flag_civ",
+     "BONE_GARRISONFLAG",
+     "BONE_HITPOINTBAR"
+    ],
+    "flag_axis_tol_m": 0.02,
+    "flag_below_tip_m": 1.3788,
+    "garrison_below_flag_m": 1.106,
+    "height_tol_m": 0.02,
+    "hitpointbar": [
+     -2.250999927520752,
+     14.817,
+     -2.2880020141601562
+    ],
+    "hitpointbar_tol_m": 0.01,
+    "_doc": "vanilla China TC convention (the donor): civ flag on the mast axis (vanilla 1.2 cm off), 1.3788 m below the tip, garrison flag 1.106 m below it; hitpoint bar at the fixed vanilla point (China and Japan identical). The pilot flag hung 15.5 cm beside its pole. 23 Oct 2026, owner: \"we should probably also add the HP bar bone, because now it displays pretty randomly\": the donor point floated 6 m above the main wing; the bar now sits on the mast axis 0.6 m above the mast tip."
+   },
+   "intact_bones": [
+    "BONE_MAIN",
+    "bone_flag_civ",
+    "BONE_GARRISONFLAG",
+    "BONE_HITPOINTBAR"
+   ],
+   "_doc": "R51 exact intact-only diagnostic, not construction/destruction or production age promotion. Owner-approved extra ridge512; no density waiver. Engine-driven flag sockets; dynamic clearance to be observed. R58 (23 Oct 2026, owner \"build also the damaged model\"): donor-bound destruction on the China TC age 4 graph (castle fracture port).",
+   "damaged": {
+    "bbox_tol_m": 0.01,
+    "tip_tol_m": 0.005,
+    "mast_axis_tol_m": 0.15,
+    "attach_tol_m": 0.001,
+    "_frame_doc": "the damaged model sits in the intact's frame: vanilla China bbox and tip identical, attach bones identical, the damaged pole measures 0.146 m (Japan 0.058) from the intact pole - a turn or mirror moves it by > 3 m.",
+    "base_bone": "base",
+    "base_max_height_m": 0.6,
+    "base_allowed_boxes": {
+     "_doc": "TC R58: nothing above the 0.43 m platform sits on the fixed base (platform, ground floors, steps, gate column feet only)."
+    },
+    "_base_doc": "Industrial TC R58: stone platform top 0.34 m, ground floors 0.43 m; props fall as object bodies.",
+    "hkt": {
+     "axis_map": [
+      2,
+      1,
+      0
+     ],
+     "scale": 1.024,
+     "scale_tol": 0.002,
+     "median_err_max_m": 0.02,
+     "containment_tol_m": 0.05,
+     "containment_max_share": 0.005,
+     "containment_max_out_m": 0.1,
+     "_doc": "China TC age 4 donor (this file): Havok body translation = 1.024 x (z, y, x) of the GR2 bone world position, median 0.1 mm (TC_Destruction_R58/DONOR_FRAME.json); age 2 measured 1.0222."
+    }
+   },
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   }
   }
  }
 }

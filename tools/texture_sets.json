@@ -796,6 +796,110 @@
      "sha256": "2986ad3585f141a620276cac5d9aeb292dabc08595a31758690b23e4d3494721"
     }
    }
+  },
+  {
+   "id": "jade_guardians_r43",
+   "status": "current",
+   "record": "Industrial TC R52 intact preview; native R51 exact and prior R46 source encodings. Game observation pending.",
+   "page": [
+    512,
+    512
+   ],
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_shared/textures/jade_guardians_r43_BaseColor",
+     "sha256": "89725ada2d4bd30bb406b7672971f910c30bcb921ea01ad51eccc38bc1c2e11b"
+    },
+    "Normals": {
+     "path": "buildings/korean_shared/textures/jade_guardians_r43_Normals",
+     "sha256": "76555988afd6916b271709285ee5dfe883207ea5adb221693c481fda1a85060c"
+    },
+    "Masks": {
+     "path": "buildings/korean_shared/textures/jade_guardians_r43_Masks",
+     "sha256": "ff1cb145842fa2301ec085c431c303084bad0333c1242bcfd56971a61ad52fac"
+    }
+   }
+  },
+  {
+   "id": "industrial_tc_r51_m02",
+   "status": "current",
+   "record": "Industrial TC R52 intact preview; native R51 exact and prior R46 source encodings. Game observation pending. R55 (23 Oct 2026, INC-608 owner game test): west lower-eave upper slope re-phased 8 px to the lip, ledge strip refilled, roof normals x2.29 to the Castle median tilt. R56: the same normal factor on every roof-object texel (R55 slope selection had skipped curved parts).",
+   "page": [
+    2048,
+    2048
+   ],
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_BaseColor",
+     "sha256": "5ecc7c0f7afd14491b3dacce0e3447f5513b759354c342af98a7196e6ab3e923"
+    },
+    "Normals": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_Normals",
+     "sha256": "dab7a0534df5cdc5ac6711f249b0fcddd46a35980824748027254da90b16a8b0"
+    },
+    "Masks": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_Masks",
+     "sha256": "d759d6cbd40189e8821385251ce6fc90b3cf10462c8e75643d5e3e8ef3fc3ac0"
+    },
+    "Details": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_Details",
+     "sha256": "8e929198dca81a879699618c457d64d2e0644799897c1a655b24cbd76f7a7282"
+    }
+   }
+  },
+  {
+   "id": "industrial_tc_r51_m03",
+   "status": "current",
+   "record": "Industrial TC R52 intact preview; native R51 exact and prior R46 source encodings. Game observation pending.",
+   "page": [
+    1024,
+    1024
+   ],
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m03_BaseColor",
+     "sha256": "aa21b48f2d5b61a8e2562b57049c71ab665a71e41a407b7b8acf67734743d5d9"
+    },
+    "Normals": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m03_Normals",
+     "sha256": "610a36a5ba72f471e9f6704718971c622e14549409340bbae1a34a2cc11cce5e"
+    },
+    "Masks": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m03_Masks",
+     "sha256": "1d85491d709df92af214e75077df489a70f2875149593166e79bf4d8c446a4b4"
+    },
+    "Details": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m03_Details",
+     "sha256": "2a5d1f6b80c1a5c781563dfdcaea2e38aa18658600b0fc1bae4d504d1755a9e9"
+    }
+   }
+  },
+  {
+   "id": "industrial_tc_r51_m05",
+   "status": "current",
+   "record": "Industrial TC R52 intact preview; native R51 exact and prior R46 source encodings. Game observation pending.",
+   "page": [
+    512,
+    512
+   ],
+   "channels": {
+    "BaseColor": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m05_BaseColor",
+     "sha256": "560627b054360018eb562224e1cfafda768446b94a66e92ad24f642f93f5f7f5"
+    },
+    "Normals": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m05_Normals",
+     "sha256": "e2562f0da1920672ade0e8cb0e9ceedee8bbcd3ba88ff6f5ad29ee8b4bc71b7d"
+    },
+    "Masks": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m05_Masks",
+     "sha256": "adfa9728bb4f9e190b3392dd7b3f3aca842111abc02f172c9d8968feeaf958c2"
+    },
+    "Details": {
+     "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m05_Details",
+     "sha256": "7a78a22c0e5a10ee325f1087579c250ee49a8abfa05ec465e6393d4c1861657a"
+    }
+   }
   }
  ]
 }

@@ -34,11 +34,43 @@
     </parameters>
   </submaterial>
   <submaterial name="mate">
-    <materialdef name="default_doublesided_cutout" />
+    <materialdef name="default_cutout" />
     <parameters>
-      <texture name="BaseColor" override="buildings\korean_shared\textures\korean_shared_guardians_r14_BaseColor" />
-      <texture name="Normals" override="buildings\korean_shared\textures\korean_shared_guardians_r14_Normals" />
-      <texture name="Masks" override="buildings\korean_shared\textures\korean_shared_guardians_r14_Masks" />
+      <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\jade_guardians_r43_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matf">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\jade_guardians_r43_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="matg">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\jade_guardians_r43_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="math">
+    <materialdef name="default_cutout" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\jade_guardians_r43_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
+    </parameters>
+  </submaterial>
+  <submaterial name="mati">
+    <materialdef name="default" />
+    <parameters>
+      <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
+      <texture name="Normals" override="buildings\korean_shared\textures\jade_guardians_r43_Normals" />
+      <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
     </parameters>
   </submaterial>
 </material>
