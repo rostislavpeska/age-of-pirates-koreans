@@ -823,7 +823,7 @@
   {
    "id": "industrial_tc_r51_m02",
    "status": "current",
-   "record": "Industrial TC R52 intact preview; native R51 exact and prior R46 source encodings. Game observation pending.",
+   "record": "Industrial TC R52 intact preview; native R51 exact and prior R46 source encodings. Game observation pending. R55 (23 Oct 2026, INC-608 owner game test): west lower-eave upper slope re-phased 8 px to the lip, ledge strip refilled, roof normals x2.29 to the Castle median tilt.",
    "page": [
     2048,
     2048
@@ -831,19 +831,19 @@
    "channels": {
     "BaseColor": {
      "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_BaseColor",
-     "sha256": "6ae749db37ab1e3e50f77999d50a4e7c5c206359ba71969bb83e8cf6ae156594"
+     "sha256": "5ecc7c0f7afd14491b3dacce0e3447f5513b759354c342af98a7196e6ab3e923"
     },
     "Normals": {
      "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_Normals",
-     "sha256": "eac5c09fbcb4e102d6005e55f88a29cd3730b871f3df861aa1de01899835fd8f"
+     "sha256": "7cefdcbb4dc5e16346f4176d761cd837b9cc89f84858a1fb1c8ceb8540cb8e33"
     },
     "Masks": {
      "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_Masks",
-     "sha256": "6757e0e0fcd7878254f34173bafc8ba172b9151246409cc82fab02f619467d3d"
+     "sha256": "d759d6cbd40189e8821385251ce6fc90b3cf10462c8e75643d5e3e8ef3fc3ac0"
     },
     "Details": {
      "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_Details",
-     "sha256": "5052748ad4ba6659be4bc143ca11b87a60f7358ba6a774f2c7c9219c2b7ee1d6"
+     "sha256": "8e929198dca81a879699618c457d64d2e0644799897c1a655b24cbd76f7a7282"
     }
    }
   },
