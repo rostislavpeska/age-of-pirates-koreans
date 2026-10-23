@@ -823,7 +823,7 @@
   {
    "id": "industrial_tc_r51_m02",
    "status": "current",
-   "record": "Industrial TC R52 intact preview; native R51 exact and prior R46 source encodings. Game observation pending. R55 (23 Oct 2026, INC-608 owner game test): west lower-eave upper slope re-phased 8 px to the lip, ledge strip refilled, roof normals x2.29 to the Castle median tilt.",
+   "record": "Industrial TC R52 intact preview; native R51 exact and prior R46 source encodings. Game observation pending. R55 (23 Oct 2026, INC-608 owner game test): west lower-eave upper slope re-phased 8 px to the lip, ledge strip refilled, roof normals x2.29 to the Castle median tilt. R56: the same normal factor on every roof-object texel (R55 slope selection had skipped curved parts).",
    "page": [
     2048,
     2048
@@ -835,7 +835,7 @@
     },
     "Normals": {
      "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_Normals",
-     "sha256": "7cefdcbb4dc5e16346f4176d761cd837b9cc89f84858a1fb1c8ceb8540cb8e33"
+     "sha256": "dab7a0534df5cdc5ac6711f249b0fcddd46a35980824748027254da90b16a8b0"
     },
     "Masks": {
      "path": "buildings/korean_tc_industrial_preview/textures/korean_tc_industrial_preview_m02_Masks",
