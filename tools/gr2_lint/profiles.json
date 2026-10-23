@@ -3671,12 +3671,12 @@
     "garrison_below_flag_m": 1.106,
     "height_tol_m": 0.02,
     "hitpointbar": [
-     2.3284,
-     11.6993,
-     -0.3933
+     -2.250999927520752,
+     14.817,
+     -2.2880020141601562
     ],
     "hitpointbar_tol_m": 0.01,
-    "_doc": "vanilla China TC convention (the donor): civ flag on the mast axis (vanilla 1.2 cm off), 1.3788 m below the tip, garrison flag 1.106 m below it; hitpoint bar at the fixed vanilla point (China and Japan identical). The pilot flag hung 15.5 cm beside its pole."
+    "_doc": "vanilla China TC convention (the donor): civ flag on the mast axis (vanilla 1.2 cm off), 1.3788 m below the tip, garrison flag 1.106 m below it; hitpoint bar at the fixed vanilla point (China and Japan identical). The pilot flag hung 15.5 cm beside its pole. 23 Oct 2026, owner: \"we should probably also add the HP bar bone, because now it displays pretty randomly\": the donor point floated 6 m above the main wing; the bar now sits on the mast axis 0.6 m above the mast tip."
    },
    "intact_bones": [
     "BONE_MAIN",
