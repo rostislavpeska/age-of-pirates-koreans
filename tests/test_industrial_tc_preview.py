@@ -1,4 +1,5 @@
-"""The diagnostic must show the new intact TC without claiming old damage/con states."""
+"""The diagnostic shows the new TC with its own destruction (R58, China TC age 4 donor graph); it has no construction
+stages and never uses the old Korean TC's damaged model."""
 import copy
 import xml.etree.ElementTree as E
 from pathlib import Path
@@ -22,9 +23,21 @@ def test_preview_uses_current_model_and_keeps_tc_garrison_gameplay():
         (c.tag, c.attrib, (c.text or '').strip()) for c in candidate]
     anim = E.parse(K / 'art/buildings/korean_tc_industrial_preview/korean_tc_industrial_preview.xml')
     assert {d.text for d in anim.findall('definebone')} == {'bone_flag_civ', 'bone_garrisonflag'}
-    assert not anim.findall('.//simskeleton') and not anim.findall('.//logic')
-    models = [r.findtext('file') for r in anim.findall('.//assetreference') if r.get('type') == 'GrannyModel']
-    assert models == ['buildings\\korean_tc_industrial_preview\\korean_tc_industrial_preview']
-    assert {'Idle', 'RangedAttack', 'RangedAttackShip', 'Death'} == {(a.text or '').strip() for a in anim.findall('anim')}
-    assert len(anim.findall('anim')) == 4
-    assert all(a.findtext('component') == 'LIVE' for a in anim.findall('anim'))
+    intact = 'buildings\\korean_tc_industrial_preview\\korean_tc_industrial_preview'
+    damaged = intact + '_damaged'
+    models = {r.findtext('file') for r in anim.findall('.//assetreference') if r.get('type') == 'GrannyModel'}
+    assert models == {intact, damaged}
+    comps = {(c.text or '').strip(): c for c in anim.findall('component')}
+    logic = comps['LIVE'].find('logic')
+    assert logic.get('type') == 'Destruction'
+    assert logic.findtext('p1/assetreference/file') == damaged and logic.findtext('p99/assetreference/file') == intact
+    assert comps['DEAD'].findtext('assetreference/file') == damaged
+    anims = {(a.text or '').strip(): a for a in anim.findall('anim')}
+    assert set(anims) == {'Idle', 'RangedAttack', 'RangedAttackShip', 'Death'} and len(anim.findall('anim')) == 4
+    for name in ('Idle', 'RangedAttack', 'RangedAttackShip'):
+        assert anims[name].findtext('component') == 'LIVE' and anims[name].findtext('simskeleton/model') == damaged
+    assert anims['Death'].findtext('component') == 'DEAD'
+    folder = K / 'art/buildings/korean_tc_industrial_preview'
+    for name in ('korean_tc_industrial_preview_damaged.gr2', 'korean_tc_industrial_preview_damaged.hkt',
+                 'korean_tc_industrial_preview_damaged.material'):
+        assert (folder / name).is_file(), name

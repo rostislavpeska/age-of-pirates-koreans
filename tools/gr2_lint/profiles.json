@@ -3536,7 +3536,10 @@
    "files": {
     "intact": "korean_tc_industrial_preview.gr2",
     "intact_material": "korean_tc_industrial_preview.material",
-    "animfile": "korean_tc_industrial_preview.xml"
+    "animfile": "korean_tc_industrial_preview.xml",
+    "damaged": "korean_tc_industrial_preview_damaged.gr2",
+    "hkt": "korean_tc_industrial_preview_damaged.hkt",
+    "damaged_material": "korean_tc_industrial_preview_damaged.material"
    },
    "texture_budget": {
     "models": [
@@ -3684,7 +3687,38 @@
     "BONE_GARRISONFLAG",
     "BONE_HITPOINTBAR"
    ],
-   "_doc": "R51 exact intact-only diagnostic, not construction/destruction or production age promotion. Owner-approved extra ridge512; no density waiver. Engine-driven flag sockets; dynamic clearance to be observed."
+   "_doc": "R51 exact intact-only diagnostic, not construction/destruction or production age promotion. Owner-approved extra ridge512; no density waiver. Engine-driven flag sockets; dynamic clearance to be observed. R58 (23 Oct 2026, owner \"build also the damaged model\"): donor-bound destruction on the China TC age 4 graph (castle fracture port).",
+   "damaged": {
+    "bbox_tol_m": 0.01,
+    "tip_tol_m": 0.005,
+    "mast_axis_tol_m": 0.15,
+    "attach_tol_m": 0.001,
+    "_frame_doc": "the damaged model sits in the intact's frame: vanilla China bbox and tip identical, attach bones identical, the damaged pole measures 0.146 m (Japan 0.058) from the intact pole - a turn or mirror moves it by > 3 m.",
+    "base_bone": "base",
+    "base_max_height_m": 0.6,
+    "base_allowed_boxes": {
+     "_doc": "TC R58: nothing above the 0.43 m platform sits on the fixed base (platform, ground floors, steps, gate column feet only)."
+    },
+    "_base_doc": "Industrial TC R58: stone platform top 0.34 m, ground floors 0.43 m; props fall as object bodies.",
+    "hkt": {
+     "axis_map": [
+      2,
+      1,
+      0
+     ],
+     "scale": 1.024,
+     "scale_tol": 0.002,
+     "median_err_max_m": 0.02,
+     "containment_tol_m": 0.05,
+     "containment_max_share": 0.005,
+     "containment_max_out_m": 0.1,
+     "_doc": "China TC age 4 donor (this file): Havok body translation = 1.024 x (z, y, x) of the GR2 bone world position, median 0.1 mm (TC_Destruction_R58/DONOR_FRAME.json); age 2 measured 1.0222."
+    }
+   },
+   "rest_contract": {
+    "bounds_tolerance_m": 0.002,
+    "ground_supports": []
+   }
   }
  }
 }

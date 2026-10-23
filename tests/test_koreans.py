@@ -902,6 +902,7 @@ def test_materials_keep_their_source_materialdef():
     castle_guardians = [('matf', 'matg'), ('math', 'mati')]
     guardian_pairs = {
         'art/buildings/korean_tc_industrial_preview/korean_tc_industrial_preview.material': [('matj', 'matk')],
+        'art/buildings/korean_tc_industrial_preview/korean_tc_industrial_preview_damaged.material': [('matj', 'matk')],
         'art/buildings/korean_castle_industrial/korean_castle_industrial.material': castle_guardians,
         'art/buildings/korean_castle_industrial/korean_castle_industrial_damaged.material': castle_guardians,
     }
