@@ -3343,8 +3343,8 @@
     "bone_banner_r"
    ],
    "uv_contract": {
-    "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r3.json",
-    "sha256": "5c0c8d586ed1cde7940424befa2f15e34561a53a2263373a9cbb91b9cd5d69ae"
+    "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r4.json",
+    "sha256": "1e3d92b4df748aa8fdee611e90d19737b79a59c5cccb81292a90941ff3e3b928"
    },
    "handedness": {
     "expect_sign": 1,

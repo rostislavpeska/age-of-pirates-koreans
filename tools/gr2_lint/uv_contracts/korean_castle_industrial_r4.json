@@ -1,0 +1,108 @@
+{
+ "schema": 1,
+ "convention": "raw_gr2=(author_u,1-author_v)",
+ "author_checkpoint": "r2 body signatures unchanged; r14 guardians (mate) removed; R43 alpha-card jade guardians (4 dragons, 8 lions) from the frozen author payload of castle_r43-alpha-cards-20261023.blend, damaged groups by DAMAGE_PLAN body order (owner 23 Oct 2026: \"Also castle will need update and havek regeneration since geometry is changed\"); r4: guardian runtime material names r40_guardian_m00..m03 -> matf..mati (INC-607), signatures unchanged",
+ "author_blend_sha256": "e5c41a48199a5447ab67854cf7d40eb2a1e83680a2c2079d513bf16728ad8fd5",
+ "author_payload_sha256": "7378365cd9f49262e8ee61a1f3f0495ead2156f9275a04da0516d71cc688eab0",
+ "damage_plan_sha256": "bc3281b857e67905491c8357e31313a63dd6d21807673aae90e15aa7129d8220",
+ "parent_contract": {
+  "path": "tools/gr2_lint/uv_contracts/korean_castle_industrial_r3.json",
+  "sha256": "5c0c8d586ed1cde7940424befa2f15e34561a53a2263373a9cbb91b9cd5d69ae"
+ },
+ "expected": {
+  "intact": {
+   "mata": {
+    "corners": 48144,
+    "position_f32_sha256": "f1b47bde05a006ddc5f6bd9741b5b47163e33243ba331d07ec0c7982c67d9309",
+    "raw_uv_f16_sha256": "a6015da3542cb891fc8ea952d5e0a1ce9a3c408fb83fa5041ed677c75aaad223"
+   },
+   "matc": {
+    "corners": 3888,
+    "position_f32_sha256": "9c300c9e7a4959000d1f58b302b94b4910ccb233513480ae46722e46ae07b411",
+    "raw_uv_f16_sha256": "1861e23db0d8b1e1c10328c18a1f7011507b9409878b699d426a8e25517de256"
+   },
+   "matd": {
+    "corners": 6918,
+    "position_f32_sha256": "4cd6e14a7a98611b23eea8a70a9d283aad36757685523ebe20f77c8ce6643315",
+    "raw_uv_f16_sha256": "8ba18dfc7b269ac9879b1c9e569859f40acc65e68eb09e78c90266b1094df736"
+   },
+   "matb": {
+    "corners": 11028,
+    "position_f32_sha256": "c193372a365e27da30a48d2de7e4a77ebe638c79df8e888b9eb3fc27a3362dc3",
+    "raw_uv_f16_sha256": "cc5a3845d73027a922a1f997e6a86e804cd0e46a4393cc2be9c614803ed99914"
+   },
+   "mate": {
+    "corners": 0,
+    "position_f32_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_uv_f16_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+   },
+   "matf": {
+    "corners": 192,
+    "position_f32_sha256": "b8e76f06691f5287e2bd453ea8b1f39e94ebe235d5a67dd6c436023eef0b01ba",
+    "raw_uv_f16_sha256": "3395a4960072a2dd1454b77a6935b39ed8c99570637b336f2a5d49d3033e0667"
+   },
+   "matg": {
+    "corners": 1464,
+    "position_f32_sha256": "591a9c10e89039d4cb7ce9882492b58b353485833cfa76905973eee37db3869e",
+    "raw_uv_f16_sha256": "0acc3f146dd037b196e5dbb61d2a646711cb882082394d72e4b1c73d389ee670"
+   },
+   "math": {
+    "corners": 384,
+    "position_f32_sha256": "cde7311257dd2542a78dee84b7ee9cb3fe504141880356adb4f480d98aab1132",
+    "raw_uv_f16_sha256": "631a738c286ff3e2dd11269333f5a005abe3d4745de99f9223b962f11ec96de6"
+   },
+   "mati": {
+    "corners": 2448,
+    "position_f32_sha256": "4a3c96cef1141055f03803c7b168e47af619c37f932129636070ffba3f474d45",
+    "raw_uv_f16_sha256": "70c294713f9e554f3b3bd986b2016bf1cb1d7362dee1f26c5799d8ed187e491f"
+   }
+  },
+  "damaged": {
+   "mata": {
+    "corners": 62166,
+    "position_f32_sha256": "3c3df07bebef202a6634b1f721440e5d35ea894dba0bdc2b473bdeb7639c2ece",
+    "raw_uv_f16_sha256": "60bcfce0fc03e67171e4ccfcb50e0e6effca8ecf8366ac6170c516ca6bf19a5c"
+   },
+   "matc": {
+    "corners": 5793,
+    "position_f32_sha256": "a3ceb2f569c9a91122c0c2f789bdf37921d37b059b5748fcbde34df4f8fc8ebf",
+    "raw_uv_f16_sha256": "1734161c9a17f5ea1a778aed739533253ec077387cc676e1915b3c3346dfecdf"
+   },
+   "matz": {
+    "corners": 43899,
+    "position_f32_sha256": "08c0674aa036a4728b614a257b4b562f5cec97ae5ca9a718089ae3680608fe07",
+    "raw_uv_f16_sha256": "69bf528fd2a9594e82e4f206e7e711c2e11c371ba6fcf3e284e06c1380e288f6"
+   },
+   "matd": {
+    "corners": 13632,
+    "position_f32_sha256": "40561c7491270230bf13785a19cb441d7e614b114425a238249788642eec089f",
+    "raw_uv_f16_sha256": "63cf5e9a4929f945f3b5118f37f4eca082b4036b33fbe39b6c9fa79c6e2a8696"
+   },
+   "matb": {
+    "corners": 13200,
+    "position_f32_sha256": "3dd0b06883061bfa84b0b95c1f3265613146af52d6c378164a316ccf5346375f",
+    "raw_uv_f16_sha256": "af3f6f75c0410dc16c66d52b101e23a1ca09aceecaf257352a8095b54260e650"
+   },
+   "matf": {
+    "corners": 192,
+    "position_f32_sha256": "f426610a59b1e5df01ba3cd254acafab8c1351f3a3ac4c3e03da3a8e2eb7a29d",
+    "raw_uv_f16_sha256": "3d99b4cb7af19e5ef329b9dc8743e23ac94fab79ea092aec557e32c506615df0"
+   },
+   "matg": {
+    "corners": 1464,
+    "position_f32_sha256": "489df6b9ab01c405f4a2d8815850cbdf52d0f7dac057dfb22f1581dcadef504e",
+    "raw_uv_f16_sha256": "0acc3f146dd037b196e5dbb61d2a646711cb882082394d72e4b1c73d389ee670"
+   },
+   "math": {
+    "corners": 384,
+    "position_f32_sha256": "b022a897a20d303665ce4844c09260d5df8955002ec00b4f3b0f471c7a402166",
+    "raw_uv_f16_sha256": "37195e11dbda18a004e10d248dab7f76393bf89743e338c4ff324acbccbbbd0b"
+   },
+   "mati": {
+    "corners": 2448,
+    "position_f32_sha256": "2fcb6e3c68337f75503d8441df72b491404952d36acdafa6416643ed6a5b25b7",
+    "raw_uv_f16_sha256": "70c294713f9e554f3b3bd986b2016bf1cb1d7362dee1f26c5799d8ed187e491f"
+   }
+  }
+ }
+}

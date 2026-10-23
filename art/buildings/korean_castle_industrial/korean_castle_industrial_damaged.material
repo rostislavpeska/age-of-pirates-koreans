@@ -41,7 +41,7 @@
       <texture name="Masks" override="generic_props\destruction\textures\destructionsheet_mata_Masks" />
     </parameters>
   </submaterial>
-  <submaterial name="r40_guardian_m00">
+  <submaterial name="matf">
     <materialdef name="default_cutout" />
     <parameters>
       <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
@@ -49,7 +49,7 @@
       <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
     </parameters>
   </submaterial>
-  <submaterial name="r40_guardian_m01">
+  <submaterial name="matg">
     <materialdef name="default" />
     <parameters>
       <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
@@ -57,7 +57,7 @@
       <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
     </parameters>
   </submaterial>
-  <submaterial name="r40_guardian_m02">
+  <submaterial name="math">
     <materialdef name="default_cutout" />
     <parameters>
       <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />
@@ -65,7 +65,7 @@
       <texture name="Masks" override="buildings\korean_shared\textures\jade_guardians_r43_Masks" />
     </parameters>
   </submaterial>
-  <submaterial name="r40_guardian_m03">
+  <submaterial name="mati">
     <materialdef name="default" />
     <parameters>
       <texture name="BaseColor" override="buildings\korean_shared\textures\jade_guardians_r43_BaseColor" />

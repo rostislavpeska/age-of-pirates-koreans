@@ -899,9 +899,9 @@ def test_materials_keep_their_source_materialdef():
     mats = sorted((K / 'art').rglob('*.material'))
     # Original sculpted jade guardian profiles deliberately ignore their front card's shared alpha.
     # They are authored art, not vanilla retextures; require the exact paired semantics.
-    castle_guardians = [('r40_guardian_m00', 'r40_guardian_m01'), ('r40_guardian_m02', 'r40_guardian_m03')]
+    castle_guardians = [('matf', 'matg'), ('math', 'mati')]
     guardian_pairs = {
-        'art/buildings/korean_tc_industrial_preview/korean_tc_industrial_preview.material': [('r40_tc_m06', 'r40_tc_m07')],
+        'art/buildings/korean_tc_industrial_preview/korean_tc_industrial_preview.material': [('matj', 'matk')],
         'art/buildings/korean_castle_industrial/korean_castle_industrial.material': castle_guardians,
         'art/buildings/korean_castle_industrial/korean_castle_industrial_damaged.material': castle_guardians,
     }
@@ -919,6 +919,15 @@ def test_materials_keep_their_source_materialdef():
             warnings = [w for w in warnings if not (w.startswith(known) and w.endswith('but default ignores the alpha (cards draw solid); no vanilla source found'))]
         found.extend(errors + warnings)
     assert len(mats) > 20 and found == []
+
+
+def test_submaterial_names_use_the_engine_mat_convention():
+    """INC-607, owner's game test 2026-10-23: Castle guardian slots named r40_guardian_m00.. drew magenta although lint,
+    xmlcheck and the textures were fine. Every vanilla (16267) and AoP (1692) submaterial name starts with 'mat';
+    gr2_lint's materials check keeps the GR2 binding names equal to these."""
+    bad = [(p.relative_to(K).as_posix(), s.get('name')) for p in sorted((K / 'art').rglob('*.material'))
+           for s in ET.parse(p).getroot().findall('submaterial') if not (s.get('name') or '').startswith('mat')]
+    assert bad == []
 
 
 # Geomsabok and Gungdo Cavalry replace the Japanese cavalry. Pyeongon Cavalry is an extra Stable unit:
