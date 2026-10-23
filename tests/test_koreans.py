@@ -65,7 +65,7 @@ def test_techs_activate_japan_and_the_visual_marker():
 
 def test_strings_flags_personality_and_sounds():
     ids = re.findall(r'_locid="(\d+)"', (K / 'data/strings/english/stringmods.xml').read_text(encoding='utf-8'))
-    assert ids == [str(600000 + i) for i in range(136)]         # 600132-600135: HC lantern cosmetics (Building Lanterns, Cheongsachorong)
+    assert ids == [str(600000 + i) for i in range(138)]         # 600136-600137: Industrial TC intact-only preview
                                                                 # 600126-600131: consulate Japanese Allies, Osaka Ronin
                                                                 # 600120-600125: Hongyipao
                                                                 # 600095-600119: Geomsabok, Gungdo Cavalry, Pyeongon Cavalry
@@ -897,7 +897,27 @@ def test_materials_keep_their_source_materialdef():
     spec.loader.exec_module(ms)
     data = ms.load_index()
     mats = sorted((K / 'art').rglob('*.material'))
-    found = [m for p in mats for part in ms.check_file(str(p), str(K), data) for m in part]
+    # Original sculpted jade guardian profiles deliberately ignore their front card's shared alpha.
+    # They are authored art, not vanilla retextures; require the exact paired semantics.
+    castle_guardians = [('r40_guardian_m00', 'r40_guardian_m01'), ('r40_guardian_m02', 'r40_guardian_m03')]
+    guardian_pairs = {
+        'art/buildings/korean_tc_industrial_preview/korean_tc_industrial_preview.material': [('r40_tc_m06', 'r40_tc_m07')],
+        'art/buildings/korean_castle_industrial/korean_castle_industrial.material': castle_guardians,
+        'art/buildings/korean_castle_industrial/korean_castle_industrial_damaged.material': castle_guardians,
+    }
+    found = []
+    for p in mats:
+        errors, warnings = ms.check_file(str(p), str(K), data)
+        for front_name, profile_name in guardian_pairs.get(p.relative_to(K).as_posix(), []):
+            root = ET.parse(p).getroot()
+            front = root.find("submaterial[@name='%s']" % front_name)
+            profile = root.find("submaterial[@name='%s']" % profile_name)
+            assert front.find('materialdef').get('name') == 'default_cutout'
+            assert profile.find('materialdef').get('name') == 'default'
+            assert front.find("parameters/texture[@name='BaseColor']").attrib == profile.find("parameters/texture[@name='BaseColor']").attrib
+            known = str(p) + ' [%s]: the BaseColor cuts out ' % profile_name
+            warnings = [w for w in warnings if not (w.startswith(known) and w.endswith('but default ignores the alpha (cards draw solid); no vanilla source found'))]
+        found.extend(errors + warnings)
     assert len(mats) > 20 and found == []
 
 

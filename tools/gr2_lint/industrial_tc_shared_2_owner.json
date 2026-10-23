@@ -1,0 +1,13 @@
+{
+ "authority": "owner",
+ "kind": "recorded_owner_chat",
+ "purpose": "shared_mod_dependencies",
+ "models": [
+  "korean_tc_industrial_preview"
+ ],
+ "source_names": [
+  "Korean shared props r6"
+ ],
+ "source_citation": "Owner chat 01a15101-8dcc-7fc0-b449-cc3721f5ee65: existing TC sign/props and guardian reuse, reaffirmed by current accepted prop delivery; historical assets unchanged",
+ "owner_quote": "The town center sign needed to come higher - check my Figma and I still mis more props on the intact model"
+}

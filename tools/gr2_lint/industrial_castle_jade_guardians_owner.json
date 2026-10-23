@@ -1,0 +1,14 @@
+{
+ "authority": "owner",
+ "kind": "recorded_owner_chat",
+ "purpose": "shared_mod_dependencies",
+ "models": [
+  "korean_castle_industrial"
+ ],
+ "source_names": [
+  "Jade guardians r43 shared with Industrial TC"
+ ],
+ "source_citation": "Codex chat thread 01a15101-8dcc-7fc0-b449-cc3721f5ee65, user message msg_01a1660f-d0af-7693-bd05-9e6686592345 at 2026-10-23T00:01:14Z; same thread 2026-10-23T06:36:11Z: \"Also castle will need update and havek regeneration since geometry is changed\"",
+ "owner_quote": "and use Industrial castle with same textures as we have in Blender",
+ "basis": "The Industrial Castle guardians use the exact jade guardian maps installed for the Industrial TC (byte-identical to the castle export encoding); counted once, not a new castle page."
+}

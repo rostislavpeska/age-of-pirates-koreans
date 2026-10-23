@@ -1,0 +1,13 @@
+{
+ "authority": "owner",
+ "kind": "recorded_owner_chat",
+ "purpose": "shared_mod_dependencies",
+ "models": [
+  "korean_tc_industrial_preview"
+ ],
+ "source_names": [
+  "Jade guardians shared with Industrial Castle"
+ ],
+ "source_citation": "Owner chat 01a15101-8dcc-7fc0-b449-cc3721f5ee65: existing TC sign/props and guardian reuse, reaffirmed by current accepted prop delivery; historical assets unchanged",
+ "owner_quote": "and use Industrial castle with same textures as we have in Blender"
+}
